@@ -1,5 +1,6 @@
 THISDIR := phy454-continuumechanics
 THISBOOK := phy454
+BASEVER := 339af54
 
 include ../latex/make.bookvars
 
