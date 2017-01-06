@@ -4,10 +4,10 @@ BASEVER := 339af54
 
 include ../latex/make.bookvars
 
-FIGURES := ../../figures/$(THISBOOK)
+FIGURES := ../figures/phy454-continuumechanics
 
 SOURCE_DIRS += appendix
-SOURCE_DIRS += figures
+#SOURCE_DIRS += figures
 SOURCE_DIRS += $(FIGURES)
 SOURCE_DIRS += elastic/displacements
 SOURCE_DIRS += elastic/strain
