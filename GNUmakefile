@@ -1,12 +1,7 @@
 THISDIR := phy454-continuumechanics
 THISBOOK := phy454
 
-export BOOKSUBVER := 1
-export BOOKMAJVER := 0
-export REVISIONNUMBER := 9
-
-VER := $(shell grep Version .revinfo/gitCommitDateAsMyTime.tex | sed 's/.*{//;s/.xspace.*//;')
-
+include make.revision
 include ../latex/make.bookvars
 
 FIGURES := ../figures/phy454-continuumechanics
@@ -37,10 +32,3 @@ include ../latex/make.rules
 
 backmatter.tex : ../phy487-qmsolids/backmatter.tex
 	cp $< $@
-
-dist:
-	cp $(THISBOOK).pdf $(THISBOOK).$(VER).pdf
-
-# a for annotate (releases).
-tag:
-	git tag -a $(THISBOOK).$(VER).pdf
