@@ -30,5 +30,6 @@ GENERATED_SOURCES += backmatter.tex
 
 include ../latex/make.rules
 
-backmatter.tex : ../phy487-qmsolids/backmatter.tex
-	cp $< $@
+backmatter.tex: ../latex/classicthesis_mine/backmatter_with_parts.tex
+	rm -f $@
+	ln -s ../latex/classicthesis_mine/backmatter_with_parts.tex backmatter.tex
