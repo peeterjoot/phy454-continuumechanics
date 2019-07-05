@@ -32,11 +32,97 @@
 % ********************************************************************
 
 % ********************************************************************
+%
+% http://tex.stackexchange.com/questions/3676/too-many-math-alphabets-error
+%
+% adding \usepackage{txfonts} % \ointclockwise
+%
+% caused too many alphabets error.  se workaround:
+
+\newcommand{\bmmax}{0}
+\newcommand{\hmmax}{0}
+
+% ********************************************************************
+
+%\AtBeginDocument{%
+%\let\latextableofcontents\tableofcontents
+%
+%\renewcommand{\tableofcontents}{%
+%  \addtocontents{toc}{\protect\setcounter{tocdepth}{-2}}
+%  \latextableofcontents%
+%  \addtocontents{toc}{\protect\setcounter{tocdepth}{3}}
+%}
+%}
+
+% https://tex.stackexchange.com/a/348976/15
+\BeforeTOCHead[toc]{\cleardoublepage\pdfbookmark{\contentsname}{toc}}
+\BeforeTOCHead[lof]{\cleardoublepage\pdfbookmark{\listfigurename}{lof}}
+%\BeforeTOCHead[lot]{\cleardoublepage\pdfbookmark{\listtablename}{lot}}
+
+% ********************************************************************
 % Triggers for this config
 % ********************************************************************
 \usepackage{ifthen}
+\usepackage{censor}
 \newboolean{enable-backrefs} % enable backrefs in the bibliography
 \setboolean{enable-backrefs}{true} % true false
+
+\newboolean{redacted}
+%\setboolean{redacted}{true}
+\setboolean{redacted}{false} % uncensored version.
+
+\newcommand{\withproblemsets}[1]{%
+\ifthenelse{\boolean{redacted}}%
+{%
+\textcolor{Maroon}{%
+PROBLEM SET RELATED MATERIAL REDACTED IN THIS DOCUMENT.%
+%
+PLEASE FEEL FREE TO EMAIL ME FOR THE FULL VERSION IF YOU AREN'T TAKING PHY1520.%
+}%
+%
+\input{censor1pg.tex}%
+%
+\textcolor{Maroon}{%
+END-REDACTION%
+}%
+}%
+{%
+#1%
+}%
+}
+
+\newcommand{\withproblemsetsParagraph}[1]{%
+\ifthenelse{\boolean{redacted}}%
+{%
+\textcolor{Maroon}{%
+PROBLEM SET RELATED MATERIAL REDACTED IN THIS DOCUMENT.%
+%
+PLEASE FEEL FREE TO EMAIL ME FOR THE FULL VERSION IF YOU AREN'T TAKING PHY1520.%
+}%
+%
+\input{censor1p.tex}%
+%\input{censor1p.tex}%
+%\input{censor1p.tex}%
+%
+\textcolor{Maroon}{%
+END-REDACTION%
+}%
+}%
+{%
+#1%
+}%
+}
+
+\newcommand{\withproblemsetsMessage}[1]{%
+\ifthenelse{\boolean{redacted}}%
+{%
+#1%
+}%
+{%
+\relax%
+}%
+}
+
 % ****************************************************************************************************
 
 
@@ -46,7 +132,7 @@
 \newcommand{\myTitle}{Continuum Mechanics\xspace}
 \newcommand{\mySubtitle}{Notes and problems from UofT PHY454H1S 2012\xspace}
 \newcommand{\myDegree}{}
-\newcommand{\myName}{Peeter Joot\ peeterjoot@pm.me\xspace}
+\newcommand{\myName}{Peeter Joot\xspace}
 \newcommand{\myProf}{}
 \newcommand{\myOtherProf}{}
 \newcommand{\mySupervisor}{}
@@ -55,7 +141,6 @@
 \newcommand{\myUni}{}
 \newcommand{\myLocation}{}
 %----------------------
-   %\newcommand{\myTime}{May 2012}
    \input{./.revinfo/gitCommitDateAsMyTime.tex}
 %----------------------
 %\newcommand{\myVersion}{version v.5\xspace}
@@ -133,6 +218,7 @@
     {\mathcode`\-=\hyphenmathcode
      \everymath{}\mathsurround=0pt\origlstlisting}
     {\endoriglstlisting}
+
 %\lstset{emph={trueIndex,root},emphstyle=\color{BlueViolet}}%\underbar} % for special keywords
 \lstset{language=[LaTeX]Tex,%C++,
     keywordstyle=\color{RoyalBlue},%\bfseries,
@@ -160,9 +246,15 @@
 % ********************************************************************
 % Using PDFLaTeX
 % ********************************************************************
-\PassOptionsToPackage{pdftex,hyperfootnotes=false,pdfpagelabels}{hyperref}
+\PassOptionsToPackage{pdftex,hyperfootnotes=false,pdfpagelabels,hyperindex=true}{hyperref}
 	\usepackage{hyperref}  % backref linktocpage pagebackref
+%----------------------
 \pdfcompresslevel=9
+% http://tex.stackexchange.com/questions/52317/pdftex-warning-version-allowed
+%\pdfminorversion=5
+\pdfminorversion=7
+\pdfobjcompresslevel=3
+%----------------------
 \pdfadjustspacing=1
 \PassOptionsToPackage{pdftex}{graphicx}
 	\usepackage{graphicx}
@@ -249,6 +341,17 @@
     }{\relax}
 \makeatother
 
+% https://tex.stackexchange.com/questions/95488/list-of-figures-and-page-numbering
+% https://tex.stackexchange.com/a/95616/15
+\makeatletter
+\newcommand{\emptypage}[1]{%
+  \cleardoublepage
+  \begingroup
+  \let\ps@plain\ps@empty
+  \pagestyle{empty}
+  #1
+  \cleardoublepage}
+\makeatletter
 
 % ****************************************************************************************************
 % 7. Last calls before the bar closes
@@ -265,7 +368,7 @@
 % ********************************************************************
 % Last, but not least...
 % ********************************************************************
-\usepackage{classicthesis}
+\usepackage[sixbynine]{../latex/classicthesis_mine/classicthesis}
 % ****************************************************************************************************
 
 
@@ -299,7 +402,46 @@
 % http://www.artofproblemsolving.com/Wiki/index.php/LaTeX:Layout#The_Easy_Way
 % replaces manual settings (\parindent, \parskip, \topmargin, ...)
 %\usepackage[margin=3.0cm]{geometry}
+%\usepackage[left=3cm,right=4cm]{geometry}
+
+% this boolean is now crippled by hardcoding 6x9 in:
+% 1) config.tex above:
+%   \usepackage[sixbynine]{classicthesis} % customized ancient version of classicthesis.sty
+% 2) GAelectrodynamic.tex: paper=6in:9in
+\newboolean{use-lettersize}
+\setboolean{use-lettersize}{false}
+%\setboolean{use-lettersize}{true}
+
+\newboolean{print-version}
+\setboolean{print-version}{false}
+
+\newboolean{with-mathematica}
+\setboolean{with-mathematica}{true}
+
+\ifthenelse{\boolean{use-lettersize}}
+{
+   % http://www.artofproblemsolving.com/Wiki/index.php/LaTeX:Layout#The_Easy_Way
+   % replaces manual settings (\parindent, \parskip, \topmargin, ...)
+   %\usepackage[margin=3.0cm]{geometry}
+   % default:
 \usepackage[left=3cm,right=4cm]{geometry}
+   %\usepackage[left=2cm,right=1.9cm,top=2.1cm,bottom=1.9cm]{geometry}
+}
+{
+   %\usepackage[paperheight=9in,paperwidth=6in,left=2cm,right=1.7cm,top=1.7cm,bottom=2cm]{geometry}
+   %\usepackage[paperheight=9in,paperwidth=6in,left=2cm,right=1.9cm,top=1.9cm,bottom=2.2cm]{geometry}
+
+   % first print version: GAelectrodynamics.V0.1.14.6x9.pdf
+   % margins on the bottom look a bit big.
+   %\usepackage[paperheight=9in,paperwidth=6in,left=2cm,right=2cm,top=1.9cm,bottom=2.2cm]{geometry}
+   \usepackage[paperheight=9in,paperwidth=6in,left=2cm,right=2cm,top=1.9cm,bottom=1.5cm]{geometry}
+
+   % this is the size of the Landau and Lifshitz books (as measured with a ruler)
+   %\usepackage[paperheight=9.61in,paperwidth=6.69in,left=2cm,right=1.9cm,top=1.9cm,bottom=1.8cm]{geometry}
+
+   \setboolean{print-version}{true}
+   \setboolean{with-mathematica}{false}
+}
 
 %\PassOptionsToPackage{answerdelayed}{exercise}
 \usepackage{peeters_layout}
