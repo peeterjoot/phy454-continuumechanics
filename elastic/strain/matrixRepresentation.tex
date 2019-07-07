@@ -2,34 +2,28 @@
 % Copyright © 2012 Peeter Joot.  All Rights Reserved.
 % Licenced as described in the file LICENSE under the root directory of this GIT repository.
 %
-
 %
 %
-
-
-\section{Matrix representation, diagonalization, and deformed volume element} \index{volume element}
-
+%\section{Matrix representation, diagonalization, and deformed volume element}
+\section{Strain matrix representation and volume element.}
+\index{volume element}
 The strain tensor \(e_{ik}\) can be worked with in coordinates, but we will often us a matrix representation when working in Cartesian coordinates
-
 \begin{equation}\label{eqn:continuumL2:210}
 \Be =
 \begin{bmatrix}
 e_{11} & e_{12} & e_{13} \\
 e_{21} & e_{22} & e_{23} \\
 e_{31} & e_{32} & e_{33} \\
-\end{bmatrix}
+\end{bmatrix}.
 \end{equation}
-
 We see from \eqnref{eqn:continuumL2:190} that \(e_{ik}\) is symmetric, so we have
-
 \begin{align}\label{eqn:continuumL2:230}
 e_{21} &= e_{12} \\
 e_{31} &= e_{13} \\
-e_{32} &= e_{23}
+e_{32} &= e_{23}.
 \end{align}
 
 Given this real symmetric matrix there must exist an orthonormal basis at each point that allows the strain tensor to be written in diagonal form
-
 \begin{equation}\label{eqn:continuumL2:250}
 \overbar{e}_{ik} =
 \begin{bmatrix}
@@ -40,15 +34,12 @@ Given this real symmetric matrix there must exist an orthonormal basis at each p
 \end{equation}
 
 In that basis the difference between two close points in the deformed object, in terms of the difference between the original positions of those points in the original object, can be expressed as
-
 \begin{align}\label{eqn:continuumL2:270}
 {dx_1'}^2 &= (1 + 2 \overbar{e}_{11}) dx_1^2 \\
 {dx_2'}^2 &= (1 + 2 \overbar{e}_{22}) dx_2^2 \\
 {dx_3'}^2 &= (1 + 2 \overbar{e}_{33}) dx_3^2,
 \end{align}
-
 or
-
 \begin{align}\label{eqn:continuumL2:280}
 dx_1' &= \sqrt{1 + 2 \overbar{e}_{11}} dx_1 \\
 dx_2' &= \sqrt{1 + 2 \overbar{e}_{22}} dx_2 \\
@@ -56,7 +47,6 @@ dx_3' &= \sqrt{1 + 2 \overbar{e}_{33}} dx_3.
 \end{align}
 
 If these points are close enough, we can employ a first order Taylor expansion of the square root, yielding
-
 \begin{align}\label{eqn:continuumL2:290}
 dx_1' &\approx (1 + \overbar{e}_{11}) dx_1 \\
 dx_2' &\approx (1 + \overbar{e}_{22}) dx_2 \\
@@ -64,7 +54,6 @@ dx_3' &\approx (1 + \overbar{e}_{33}) dx_3
 \end{align}
 
 Our deformed volume element in the neighborhood of the point of interest can then be seen to be
-
 \begin{equation}\label{eqn:continuumL2:310}
 dV' =
 dx_1'
@@ -82,7 +71,6 @@ dV' \approx (1 + e_{11} +e_{22} +e_{33} ) dV.
 \end{equation}
 
 Reverting again to summation convention, this is
-
 \begin{equation}\label{eqn:continuumL2:350}
 dV' \approx ( 1 + e_{ii} ) dV.
 \end{equation}

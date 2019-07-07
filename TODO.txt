@@ -1,5 +1,9 @@
 
 - 
+   - need commas and periods.
+   - remove blank lines before and after equations.
+
+- 
 
   Label `eqn:continuumL18:391' multiply defined
   Label `eqn:continuumL18:391@cref' multiply defined
