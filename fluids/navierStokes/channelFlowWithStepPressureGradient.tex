@@ -304,31 +304,29 @@ For that calculation see (\nbref{channelFlowWithStepPressureGradient.cdf}).
 Our complete solution is
 
 \begin{equation}\label{eqn:channelFlowWithStepPressureGradient:550}
-u(y, t) =
-\frac{P h^2}{2 \mu} \left( 1 - \left( \frac{y}{h} \right)^2 \right)
+\begin{aligned}
+u(y, t) &=
+\frac{P h^2}{2 \mu} 
+\left( 1 - \left( \frac{y}{h} \right)^2 \right) \\
 %-\frac{P h^2}{12 \mu}
--
+&\quad-
 \frac{16 P h^2 }{\mu \pi^3 }
 \sum_{n = 0}^\infty
 \frac{(-1)^n}{(2 n + 1)^3}
 e^{ -((2 n + 1) \pi/2h)^2 \nu t }
-\cos \left( \frac{ (2 n + 1) \pi y }{2 h} \right) .
+\cos \left( \frac{ (2 n + 1) \pi y }{2 h} \right).
+\end{aligned}
 \end{equation}
 %Sum[(-1)^n/((2 n + 1)^3) E^( -((2 n + 1) Pi/(2 h))^2 nu t ) Cos[ (2 n + 1) Pi y /(2 h) ], {n, 0, m}]
-
 The largest of the damped exponentials above is the \(n = 0\) term which is
-
 \begin{equation}\label{eqn:channelFlowWithStepPressureGradient:570}
 e^{ - \pi^2 \nu t /h^2 },
 \end{equation}
-
 so if \(\nu t >> h^2\) these terms all die off, leaving us with just the steady state.
 %.  That leaves us with the steady state equation, less the non-damped constant factor from the Fourier series.
 
 Rather remarkably, this Fourier series is actually a very good fit even after only a single term.  Using the viscosity and density of water, \(h = 1 \text{cm}\), and \(P = 3 \times \mu_{\text{water}} \times (2 \text{cm}/{s})/ h^2\) (parameterizing the pressure gradient by the average velocity it will induce), a plot of the parabola that we are fitting to and the difference of that from the first Fourier term is shown in \cref{fig:channelFlowWithStepPressureGradient:channelFlowWithStepPressureGradientFig1}.
-
 \imageFigure{../figures/phy454-continuumechanics/channelFlowWithStepPressureGradientFig1}{Parabolic channel flow steady state, and difference from first Fourier term}{fig:channelFlowWithStepPressureGradient:channelFlowWithStepPressureGradientFig1}{0.3}
-
 The higher order corrections are even smaller.  Even the first order deviations from the parabola that we are fitting to is a correction on the scale of \(1/100\) of the height of the parabola.  This is illustrated in \cref{fig:channelFlowWithStepPressureGradient:channelFlowWithStepPressureGradientFig2} where the magnitude of the first 5 deviations from the steady state are plotted.
 
 \imageFigure{../figures/phy454-continuumechanics/channelFlowWithStepPressureGradientFig2}{Difference from the steady state for the first five Fourier terms}{fig:channelFlowWithStepPressureGradient:channelFlowWithStepPressureGradientFig2}{0.3}

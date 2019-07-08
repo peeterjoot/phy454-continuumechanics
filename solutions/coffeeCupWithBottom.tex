@@ -132,14 +132,13 @@ The boundary value constraints of \(u(r = s) = \Omega s\) and \(u(r = R) = 0\) r
 0 = \sum E_i Y_1(\lambda_i) \sinh(\lambda_i z/R).
 \end{equation}
 \end{subequations}
-
 We know how to solve a system like \eqnref{eqn:coffeeCupWithBottom:310} if we did not have the \(\sinh\) term in the mix.  Can we look for a numerical (least squares?) solution to this more general problem.  Will it be possible to find something that is a good fit regardless of the value of \(z\)?
 
 We have other troubles too.  We can not simultaneously satisfy the boundary value condition of \(u(s, z) = \Omega s\) and also \(u(s, 0) = 0\).  Should we attempt something like a least squares solution and start going near \(z = 0\) the small \(\sinh\) values near there will start forcing the \(C_i\)'s arbitrarily high.
 
 We have to somehow modify the no-slip condition so that when we have a moving interface in contact with a static interface we somehow deal with the fact that the no-slip constraints cannot simultaneously require the velocity to match both the moving and static interfaces at that point of contact.
 
-\section{Working around the no-slip troubles at the base of the cup} \index{no slip}
+\section{Base of cup no-slip troubles} \index{no slip}
 
 We have just found the functional form for an azimuthal flow that has \(z\)-axis dependence.  Attempting to apply the no-slip boundary value condition for our mixing device got us into trouble, since this simultaneously require zero and non-zero velocity at the point of contact of the mixing interface and the bottom of the vessel (i.e. where the stir stick contacts the bottom of the cup).  We can avoid this issue by constraining the mixing to only occur above the bottom of the cup, and then look at the flow that this induces below the mixing point.
 
@@ -317,9 +316,7 @@ Observing that
 \begin{equation}\label{eqn:coffeeCupWithBottom:920}
 \int_0^1 \sin(2 \pi j y) \sin(2 \pi k y) dy = \inv{2} \delta_{j k}.
 \end{equation}
-
-we can multiply both sides by \(x J_1(\lambda_k x) \sin ( 2 \pi m y )\) and integrating over the unit square we have
-
+We can multiply both sides by \(x J_1(\lambda_k x) \sin ( 2 \pi m y )\) and integrating over the unit square we have
 %
 %\begin{dmath}\label{eqn:coffeeCupWithBottom:940}
 %\sum_{i=1}^\infty
@@ -339,14 +336,13 @@ we can multiply both sides by \(x J_1(\lambda_k x) \sin ( 2 \pi m y )\) and inte
 \int_0^1 w J_1 (\lambda_i w) dw
 }{
 \int_0^1 w J_1^2 (\lambda_i w) dw
-}
+} \\
 &=
 \sum_{j = 1}^\infty d_j \int_0^1 x J_1(\lambda_j x) J_1( \lambda_k x) dx \int_0^1 \sin( 2 \pi m y ) \sin\left( 2 \pi j y \right) dy.
 \end{aligned}
 \end{equation}
 
 Applying the orthogonality relations we have
-
 %
 %\begin{dmath}\label{eqn:coffeeCupWithBottom:960}
 %\sum_{i=1}^\infty

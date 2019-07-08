@@ -134,22 +134,21 @@ Navier-Stokes takes the form
 u_r \PD{r}{} +
 \frac{u_\theta}{r} \PD{\theta}{} +
 u_z \PD{z}{} \right) \Bu
-=  \\
-&-
+= \\
+&\quad-
 \left(
 \rcap \PD{r}{} +
 \frac{\thetacap}{r} \PD{\theta}{} +
 \zcap \PD{z}{}
-\right)
-p + \mu \left(
+\right) 
+p  \\
+&\quad+ \mu \left(
 \inv{r} \PD{r}{} \left( r \PD{r}{} \right) + \inv{r^2} \PDSq{\theta}{} + \PDSq{z}{} \right)
 \Bu + \rho \Bf.
 \end{aligned}
 }
 
 It is pointed out in \citep{acheson1990elementary}, that our non-linear term \((\Bu \cdot \spacegrad) \Bu\), with \(\Bu = \rcap u_r + \thetacap u_\theta + \zcap u_z\) has contributions both from the coordinates \((u_r, u_\theta, u_z)\) and the unit vectors \(\{\rcap, \thetacap, \zcap\}\) since both \(\rcap\) and \(\thetacap\) have \(\theta\) dependence.  So if we wish to express Navier-Stokes in coordinate form we must write
-
-
 \begin{dmath}\label{eqn:classicalMechanicsPs2:650b}
 (\Bu \cdot \spacegrad) \Bu
 =

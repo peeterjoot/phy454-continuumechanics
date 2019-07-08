@@ -68,56 +68,44 @@ More explicitly, in coordinates this is
 \evalbar{\tau_i (\sigma_{ij} n_j)}{B}
 \end{equation}
 
-\makeexample{Steady incompressible rectilinear (unidirectional) flow}{ex:fluids:rectilinear}{
-
-In this case we can fix our axis so that
-
+\makeexample
+{Steady incompressible flow}
+%{Steady incompressible rectilinear (unidirectional) flow}
+{ex:fluids:rectilinear}{
+For steady incompressible rectilinear (unidirectional) flow, 
+we can fix our axis so that
 \begin{equation}\label{eqn:continuumL11:170}
 \Bu = \xcap u(x, y, z, t),
 \end{equation}
-
 where the velocity components in the other directions
-
 \begin{equation}\label{eqn:continuumL11:190}
 \begin{aligned}
 v &= 0 \\
-w &= 0
+w &= 0,
 \end{aligned}
 \end{equation}
-
 are both zero.  Symbolically, the steady state condition is
-
 \begin{equation}\label{eqn:continuumL11:210}
 \PD{t}{\Bu} = 0.
 \end{equation}
-
 % prof called this the continuity condition?
 We start with the incompressibility condition, which written explicitly, is
-
 \begin{equation}\label{eqn:continuumL11:230}
 \spacegrad \cdot \Bu = 0,
 \end{equation}
-
 or
-
 \begin{equation}\label{eqn:continuumL11:250}
-\PD{x}{u} + \PD{y}{v} + \PD{z}{w} = 0
+\PD{x}{u} + \PD{y}{v} + \PD{z}{w} = 0.
 \end{equation}
-
 This implies
-
 \begin{equation}\label{eqn:continuumL11:270}
-\PD{x}{u} = 0
+\PD{x}{u} = 0,
 \end{equation}
-
 so our velocity can only be function of the \(y\) and \(z\) coordinates only
-
 \begin{equation}\label{eqn:continuumL11:290}
 u = u(y, z).
 \end{equation}
-
 The non-linear term of the Navier-Stokes equation takes the form
-
 \begin{equation}\label{eqn:unidirectionalSolutions:870}
 \begin{aligned}
 (\Bu \cdot \spacegrad) \Bu
@@ -130,15 +118,11 @@ The non-linear term of the Navier-Stokes equation takes the form
 &= 0.
 \end{aligned}
 \end{equation}
-
 With incompressibility and \(u = v = 0\) conditions killing this term, and the steady state condition \eqnref{eqn:continuumL11:210} killing the \(\rho \PDi{t}{\Bu}\) term, the Navier-Stokes equation for this incompressible unidirectional steady state flow (in the absence of body forces) is reduced to
-
 \begin{equation}\label{eqn:continuumL11:310}
 0 = - \spacegrad p + \mu \spacegrad^2 \Bu.
 \end{equation}
-
 In coordinates this is
-
 \begin{subequations}
 \begin{equation}\label{eqn:continuumL11:330a}
 \PD{x}{p} = \mu \left( \PDSq{y}{u} + \PDSq{z}{u} \right)
@@ -150,61 +134,46 @@ In coordinates this is
 \PD{z}{p} = 0.
 \end{equation}
 \end{subequations}
-
 Operating on the first with an x partial we find
-
 \begin{equation}\label{eqn:continuumL11:350}
-\PDSq{x}{p} = \mu \left( \PDSq{y}{} \cancel{\PD{x}{u}} + \PDSq{z}{} \cancel{ \PD{x}{u} } \right) = 0
+\PDSq{x}{p} = \mu \left( \PDSq{y}{} \cancel{\PD{x}{u}} + \PDSq{z}{} \cancel{ \PD{x}{u} } \right) = 0.
 \end{equation}
-
 Since we have
-
 \begin{equation}\label{eqn:continuumL11:370}
 \PDSq{x}{p} = 0
 \end{equation}
-
 we also have
-
 \begin{equation}\label{eqn:continuumL11:390}
 \frac{d^2 p}{dx^2} = 0,
 \end{equation}
-
 so our pressure must be linear with position
-
 \begin{equation}\label{eqn:continuumL11:410}
 p = A x + B,
 \end{equation}
-
 as illustrated in \cref{fig:continuumL11:continuumL11fig3}
-
 \imageFigure{../figures/phy454-continuumechanics/lec11_Pressure_gradient_in_1D_systemFig3}{Pressure gradient in 1D system}{fig:continuumL11:continuumL11fig3}{0.2}
-
+The pressure is
 \begin{equation}\label{eqn:continuumL11:430}
 p =
 \left\{
 \begin{array}{l l}
 p_0 & \quad \mbox{\(x = 0\)} \\
-p_L & \quad \mbox{\(x = L\)}
+p_L & \quad \mbox{\(x = L\)},
 \end{array}
 \right.
 %} % vim brace matching.
 \end{equation}
-
-we have
-
+so
 \begin{equation}\label{eqn:continuumL11:450}
-p = \frac{p_L - p_0}{L} x + p_0
+p = \frac{p_L - p_0}{L} x + p_0,
 \end{equation}
-
 and
-
 \begin{equation}\label{eqn:continuumL11:470}
-\frac{dp}{dx} = \frac{p_L - p_0}{L} = \text{constant} \equiv -G
+\frac{dp}{dx} = \frac{p_L - p_0}{L} = \text{constant} \equiv -G.
 \end{equation}
 } % end example
 
 \makeexample{Shearing flow}{ex:fluids:shearing}{
-
 The flows of this sort do not have to be trivial.  For example, even with constant pressure (\(p_0 = p_L\)) as in \cref{fig:continuumL11:continuumL11fig4} we can have a ``shearing flow'' where the fluids at the top surface are not necessarily moving at the same rates as the fluid below that surface.  We have fluid flow in the \(x\) direction only, and our velocity is a function only of the \(y\) coordinate.
 
 \imageFigure{../figures/phy454-continuumechanics/lec11_Velocity_variation_with_height_in_shearing_flowFig4}{Velocity variation with height in shearing flow}{fig:continuumL11:continuumL11fig4}{0.2}

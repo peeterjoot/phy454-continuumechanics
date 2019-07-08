@@ -186,35 +186,32 @@ Our curl is then
 \end{equation}
 
 Since \(\partial_\phi \rcap = \thetacap\) and \(\partial_\phi \phicap = -\rcap\), we have only one cross term and our curl is
-
 \begin{equation}\label{eqn:stressTensorVectorForm:610}
+\begin{aligned}
 \spacegrad \wedge \Bu
-=
+&=
 \rcap \wedge \phicap
 \left(
 \partial_r u_\phi
 -\inv{r} \partial_\phi u_r
 + \frac{u_\phi}{r}
-\right)
-+
+\right) \\
+&\quad +
 \phicap \wedge \zcap
 \left(
 \inv{r} \partial_\phi u_z
 - \partial_z u_\phi
-\right)
-+
+\right) \\
+&\quad +
 \zcap \wedge \rcap
 \left(
 \partial_z u_r - \partial_r u_z
 \right).
+\end{aligned}
 \end{equation}
-
 We can now move on to compute the directional derivatives and complete the strain calculation in cylindrical coordinates.  Let us consider this computation of the stress for normals in each direction in term.
-
 \subsection{Outwards radial normal \texorpdfstring{\(\ncap = \rcap\)}{ncap equals rcap}}
-
 Our directional derivative component for a \(\rcap\) normal direction does not have any cross terms
-
 \begin{equation}\label{eqn:stressTensorVectorForm:1050}
 \begin{aligned}
 2 (\rcap \cdot \spacegrad) \Bu

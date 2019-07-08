@@ -2,11 +2,11 @@
 % Copyright © 2012 Peeter Joot.  All Rights Reserved.
 % Licenced as described in the file LICENSE under the root directory of this GIT repository.
 %
-
 %
 %
-\makeoproblem{Couette flow of a viscous incompressible fluid}{problem:fluids:couetteFlow}
-{2011 phy1530 problem set 2}
+\makeoproblem
+{Couette flow, viscous, incompressible}{problem:fluids:couetteFlow}
+{2011 phy1530 ps2}
 {
 Consider the steady flow between two long cylinders of radii \(R_1\) and \(R_2\), \(R_1 > R_1\), rotating about their axes with angular velocities \(\Omega_1\), \(\Omega_2\).  Look for a solution of the form, where \(\phicap\) is a unit vector along the azimuthal direction:
 
@@ -395,21 +395,21 @@ a - \frac{b}{r^2}
 \end{equation}
 
 So the traction vector \(\Bt_1 = \Bsigma \cdot \rcap = \Be_i \sigma_{ij} \rcap \cdot \Be_i\), our force per unit area on the fluid at the inner surface (where the normal is \(\rcap\)), is
-
 \begin{equation}\label{eqn:couetteFlow:1150}
-\Bt_1 =
--p \rcap + \mu \left( a - \frac{b}{r^2} \right) \phicap
-=
+\begin{aligned}
+\Bt_1 
+&=
+-p \rcap + \mu \left( a - \frac{b}{r^2} \right) \phicap \\
+&=
 -p \rcap +
 \frac{\mu}{R_2^2 - R_1^2}
 \left(
 R_2^2 \Omega_2 - R_1^2 \Omega_1
 +\frac{R_1^2 R_2^2}{r^2} (\Omega_2 -\Omega_1)
-\right) \phicap.
+\right) \phicap,
+\end{aligned}
 \end{equation}
-
-and our torque per unit area from the inner cylinder on the fluid is thus
-
+so the torque per unit area from the inner cylinder on the fluid is
 \begin{equation}\label{eqn:couetteFlow:1170}
 \Btau_1 = r \rcap \cross \Bt_1 =
 %r \mu \left( a - \frac{b}{r^2} \right) \zcap.
@@ -519,7 +519,5 @@ An animation of the above is available at
 %\movieFigure{couetteFlowFig6.mp4}{Animation of Couette flow, with continuous variation of outer angular velocity}{fig:couetteFlow:couetteFlowFig6}{width=320pt,height=240pt}
 
 These were all generated from the Mathematica workbook (\nbref{couetteFlow.cdf}), which has some slider controls that can be used to play with the radii and angular velocities in an interactive fashion.
-
-\FIXME{Could graph pressure and torques too}
-
+%\FIXME{Could graph pressure and torques too}
 } % end answer

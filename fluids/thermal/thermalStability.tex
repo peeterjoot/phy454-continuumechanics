@@ -7,42 +7,32 @@
 %
 \label{chap:continuumL22}
 \section{Thermal stability review.  Rayleigh Benard Problem}
-
 Reading: \S 9.3 from \citep{acheson1990elementary}.
 
 Illustrated in \cref{fig:continuumL22:continuumL22Fig1} is the heated channel we have been discussing
-
 \imageFigure{../figures/phy454-continuumechanics/lec22_Channel_with_heat_applied_to_the_baseFig1}{Channel with heat applied to the base}{fig:continuumL22:continuumL22Fig1}{0.3}
 
 We will take initial conditions
-
 \begin{equation}\label{eqn:continuumL22:10}
 \begin{aligned}
 \PD{t}{\Bu} &= 0 \\
-\PD{t}{T} &= 0
+\PD{t}{T} &= 0,
 \end{aligned}
 \end{equation}
-
 \begin{equation}\label{eqn:continuumL22:30}
 \rho \PD{t}{\Bu} + \rho (\Bu \cdot \spacegrad) \Bu = - \spacegrad p + \mu \spacegrad^2 \Bu + \rho \Bg.
 \end{equation}
-
 Our energy equation is
-
 \begin{equation}\label{eqn:continuumL22:50}
 \PD{t}{T} + (\Bu \cdot \spacegrad) T = \kappa \spacegrad^2 T.
 \end{equation}
-
 We have this \(\Bu \cdot \spacegrad\) term because our heat can be carried from one place to the other, due to the fluid motion.  We would not have this convective term for heat dissipation in solids because elements of a solid are not moving around in the bulk.
-
 %We will also use
 %
 %\begin{equation}\label{eqn:continuumL22:70}
 %\spacegrad p_s = \rho_s \Bg
 %\end{equation}
-
 In the steady (base) state we have
-
 \begin{equation}\label{eqn:continuumL22:90}
 0 = \kappa \spacegrad^2 T =
 \kappa \left(
@@ -50,21 +40,15 @@ In the steady (base) state we have
 +\PDSq{y}{}
 +\PDSq{z}{} \right) T,
 \end{equation}
-
 but since we are only considering spatial variation with \(z\) we have
-
 \begin{equation}\label{eqn:continuumL22:110}
 \kappa \PDSq{z}{} T_s = 0,
 \end{equation}
-
 with solution
-
 \begin{equation}\label{eqn:continuumL22:130}
 T_s = T_0 - \frac{\Delta T}{d} z.
 \end{equation}
-
 We found that after application of the perturbation
-
 \begin{equation}\label{eqn:continuumL22:150}
 \begin{aligned}
 \Bu &\rightarrow 0 + \delta \Bu \\
@@ -105,42 +89,32 @@ Using this, and \eqnref{eqn:continuumL22:110}, and neglecting any terms of secon
 
 We would like to solve this and \eqnref{eqn:continuumL22:170} simultaneously.
 
-\section{Non-dimensionalisation of the thermal velocity equation}
-
+\section{Non-dimensionalisation, thermal velocity}
 We would like to scale
-
 \begin{equation}\label{eqn:continuumL22:250}
 \begin{array}{l l}
 x,y,z & \quad \mbox{with \(d\)} \\
 t & \quad \mbox{with \(d^2/\nu\)} \\
 \delta w & \quad \mbox{with \(\kappa/d\)} \\
-\delta T & \quad \mbox{with \(\Delta T\)}
+\delta T & \quad \mbox{with \(\Delta T\)}.
 \end{array}
 \end{equation}
-
 Sanity check of dimensions
-
 \begin{itemize}
 \item viscosity dimensions
 \begin{equation}\label{eqn:continuumL22:270}
-[\nu] \sim \left[ \frac{1}{\text{T}} \right]/ \left[\inv{\text{L}^2} \right] \sim \frac{\text{L}^2}{\text{T}},
+[\nu] \sim \left[ \frac{1}{\text{T}} \right]/ \left[\inv{\text{L}^2} \right] \sim \frac{\text{L}^2}{\text{T}}.
 \end{equation}
 \item thermal conductivity dimensions
-
 Since \([ \kappa \spacegrad^2 ] \sim 1/\text{T}\), we have
-
 \begin{equation}\label{eqn:continuumL22:610}
 [ \kappa ] \sim \frac{\text{L}^2}{\text{T}}
 \end{equation}
-
 \item time scaling
-
 \begin{equation}\label{eqn:continuumL22:290}
 \left[\frac{d^2}{\nu}\right] \sim \frac{\text{L}^2}{\text{L}^2 \text{T}^{-1}} \sim \text{T}.
 \end{equation}
-
 \item velocity scaling
-
 \begin{equation}\label{eqn:continuumL22:630}
 [\kappa/d] \sim \frac{\text{L}^2}{\text{T}} \inv{\text{L}} \sim [\delta w]
 \end{equation}

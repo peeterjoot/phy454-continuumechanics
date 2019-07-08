@@ -1,6 +1,7 @@
 
 - 
-   - need commas and periods.
+   - need commas and periods: sections, figures, chapters, problems, examples
+
    - remove blank lines before and after equations.
 
 - 
