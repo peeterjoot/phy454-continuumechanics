@@ -27,13 +27,13 @@ We call the study of these two regions boundary layer flow.
 \section{Unsteady rectilinear flow} \index{rectilinear flow}
 
 Given
-
+%
 \begin{equation}\label{eqn:continuumL16:10}
 \Bu = u(x, y, z, t) \xcap
 \end{equation}
 
 Our continuity equation (incompressibility assumption) is
-
+%
 \begin{equation}\label{eqn:continuumL16:30}
 \PD{x}{u} +
 \cancel{\PD{y}{v}} +
@@ -41,13 +41,13 @@ Our continuity equation (incompressibility assumption) is
 \end{equation}
 
 Our non-linear term of Navier-Stokes is then killed
-
+%
 \begin{equation}\label{eqn:continuumL16:50}
 u \PD{x}{u} = 0
 \end{equation}
 
 so that Navier Stokes takes the form
-
+%
 \begin{subequations}
 \begin{equation}\label{eqn:continuumL16:70}
 \rho \PD{t}{u} = -\PD{x}{p} +
@@ -62,31 +62,31 @@ so that Navier Stokes takes the form
 \end{subequations}
 
 Taking the \(x\) partial of \eqnref{eqn:continuumL16:70}, we have
-
+%
 \begin{equation}\label{eqn:continuumL16:130}
 \rho \PD{t}{} \cancel{\PD{x}{u}} = -\PDSq{x}{p} + \mu \left( \PDSq{y}{} \cancel{\PD{x}{u}} +\PDSq{z}{} \cancel{\PD{x}{u}} \right)
 \end{equation}
 
 Since we also have zero partials in the \(y\) and \(z\) directions from \eqnref{eqn:continuumL16:90}, and \eqnref{eqn:continuumL16:110}, we must then have
-
+%
 \begin{equation}\label{eqn:continuumL16:150}
 \frac{d^2 p}{dx^2} = 0.
 \end{equation}
 
 So, after integrating we find for the pressure
-
+%
 \begin{equation}\label{eqn:continuumL16:170}
 p(x, t) = p_0(t) - G x,
 \end{equation}
 
 where
-
+%
 \begin{equation}\label{eqn:continuumL16:190}
 G = -\frac{dp}{dx}.
 \end{equation}
 
 In general \(G\) is a function of \(t\), but constant in space.  Given this, we have for our Navier-Stokes equation
-
+%
 \begin{equation}\label{eqn:continuumL16:210}
 \rho \PD{t}{u} = G(t) + \mu \left( \PDSq{y}{u} +\PDSq{z}{u} \right)
 \end{equation}
@@ -108,7 +108,7 @@ These two possible viewpoints can be called the Eulerian and the Lagrangian view
 \end{itemize}
 
 With a flow of the form
-
+%
 \begin{equation}\label{eqn:continuumL16:230}
 \Bu = u(y, t) \xcap
 \end{equation}
@@ -120,7 +120,7 @@ Navier-Stokes equation
 }
 
 Our boundary value constraints are
-
+%
 \begin{equation}\label{eqn:continuumL16:270}
 u(0, t) =
 \left\{
@@ -134,37 +134,37 @@ U & \quad \mbox{for \(t \ge 0\)}
 and \(u \rightarrow 0\) as \(y \rightarrow \infty\).
 
 If we make a transformation to dimensionless arguments
-
+%
 \begin{equation}\label{eqn:continuumL16:290}
 u \rightarrow U
 \end{equation}
 
 so that
-
+%
 \begin{equation}\label{eqn:continuumL16:310}
 \frac{u}{U} \rightarrow \text{dimensionless}
 \end{equation}
 
 Then we require of the parameters
-
+%
 \begin{equation}\label{eqn:continuumL16:330}
 y, \nu, t \rightarrow \frac{y}{\sqrt{\nu t}}
 \end{equation}
 
 so that we have a characteristic length scale of the form
-
+%
 \begin{equation}\label{eqn:continuumL16:350}
 \delta \rightarrow \sqrt{\nu t}
 \end{equation}
 
 We can find an approximate solution
-
+%
 \begin{equation}\label{eqn:continuumL16:370}
 \frac{U}{t} \approx \frac{\nu U}{\delta^2}.
 \end{equation}
 
 We can introduce a similarity variable (often hard to find), of the form
-
+%
 \begin{equation}\label{eqn:continuumL16:390}
 \eta = \frac{y}{2 \sqrt{\nu t}}.
 \end{equation}
@@ -172,13 +172,13 @@ We can introduce a similarity variable (often hard to find), of the form
 \FIXME{try attacking this more systematically using Fourier or Laplace transforms (probably a Laplace transform, because of our initial conditions.)}
 
 Let us use our similarity variable and see what happens.  With
-
+%
 \begin{equation}\label{eqn:continuumL16:410}
 u = U f(\eta),
 \end{equation}
 
 we find
-
+%
 \begin{equation}\label{eqn:boundaryLayersAndTimeDependentFlow:770}
 \begin{aligned}
 \PD{y}{u}
@@ -188,19 +188,19 @@ we find
 \end{equation}
 
 where
-
+%
 \begin{equation}\label{eqn:continuumL16:430}
 f' = \PD{\eta}{f}
 \end{equation}
 
 We then find
-
+%
 \begin{equation}\label{eqn:continuumL16:450}
 \PDSq{y}{u} = U f'' \inv{4 \nu t}
 \end{equation}
 
 and
-
+%
 \begin{equation}\label{eqn:boundaryLayersAndTimeDependentFlow:790}
 \begin{aligned}
 \PD{t}{u}
@@ -216,61 +216,61 @@ and
 \end{equation}
 
 Putting these all together we have
-
+%
 \begin{equation}\label{eqn:continuumL16:630}
 - \cancel{U} f' \frac{\eta}{2 t} = \cancel{\nu} \cancel{U} f'' \inv{4 \cancel{\nu} t},
 \end{equation}
 
 or
-
+%
 \begin{equation}\label{eqn:continuumL16:490}
 f'' + 2 \eta f' = 0
 \end{equation}
 
 With \(g = f'\), we have
-
+%
 \begin{equation}\label{eqn:continuumL16:650}
 \int \frac{dg}{g} = \int -2 \eta y
 \end{equation}
 
 With solution
-
+%
 \begin{equation}\label{eqn:continuumL16:670}
 \ln(f') = - \eta^2 + \ln C
 \end{equation}
 
 or
-
+%
 \begin{equation}\label{eqn:continuumL16:690}
 f' = C e^{- \eta^2}.
 \end{equation}
 
 Integrating once more, and writing the integral in terms of the error function
-
+%
 \begin{equation}\label{eqn:continuumL16:530}
 \erf(\eta) = \frac{2}{\sqrt{\pi}} \int_0^\eta e^{-s^2} ds,
 \end{equation}
 
 We find
-
+%
 \begin{equation}\label{eqn:continuumL16:510}
 f(\eta) = A \erf(\eta) + B.
 \end{equation}
 
 From our boundary value condition at the origin we have
-
+%
 \begin{equation}\label{eqn:continuumL16:710}
 u(0, t) = U f(0) = U,
 \end{equation}
 
 so that
-
+%
 \begin{equation}\label{eqn:continuumL16:730}
 U( A \erf(0) + B) = U.
 \end{equation}
 
 Since \(\erf(0) = 0\), we must have \(B = 1\).  For our boundary value constraint far from the impulse, we have
-
+%
 \begin{equation}\label{eqn:continuumL16:750}
 u(\infty, t) = U( A \erf(\infty) + 1) = 0
 \end{equation}
@@ -282,13 +282,13 @@ u(y, t) = U(1 - \erf(\eta)).
 }
 
 where (again)
-
+%
 \begin{equation}\label{eqn:continuumL16:610}
 \eta = \frac{y}{2 \sqrt{\nu t}}.
 \end{equation}
 
 Explicitly, this is
-
+%
 \begin{equation}\label{eqn:continuumL16:590b}
 u(y, t) = U_0 \left(1 - \erf\left(\frac{y}{2 \sqrt{\nu t}}\right) \right)
 \end{equation}

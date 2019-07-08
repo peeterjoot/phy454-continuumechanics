@@ -12,7 +12,7 @@ Imagine a steady rectilinear blood flow of the form \(\Bu = u(y) \ycap\) through
 
 
 \makesubproblem{Show that the Navier-Stokes equation reduces to
-
+%
 \begin{equation}\label{eqn:continuumProblemSet2:20}
 \frac{d^2 u}{dy^2} = -\frac{G}{\mu}
 \end{equation}
@@ -31,7 +31,7 @@ where \(\mu\) is the viscosity of the blood.
 \makesubanswer{Navier-Stokes}{problem:fluids:bloodReduceNS}
 %\unnumberedSubsection{Navier-Stokes equation for the system}
 The Navier-Stokes equation, for an incompressible unidirectional fluid \(\Bu = (u, 0, 0)\), assuming that there is no \(z\) dependence, takes the form
-
+%
 \begin{subequations}
 \begin{equation}\label{eqn:continuumProblemSet2:40}
 \rho \PD{t}{u} + u \PD{x}{u} = - \PD{x}{p} + \mu \left( \PDSq{x}{} + \PDSq{y}{} \right) u
@@ -48,7 +48,7 @@ The Navier-Stokes equation, for an incompressible unidirectional fluid \(\Bu = (
 \end{subequations}
 
 With a steady state assumption we kill the \(\PDi{t}{u}\) term, and \eqnref{eqn:continuumProblemSet2:100} kills of the x-component of the Laplacian and our non-linear inertial term on the LHS, leaving just
-
+%
 \begin{subequations}
 \begin{equation}\label{eqn:continuumProblemSet2:40a}
 0 = - \PD{x}{p} + \mu \PDSq{y}{u}
@@ -62,13 +62,13 @@ With a steady state assumption we kill the \(\PDi{t}{u}\) term, and \eqnref{eqn:
 \end{subequations}
 
 With \(\PD{z}{p} = \PD{y}{p} = 0\), we have \(\PD{x}{p} = dp/dx = -G\), so \eqnref{eqn:continuumProblemSet2:40a} is reduced to
-
+%
 \begin{equation}\label{eqn:continuumProblemSet2:40b}
 0 = G + \mu \PDSq{y}{u}.
 \end{equation}
 
 Finally, since we have an assumption of no z-dependence (\(\PDi{z}{u} = 0\)) and from the incompressibility assumption \eqnref{eqn:continuumProblemSet2:100} (\(\PDi{x}{u} = 0\)), we have
-
+%
 \begin{equation}\label{eqn:continuumProblemSet2:140}
 \PDSq{y}{u} = \frac{d^2 u}{dy^2} = -\frac{G}{\mu},
 \end{equation}
@@ -77,13 +77,13 @@ as desired.
 
 \makesubanswer{Velocity profile}{problem:fluids:bloodVelocityProfile}
 For the velocity profile, integrating \eqnref{eqn:continuumProblemSet2:140} twice, we have
-
+%
 \begin{equation}\label{eqn:continuumProblemSet2:160}
 u = -\frac{G}{2 \mu} y^2 + A y + B.
 \end{equation}
 
 Application of the no-slip boundary value condition \(u(\pm h) = 0\), we have
-
+%
 \begin{equation}\label{eqn:continuumProblemSet2:180}
 \begin{aligned}
 0 &= -\frac{G}{2 \mu} h^2 + A h + B \\
@@ -92,7 +92,7 @@ Application of the no-slip boundary value condition \(u(\pm h) = 0\), we have
 \end{equation}
 
 Adding and subtracting these, we find
-
+%
 \begin{subequations}
 \begin{equation}\label{eqn:continuumProblemSet2:280}
 A = 0
@@ -103,14 +103,14 @@ B = \frac{G}{2 \mu} h^2,
 \end{subequations}
 
 so the velocity is given by the parabolic function
-
+%
 \begin{equation}\label{eqn:continuumProblemSet2:220}
 u(y) = \frac{G}{2 \mu} \left( h^2 - y^2 \right).
 \end{equation}
 
 \makesubanswer{Maximum speed}{problem:fluids:bloodMaxSpeed}
 It is clear that the maximum speed of the fluid is found at \(y = 0\)
-
+%
 \begin{equation}\label{eqn:continuumProblemSet2:240}
 u(0) = \frac{G h^2}{2 \mu}
 \end{equation}
@@ -127,7 +127,7 @@ The velocity profile for this flow is drawn in \cref{fig:continuumProblemSet2:co
 
 \makesubanswer{Effects of viscosity doubling}{problem:fluids:bloodViscositySmoking}
 With our velocity being dependent on the \(G/\mu\) ratio, it is clear that to consider the effects of viscosity doubling, even without calculating the flux, that we will need  twice the pressure gradient if the viscosity is doubled to maintain the same flux through the artery and veins.  To demonstrate this more thoroughly we can calculate this mass flux.  For an element of mass leaving a portion of the conduit, bounded by the plane normal to \(\xcap\) we have
-
+%
 \begin{equation}\label{eqn:continuumProblemSet2:980}
 \begin{aligned}
 \frac{dm}{dt}
@@ -137,7 +137,7 @@ With our velocity being dependent on the \(G/\mu\) ratio, it is clear that to co
 \end{equation}
 
 Integrating this over a width \(\Delta z\), our flux through the plane is
-
+%
 \begin{equation}\label{eqn:continuumProblemSet2:1000}
 \begin{aligned}
 \text{Flux}
@@ -157,7 +157,7 @@ Integrating this over a width \(\Delta z\), our flux through the plane is
 \end{equation}
 
 Doubling the blood viscosity for our smoker, our respective fluxes are
-
+%
 \begin{equation}\label{eqn:continuumProblemSet2:320}
 \begin{aligned}
 \text{Flux}_{\text{smoker}} &= \Delta z \frac{2 G_{\text{smoker}} h^3}{3 (2 \mu)}  \\
@@ -166,7 +166,7 @@ Doubling the blood viscosity for our smoker, our respective fluxes are
 \end{equation}
 
 Demanding equality before and after smoking we find
-
+%
 \begin{equation}\label{eqn:continuumProblemSet2:260}
 G_{\text{smoker}} = 2 G.
 \end{equation}
@@ -178,7 +178,7 @@ where \(G\) is the magnitude of the pressure gradient before the bad habits kick
 {2012 ps2}
 {
 Consider steady simple shearing flow with no imposed pressure gradient \((G = 0)\) of a two layer fluid with viscosity
-
+%
 \begin{equation}\label{eqn:continuumProblemSet2:120}
 \mu =
 \left\{
@@ -211,7 +211,7 @@ Starting with the velocity profile derivation for the two fluids, we set up coor
 %\end{figure}
 
 \pdfTexFigure{../figures/phy454-continuumechanics/continuumProblemSet2Fig2r2.pdf_tex}{Two layer flow induced by moving wall}{fig:continuumProblemSet2:continuumProblemSet2Fig2}{0.4}
-
+%
 \begin{subequations}
 \begin{equation}\label{eqn:continuumProblemSet2:340}
 0 = - \PD{x}{p} + \mu^{(i)} \PDSq{y}{u^{(i)}}
@@ -225,13 +225,13 @@ Starting with the velocity profile derivation for the two fluids, we set up coor
 \end{subequations}
 
 as we found in Q1.  Only the boundary value conditions and the driving pressure are different here.  In this problem and the next, we have constant pressure gradients \(dp/dx = -G\) to deal with, so we really have just the pair of equations
-
+%
 \begin{equation}\label{eqn:continuumProblemSet2:400}
 0 = G + \mu^{(i)} \frac{d^2 u^{(i)}(y)}{dy^2},
 \end{equation}
 
 to solve.  For this Q2 problem we have \(G = 0\), so the algebra to match our boundary value constraints becomes a bit easier.  Our boundary value constraints are
-
+%
 \begin{subequations}
 \begin{equation}\label{eqn:continuumProblemSet2:420}
 u^{(1)}(-h) = 0 \\
@@ -245,7 +245,7 @@ u^{(1)}(0) = u^{(2)}(0),
 \end{subequations}
 
 plus one more to match the tangential components of the traction vector with respect to the normal \(\ncap = (0, 1, 0)\).  The components of that traction vector are
-
+%
 \begin{equation}\label{eqn:continuumProblemSet2:1020}
 \begin{aligned}
 t_i
@@ -256,7 +256,7 @@ t_i
 \end{equation}
 
 but we are only interested in the horizontal component \(t_1\) which is
-
+%
 \begin{equation}\label{eqn:continuumProblemSet2:1040}
 \begin{aligned}
 t_1
@@ -272,13 +272,13 @@ t_1
 \end{equation}
 
 So the matching the tangential components of the traction vector at the interface gives us our last boundary value constraint
-
+%
 \begin{equation}\label{eqn:continuumProblemSet2:480}
 \evalbar{\mu^{(1)} \PD{u}{y}}{y = 0} = \evalbar{\mu^{(2)} \PD{u}{y}}{y = 0},
 \end{equation}
 
 and we are ready to do our remaining bits of algebra.  We wish to solve the pair of equations
-
+%
 \begin{equation}\label{eqn:continuumProblemSet2:500}
 \begin{aligned}
 u^{(1)} &= A^{(1)} y + B^{(1)} \\
@@ -287,7 +287,7 @@ u^{(2)} &= A^{(2)} y + B^{(2)},
 \end{equation}
 
 for the four integration constants \(A^{(i)}\) and \(B^{(i)}\) using our boundary value constraints.  The linear system to solve is
-
+%
 \begin{equation}\label{eqn:continuumProblemSet2:520}
 \begin{aligned}
 0 &= -A^{(1)} h + B^{(1)} \\
@@ -298,7 +298,7 @@ B^{(1)} &= B^{(2)} \\
 \end{equation}
 
 With \(B = B^{(i)}\), we have
-
+%
 \begin{equation}\label{eqn:continuumProblemSet2:540}
 \begin{aligned}
 0 &= -A^{(1)} h + B \\
@@ -307,13 +307,13 @@ With \(B = B^{(i)}\), we have
 \end{equation}
 
 Subtracting these to solve for \(A^{(1)}\) we find
-
+%
 \begin{equation}\label{eqn:continuumProblemSet2:560}
 -U = h A^{(1)} \left( \frac{\mu^{(1)}}{\mu^{(2)}} + 1 \right).
 \end{equation}
 
 This gives us everything we need
-
+%
 \begin{equation}\label{eqn:continuumProblemSet2:580}
 \begin{aligned}
 A^{(1)} &= -\frac{U \mu^{(2)}}{h(\mu^{(1)} + \mu^{(2)})} \\
@@ -341,7 +341,7 @@ u^{(2)} &=
 Checking, we see at a glance we see that we have \(u^{(2)}(h) = -U\), \(u^{(1)}(-h) = 0\), \(u^{(1)}(0) = u^{(2)}(0)\), and \(\evalbar{\mu^{(1)} du^{(1)}/dy}{y=0} = \mu^{(2)} \evalbar{du^{(2)}/dy}{y=0}\) as desired.
 
 As an example, let us add some numbers.  With mercury and water in layers \({(1)}\) and \({(2)}\) respectively, we have
-
+%
 \begin{equation}\label{eqn:continuumL16:620}
 \begin{aligned}
 \mu^{(1)} &= 0.001526 \quad \text{Pa-s} \\
@@ -350,7 +350,7 @@ As an example, let us add some numbers.  With mercury and water in layers \({(1)
 \end{equation}
 
 so that our velocity is
-
+%
 \begin{equation}\label{eqn:continuumProblemSet2:640}
 u(y) =
 \left\{
@@ -371,7 +371,7 @@ With \(u^{(1)}(-h) = 0\), and \(u^{(1)}\) linearly decreasing, then \(u^{(2)}\) 
 
 \makesubanswer{Mean speed}{problem:fluids:simpleShearing3}
 As linear functions the average speeds of the respective fluids fall on the midpoints \(y = \pm h/2\).  These are
-
+%
 \begin{equation}\label{eqn:continuumProblemSet2:660}
 \begin{aligned}
 \expectation{u^{(1)}} &= -\frac{U \mu^{(2)} }{ 2 (\mu^{(1)} + \mu^{(2)})} \\
@@ -380,7 +380,7 @@ As linear functions the average speeds of the respective fluids fall on the midp
 \end{equation}
 
 Averaging these two gives us the overall average, so we find
-
+%
 \begin{equation}\label{eqn:continuumProblemSet2:680}
 \expectation{u(y)} =
 -\frac{U }{ 4 (\mu^{(1)} + \mu^{(2)})} \left( 3 \mu^{(2)} + \mu^{(1)} \right)
@@ -388,13 +388,13 @@ Averaging these two gives us the overall average, so we find
 
 \makesubanswer{Volume flux}{problem:fluids:simpleShearing4}
 We can calculate the volume flux, much like the mass flux (although the mass flux seems a more sensible quantity to calculate).  Looking at the rate of change of an element of fluid passing through the \(y-z\) plane we have
-
+%
 \begin{equation}\label{eqn:continuumProblemSet2:700}
 \frac{dV}{dt} = dy dz \Bu \cdot \xcap
 \end{equation}
 
 Integrating over the total height, for a width \(\Delta z\) we have
-
+%
 \begin{equation}\label{eqn:continuumProblemSet2:1060}
 \begin{aligned}
 \text{Volume Flux}
@@ -404,7 +404,7 @@ Integrating over the total height, for a width \(\Delta z\) we have
 \end{equation}
 
 So our volume flux through a width \(\Delta z\) is
-
+%
 \begin{equation}\label{eqn:continuumProblemSet2:720}
 \text{Volume Flux}
 =
@@ -413,7 +413,7 @@ So our volume flux through a width \(\Delta z\) is
 
 \makesubanswer{Tangential force on lower wall}{problem:fluids:simpleShearing5}
 We see from \eqnref{eqn:continuumProblemSet2:600} the tangential components of our traction vectors are
-
+%
 \begin{equation}\label{eqn:continuumProblemSet2:1080}
 \begin{aligned}
 t^{(1)}
@@ -423,7 +423,7 @@ t^{(1)}
 \end{equation}
 
 and
-
+%
 \begin{equation}\label{eqn:continuumProblemSet2:1100}
 \begin{aligned}
 t^{(2)}
@@ -433,7 +433,7 @@ t^{(2)}
 \end{equation}
 
 We see that the tangential component of the traction vector is a constant throughout both fluids.  Allowing this force to act on a length \(L\) of the lower wall, our force per unit width over that strip is just
-
+%
 \begin{equation}\label{eqn:continuumProblemSet2:740}
 F = -\frac{U \mu^{(1)} \mu^{(2)} }{(\mu^{(1)} + \mu^{(2)})} \frac{L}{h}.
 \end{equation}
@@ -456,7 +456,7 @@ We showed earlier that the Navier-Stokes equations for this Q3 case, where \(G\)
 \begin{equation}\label{eqn:continuumProblemSet2:400b}
 0 = G + \mu^{(i)} \frac{d^2 u^{(i)}(y)}{dy^2}.
 \end{equation}
-
+%
 Our solutions will now necessarily be parabolic, of the form
 \begin{equation}\label{eqn:continuumProblemSet2:760}
 u^{(i)}(y) = -\frac{G}{2 \mu^{(i)}} y^2 + A^{(i)} y + B^{(i)},
@@ -465,7 +465,7 @@ with the tangential traction vector components given by
 \begin{equation}\label{eqn:continuumProblemSet2:780}
 t^{(i)} = -G y + A^{(i)} \mu^{(i)}
 \end{equation}
-
+%
 The boundary value constants become a bit messier to solve for, and should we wish to do so we would have to solve the system
 \begin{equation}\label{eqn:continuumProblemSet2:800}
 \begin{aligned}
@@ -487,7 +487,7 @@ This superposition can be justified since we have no \((\Bu \cdot \spacegrad)\Bu
 %\unnumberedSubsection{Exact solutions}
 
 The figures above are kind of rough.  It is not actually hard to solve the system above.  After some simplification, I find using Mathematica in (\nbref{problemSetIIQ3exactSolution.cdf}) the following solution
-
+%
 \begin{equation}\label{eqn:continuumProblemSet2:840}
 \begin{aligned}
 u^{(1)}(y) &= -\frac{\mu^{(2)} U -G h^2}{\mu^{(1)}+\mu^{(2)}}-\frac{y \left(G h^2 (\mu^{(2)} -\mu^{(1)}) +2 \mu^{(1)} \mu^{(2)} U \right)}{2 h \mu^{(1)} \left(\mu^{(1)}+\mu^{(2)}\right)}-\frac{G y^2}{2 \mu^{(1)}} \\
@@ -500,7 +500,7 @@ Should we wish a more exact plot for any specific values of the viscosities, we 
 I suppose it is cheating to use Mathematica and then say that the solution is easy?  To make amends for being lazy with my algebra, let us show that it is easy to do manually too.  I will do the same problem manually, but generalize it slightly.  We can do this easily if we just be a bit smarter with our integration constants.  Let us solve the problem for the upper and lower walls moving with velocity \(V_2\) and \(V_1\) respectively, and let the heights from the interface be \(h_2\) and \(h_1\) respectively.
 
 We have the same set of differential equations to solve, but now let us write our solution with the undetermined coefficients expressed as
-
+%
 \begin{equation}\label{eqn:continuumProblemSet2:860}
 \begin{aligned}
 u^{(2)} &= -\frac{G}{2 \mu^{(2)}}\left( h_2^2 - y^2 \right) + \frac{A_2}{\mu^{(2)}} (y - h_2) + B_2 \\
@@ -509,17 +509,17 @@ u^{(1)} &= -\frac{G}{2 \mu^{(1)}}\left( h_1^2 - y^2 \right) + \frac{A_1}{\mu^{(1
 \end{equation}
 
 Now it is super easy to match the boundary conditions at \(y = -h_1\) and \(y = h_2\)(the lower and upper walls respectively).  Clearly the integration constants \(B_1,B_2\) are just the velocities.  Matching the tangential component of the traction vectors at \(y = 0\) we have
-
+%
 \begin{equation}\label{eqn:continuumProblemSet2:880}
 A_2 = A_1
 \end{equation}
 
 and matching velocities at \(y = 0\) gives us
-
+%
 \begin{equation}\label{eqn:continuumProblemSet2:900}
 -\frac{G}{2 \mu^{(2)}}h_2^2 - \frac{A_2}{\mu^{(2)}} h_2 + V_2 = -\frac{G}{2 \mu^{(1)}}h_1^2 + \frac{A_1}{\mu^{(1)}} h_1 + V_1.
 \end{equation}
-
+%
 This gives us
 \begin{equation}\label{eqn:continuumProblemSet2:920}
 \begin{aligned}
@@ -570,13 +570,13 @@ I am assuming that the comment about \(G\) being constant across the fluid means
 \imageFigure{../figures/phy454-continuumechanics/continuumProblemSet2Fig6mu2Gtmu1}{\(\mu^{(2)} > \mu^{(1)}\)}{fig:continuumProblemSet2:continuumProblemSet2Fig6mu2Gtmu1}{0.3}
 
 It was not clear to me initially what the grader meant by the gradients were the wrong way around, but I see that too looking at the actual plots.  If you check out the Mathematica worksheet itself you will see that I do not have a pressure gradient slider, but a velocity \(V_{\text{pressure}}\) slider.  This was based on the fact that for a channel flow our average speed is proportional to the pressure gradient
-
+%
 \begin{equation}\label{eqn:continuumProblemSet2:940}
 \expectation{u} = \frac{G h}{3 \mu},
 \end{equation}
 
 so in order to parameterize the pressure gradient in an intuitive sense I defined it as a weighted average
-
+%
 \begin{equation}\label{eqn:continuumProblemSet2:960}
 G = 3 V_{\text{pressure}} \inv{2} \left( \frac{\mu^{(1)}}{h_1} + \frac{\mu^{(2)}}{h_2}\right).
 \end{equation}

@@ -64,7 +64,7 @@ What are the boundary conditions?  One is the ``no-slip'' condition, the experim
 Writing this, it occurred to me that I did not fully understand what motivated the traction vector matching boundary value condition.  Talking to our Prof about this, the matching of the traction vectors at any point can be thought of as an observational issue, but this is also a force balance issue.  There is an induced velocity in the direction of the traction vector at any given point.  For example, when we have unidirectional flow, we must have no normal component of the traction vector, and only a tangential component, because we have only the tangential flow.  It is probably reasonable to think about this roughly as the equivalent of matching both acceleration and velocity at the boundary, but because densities and viscosities vary, we have to match the traction vectors and not the acceleration itself.
 
 Before continuing to solve our Navier-Stokes equations let us express the condition that the tangential component of the traction vectors match algebraically.
-
+%
 Dropping indices temporarily, for the normal to the surface \(\ncap = (n_1, n_2, n_3) = (0, 1, 0)\) we want to compute
 \begin{equation}\label{eqn:twoLayerInclinedFlowDifferentDensities:595}
 \begin{aligned}
@@ -76,14 +76,14 @@ Dropping indices temporarily, for the normal to the surface \(\ncap = (n_1, n_2,
 &= \mu \left( \PD{y}{u_1} + \cancel{\PD{x}{u_2}} \right)
 \end{aligned}
 \end{equation}
-
+%
 So the tangential component of the traction vector is
 \begin{equation}\label{eqn:twoLayerInclinedFlowDifferentDensities:90}
 \Btau^{(i)} = \mu^{(i)} \PD{y}{u^{(i)}} \xcap.
 \end{equation}
 
 As noted above, this is in fact, the only component of the traction vector, since we do not have any non-horizontal flow.
-
+%
 Our boundary value conditions, what we need in addition to the Navier-Stokes equations of \eqnref{eqn:twoLayerInclinedFlowDifferentDensities:50}, to solve our problem, are the matching at any interface of the following conditions
 \begin{subequations}
 \label{eqn:twoLayerInclinedFlowDifferentDensities:70}
@@ -104,12 +104,12 @@ Starting with the simplest, the z-coordinate equation, of Navier-Stokes \eqnref{
 \begin{equation}\label{eqn:twoLayerInclinedFlowDifferentDensities:235}
 p^{(i)} = p^{(i)}(x, y).
 \end{equation}
-
+%
 Using this, we can integrate our y-coordinate Navier-Stokes equation \eqnref{eqn:twoLayerInclinedFlowDifferentDensities:150}, to find
 \begin{equation}\label{eqn:twoLayerInclinedFlowDifferentDensities:255}
 p^{(i)} = - \rho^{(i)} g y \cos\alpha + f^{(i)}(x)
 \end{equation}
-
+%
 At this point we can introduce the first boundary value constraint, that the pressures must match at the interfaces.  In particular, on the upper surface, where we have atmospheric pressure \(p_A\) our pressure is
 \begin{equation}\label{eqn:twoLayerInclinedFlowDifferentDensities:275}
 p^{(2)}(H) = - \rho^{(2)} g H \cos\alpha + f^{(2)}(x) = p_A,
@@ -122,7 +122,7 @@ which fully determines the density of the upper surface
 \begin{equation}\label{eqn:twoLayerInclinedFlowDifferentDensities:315}
 p^{(2)}(y) = \rho^{(2)} g \cos\alpha (H - y) + p_A.
 \end{equation}
-
+%
 Matching the pressure between the two layers of fluids we have
 \begin{equation}\label{eqn:twoLayerInclinedFlowDifferentDensities:615}
 \begin{aligned}
@@ -136,7 +136,7 @@ so that our undetermined function \(f^{(1)}(x)\) is
 \begin{equation}\label{eqn:twoLayerInclinedFlowDifferentDensities:335}
 f^{(1)}(x) = \left(\rho^{(1)} h_1 + \rho^{(2)} h_2 \right) g \cos\alpha  + p_A.
 \end{equation}
-
+%
 With the densities not equal, we no longer find that the pressure is dependent only on the total height \(y\), independent of the velocities and viscosities
 \begin{equation}\label{eqn:twoLayerInclinedFlowDifferentDensities:355}
 p^{(1)}(y) =
@@ -172,13 +172,13 @@ p_A
 Observe that we have the usual \(\rho g h\) form in all the terms of the pressure above, just scaled by the cosine of the angle since only a portion of the gravitational force is pushing normally on the fluids.
 
 Having solved for the pressure, we are now set to return to the remaining Navier-Stokes equations \eqnref{eqn:twoLayerInclinedFlowDifferentDensities:110}, and \eqnref{eqn:twoLayerInclinedFlowDifferentDensities:130} for this system.  From \eqnref{eqn:twoLayerInclinedFlowDifferentDensities:110} we see that the non-linear term on the LHS of \eqnref{eqn:twoLayerInclinedFlowDifferentDensities:130} is killed and also see that our velocities can only be functions of \(y\) and \(z\)
-
+%
 \begin{equation}\label{eqn:twoLayerInclinedFlowDifferentDensities:375}
 u^{(i)} = u^{(i)}(y, z).
 \end{equation}
 
 While more general solutions can likely be found, we will limit ourselves to looking only for solutions that are functions of \(y\).  From our solution to the pressure part of the problem \(p^{(i)} = p^{(i)}(y)\), we also see that the pressure term \(\partial_x p^{(i)}\) of \eqnref{eqn:twoLayerInclinedFlowDifferentDensities:130} is killed.  We are left with just
-
+%
 \begin{equation}\label{eqn:twoLayerInclinedFlowDifferentDensities:635}
 \begin{aligned}
 0 &= \mu^{(i)} (\partial_{xx} + \partial_{yy} + \partial_{zz}) u^{(i)} + \rho^{(i)} g \sin\alpha  \\
@@ -188,7 +188,7 @@ While more general solutions can likely be found, we will limit ourselves to loo
 \end{equation}
 
 This is directly integrable, and we find for the velocities and traction vectors respectively
-
+%
 \begin{subequations}
 \begin{equation}\label{eqn:twoLayerInclinedFlowDifferentDensities:395}
 u^{(i)} = -\frac{\rho^{(i)} g \sin\alpha }{2 \mu^{(i)}} y^2 + A^{(i)} y + B^{(i)}.
@@ -199,7 +199,7 @@ u^{(i)} = -\frac{\rho^{(i)} g \sin\alpha }{2 \mu^{(i)}} y^2 + A^{(i)} y + B^{(i)
 \end{subequations}
 
 The boundary conditions left to exploit are
-
+%
 \begin{equation}\label{eqn:twoLayerInclinedFlowDifferentDensities:435}
 \begin{aligned}
 u^{(1)}(0) &= 0 \\
@@ -212,19 +212,19 @@ u^{(1)}(h_1) &= u^{(2)}(h_1) \\
 The first is the no-slip condition with the plane.  The last is an approximation that assumes the liquid is not producing a measurable force on the air above it.  The other two are for the interfaces between the two fluids.
 
 From \(u^{(1)}(0) = 0\) we see immediately that we have \(B^{(1)} = 0\).  From the traction vector equality in the atmosphere, we have
-
+%
 \begin{equation}\label{eqn:twoLayerInclinedFlowDifferentDensities:455}
 0 = - \rho^{(2)} g H \sin\alpha + \mu^{(2)} A^{(2)},
 \end{equation}
 
 or
-
+%
 \begin{equation}\label{eqn:twoLayerInclinedFlowDifferentDensities:475}
 A^{(2)} = \frac{\rho^{(2)} g H \sin\alpha }{ \mu^{(2)} }.
 \end{equation}
 
 These reduce the problem to solving for two last integration constants, where our velocities are
-
+%
 \begin{equation}\label{eqn:twoLayerInclinedFlowDifferentDensities:495}
 \begin{aligned}
 u^{(1)} &= -\frac{\rho^{(1)} g \sin\alpha }{2 \mu^{(1)}} y^2 + A^{(1)} y \\
@@ -233,7 +233,7 @@ u^{(2)} &= \frac{\rho^{(2)} g \sin\alpha }{2 \mu^{(2)}} \left( 2 H y -y^2 \right
 \end{equation}
 
 and our traction vectors are
-
+%
 \begin{equation}\label{eqn:twoLayerInclinedFlowDifferentDensities:515}
 \begin{aligned}
 \tau_x^{(1)} &= - \rho^{(1)} g y \sin\alpha + \mu^{(1)} A^{(1)} \\
@@ -242,7 +242,7 @@ and our traction vectors are
 \end{equation}
 
 Matching both at the interface (\(y = h_1\)) gives us
-
+%
 \begin{equation}\label{eqn:twoLayerInclinedFlowDifferentDensities:535}
 \begin{aligned}
 -\frac{\rho^{(1)} g \sin\alpha }{2 \mu^{(1)}} h_1^2 + A^{(1)} h_1 &= \frac{\rho^{(2)} g \sin\alpha }{2 \mu^{(2)}} h_1 \left( 2 h_2 + h_1 \right) + B^{(2)} \\
@@ -251,14 +251,14 @@ Matching both at the interface (\(y = h_1\)) gives us
 \end{equation}
 
 We find
-
+%
 \begin{equation}\label{eqn:twoLayerInclinedFlowDifferentDensities:555}
 A^{(1)} =
 \inv{ \mu^{(1)} }
 (\rho^{(1)} h_1 + \rho^{(2)} h_2 )
 g \sin\alpha
 \end{equation}
-
+%
 Let us substitute this back for our first fluid velocity
 \begin{equation}\label{eqn:twoLayerInclinedFlowDifferentDensities:655}
 \begin{aligned}
@@ -280,7 +280,7 @@ g \sin\alpha \left(
 \end{equation}
 
 As a check we see this is consistent with the previous calculation when \(\rho^{(1)} = \rho^{(2)}\).  For our final integration constant we now find
-
+%
 \begin{equation}\label{eqn:twoLayerInclinedFlowDifferentDensities:675}
 \begin{aligned}
 B^{(2)}
@@ -303,7 +303,7 @@ B^{(2)}
 \end{equation}
 
 So, finally, we have for the velocities
-
+%
 \begin{subequations}
 \begin{equation}\label{eqn:twoLayerInclinedFlowDifferentDensities:575}
 u^{(1)}(y) = \frac{g y \sin\alpha}{2 \mu^{(1)}} \left( \rho^{(1) } (2 h_1 - y) +2 \rho^{(2)} h_2 \right)

@@ -10,7 +10,7 @@ Here is a quick re-derivation of how to obtain the Fourier coefficients \index{F
 %I had used the wrong scaling in a Fourier series over a \([0, 1]\) interval.  Here is a reminder to self what the right way to do this is.
 
 Suppose we have a function that is defined in terms of a trigonometric Fourier sum
-
+%
 \begin{equation}\label{eqn:fourierSeries:10}
 \phi(x) = \sum c_k e^{i \omega k x},
 \end{equation}
@@ -18,8 +18,8 @@ Suppose we have a function that is defined in terms of a trigonometric Fourier s
 where the domain of interest is \(x \in [a, b]\).  Stating the problem this way avoids any issue of existence.  We know \(c_k\) exists, but just want to find what they are given some other representation of the function.
 
 Multiplying and integrating over our domain we have
-
-
+%
+%
 \begin{dmath}\label{eqn:fourierSeries:30}
 \int_a^b \phi(x) e^{-i \omega m x} dx
 = \sum c_k \int_a^b e^{i \omega (k -m) x} dx
@@ -27,19 +27,19 @@ Multiplying and integrating over our domain we have
 \end{dmath}
 
 We want all the terms in the sum to be be zero, requiring equality of the exponentials, or
-
+%
 \begin{equation}\label{eqn:fourierSeries:50}
 e^{i \omega (k -m) (b -a )} = 1,
 \end{equation}
 
 or
-
+%
 \begin{equation}\label{eqn:fourierSeries:70}
 \omega = \frac{2 \pi}{b - a}.
 \end{equation}
 
 This fixes our Fourier coefficients
-
+%
 \begin{equation}\label{eqn:fourierSeries:90}
 c_m = \inv{b - a} \int_a^b \phi(x) e^{- 2 \pi i m x/(b - a)} dx.
 \end{equation}

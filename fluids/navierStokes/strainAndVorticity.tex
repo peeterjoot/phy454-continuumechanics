@@ -14,13 +14,13 @@ Reading: \S 1.4 from \citep{acheson1990elementary}.
 
 In fluid dynamics we look at displacements with respect to time as illustrated in \cref{fig:continuumL8:continuumL8fig1}
 \imageFigure{../figures/phy454-continuumechanics/lec8_Differential_displacementFig1}{Differential displacement}{fig:continuumL8:continuumL8fig1}{0.2}
-
+%
 \begin{equation}\label{eqn:continuumL8:230}
 d\Bx' = d\Bx + d\Bu \delta t
 \end{equation}
 
 In index notation
-
+%
 \begin{equation}\label{eqn:strainAndVorticity:490}
 \begin{aligned}
 dx_i'
@@ -30,7 +30,7 @@ dx_i'
 \end{equation}
 
 We define the strain tensor, still symmetric, using only first order partials
-
+%
 \begin{equation}\label{eqn:continuumL8:250}
 e_{ij} = \inv{2} \left(
 \PD{x_j}{u_i} +
@@ -38,7 +38,7 @@ e_{ij} = \inv{2} \left(
 \end{equation}
 
 We also define an antisymmetric vorticity tensor
-
+%
 \begin{equation}\label{eqn:continuumL8:270}
 \omega_{ij} = \inv{2} \left(
 \PD{x_j}{u_i}
@@ -46,7 +46,7 @@ We also define an antisymmetric vorticity tensor
 \end{equation}
 
 Effect of \(e_{ij}\) when diagonalized
-
+%
 \begin{equation}\label{eqn:continuumL8:290}
 e_{ij}
 =
@@ -58,7 +58,7 @@ e_{11} & 0 & 0 \\
 \end{equation}
 
 so that in this frame of reference we have
-
+%
 \begin{equation}\label{eqn:continuumL8:310}
 \begin{aligned}
 dx_1' &= ( 1 + e_{11} \delta t) dx_1 \\
@@ -68,19 +68,19 @@ dx_3' &= ( 1 + e_{33} \delta t) dx_3
 \end{equation}
 
 Let us find the matrix form of the antisymmetric tensor.  We find
-
+%
 \begin{equation}\label{eqn:continuumL8:330}
 \omega_{11} = \omega_{22} = \omega_{33} = 0
 \end{equation}
 
 Introducing a vorticity vector
-
+%
 \begin{equation}\label{eqn:continuumL8:350}
 \Bomega = \spacegrad \cross \Bu
 \end{equation}
 
 we find
-
+%
 \begin{equation}\label{eqn:continuumL8:370}
 \begin{aligned}
 \omega_{12} &= \inv{2}\left( \PD{x_2}{u_1} -\PD{x_1}{u_2} \right) = - \inv{2} (\spacegrad \cross \Bu)_3 \\
@@ -90,13 +90,13 @@ we find
 \end{equation}
 
 Writing
-
+%
 \begin{equation}\label{eqn:continuumL8:390}
 \Omega_i = \inv{2} \omega_i
 \end{equation}
 
 we find the matrix form of this antisymmetric tensor
-
+%
 \begin{equation}\label{eqn:continuumL8:410}
 \omega_{ij}
 =
@@ -106,7 +106,7 @@ we find the matrix form of this antisymmetric tensor
 -\Omega_2 & \Omega_1 & 0 \\
 \end{bmatrix}
 \end{equation}
-
+%
 \begin{equation}\label{eqn:strainAndVorticity:510}
 \begin{aligned}
 dx_1'
@@ -117,7 +117,7 @@ dx_1'
 \end{equation}
 
 Doing this for all components we find
-
+%
 \begin{equation}\label{eqn:continuumL8:430}
 d\Bx' = d\Bx + (\BOmega \cross d\Bx) \delta t.
 \end{equation}
@@ -125,7 +125,7 @@ d\Bx' = d\Bx + (\BOmega \cross d\Bx) \delta t.
 The tensor \(\omega_{ij}\) implies rotation of a control volume with an angular velocity \(\BOmega = \Bomega/2\) (half the vorticity vector).
 
 In general we have
-
+%
 \begin{equation}\label{eqn:continuumL8:450}
 dx_i' = dx_i + e_{ij} dx_j \delta t + \omega_{ij} dx_j \delta t
 \end{equation}
@@ -136,11 +136,11 @@ dx_i' = dx_i + e_{ij} dx_j \delta t + \omega_{ij} dx_j \delta t
 Recall that for elastic materials we derived the strain tensor by considering differences in squared displacements?  It was not obvious to me why we had no such term when analyzing solids.
 
 For solids we could have also done this first order decomposition of the displacement (per unit time) of a point.  Note that this is really just a gradient evaluation, split into coordinates by grouping into symmetric and antisymmetric terms.  Here, as in the solids case, we write
-
+%
 \begin{equation}\label{eqn:continuumL8:470}
 \Bu = \Bx' - \Bx
 \end{equation}
-
+%
 \begin{equation}\label{eqn:strainAndVorticity:530}
 \begin{aligned}
 x_i'

@@ -49,19 +49,19 @@
 \section{Antisymmetric term, the vorticity}
 
 With
-
+%
 \begin{equation}\label{eqn:continuumL9:70}
 \Bomega = \spacegrad \cross \Bu,
 \end{equation}
 
 we introduce the dual vector
-
+%
 \begin{equation}\label{eqn:continuumL9:90}
 \BOmega = \Omega_k \Be_k = \inv{2} \Bomega
 \end{equation}
 
 defined according to
-
+%
 \begin{equation}\label{eqn:continuumL9:110}
 \begin{aligned}
 \Omega_1 &= \inv{2} \omega_{32} = \inv{2} \omega_1 \\
@@ -69,20 +69,20 @@ defined according to
 \Omega_3 &= \inv{2} \omega_{21} = \inv{2} \omega_3
 \end{aligned}
 \end{equation}
-
+%
 With
 \begin{equation}\label{eqn:continuumL9:610}
 \omega_{k}
 = \epsilon_{ijk} \partial_i u_j
 \end{equation}
-
+%
 we can write
 \begin{equation}\label{eqn:continuumL9:590}
 \Omega_k = \inv{2} \epsilon_{ijk} \partial_i u_j.
 \end{equation}
 
 In matrix form this becomes
-
+%
 \begin{equation}\label{eqn:continuumL9:130}
 \omega_{ij} =
 \begin{bmatrix}
@@ -93,13 +93,13 @@ In matrix form this becomes
 \end{equation}
 
 For the special case \(e_{ij} = 0\), our displacement equation in vector form becomes
-
+%
 \begin{equation}\label{eqn:continuumL9:150}
 d\Bx' = d\Bx + \BOmega \cross d\Bx \delta t.
 \end{equation}
 
 Let us do a quick verification that this is all kosher.
-
+%
 \begin{equation}\label{eqn:newtonianFluidsAndMassConservationAndConstitutiveRelationAndIncompressibleFluids:730}
 \begin{aligned}
 (\BOmega \cross d\Bx)_i
@@ -134,13 +134,13 @@ All's good in the world of signs and indices.
 \section{Symmetric term, the strain tensor}
 
 Now let us look at the symmetric term.  With the initial volume
-
+%
 \begin{equation}\label{eqn:continuumL9:170}
 dV = dx_1 dx_2 dx_3,
 \end{equation}
 
 and the final volume written assuming that we are working in our principle strain basis, we have (very much like the solids case)
-
+%
 \begin{equation}\label{eqn:newtonianFluidsAndMassConservationAndConstitutiveRelationAndIncompressibleFluids:750}
 \begin{aligned}
 dV'
@@ -169,13 +169,13 @@ dV'
 \end{equation}
 
 So much like we expressed the relative change of volume in solids, we now can express the relative change of volume per unit time as
-
+%
 \begin{equation}\label{eqn:continuumL9:190}
 \frac{dV' - dV}{dV \delta t} = \spacegrad \cdot \Bu,
 \end{equation}
 
 or
-
+%
 \begin{equation}\label{eqn:continuumL9:210}
 \frac{\delta(dV)}{dV \delta t} = \spacegrad \cdot \Bu,
 \end{equation}
@@ -195,13 +195,13 @@ For such a fluid, the \textAndIndex{constitutive relation} takes the form
 where \(p\) is called the isotropic pressure, and \(\mu\) is the viscosity of the fluid.
 
 For comparison, in solids we had
-
+%
 \begin{equation}\label{eqn:continuumL9:270}
 \sigma_{ij} = \lambda e_{kk} \delta_{ij} + 2 \mu e_{ij}
 \end{equation}
 
 While we are allowing for rotation in the fluids (\(\omega_{ij}\)) that we did not consider for solids, we now impose a requirement that the strain tensor trace is not a function of the fluid displacements, with
-
+%
 \begin{equation}\label{eqn:continuumL9:630}
 \lambda e_{kk} = \lambda \spacegrad \cdot \Bu = -p.
 \end{equation}
@@ -209,19 +209,19 @@ While we are allowing for rotation in the fluids (\(\omega_{ij}\)) that we did n
 What is the physical justification for this?  In words this was explained after class as the effect of rotation invariance with an attempt to measure the pressure at a given point in the fluid.  It does not matter what direction we place our pressure measurement device at a given fixed location in the fluid.  Note that this does not mean the pressure itself is constant.  For example with a gravitational body force applied, our pressure will increase with depth in the fluid.  Noting this provides a nice physical interpretation of the trace of the strain tensor.
 
 Can we mathematically justify this explanation?  We see above that we have
-
+%
 \begin{equation}\label{eqn:continuumL9:650}
 \spacegrad \cdot \Bu = \frac{\delta \ln(dV)}{\delta t},
 \end{equation}
 
 so we are in effect making the identification
-
+%
 \begin{equation}\label{eqn:continuumL9:670}
 \ln dV = -p t /\lambda + \ln dV_0
 \end{equation}
 
 or
-
+%
 \begin{equation}\label{eqn:continuumL9:690}
 dV = dV_0 e^{-p t/\lambda}.
 \end{equation}
@@ -229,7 +229,7 @@ dV = dV_0 e^{-p t/\lambda}.
 The relative change in a differential volume element changes exponentially.
 
 \section{Dimensions of viscosity}
-
+%
 \begin{equation}\label{eqn:continuumL9:290}
 [\mu] = \frac{\text{M}}{\text{L}\text{T}}.
 \end{equation}
@@ -251,34 +251,34 @@ Referring to \cref{fig:continuumL9:continuumL9fig2}
 \FIXME{What this figure illustrates was not clear to me in class}
 
 we have a flow rate
-
+%
 \begin{equation}\label{eqn:continuumL9:310}
 \rho \Bu \delta t ds
 \end{equation}
-
+%
 or
 \begin{equation}\label{eqn:continuumL9:330}
 \rho \Bu ds,
 \end{equation}
 
 per unit time.  Here the velocity of fluid particle is \(\Bu\).
-
+%
 \begin{equation}\label{eqn:continuumL9:350}
 \oint \rho \Bu \cdot d\Bs,
 \end{equation}
 
 we must have
-
+%
 \begin{equation}\label{eqn:continuumL9:710}
 \PD{t}{} \int \rho dV
 =
 -\oint \rho \Bu \cdot d\Bs.
 \end{equation}
-
+%
 \begin{equation}\label{eqn:continuumL9:370}
 dm = \rho dV
 \end{equation}
-
+%
 \begin{equation}\label{eqn:continuumL9:390}
 \frac{dm}{dt} = \frac{d}{dt} (\rho dV)
 \end{equation}
@@ -291,19 +291,19 @@ negative if fluid is going out.
 \end{itemize}
 
 By Green's theorem
-
+%
 \begin{equation}\label{eqn:continuumL9:410}
 \oint \BA \cdot d\Bs = \int_V (\spacegrad \cdot \BA) dV,
 \end{equation}
 
 so we have
-
+%
 \begin{equation}\label{eqn:continuumL9:430}
 -\oint \rho \Bu \cdot d\Bs = -\int \spacegrad \cdot (\rho \Bu ) dV,
 \end{equation}
 
 and must have
-
+%
 \begin{equation}\label{eqn:continuumL9:450}
 \int \left( \PD{t}{\rho} + \spacegrad \cdot (\rho \Bu) \right) dV = 0.
 \end{equation}
@@ -317,13 +317,13 @@ Note that this is what I had thought we called the \textunderline{continuity equ
 }
 
 Operating by chain rule we can write this as
-
+%
 \begin{equation}\label{eqn:continuumL9:490}
 \PD{t}{\rho} + \Bu \cdot \spacegrad \rho = - \rho \spacegrad \cdot \Bu.
 \end{equation}
 
 To make sense of this, observe that we have for \(f = f(x, y, z, t)\)
-
+%
 \begin{equation}\label{eqn:newtonianFluidsAndMassConservationAndConstitutiveRelationAndIncompressibleFluids:770}
 \begin{aligned}
 \delta f
@@ -339,11 +339,11 @@ To make sense of this, observe that we have for \(f = f(x, y, z, t)\)
 \end{equation}
 
 so we have
-
+%
 \begin{equation}\label{eqn:continuumL9:510}
 \PD{t}{\rho} + \Bu \cdot \spacegrad \rho = \frac{d\rho}{dt}
 \end{equation}
-
+%
 or
 \begin{equation}\label{eqn:continuumL9:530}
 \frac{d\rho}{dt} = - \rho \spacegrad \cdot \Bu.
@@ -352,7 +352,7 @@ or
 \section{Incompressible fluid}
 
 When the density does not change note that we have
-
+%
 \begin{equation}\label{eqn:continuumL9:550}
 \frac{d\rho}{dt} = 0
 \end{equation}

@@ -12,14 +12,14 @@ I can find the form of the solution, but do not know how to actually apply the b
 \section{Navier-Stokes for the problem}
 
 Working in cylindrical coordinates is the only sensible option.  Let us look first at the steady state problem, with the cup being stirred at at constant rate with the unrealistic rotating cylinder  stir stick used previously.  We will assume an azimuthal velocity profile
-
+%
 \begin{equation}\label{eqn:coffeeCupWithBottom:10}
 \Bu = u(r, z, t) \phicap.
 \end{equation}
 
 Let us first verify that this satisfies our incompressible condition
-
-
+%
+%
 \begin{dmath}\label{eqn:coffeeCupWithBottom:30}
 \spacegrad \cdot \Bu
 =
@@ -31,8 +31,8 @@ Let us first verify that this satisfies our incompressible condition
 \end{dmath}
 
 The only term that survives is the \(\partial_\phi \phicap = -\rcap\) but that is perpendicular to \(\phicap\) so we have \(0 = \spacegrad \cdot \Bu\) as desired.  This leaves us with
-
-
+%
+%
 \begin{dmath}\label{eqn:coffeeCupWithBottom:50}
 \frac{u}{r} \partial_\phi ( u \phicap )
 = -\inv{\rho}
@@ -42,7 +42,7 @@ The only term that survives is the \(\partial_\phi \phicap = -\rcap\) but that i
 \end{dmath}
 
 Splitting into \(\phicap, \rcap, \zcap\) coordinates respectively we have
-
+%
 \begin{subequations}
 \begin{equation}\label{eqn:coffeeCupWithBottom:70}
 0 = -\inv{r \rho} \partial_\phi p + \nu \left( \inv{r} \partial_r ( r \partial_r u ) - \frac{u}{r^2} + \partial_{zz} u \right)
@@ -56,13 +56,13 @@ Splitting into \(\phicap, \rcap, \zcap\) coordinates respectively we have
 \end{subequations}
 
 Demanding a symmetrical solution kills off the pressure term in \eqnref{eqn:coffeeCupWithBottom:70}, and we can proceed with separation of variables to find the allowable solutions for the velocity before imposing our boundary value conditions.  With \(u = R(r) Z(z)\) we have
-
+%
 \begin{equation}\label{eqn:coffeeCupWithBottom:130}
 \inv{r R} ( R' + r R'' ) - \frac{1}{r^2} = -\frac{Z''}{Z} = -\inv{a^2} = \inv{b^2}
 \end{equation}
 
 Should we pick a negative or a positive constant here (ie: trig or hyperbolic functions for \(Z\))?  Allowing for both temporarily, we find for \(R\)
-
+%
 \begin{subequations}
 \begin{equation}\label{eqn:coffeeCupWithBottom:150}
 0 = r R' + r^2 R'' + R \left( -1 + \frac{r^2}{a^2} \right)
@@ -73,7 +73,7 @@ Should we pick a negative or a positive constant here (ie: trig or hyperbolic fu
 \end{subequations}
 
 Using Mathematica (\nbref{coffeeCupWithBottom.cdf}) to look up the solutions, we find that this was a Bessel equation with solutions
-
+%
 \begin{subequations}
 \begin{equation}\label{eqn:coffeeCupWithBottom:190}
 R(r) \in \Span \{ J_1(r/a), Y_1(r/a) \}
@@ -84,7 +84,7 @@ R(r) \in \Span \{ J_1(i r/b), Y_1(i r/b) \}.
 \end{subequations}
 
 However, the second set are not real valued for \(r > 0\).  This means we want the hyperbolic solutions for \(Z\).  Because we also have a boundary value constrain of \(u = 0\) on the bottom of the cup, we can pick only hyperbolic sine solutions.  As before, we will ``stir'' the coffee with a cylinder at radius \(s\) (with cup radius \(R\)), our solution has the form
-
+%
 \begin{equation}\label{eqn:coffeeCupWithBottom:230}
 u(r, z, 0) =
 \left\{
@@ -102,7 +102,7 @@ s \Omega
 \end{equation}
 
 Observe that, regardless of \(a\) we have \(u(0, z, 0) = 0\) because \(J_1(0) = 0\).  We also can not scale \(a\) as \(\lambda_i/s\) (where \(\lambda_i\) are the zeros of \(J_1\)) when the stirring is not at the edge since we need \(u(s, z, 0) = \Omega s\).  That suggests that we probably want to write our system as
-
+%
 \begin{equation}\label{eqn:coffeeCupWithBottom:230b}
 u(r, z, 0) =
 \left\{
@@ -120,7 +120,7 @@ s \Omega
 \end{equation}
 
 The boundary value constraints of \(u(r = s) = \Omega s\) and \(u(r = R) = 0\) require the solution of
-
+%
 \begin{subequations}
 \begin{equation}\label{eqn:coffeeCupWithBottom:310}
 1 = \sum C_i J_1(\lambda_i s/R) \sinh(\lambda_i z/R)
@@ -143,7 +143,7 @@ We have to somehow modify the no-slip condition so that when we have a moving in
 We have just found the functional form for an azimuthal flow that has \(z\)-axis dependence.  Attempting to apply the no-slip boundary value condition for our mixing device got us into trouble, since this simultaneously require zero and non-zero velocity at the point of contact of the mixing interface and the bottom of the vessel (i.e. where the stir stick contacts the bottom of the cup).  We can avoid this issue by constraining the mixing to only occur above the bottom of the cup, and then look at the flow that this induces below the mixing point.
 
 Let us attempt to solve this new simpler boundary value problem.  We will position the mixing cylinder at a height \(d\) above the bottom of the cup, and set the radius of that inner cylinder to \(s\) as before, with the mixing occurring at an angular velocity of \(\Omega\).  We now want apply these boundary value constrains to the velocity function we have found for the steady state problem.  Provided \(z < d\), this will have the form
-
+%
 \begin{equation}\label{eqn:coffeeCupWithBottom:500}
 u(r, z, 0) = s \Omega \sum C_i J_1(\lambda_i r/R) \sinh(\lambda_i z/R)
 \end{equation}
@@ -151,13 +151,13 @@ u(r, z, 0) = s \Omega \sum C_i J_1(\lambda_i r/R) \sinh(\lambda_i z/R)
 where \(\lambda_i\) are the zeros of the order one Bessel function \(J_1\).  Observe that our boundary value conditions of \(u(R, z, 0) = 0\) and \(u(r, 0, 0) = 0\) are automatically satisfied.  Note that because of the \(u(R, z, 0) = 0\) equality here, this form of solution is no good if we are mixing at the edge of the cup, so we require \(s \ne R\).
 
 Our remaining boundary value condition \(u(s, d, 0) = s \Omega\), means that we have to solve
-
+%
 \begin{equation}\label{eqn:coffeeCupWithBottom:520}
 1 = \sum C_i J_1(\lambda_i s/R) \sinh(\lambda_i d/R)
 \end{equation}
 
 Having had the same sort of problem in our steady state bottomless coffee problem, we know how to solve this
-
+%
 \begin{equation}\label{eqn:coffeeCupWithBottom:540}
 C_i \sinh(\lambda_i d/R) =
 \frac{
@@ -168,7 +168,7 @@ C_i \sinh(\lambda_i d/R) =
 \end{equation}
 
 So we find that below the point of stirring (\(z = d\)), our steady state solution for the velocity should be
-
+%
 \begin{equation}\label{eqn:coffeeCupWithBottom:560}
 \Bu(r, z, 0) = s \Omega \phicap \sum_{i=1}^\infty
 \frac{
@@ -180,8 +180,8 @@ J_1(\lambda_i r/R) \frac{\sinh(\lambda_i z/R)}{\sinh(\lambda_i d/R) }
 \end{equation}
 
 For a cup size of \(R = 5 \text{cm}\), stir radius of \(s = 3 \text{cm}\), stir depth \(d = 2 \text{cm}\), and angular velocity \(\Omega = 2 \pi \text{rad}/\text{s}\), we can compute (\nbref{coffeeCupWithBottom.cdf}) some terms of this series
-
-
+%
+%
 \begin{dmath}\label{eqn:coffeeCupWithBottom:580}
 u(r, z, 0) =
 27.1119 J_{1}(7.66341 r) \sinh (7.66341 z)-3.42819 J_{1}(14.0312 r) \sinh (14.0312 z)
@@ -201,7 +201,7 @@ It is not clear to me how to compute the velocity profile above the point of low
 \section{Spin down below the stir point}
 
 Let us now consider the time evolution problem when we stop the stirring abruptly at \(t = 0\).  The \(\phicap\) component of Navier-Stokes becomes
-
+%
 \begin{equation}\label{eqn:coffeeCupWithBottom:800}
 \PD{t}{u} =
 \nu
@@ -209,7 +209,7 @@ Let us now consider the time evolution problem when we stop the stirring abruptl
 \end{equation}
 
 with \(u = R(r) Z(z) T(t)\) we find
-
+%
 \begin{equation}\label{eqn:coffeeCupWithBottom:620b}
 \frac{T'}{T} = -\nu \frac{\alpha^2}{R^2} =
 \nu
@@ -217,13 +217,13 @@ with \(u = R(r) Z(z) T(t)\) we find
 \end{equation}
 
 We have immediately
-
+%
 \begin{equation}\label{eqn:coffeeCupWithBottom:640b}
 T \propto e^{-\alpha^2 \nu t/R^2},
 \end{equation}
 
 and can insist that we also have
-
+%
 \begin{subequations}
 \begin{equation}\label{eqn:coffeeCupWithBottom:660b}
 \inv{r R} ( r R' )' -\frac{1}{r^2} = -\frac{\lambda_i^2}{R^2}
@@ -234,8 +234,8 @@ and can insist that we also have
 \end{subequations}
 
 Our time dependent solution below the point of stirring is therefore of the form
-
-
+%
+%
 \begin{dmath}\label{eqn:coffeeCupWithBottom:700b}
 u(r, z, t)
 =
@@ -244,7 +244,7 @@ s \Omega \sum_{\lambda_i^2 > \alpha^2} c_{i \alpha} J_1(\lambda_i r/R) \sinh\lef
 \end{dmath}
 
 with a boundary value condition
-
+%
 %
 %\begin{dmath}\label{eqn:coffeeCupWithBottom:720f}
 %\sum_{i=1}^\infty
@@ -300,7 +300,7 @@ J_1(\lambda_i x) \frac{\sinh(\lambda_i y d/R)}{\sinh(\lambda_i d/R) }
 =
 \sum_{j = 1}^\infty d_j J_1(\lambda_j x) \sin\left( 2 \pi j y \right).
 \end{equation}
-
+%
 Observing that
 \begin{equation}\label{eqn:coffeeCupWithBottom:920}
 \int_0^1 \sin(2 \pi j y) \sin(2 \pi k y) dy = \inv{2} \delta_{j k}.
@@ -364,14 +364,14 @@ or
 =
 \inv{2} d_k \int_0^1 x J_1^2(\lambda_k x) dx.
 \end{equation}
-
+%
 We have got the same Bessel integral on both sides leaving us with
 \begin{equation}\label{eqn:coffeeCupWithBottom:1000}
 d_k = 2 \int_0^1 \sin( 2 \pi k y ) \frac{\sinh(\lambda_k y d/R)}{\sinh(\lambda_k d/R) } dy
 =
 \frac{4 \pi k (-1)^{k+1} \sinh \left(\frac{d \lambda_k}{R}\right)}{\frac{d^2 \lambda_k^2}{R^2} + 4 k^2 \pi^2}
 \end{equation}
-
+%
 Putting all the pieces together we have for the spin down of the fluid below the stir height for \(t \ge 0\).
 \begin{dmath}\label{eqn:coffeeCupWithBottom:1020}
 \Bu(r, z, t)

@@ -11,7 +11,7 @@ Reading: \S 9.3 from \citep{acheson1990elementary}.
 
 Illustrated in \cref{fig:continuumL22:continuumL22Fig1} is the heated channel we have been discussing
 \imageFigure{../figures/phy454-continuumechanics/lec22_Channel_with_heat_applied_to_the_baseFig1}{Channel with heat applied to the base}{fig:continuumL22:continuumL22Fig1}{0.3}
-
+%
 We will take initial conditions
 \begin{equation}\label{eqn:continuumL22:10}
 \begin{aligned}
@@ -59,7 +59,7 @@ T &\rightarrow T_s + \delta T
 \end{equation}
 
 to the base state equations, our perturbed Navier-Stokes equation was
-
+%
 \begin{equation}\label{eqn:continuumL22:170}
 \spacegrad^2 \left( \PD{t}{} - \nu \spacegrad^2 \right) \delta w = g \alpha
 \left(
@@ -68,7 +68,7 @@ to the base state equations, our perturbed Navier-Stokes equation was
 \right)
 \delta T.
 \end{equation}
-
+%
 \section{Energy perturbation}
 \begin{equation}\label{eqn:continuumL22:190}
 \PD{t}{T_s + \delta T} + (\delta \Bu \cdot \spacegrad) (T_s + \delta T) = \kappa \spacegrad^2 (T_s + \delta T).
@@ -121,7 +121,7 @@ Since \([ \kappa \spacegrad^2 ] \sim 1/\text{T}\), we have
 Looks like everything checks out.
 
 Let us apply this rescaling to our perturbed velocity \eqnref{eqn:continuumL22:170}
-
+%
 \begin{equation}\label{eqn:continuumL22:310}
 {\spacegrad'}^2 \left(
 \frac{\nu}{d^2} \PD{t'}{} - \frac{\nu}{d^2} {\spacegrad'}^2
@@ -137,7 +137,7 @@ g \alpha \Delta T
 \end{equation}
 
 Introducing the \textit{Rayleigh number}
-
+%
 \begin{equation}\label{eqn:continuumL22:330}
 \calR = \frac{g \alpha \Delta T d^3}{\nu \kappa},
 \end{equation}
@@ -157,7 +157,7 @@ and dropping primes, we have
 }
 
 My class notes original had \(\calR\) with the value
-
+%
 \begin{equation*}
 \frac{g \Delta T d^2}{\nu \alpha},
 \end{equation*}
@@ -167,13 +167,13 @@ but performing this non-dimensionalization shows that this was either quoted inc
 \section{Non-dimensionalization of the energy equation}
 
 Rescaling our energy \eqnref{eqn:continuumL22:230} we find
-
+%
 \begin{equation}\label{eqn:continuumL22:230b}
 \frac{\nu}{d^2} \PD{t'}{\delta T'} + \frac{\kappa}{d^2} \delta \Bu' \cdot \spacegrad' T_s' = \frac{\kappa}{d^2} {\spacegrad'}^2 \delta T'.
 \end{equation}
 
 Introducing the \textit{Prandtl number}
-
+%
 \begin{equation}\label{eqn:continuumL22:370}
 \text{P}_r = \frac{\nu}{\kappa},
 \end{equation}
@@ -189,7 +189,7 @@ and dropping primes our non-dimensionalized energy equation takes the form
 \section{Normal mode analysis}
 
 We have got a pair of nasty looking coupled equations \eqnref{eqn:continuumL22:310b}, and \eqnref{eqn:continuumL22:350}.  Repeated so that we can see them together
-
+%
 \begin{subequations}
 \begin{equation}\label{eqn:continuumL22:650}
 \spacegrad^2 \left( \PD{t}{} - \spacegrad^2 \right) \delta w = \calR \left( \PDSq{x}{} +\PDSq{y}{} \right) \delta T
@@ -200,59 +200,59 @@ We have got a pair of nasty looking coupled equations \eqnref{eqn:continuumL22:3
 \end{subequations}
 
 it is clear that we can decouple these by inserting \eqnref{eqn:continuumL22:670} into \eqnref{eqn:continuumL22:650}.  Doing that gives us a beastly 6th order spatial equation for the perturbed temperature
-
+%
 \begin{equation}\label{eqn:continuumL22:690}
 \left( \PD{t}{} - \spacegrad^2 \right) \left( \text{P}_r \PD{t}{} - \spacegrad^2 \right) \spacegrad^2 \delta T = \calR \left( \PDSq{x}{} +\PDSq{y}{} \right) \delta T.
 \end{equation}
 
 It is pointed out in the text we have all the \(x\) and \(y\) derivatives coming together we can apply separation of variables with
-
+%
 \begin{equation}\label{eqn:continuumL22:710}
 \delta T = \Theta(z) f(x, y) e^{\sigma t},
 \end{equation}
 
 provided we introduce some restrictions on the form of \(f(x, y)\).  Here \(\sigma\) (if real) is the growth rate.  Applying the Laplacian to this assumed solution we find
-
+%
 \begin{equation}\label{eqn:continuumL22:730}
 \spacegrad^2 \delta T = e^{\sigma t} \left( \Theta''(z) f(x, y) +\Theta(z) \spacegrad_t^2 f(x, y) \right),
 \end{equation}
 
 where
-
+%
 \begin{equation}\label{eqn:continuumL22:750}
 \spacegrad_t^2 = \PDSq{x}{} +\PDSq{y}{}.
 \end{equation}
 
 For \eqnref{eqn:continuumL22:730} to be separable we require a constant proportionality
-
+%
 \begin{equation}\label{eqn:continuumL22:770}
 \spacegrad_t^2 f(x, y) \propto f(x, y),
 \end{equation}
 
 or
-
+%
 \begin{equation}\label{eqn:continuumL22:790}
 \spacegrad_t^2 f(x, y) \pm k^2 f(x, y) = 0.
 \end{equation}
 
 Picking \(+ k^2\) so that we do not have hyperbolic solutions, \(f\) must have the form
-
+%
 \begin{equation}\label{eqn:continuumL22:810}
 f(x, y) = e^{i (k_x x + k_y y)},
 \end{equation}
 
 where
-
+%
 \begin{equation}\label{eqn:continuumL22:830}
 k^2 = k_x^2 + k_y^2.
 \end{equation}
 
 Our separation of variables function now takes the form
-
+%
 \begin{equation}\label{eqn:continuumL22:850}
 \delta T = \Theta(z) e^{ i ( k_1 x + k_2 y) + \sigma t}.
 \end{equation}
-
+%
 Writing
 \begin{equation}\label{eqn:continuumL22:570}
 D = \frac{\partial}{\partial z},
@@ -284,17 +284,17 @@ This is now an equation for only \(\Theta(z)\)
 0 = \Bigl( \left( \sigma + k^2 - D^2 \right) \left( \text{P}_r \sigma + k^2 - D^2 \right) \left( -k^2 -D^2 \right) + \calR k^2
 \Bigr) \Theta(z).
 \end{equation}
-
+%
 Conceptually we have just a plain old LDE, and should we decide to expand this out we have something of the form
 \begin{equation}\label{eqn:continuumL22:890}
 0 = \Bigl( \alpha D^6 + \beta D^4 + \gamma D^2 + \zeta \Bigr) \Theta(z).
 \end{equation}
-
+%
 Our standard toolbox method to solve this is to assume a solution \(\Theta(z) = e^{m z}\) and compute the characteristic equation.  We would have to solve
 \begin{equation}\label{eqn:continuumL22:910}
 0 = \alpha m^6 + \beta m^4 + \gamma m^2 + \zeta.
 \end{equation}
-
+%
 Let us back up a bit instead.  Looking back to \eqnref{eqn:continuumL22:670}, it is clear that we will have the same separable form for our perturbed velocity since we have
 \begin{equation}\label{eqn:continuumL22:670b}
 \left( \text{P}_r \sigma + k^2 - D^2 \right) \Theta(z) e^{i (\Bk \cdot \Bx) } e^{\sigma t} = \delta w,
@@ -303,7 +303,7 @@ where
 \begin{equation}\label{eqn:continuumL22:930}
 \Bk = (k_x, k_y, 0).
 \end{equation}
-
+%
 Assuming a solution of the form
 \begin{equation}\label{eqn:continuumL22:950}
 \delta w = w(z) e^{ i ( k_1 x + k_2 y) + \sigma t},
@@ -323,17 +323,17 @@ Having gleamed an idea what the form of our solutions is, we can simplify our or
 (D^2 - k^2 -\text{P}_r \sigma ) \Theta(z) = -w(z).
 \end{equation}
 \end{subequations}
-
+%
 Considering the boundary conditions, if the heating is even then at \(z = t = 0\) we can not have any variation with \(x\) and \(y\), so can only have \(\Theta(0) = 0\).  Thus at the boundary, from \eqnref{eqn:continuumL22:990}, we have
 \begin{equation}\label{eqn:continuumL22:1030}
 0 = \evalbar{(D^2 - k^2) ( \sigma - (D^2 - k^2) ) w(z)}{z = 0}.
 \end{equation}
-
+%
 From the continuity equation \(\spacegrad \cdot \Bu = 0\), the text argues that we also have \(\PDi{z}{\delta w} = 0\) on the boundary, so that on that plane we also have
 \begin{equation}\label{eqn:continuumL22:1050}
 0 = \evalbar{w(z) = D w(z)}{z = 0}.
 \end{equation}
-
+%
 Expanding out \eqnref{eqn:continuumL22:1030} then gives us
 \begin{equation}\label{eqn:continuumL22:1070}
 0 = \evalbar{(D^4 - D^2 ( 2 k^2 + \sigma ) + k^2(\sigma + k^2))w}{z = 0},
@@ -342,7 +342,7 @@ or
 \begin{equation}\label{eqn:continuumL22:1070b}
 0 = \evalbar{(D^4 - D^2 ( 2 k^2 + \sigma ))w}{z = 0}.
 \end{equation}
-
+%
 These boundary value constraints \eqnref{eqn:continuumL22:1050}, and \eqnref{eqn:continuumL22:1070b}, plus the coupled system equations \eqnref{eqn:continuumL22:990a} are the complete problem to solve.  To get a feel for the solution of this system, consider the system with the following simpler set of boundary value constraints
 \begin{equation}\label{eqn:continuumL22:590}
 \evalbar{w = D^2 w = D^4 w}{z = 0, 1} = 0,
@@ -356,7 +356,7 @@ w(z) &= A_n \sin\left( n \pi z \right) \\
 \Theta(z) &= B_n \sin\left( n \pi z \right).
 \end{aligned}
 \end{equation}
-
+%
 Note that we have
 \begin{equation}\label{eqn:continuumL22:1090}
 (D^2 - k^2)
@@ -383,7 +383,7 @@ Inserting \eqnref{eqn:continuumL22:470} into our system \eqnref{eqn:continuumL22
 \sin\left( n \pi z \right)
 \end{aligned}
 \end{equation}
-
+%
 For any \(A_n\), \(B_n\), we must then have
 \begin{equation}\label{eqn:continuumL22:490}
 0 =
@@ -392,7 +392,7 @@ For any \(A_n\), \(B_n\), we must then have
 -1 & n^2 \pi^2 + k^2 + \text{P}_r \sigma
 \end{vmatrix}.
 \end{equation}
-
+%
 For \(\sigma = 0\), this gives us the critical value for the Rayleigh number
 \begin{equation}\label{eqn:continuumL22:510}
 \calR = \frac{(k^2 + n^2 \pi^2)^3}{k^2},

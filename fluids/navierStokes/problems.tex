@@ -9,7 +9,7 @@ Solve for the velocity and discuss.
 
 \makeanswer{problem:fluids:review:q1}{
 Lets specify that we have fluid flowing between surfaces at \(z = \pm h\), the lower surface moving at velocity \(v\) and pressure gradient \(dp/dx = -G\) we find that Navier-Stokes for an assumed flow of \(\Bu = u(z) \xcap\) takes the form
-
+%
 \begin{align}\label{eqn:continuumFluidsReview:1270}
 0 &= \partial_x u + \partial_y (0) + \partial_z (0) \\
 u \cancel{\partial_x u} &= - \partial_x p + \mu \partial_{zz} u \\
@@ -18,19 +18,19 @@ u \cancel{\partial_x u} &= - \partial_x p + \mu \partial_{zz} u \\
 \end{align}
 
 We find that this reduces to
-
+%
 \begin{equation}\label{eqn:continuumFluidsReview:1290}
 \frac{d^2 u}{dz^2} = -\frac{G}{\mu}
 \end{equation}
 
 with solution
-
+%
 \begin{equation}\label{eqn:continuumFluidsReview:1310}
 u(z) = \frac{G}{2\mu}(h^2 - z^2) + A (z + h) + B.
 \end{equation}
 
 Application of the no-slip velocity matching constraint gives us in short order
-
+%
 \begin{equation}\label{eqn:continuumFluidsReview:1330}
 u(z) = \frac{G}{2\mu}(h^2 - z^2) + v \left( 1 - \inv{2h} (z + h) \right).
 \end{equation}
@@ -38,7 +38,7 @@ u(z) = \frac{G}{2\mu}(h^2 - z^2) + v \left( 1 - \inv{2h} (z + h) \right).
 With \(v = 0\) this is the channel flow solution, and with \(G = 0\) this is the shearing flow solution.
 
 Having solved for the velocity at any height, we can also solve for the mass or volume flux through a slice of the channel.  For the mass flux \(\rho Q\) per unit time (given volume flux \(Q\))
-
+%
 \begin{equation}\label{eqn:continuumFluidsReview:1350}
 \int \frac{dm}{dt}
 =
@@ -48,7 +48,7 @@ Having solved for the velocity at any height, we can also solve for the mass or 
 \end{equation}
 
 we find
-
+%
 \begin{equation}\label{eqn:continuumFluidsReview:1370}
 \rho Q =
 \rho (\Delta y) \left(
@@ -57,11 +57,11 @@ we find
 \end{equation}
 
 We can also calculate the force of the boundaries on the fluid.  For example, the force per unit volume of the boundary at \(z = \pm h\) on the fluid is found by calculating the tangential component of the traction vector taken with normal \(\ncap = \mp \zcap\).  That tangent vector is found to be
-
+%
 \begin{equation}\label{eqn:continuumFluidsReview:1390}
 \Bsigma \cdot (\pm \ncap) = -p \zcap \pm 2 \mu \Be_i e_{ij} \delta_{j 3} = - p \zcap \pm \xcap \mu \PD{z}{u}.
 \end{equation}
-
+%
 The tangential component is the \(\xcap\) component evaluated at \(z = \pm h\), so for the lower and upper interfaces we have
 \begin{align}\label{eqn:continuumFluidsReview:1410}
 \evalbar{(\Bsigma \cdot \ncap) \cdot \xcap}{z = -h} &= -G (-h) - \frac{v \mu}{2 h} \\

@@ -7,7 +7,7 @@
 Reading: \S 2, \S 4 and \S 5 from the text \citep{landau1960theory}.
 
 We can find the relationship between stress and strain, both analytically and experimentally, and call this the Constitutive relation.  We prefer to deal with ranges of distortion that are small enough that we can make a linear approximation for this relation.  In general such a linear relationship takes the form
-
+%
 \begin{equation}\label{eqn:continuumL5:70}
 \sigma_{ij} = c_{ijkl} e_{kl}.
 \end{equation}
@@ -15,7 +15,7 @@ We can find the relationship between stress and strain, both analytically and ex
 Materials for which the stress and strain tensors are linearly related are called Newtonian \index{Newtonian material}.  We will not consider any non-Newtonian materials in this course.
 
 Consider the number of components that we are talking about for various rank tensors
-
+%
 \begin{equation}\label{eqn:continuumL5:90}
 \begin{array}{l l}
 \mbox{\(0^{\text{th}}\) rank tensor} & \mbox{\(3^0 = 1\) components} \\
@@ -36,7 +36,7 @@ It can be shown \citep{feynman1963flp:elasticMaterials} that a relationship betw
 For such a modeling of the material the (measured) values \(\lambda\) and \(\mu\) (shear modulus or modulus of rigidity) are called the Lam\'e parameters.
 
 It will be useful to compute the trace of the stress tensor in the form of the constitutive relation for the isotropic model.  We find
-
+%
 \begin{equation}\label{eqn:14constituative:170}
 \begin{aligned}
 \sigma_{ii}
@@ -46,19 +46,19 @@ It will be useful to compute the trace of the stress tensor in the form of the c
 \end{equation}
 
 or
-
+%
 \begin{equation}\label{eqn:continuumL5:150}
 \sigma_{ii} = (3 \lambda + 2 \mu) e_{kk}.
 \end{equation}
 
 We can now also invert this, to find the trace of the strain tensor in terms of the stress tensor
-
+%
 \begin{equation}\label{eqn:continuumL5:130}
 e_{ii} = \frac{\sigma_{kk}}{3 \lambda + 2 \mu}
 \end{equation}
 
 Substituting back into our original relationship \eqnref{eqn:continuumL5:110}, and find
-
+%
 \begin{equation}\label{eqn:continuumL5:110b}
 \sigma_{ij} = \lambda \frac{\sigma_{kk}}{3 \lambda + 2 \mu} \delta_{ij} + 2 \mu e_{ij},
 \end{equation}

@@ -17,7 +17,7 @@ where \(g\) is the acceleration due to gravity, \(\alpha = (\PDi{T}{V})/V\) is t
 \makesubproblem{Verify that each of the expressions above have units of velocity}{problem:fluids:ps3:1}
 \makesubproblem{Water convection at room temperature.
 For pure liquid, say pure water at room temperature, one has the following estimates in cgs units:
-
+%
 \begin{equation}\label{eqn:problems:370}
 \begin{aligned}
 \alpha &\sim 10^{-4} \\
@@ -30,7 +30,7 @@ For a \(d \sim 1 \text{cm}\) layer depth and a ten degree temperature drop conve
 % \text{cm}/\text{s}
 With \(g \sim 10^{-3}\), calculate the values of \(U_1\), \(U_2\), \(U_3\), and \(U_4\).  Which ones of the characteristic velocities \((U_1\), \(U_2\), \(U_3, U_4)\) do you think are suitable for nondimensionalising the velocity in Navier-Stokes/Energy equation describing the water convection problem?
 }{problem:fluids:ps3:2}
-
+%
 \makesubproblem{For mantle convection, we have
 \begin{equation}\label{eqn:problems:390}
 \begin{aligned}
@@ -72,7 +72,7 @@ so that
 \end{equation}
 
 \item For \(U_3\)
-
+%
 \begin{equation}\label{eqn:continuumProblemSet3:110}
 [U_3] = \sqrt{ \frac{L}{T^2} \inv{K} L K } = \frac{L}{T}
 \end{equation}
@@ -80,19 +80,19 @@ so that
 \item For \(U_4\)
 
 According to \citep{wolframThermalDiffusivity}, thermal diffusivity is defined by
-
+%
 \begin{equation}\label{eqn:continuumProblemSet3:130}
 \PD{t}{T} = \kappa \spacegrad^2 T
 \end{equation}
 
 so that
-
+%
 \begin{equation}\label{eqn:continuumProblemSet3:150}
 [\kappa] = \inv{[t][\spacegrad^2]} = \frac{L^2}{T}
 \end{equation}
 
 That gives us
-
+%
 \begin{equation}\label{eqn:continuumProblemSet3:170}
 [U_4] = \frac{L^2}{T} \inv{L} = \frac{L}{T}.
 \end{equation}
@@ -102,7 +102,7 @@ That gives us
 
 \makesubanswer{Water convection}{problem:fluids:ps3:2}
 For water at room temperature, we have
-
+%
 \begin{equation}\label{eqn:continuumProblemSet3:190}
 \begin{aligned}
 U_1 &\sim 10^{-3} 10^{-4} (1)^2 10^1 \inv{10^{-2}} = 10^{-4} \\
@@ -150,13 +150,13 @@ Reynolds number \(\text{Re} = R U \rho/ \mu\) and Froude number \(\text{Fr} = g 
 
 \makeanswer{problem:fluids:ps3:q2}{
 Let us start by dividing by \(g \rho\), to make all terms (most obviously the \(\zcap\) term) dimensionless.
-
+%
 \begin{equation}\label{eqn:continuumProblemSet3:250}
 \inv{g} \PD{t}{\Bu} + \inv{g} (\Bu \cdot \spacegrad) \Bu = - \inv{g \rho} \spacegrad p + \frac{\mu}{g \rho} \spacegrad^2 \Bu + \zcap.
 \end{equation}
 
 Our suggested replacements are
-
+%
 \begin{equation}\label{eqn:continuumProblemSet3:270}
 \begin{aligned}
 \Bu &= U \Bu' \\
@@ -167,25 +167,25 @@ p &= \rho U^2 p' \\
 \end{equation}
 
 Plugging these in we have
-
+%
 \begin{equation}\label{eqn:continuumProblemSet3:290}
 \frac{U^2}{g R} \PD{t'}{\Bu'} + \frac{U^2}{g R} (\Bu' \cdot \spacegrad') \Bu' = - \frac{\cancel{\rho} U^2}{g \cancel{\rho} R} \spacegrad' p' + \frac{\mu U}{g \rho R^2} {\spacegrad'}^2 \Bu' + \zcap.
 \end{equation}
 
 Making a \(\text{Fr} = gR/U\) replacement, using the Froude number, we have
-
+%
 \begin{equation}\label{eqn:continuumProblemSet3:310}
 \frac{U}{\text{Fr}} \PD{t'}{\Bu'} + \frac{U}{\text{Fr}} (\Bu' \cdot \spacegrad') \Bu' = - \frac{U}{\text{Fr}} \spacegrad' p' + \frac{\mu }{\text{Fr} \rho R} {\spacegrad'}^2 \Bu' + \zcap.
 \end{equation}
 
 Scaling by \(\text{Fr}/U\) we tidy things up a bit, and also allow for insertion of the Reynold's number
-
+%
 \begin{equation}\label{eqn:continuumProblemSet3:330}
 \PD{t'}{\Bu'} + (\Bu' \cdot \spacegrad') \Bu' = - \spacegrad' p' + \frac{1}{\text{Re}} {\spacegrad'}^2 \Bu' + \frac{\text{Fr}}{U}\zcap.
 \end{equation}
 
 Observe that the dimensions of Froude's number is that of velocity
-
+%
 \begin{equation}\label{eqn:continuumProblemSet3:350}
 [\text{Fr}] = [g] T = \frac{L}{T},
 \end{equation}

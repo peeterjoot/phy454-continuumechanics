@@ -21,7 +21,7 @@ p = p(r).
 \end{subequations}
 
 \makesubproblem{Write out the Navier-Stokes equations and find differential equations for \(v(r)\) and \(p(r)\).  You should find that these equations have relatively simple solutions, i.e.,
-
+%
 \begin{equation}\label{eqn:couetteFlow:50}
 v(r) = a r + \frac{b}{r}.
 \end{equation}
@@ -39,7 +39,7 @@ We illustrate our system in \cref{fig:couetteFlow:couetteFlowFig1}.
 
 \makesubanswer{Navier-Stokes}{problem:fluids:couetteFlow:1}
 Navier-Stokes for steady state incompressible flow has the form
-
+%
 \begin{subequations}
 \begin{equation}\label{eqn:couetteFlow:70}
 (\Bu \cdot \spacegrad) \Bu = -\inv{\rho} \spacegrad p + \nu \spacegrad^2 \Bu
@@ -50,13 +50,13 @@ Navier-Stokes for steady state incompressible flow has the form
 \end{subequations}
 
 where the gradient has the form
-
+%
 \begin{equation}\label{eqn:couetteFlow:110}
 \spacegrad = \rcap \partial_r + \frac{\phicap}{r} \partial_\phi.
 \end{equation}
 
 Let us first verify that the incompressible condition \eqnref{eqn:couetteFlow:90} is satisfied for the presumed form of the solution we seek.  We have
-
+%
 \begin{equation}\label{eqn:couetteFlow:1330}
 \begin{aligned}
 \spacegrad \cdot \Bu
@@ -72,7 +72,7 @@ Let us first verify that the incompressible condition \eqnref{eqn:couetteFlow:90
 \end{equation}
 
 Good.  Now let us write out the terms of the momentum conservation equation \eqnref{eqn:couetteFlow:70}.  We have got
-
+%
 \begin{equation}\label{eqn:couetteFlow:1350}
 \begin{aligned}
 (\Bu \cdot \spacegrad) \Bu
@@ -82,7 +82,7 @@ Good.  Now let us write out the terms of the momentum conservation equation \eqn
 -\frac{ v^2 \rcap}{r},
 \end{aligned}
 \end{equation}
-
+%
 and
 \begin{equation}\label{eqn:couetteFlow:1370}
 \begin{aligned}
@@ -95,7 +95,7 @@ and
 \end{equation}
 
 and
-
+%
 \begin{equation}\label{eqn:couetteFlow:1390}
 \begin{aligned}
 \nu \spacegrad^2 \Bu
@@ -149,7 +149,7 @@ So the momentum equation of Navier-Stokes takes the form
 }
 
 Equating \(\rcap\) and \(\phicap\) components we have two equations to solve
-
+%
 \begin{subequations}
 \begin{equation}\label{eqn:couetteFlow:130}
 r (r v')' - v = 0
@@ -160,13 +160,13 @@ p' = \frac{\rho v^2}{r}.
 \end{subequations}
 
 Expanding out our velocity equation we have
-
+%
 \begin{equation}\label{eqn:couetteFlow:170}
 r^2 v'' + r v' - v = 0,
 \end{equation}
 
 for which we have been told to expect that \eqnref{eqn:couetteFlow:50} is a solution (and it has the two integration constants we require for a solution to a homogeneous equation of this form).  Let us verify that we have computed the correct differential equation for the problem by trying this solution
-
+%
 \begin{equation}\label{eqn:couetteFlow:1410}
 \begin{aligned}
 r^2 v'' + r v' - v
@@ -181,7 +181,7 @@ r^2 \frac{2 b}{r^3} + \cancel{a r} - \frac{b}{r} - \cancel{a r} - \frac{b}{r} \\
 \end{equation}
 
 Given the velocity, we can now determine the pressure up to a constant
-
+%
 \begin{equation}\label{eqn:couetteFlow:1430}
 \begin{aligned}
 p'
@@ -190,7 +190,7 @@ p'
 &= \rho \left( a^2 r + \frac{b^2}{r^3} + 2 \frac{a b}{r} \right)
 \end{aligned}
 \end{equation}
-
+%
 so
 \begin{equation}\label{eqn:couetteFlow:190}
 p_r -p_0
@@ -199,19 +199,19 @@ p_r -p_0
 
 \makesubanswer{Constants and the pressure}{problem:fluids:couetteFlow:2}
 To determine our integration constants we recall that velocity associated with a radial position \(\Bx = r \rcap\) in cylindrical coordinates takes the form
-
+%
 \begin{equation}\label{eqn:couetteFlow:210}
 \frac{\Bx}{dt} = \rdot \rcap + r \phicap \phidot,
 \end{equation}
 
 where \(\phidot\) is the angular velocity.  The cylinder walls therefore have the velocity
-
+%
 \begin{equation}\label{eqn:couetteFlow:230}
 v = r \phidot,
 \end{equation}
 
 so our boundary conditions (given a no-slip assumption for the fluids) are
-
+%
 \begin{equation}\label{eqn:couetteFlow:250}
 \begin{aligned}
 v(R_1) &= R_1 \Omega_1 \\
@@ -220,7 +220,7 @@ v(R_2) &= R_2 \Omega_2.
 \end{equation}
 
 This gives us a pair of equations to solve for \(a\) and \(b\)
-
+%
 \begin{equation}\label{eqn:couetteFlow:270}
 \begin{aligned}
 R_1 \Omega_1 &= a R_1 + \frac{b}{R_1} \\
@@ -229,25 +229,25 @@ R_2 \Omega_2 &= a R_2 + \frac{b}{R_2}.
 \end{equation}
 
 Multiplying each by \(R_1\) and \(R_2\) respectively gives us
-
+%
 \begin{equation}\label{eqn:couetteFlow:290}
 b = R_1^2 (\Omega_1 - a) = R_2^2 (\Omega_2 - a).
 \end{equation}
 
 Rearranging for \(a\) we find
-
+%
 \begin{equation}\label{eqn:couetteFlow:310}
 R_1^2 \Omega_1 - R_2^2 \Omega_2 = (R_1^2 - R_2^2) a,
 \end{equation}
 
 or
-
+%
 \begin{equation}\label{eqn:couetteFlow:330}
 a = \frac{ R_2^2 \Omega_2 - R_1^2 \Omega_1}{R_2^2 - R_1^2}.
 \end{equation}
 
 For \(b\) we have
-
+%
 \begin{equation}\label{eqn:couetteFlow:1450}
 \begin{aligned}
 b &=
@@ -261,14 +261,14 @@ R_2^2 \Omega_2 + \cancel{R_1^2 \Omega_1}
 \end{equation}
 
 or
-
+%
 \begin{equation}\label{eqn:couetteFlow:350}
 b = \frac{R_1^2 R_2^2}{R_2^2 - R_1^2} (\Omega_1 -\Omega_2).
 \end{equation}
 
 This gives us
-
-
+%
+%
 \begin{subequations}
 \begin{equation}\label{eqn:couetteFlow:370}
 v(r) =
@@ -294,7 +294,7 @@ r^2
 
 \makesubanswer{Friction torque on the cylinders}{problem:fluids:couetteFlow:3}
 We can expand out the identity for the traction vector
-
+%
 \begin{dmath}\label{eqn:couetteFlow:970}
 \Bt_{\ncap}
 = \Be_i \sigma_{ij} n_j
@@ -304,7 +304,7 @@ We can expand out the identity for the traction vector
 \end{dmath}
 
 in cylindrical coordinates and find
-
+%
 \begin{subequations}
 \begin{equation}\label{eqn:couetteFlow:990}
 \Bt_{\rcap} \cdot \rcap
@@ -366,7 +366,7 @@ in cylindrical coordinates and find
 \end{subequations}
 
 so we have
-
+%
 \begin{subequations}
 \begin{equation}\label{eqn:couetteFlow:1090}
 \sigma_{rr} = \sigma_{\phi \phi} = \sigma_{z z} = -p
@@ -380,7 +380,7 @@ so we have
 \end{subequations}
 
 We want to expand the last of these
-
+%
 \begin{equation}\label{eqn:couetteFlow:1470}
 \begin{aligned}
 \sigma_{r \phi}
@@ -393,7 +393,7 @@ a - \frac{b}{r^2}
 \right).
 \end{aligned}
 \end{equation}
-
+%
 So the traction vector \(\Bt_1 = \Bsigma \cdot \rcap = \Be_i \sigma_{ij} \rcap \cdot \Be_i\), our force per unit area on the fluid at the inner surface (where the normal is \(\rcap\)), is
 \begin{equation}\label{eqn:couetteFlow:1150}
 \begin{aligned}
@@ -421,7 +421,7 @@ R_2^2 \Omega_2 - R_1^2 \Omega_1
 \end{equation}
 
 Observing that our stress tensors flip sign for an inwards normal, our torque per unit area from the outer cylinder on the fluid is
-
+%
 \begin{equation}\label{eqn:couetteFlow:1190}
 \Btau_2 = r \rcap \cross (-\Bt_1) =
 %-r \mu \left( a - \frac{b}{r^2} \right) \zcap.
@@ -433,7 +433,7 @@ R_2^2 \Omega_2 - R_1^2 \Omega_1
 \end{equation}
 
 For the complete torque on the fluid due to a strip of width \(\Delta z\) the magnitudes of the total torque from each cylinder are respectively
-
+%
 \begin{equation}\label{eqn:couetteFlow:1210}
 \Btau_1 =
 %2 \pi r^2 \Delta z \mu \left( a - \frac{b}{r^2} \right)
@@ -454,14 +454,14 @@ R_2^2 \Omega_2 - R_1^2 \Omega_1
 \end{equation}
 
 As expected these torques on the fluid sum to zero
-
+%
 \begin{equation}\label{eqn:couetteFlow:1250}
 \Btau_2 + \Btau_1 = 0.
 \end{equation}
 
 Evaluating these at \(R_1\) and \(R_2\) respectively gives us the torques on the fluid by the cylinders.  However, we want the torques on the cylinders by the fluid, so have to flip the signs.  For the inner cylinder the total torque on a strip of width \(\Delta z\) by the fluid is
-
-
+%
+%
 \begin{dmath}\label{eqn:couetteFlow:1270}
 \text{Torque on inner cylinder (1) by the fluid}
 =
@@ -479,8 +479,8 @@ R_2^2 \Omega_2 - R_1^2 \Omega_1
 \end{dmath}
 
 For the outer cylinder the total torque on a strip of width \(\Delta z\) by the fluid is
-
-
+%
+%
 \begin{dmath}\label{eqn:couetteFlow:1290}
 \text{Torque on outer cylinder (2) by the fluid}
 =

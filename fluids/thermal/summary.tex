@@ -6,7 +6,7 @@
 \subsection{Stability}
 
 We characterized stability in terms of displacements writing
-
+%
 \begin{equation}\label{eqn:continuumFluidsReview:2770}
 \delta x = e^{(\sigma_R + i \sigma_I) t}
 \end{equation}
@@ -21,7 +21,7 @@ and defining
 \subsection{Thermal stability: Rayleigh-Benard problem}
 
 We considered the Rayleigh-Benard problem, looking at thermal effects in a cavity.  Assuming perturbations of the form
-
+%
 \begin{equation}\label{eqn:summary:3130}
 \begin{aligned}
 \Bu &= \Bu_{\text{base}} + \delta \Bu = 0 + \delta \Bu \\
@@ -31,36 +31,36 @@ p &= p_s + \delta p \\
 \end{equation}
 
 and introducing an equation for the base state
-
+%
 \begin{equation}\label{eqn:continuumFluidsReview:2790}
 \spacegrad p_s = -\rho_s \zcap g
 \end{equation}
 
 we found
-
+%
 \begin{equation}\label{eqn:continuumFluidsReview:2810}
 \left( \PD{t}{} - \nu \spacegrad^2 \right) \delta \Bu = -\inv{\rho_s} \spacegrad \delta p - \frac{\delta \rho}{\rho_s} \zcap g
 \end{equation}
 
 Operating on this with \(\PDi{z}{} \spacegrad \cdot ()\) we find
-
+%
 \begin{equation}\label{eqn:continuumFluidsReview:2830}
 \spacegrad^2 \PD{z}{\delta p} = -g \PDSq{z}{\delta \rho},
 \end{equation}
 
 from which we apply back to \eqnref{eqn:continuumFluidsReview:2810} and take just the z component to find
-
+%
 \begin{equation}\label{eqn:continuumFluidsReview:2850}
 \left( \PD{t}{} - \nu \spacegrad^2 \right) \delta w = -\inv{\rho_s} \PD{z}{\delta p} - \frac{\delta \rho}{\rho_s} g
 \end{equation}
-
+%
 With an assumption that density change and temperature are linearly related
 \begin{equation}\label{eqn:continuumFluidsReview:2870}
 \delta \rho = - \rho_s \alpha \delta T,
 \end{equation}
 
 and operating with the Laplacian we end up with a relation that follows from the momentum balance equation
-
+%
 \begin{equation}\label{eqn:continuumFluidsReview:2890}
 \left( \PD{t}{} - \nu \spacegrad^2 \right) \spacegrad^2 \delta w
 =
@@ -72,31 +72,31 @@ g \alpha \left(
 \end{equation}
 
 We also applied our perturbation to the energy balance equation
-
+%
 \begin{equation}\label{eqn:continuumFluidsReview:2910}
 \PD{t}{T} + (\Bu \cdot \spacegrad) T = \kappa \spacegrad^2 T
 \end{equation}
 
 We determined that the base state temperature obeyed
-
+%
 \begin{equation}\label{eqn:continuumFluidsReview:2930}
 \kappa \PDSq{z}{} T_s = 0,
 \end{equation}
 
 with solution
-
+%
 \begin{equation}\label{eqn:continuumFluidsReview:2950}
 T_s = T_0 - \frac{\Delta T}{d} z.
 \end{equation}
 
 This and application of the perturbation gave us
-
+%
 \begin{equation}\label{eqn:continuumFluidsReview:2970}
 \PD{t}{\delta T} + \delta \Bu \cdot \spacegrad T_s = \kappa \spacegrad^2 \delta T.
 \end{equation}
 
 We used this to non-dimensionalize with
-
+%
 \begin{equation}\label{eqn:continuumFluidsReview:2990}
 \begin{array}{l l}
 x,y,z & \quad \mbox{with \(d\)} \\
@@ -107,7 +107,7 @@ t & \quad \mbox{with \(d^2/\nu\)} \\
 \end{equation}
 
 And found (primes dropped)
-
+%
 \begin{subequations}
 \begin{equation}\label{eqn:continuumFluidsReview:3010}
 \spacegrad^2 \left( \PD{t}{} - \spacegrad^2 \right) \delta w = \calR \left( \PDSq{x}{} +\PDSq{y}{} \right) \delta T
@@ -116,7 +116,7 @@ And found (primes dropped)
 \left( \text{P}_r \PD{t}{} - \spacegrad^2 \right) \delta T = \delta w,
 \end{equation}
 \end{subequations}
-
+%
 where we have introduced the Rayleigh number and Prandtl number's
 \begin{subequations}
 \begin{equation}\label{eqn:continuumFluidsReview:3050}
@@ -128,7 +128,7 @@ where we have introduced the Rayleigh number and Prandtl number's
 \end{subequations}
 
 We were able to construct some approximate solutions for a problem similar to these equations using an assumed solution form
-
+%
 \begin{equation}\label{eqn:continuumFluidsReview:3090}
 \begin{aligned}
 \delta w &= w(z) e^{ i ( k_1 x + k_2 y) + \sigma t} \\
@@ -137,13 +137,13 @@ We were able to construct some approximate solutions for a problem similar to th
 \end{equation}
 
 Using these we are able to show that our PDEs are similar to that of
-
+%
 \begin{equation}\label{eqn:continuumFluidsReview:3110}
 \evalbar{w = D^2 w = D^4 w}{z = 0, 1} = 0,
 \end{equation}
 
 where \(D = \PDi{z}{}\).  Using the trig solutions that fall out of this we were able to find the constraint
-
+%
 \begin{equation}\label{eqn:continuumFluidsReview:490a}
 0 =
 \begin{vmatrix}
@@ -153,7 +153,7 @@ where \(D = \PDi{z}{}\).  Using the trig solutions that fall out of this we were
 \end{equation}
 
 which for \(\sigma = 0\), this gives us the critical value for the Rayleigh number
-
+%
 \begin{equation}\label{eqn:continuumFluidsReview:510a}
 \calR = \frac{(k^2 + n^2 \pi^2)^3}{k^2},
 \end{equation}
