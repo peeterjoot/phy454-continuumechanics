@@ -5,52 +5,39 @@
 
 %
 %
-\makeoproblem{Strain tensor for a small displacement}{problem:strain:ps1q2a}
+\makeoproblem{Strain tensor, small displacement}{problem:strain:ps1q2a}
 {2012 ps1, p2 a}
 {
 %\ExePart*[]
 %
 Small displacement field in a material is given by
-
 \begin{equation}\label{eqn:continuumProblemSet1:30}
 \begin{aligned}
 e_1 &= 2 x_1 x_2 \\
 e_2 &= x_3^2 \\
-e_3 &= x_1^2 - x_3
+e_3 &= x_1^2 - x_3.
 \end{aligned}
 \end{equation}
-
 Find
-
 \makesubproblem{Infinitesimal strain tensor \(e_{ij}\)}{problem:strain:ps1q2a1}
 \makesubproblem{Principal strains and corresponding principal axes at \((x_1, x_2, x_3) = (1, 2, 4)\)}{problem:strain:ps1q2a2}
 } % makeoproblem
 
 %Solution: \ref{solutions:ps1q2a}.
-
 \makeproblem{Computing stretch in any given direction}{problem:strain:todo}{
-
 In class, it was stated ``How do we use the strain tensor?  Strain is the measure of stretching, so given a strain tensor, we should be able to compute the stretch in any given direction.''.
-
-PLACEHOLDER: find or create problem and try this.
-
+%PLACEHOLDER: find or create problem and try this.
 %\imageFigure{../figures/phy454-continuumechanics/lec3_Stretched_line_elementsFig1}{Stretched line elements}{fig:continuumL3:continuumL3fig1}{0.2}
-
 \FIXME{Related to the following question created while reviewing for the exam
 In \citep{feynman1963flp:elasticMaterials} it is pointed out that this strain tensor simply relates the displacement vector coordinates \(u_i\) to the coordinates at the point at which it is measured
-
 \begin{equation}\label{eqn:strainProblems:110}
 u_i = e_{ij} x_j.
 \end{equation}
-
 When we get to fluid dynamics we perform a linear expansion of \(du_i\) and find something similar
-
 \begin{equation}\label{eqn:strainProblems:530}
 dx_i' - dx_i = du_i = \PD{x_k}{u_i} dx_k = e_{ij} dx_k + \omega_{ij} dx_k
 \end{equation}
-
 where
-
 \begin{equation}\label{eqn:strainProblems:550}
 \omega_{ij} = \inv{2} \left( \PD{x_i}{u_j} +\PD{x_j}{u_i} \right).
 \end{equation}
@@ -67,13 +54,10 @@ Except for the antisymmetric term, note the structural similarity of \eqnref{eqn
 %
 %This is easily seen to be the case, recovering \eqnref{eqn:strainProblems:90} by taking derivatives of \eqnref{eqn:strainProblems:110}, plus an assumption that \(e_{ij}\) is symmetric.
 }
-
 } % makeproblem.
 
 \makeproblem{Derive the 3D compatibility conditions}{problem:strainFIXME:todo3d}{
-
 PLACEHOLDER.  We would been promised some homework for this, presumably with hints that walked us through the complexity of the proof, but that never materialized.
-
 } % makeproblem
 
 \makeanswer{problem:strain:ps1q2a}{

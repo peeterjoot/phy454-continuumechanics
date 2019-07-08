@@ -154,25 +154,22 @@ we see that Poisson's ratio characterizes the speeds of the waves for the medium
 \end{equation}
 
 \section{Assuming a gradient plus curl representation} \index{gradient} \index{curl}
-
 Let us assume that our displacement can be written in terms of a gradient and curl as we do for the electric field
-
 \begin{equation}\label{eqn:continuumL7:370}
-\Be = \spacegrad \phi + \spacegrad \cross \BH,
+\Be = \spacegrad \phi + \spacegrad \cross \BH.
 \end{equation}
-
 Inserting this into \eqnref{eqn:continuumL6:290} we find
-
 \begin{equation}\label{eqn:continuumL7:390}
-\rho \PDSq{t}{(\spacegrad \phi + \spacegrad \cross \BH)} = (\lambda + \mu) \spacegrad (\spacegrad \cdot (\spacegrad \phi + \spacegrad \cross \BH)) + \mu \spacegrad^2 (\spacegrad \phi + \spacegrad \cross \BH).
+\begin{aligned}
+\rho &\PDSq{t}{(\spacegrad \phi + \spacegrad \cross \BH)} \\
+&= (\lambda + \mu) \spacegrad (\spacegrad \cdot (\spacegrad \phi + \spacegrad \cross \BH)) + \mu \spacegrad^2 (\spacegrad \phi + \spacegrad \cross \BH).
+\end{aligned}
 \end{equation}
 
 The first term on the RHS can be simplified.  First note that the divergence of the gradient is just a Laplacian
-
 \begin{equation}\label{eqn:continuumL7:410}
 \spacegrad \cdot \spacegrad \phi = \spacegrad^2 \phi,
 \end{equation}
-
 and then note that the divergence of a curl is zero
 \begin{equation}\label{eqn:elasticWaves:510}
 \begin{aligned}
@@ -184,7 +181,6 @@ and then note that the divergence of a curl is zero
 \end{equation}
 
 The zero follows from the fact that the antisymmetric sum of symmetric partials is zero (assuming sufficient continuity).  Grouping terms we have
-
 \begin{equation}\label{eqn:continuumL7:450}
 \spacegrad
 \left(
@@ -199,21 +195,16 @@ The zero follows from the fact that the antisymmetric sum of symmetric partials 
 \end{equation}
 
 When the material is infinite in scope, so that boundary value coupling is not a factor, we can write this as a set of independent P-wave and S-wave equations
-
 \begin{equation}\label{eqn:continuumL7:470}
 \rho \PDSq{t}{\phi} - (\lambda + 2\mu) \spacegrad^2 \phi = 0
 \end{equation}
-
 The P-wave is irrotational (curl free).
-
 \begin{equation}\label{eqn:continuumL7:490}
 \rho \PDSq{t}{\BH} - \mu \spacegrad^2 \BH = 0
 \end{equation}
-
 The S-wave is solenoidal (divergence free).
 
 \section{A couple summarizing statements}
-
 \begin{itemize}
 \item
 P-waves: irrotational.  Volume not preserved.

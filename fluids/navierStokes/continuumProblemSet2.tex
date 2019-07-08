@@ -444,33 +444,29 @@ The negative value here makes sense since it is acting to push the fluid backwar
 We note that due to constant nature of the tangential component of the traction vector shown above, the force per unit width of the upper fluid acting on the lower fluid, is also given by \eqnref{eqn:continuumProblemSet2:740}.
 } % end answer
 
-\makeoproblem{Simple shearing flow with constant pressure gradient}{problem:fluids:simpleShearingPressureGrad}
+\makeoproblem{Shearing flow, w/ pressure gradient}{problem:fluids:simpleShearingPressureGrad}
 {2012 ps2}
 {
-If on top of the problem described above a constant pressure gradient \(G = -dp/dx\) is applied between the boundaries \(y = \pm h\), describe qualitatively what type of flow profile you would expect in the steady state.  Draw the velocity profiles for two cases (i) \(\mu^{(1)} > \mu^{(2)}\) (ii) \(\mu^{(1)} < \mu^{(2)}\).  Explain your result.
+Add a constant pressure gradient \(G = -dp/dx\), applied between the boundaries \(y = \pm h\), to the problem above.
+Describe qualitatively what type of flow profile you would expect in the steady state.  Draw the velocity profiles for two cases (i) \(\mu^{(1)} > \mu^{(2)}\) (ii) \(\mu^{(1)} < \mu^{(2)}\).  Explain your result.
 } % makeoproblem
 
 \makeanswer{problem:fluids:simpleShearingPressureGrad}{
 We showed earlier that the Navier-Stokes equations for this Q3 case, where \(G\) is non-zero were given by \eqnref{eqn:continuumProblemSet2:400}, which restated is
-
 \begin{equation}\label{eqn:continuumProblemSet2:400b}
 0 = G + \mu^{(i)} \frac{d^2 u^{(i)}(y)}{dy^2}.
 \end{equation}
 
 Our solutions will now necessarily be parabolic, of the form
-
 \begin{equation}\label{eqn:continuumProblemSet2:760}
 u^{(i)}(y) = -\frac{G}{2 \mu^{(i)}} y^2 + A^{(i)} y + B^{(i)},
 \end{equation}
-
 with the tangential traction vector components given by
-
 \begin{equation}\label{eqn:continuumProblemSet2:780}
 t^{(i)} = -G y + A^{(i)} \mu^{(i)}
 \end{equation}
 
 The boundary value constants become a bit messier to solve for, and should we wish to do so we would have to solve the system
-
 \begin{equation}\label{eqn:continuumProblemSet2:800}
 \begin{aligned}
 0 &= -\frac{G}{2 \mu^{(1)}} h^2 - A^{(1)} h + B^{(1)} \\

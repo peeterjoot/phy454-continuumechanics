@@ -2,7 +2,7 @@
 % Copyright © 2012 Peeter Joot.  All Rights Reserved.
 % Licenced as described in the file LICENSE under the root directory of this GIT repository.
 %
-\makeoproblem{Flow between infinite cylinders, one moving}{problem:fluids:twoCylinders}
+\makeoproblem{Infinite cylinders, one moving}{problem:fluids:twoCylinders}
 {2009 phy1530 final}
 {
 An infinite cylinder of radius \(R_1\) is moving with velocity \(v\) parallel to its axis.  It is placed inside another cylinder of radius \(R_2\).  The axes of the two cylinders coincide.  The fluid is incompressible, with viscosity \(\mu\) and density \(\rho\), the flow is assumed to be stationary, and no external pressure gradient is applied.
@@ -174,32 +174,26 @@ p(r) = \text{constant},
 
 \makesubanswer{With external pressure gradient}{problem:fluids:twoCylinders:4}
 With an external pressure gradient imposed we expect a superposition of a parabolic flow profile with what we have calculated above.  With
-
 \begin{equation}\label{eqn:twoCylinder:370}
 G = - \frac{dp}{dz},
 \end{equation}
 
 our Navier-Stokes equation will now take the form
-
 \begin{equation}\label{eqn:twoCylinder:390}
 0 = - \rcap p' - (-G \zcap) + \frac{\mu}{r} (r w')' \zcap.
 \end{equation}
 
 We want to solve the LDE
-
 \begin{equation}\label{eqn:twoCylinder:410}
 - \frac{ G r}{\mu} =
 (r w')' = r w'' + w'
 \end{equation}
 
 The homogeneous portion of this equation
-
 \begin{equation}\label{eqn:twoCylinder:430}
 (r w')' = 0,
 \end{equation}
-
 we have already solved finding \(w = C \ln r + D\).  It looks reasonable to try a polynomial solution for the specific solution.  Let us try a second order polynomial
-
 \begin{subequations}
 \begin{equation}\label{eqn:twoCylinder:450}
 w = A r^2 + B r
@@ -213,31 +207,23 @@ w'' = 2 A.
 \end{subequations}
 
 We need
-
 \begin{equation}\label{eqn:twoCylinder:510}
 -\frac{G r}{\mu} = 2 A r + 2 A r + B,
 \end{equation}
 
 So \(B = 0\) and \(4 A = -G/\mu\), and our general solution has the form
-
 \begin{equation}\label{eqn:twoCylinder:530}
 w = -\frac{G}{4 \mu} r^2 + C \ln r + D.
 \end{equation}
-
 requiring just the boundary condition fitting.  Let us tweak the constants slightly, writing
-
 \begin{equation}\label{eqn:twoCylinder:550}
 w = \frac{G}{4 \mu} (R_2^2 - r^2) + C \ln r/R_2 + D,
 \end{equation}
-
 so that \(D = 0\) falls out of the \(w(R_2) = 0\) constraint.  Our last integration constant is then determined by the solution of
-
 \begin{equation}\label{eqn:twoCylinder:570}
 v = \frac{G}{4 \mu} (R_2^2 - R_1^2) + C \ln R_1/R_2.
 \end{equation}
-
 Or
-
 \boxedEquation{eqn:twoCylinder:590}{
 w = \frac{G}{4 \mu} (R_2^2 - r^2) +
 \left(v - \frac{G}{4 \mu} (R_2^2 - R_1^2)\right)
@@ -245,15 +231,11 @@ w = \frac{G}{4 \mu} (R_2^2 - r^2) +
 }
 
 A plot of this, with a pressure gradient small enough that we still see the logarithmic profile is shown in \cref{fig:twoCylinder:twoCylinderFig4}.  An animation of this with different values for \(R_1\), \(v\), and \(G/4\mu\) is available on \youtubehref{BNgpnYeRpLo}, but the Mathematica notebook above can also be used.
-
 \imageFigure{../figures/phy454-continuumechanics/twoCylinderFig4}{Pressure gradient added}{fig:twoCylinder:twoCylinderFig4}{0.2}
-
 % Too big and two slow to embed:
 %\cref{fig:twoCylinders:twoCylindersFig5}.
 %\movieFigure{twoCylindersFig5.flv}{5: FIXME: CAPTION}{fig:twoCylinders:twoCylindersFig5}{width=320pt,height=240pt}
-
 Even cooler is to look at some plots of the velocity profiles in 3D
-
 %\cref{fig:twoCylinders:twoCylindersFig6}.
 \imageFigure{../figures/phy454-continuumechanics/twoCylindersFig6}{3D plot 1}{fig:twoCylinders:twoCylindersFig6}{0.3}
 %\cref{fig:twoCylinders:twoCylindersFig7}.
@@ -263,11 +245,9 @@ Even cooler is to look at some plots of the velocity profiles in 3D
 %\cref{fig:twoCylinders:twoCylindersFig9}.
 \imageFigure{../figures/phy454-continuumechanics/twoCylindersFig9}{3D plot 4}{fig:twoCylinders:twoCylindersFig9}{0.3}
 
-An animation of this can be found at \youtubehref{OiJTopWx7L8} from (\nbref{twoCylinders3D.cdf}).  That notebook is now also available online on the Wolfram demonstrations project \citep{wolframdemo:3DcylinderFlow}.
-
+An animation of this from (\nbref{twoCylinders3D.cdf}) is available \citep{pjtwocylinders}.  That notebook is now also available online on the Wolfram demonstrations project \citep{wolframdemo:3DcylinderFlow}.
 %\movieFigure{twoCylindersFig11ve.mp4}{FIXME: CAPTION}{fig:twoCylindersFig11ve:twoCylindersFig11ve}{width=746pt,height=608pt}
 %\movieFigure{twoCylindersFig11m.mp4}{FIXME: CAPTION}{fig:twoCylindersFig11m:twoCylindersFig11m}{width=546pt,height=408pt}
 %\movieFigure{twoCylindersFig11f.mp4}{FIXME: CAPTION}{fig:twoCylindersFig11f:twoCylindersFig11f}{width=546pt,height=408pt}
 %\movieFigure{twoCylindersFig11a.mp4}{FIXME: CAPTION}{fig:twoCylindersFig11a:twoCylindersFig11a}{width=546pt,height=412pt}
-
 } % end answer
