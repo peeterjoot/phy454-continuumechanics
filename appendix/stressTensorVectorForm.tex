@@ -1180,15 +1180,15 @@ Putting these together we find
 %
 \begin{equation}\label{eqn:stressTensorVectorForm:1410}
 \begin{aligned}
-2 {\Be}_{\thetacap}
+2 &{\Be}_{\thetacap} \\
 &=
 2 (\phicap \cdot \spacegrad)\Bu + (\spacegrad \wedge \Bu) \cdot \phicap \\
 &=
 2 \rcap
 \left(
 \inv{r \sin\theta} \partial_\phi u_r - \frac{u_\phi}{r}
-\right) \\
-&\quad +
+\right) 
++
 2 \thetacap
 \left(
 \inv{r \sin\theta} \partial_\phi u_\theta
@@ -1202,12 +1202,13 @@ Putting these together we find
 + \inv{r} u_r
 + \inv{r} \cot\theta u_\theta
 \right) \\
-&+
+&\quad+
 \thetacap
 \left(
 \inv{r} \partial_\theta u_\phi - \inv{r \sin\theta} \partial_\phi u_\theta
 + \frac{u_\phi \cot\theta}{r}
-\right)
+\right) \\
+&\quad
 -\rcap
 \left(
 \inv{r \sin\theta} \partial_\phi u_r - \partial_r u_\phi
@@ -1215,12 +1216,12 @@ Putting these together we find
 \right),
 \end{aligned}
 \end{equation}
-Which gives
-%
+which gives
 %
 \begin{dmath}\label{eqn:stressTensorVectorForm:510}
+\begin{aligned}
 2 {\Be}_{\phicap}
-=
+&=
 \rcap \left(
  \frac{ \partial_\phi u_r }{r \sin\theta}
 - \frac{u_\phi}{r}
@@ -1235,8 +1236,8 @@ Which gives
 +\frac{
 \partial_\theta u_\phi
 }{r}
-\right)
-+
+\right) \\
+&+
 2 \phicap \left(
 \frac{
 \partial_\phi u_\phi
@@ -1248,6 +1249,7 @@ u_r
 \cot\theta u_\theta
 }{r}
 \right).
+\end{aligned}
 \end{dmath}
 For our stress tensor
 %
