@@ -26,7 +26,7 @@ We will assume a solution that with velocity azimuthal in direction, and both pr
 \begin{equation}\label{eqn:bottomlessCoffee:30}
 p = p(r)
 \end{equation}
-
+%
 Let us first verify that this meets the non-compressible condition that eliminates the \(\mu \spacegrad (\spacegrad \cdot \Bu)\) term from Navier-Stokes
 %
 \begin{equation}\label{eqn:bottomlessCoffee:590}
@@ -48,7 +48,7 @@ u
 &= 0.
 \end{aligned}
 \end{equation}
-
+%
 Good.  Now let us express each of the terms of Navier-Stokes in cylindrical form.  Our time dependence is
 %
 \begin{equation}\label{eqn:bottomlessCoffee:50}
@@ -56,7 +56,7 @@ Good.  Now let us express each of the terms of Navier-Stokes in cylindrical form
 =
 \rho \phicap \partial_t u.
 \end{equation}
-
+%
 Our inertial term is
 %
 %
@@ -67,7 +67,7 @@ Our inertial term is
 =
 \frac{\rho u^2}{r} (-\rcap).
 \end{dmath}
-
+%
 Our pressure term is
 %
 \begin{equation}\label{eqn:bottomlessCoffee:90}
@@ -75,7 +75,7 @@ Our pressure term is
 =
 -\rcap \partial_r p,
 \end{equation}
-
+%
 and our Laplacian term is
 %
 %
@@ -91,7 +91,7 @@ u(r) \phicap
 \frac{\phicap}{r} \partial_r ( r \partial_r u) + \frac{-\rcap u}{r^2}
 \right).
 \end{dmath}
-
+%
 Putting things together, we find that Navier-Stokes takes the form
 %
 \begin{equation}\label{eqn:bottomlessCoffee:130}
@@ -105,7 +105,7 @@ Putting things together, we find that Navier-Stokes takes the form
 \frac{\phicap}{r} \partial_r ( r \partial_r u) + \frac{-\phicap u}{r^2}
 \right),
 \end{equation}
-
+%
 which nicely splits into an separate equations for the \(\phicap\) and \(\rcap\) directions respectively
 %
 \begin{subequations}
@@ -121,7 +121,7 @@ which nicely splits into an separate equations for the \(\phicap\) and \(\rcap\)
 \partial_r p.
 \end{equation}
 \end{subequations}
-
+%
 %\unnumberedSubsection{Steady state solution}
 
 Before \(t = 0\) we seek the steady state, the solution of
@@ -129,31 +129,31 @@ Before \(t = 0\) we seek the steady state, the solution of
 \begin{equation}\label{eqn:bottomlessCoffee:190}
 r \partial_r ( r \partial_r u) - u = 0.
 \end{equation}
-
+%
 We have seen that
 %
 \begin{equation}\label{eqn:bottomlessCoffee:210}
 u(r) = A r + \frac{B}{r}
 \end{equation}
-
+%
 is the general solution, and can now fit this to the boundary value constraints.  For the interior portion of the cup we have
 %
 \begin{equation}\label{eqn:bottomlessCoffee:230}
 \evalbar{A r + \frac{B}{r}}{r = 0} = 0
 \end{equation}
-
+%
 so \(B = 0\) is required.  For the interface of the ``stir-stick'' (moving fast enough that we can consider it having a cylindrical effect) at \(r = R_1\) we have
 %
 \begin{equation}\label{eqn:bottomlessCoffee:250}
 A R_1 = \Omega R_1,
 \end{equation}
-
+%
 so the interior portion of our steady state coffee velocity is just
 %
 \begin{equation}\label{eqn:bottomlessCoffee:270}
 \Bu = \Omega r \phicap.
 \end{equation}
-
+%
 Between the cup edge and the stir-stick we have to solve
 %
 \begin{equation}\label{eqn:bottomlessCoffee:290}
@@ -170,7 +170,7 @@ A R_1^2 + B &= \Omega R_1^2 \\
 A R_2^2 + B &= 0.
 \end{aligned}
 \end{equation}
-
+%
 Subtracting we find
 %
 \begin{subequations}
@@ -198,7 +198,7 @@ so our steady state coffee flow is
 \end{array}
 \right.
 \end{equation}
-
+%
 %\unnumberedSubsection{Time evolution}
 
 We can use a separation of variables technique with \(u(r, t) = R(r) T(t)\) to find the time evolution
@@ -211,43 +211,43 @@ We can use a separation of variables technique with \(u(r, t) = R(r) T(t)\) to f
 \right)
 = -\lambda^2,
 \end{equation}
-
+%
 which gives us
 %
 \begin{equation}\label{eqn:bottomlessCoffee:410}
 T \propto e^{-\lambda^2 \nu t},
 \end{equation}
-
+%
 and \(R\) specified by
 %
 \begin{equation}\label{eqn:bottomlessCoffee:430}
 0 = r^2 \frac{d^2 R}{dr^2} + r \frac{d R}{dr} + R \left( r^2 \lambda^2 - 1 \right).
 \end{equation}
-
+%
 Checking \citep{abramowitz1964handbook} (9.1.1) we see that this can be put into the standard form of the Bessel equation if we eliminate the \(\lambda\) term.  We can do that writing \(z = r \lambda\), \(\calR(z) = R(z/\lambda)\) and noting that \(r d/dr = z d/dz\) and \(r^2 d^2/dr^2 = z^2 d^2/dz^2\), which gives us
 %
 \begin{equation}\label{eqn:bottomlessCoffee:450}
 0 = z^2 \frac{d^2 \calR}{dr^2} + z \frac{d \calR}{dr} + \calR \left( z^2 - 1 \right).
 \end{equation}
-
+%
 The solutions are
 %
 \begin{equation}\label{eqn:bottomlessCoffee:470}
 \calR(z) = J_{\pm 1}(z), Y_{\pm 1}(z).
 \end{equation}
-
+%
 From (9.1.5) of the handbook we see that the plus and minus variations are linearly dependent since \(J_{-1}(z) = -J_1(z)\) and \(Y_{-1}(z) = -Y_1(z)\), and from (9.1.8) that \(Y_1(z)\) is infinite at the origin, so our general solution has to be of the form
 %
 \begin{equation}\label{eqn:bottomlessCoffee:490}
 \Bu(r, t) = \phicap \sum_\lambda c_\lambda e^{-\lambda^2 \nu t} J_{1}(r \lambda).
 \end{equation}
-
+%
 In the text, I see that the transformation \(\lambda \rightarrow \lambda/a\) (where \(a\) was the radius of the cup) is made so that the Bessel function parameter was dimensionless.  We can do that too but write
 %
 \begin{equation}\label{eqn:bottomlessCoffee:490b}
 \Bu(r, t) = \phicap \sum_\lambda c_\lambda e^{-\frac{\lambda^2}{R_2^2} \nu t} J_{1}\left(\lambda \frac{r}{R_2}\right).
 \end{equation}
-
+%
 Our boundary value constraint is that we require this to match \eqnref{eqn:bottomlessCoffee:370} at \(t = 0\).  Let us write \(R_2 = R\), \(R_1 = a R\), \(z = r/R\), so that we are working in the unit circle with \(z \in [0, 1]\).  Our boundary problem can now be expressed as
 %
 \begin{equation}\label{eqn:bottomlessCoffee:490c}
@@ -265,7 +265,7 @@ z
 \end{array}
 \right.
 \end{equation}
-
+%
 Let us pull the \(\Omega R\) factor into \(c_\lambda\) and state the problem to be solved as
 %
 \begin{subequations}

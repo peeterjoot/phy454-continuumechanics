@@ -10,7 +10,7 @@ Identifying a point in a solid with coordinates \(x_i\) and the coordinates of t
 \begin{equation}\label{eqn:continuumElasticityReview:10}
 u_i = x_i' - x_i.
 \end{equation}
-
+%
 With \(du_i = \PDi{x_j}{u_i} dx_j\), we computed the difference in length (squared) for an element of the displaced solid and found
 %
 \begin{equation}\label{eqn:continuumElasticityReview:30}
@@ -23,7 +23,7 @@ dx_k' dx_k' - dx_k dx_k =
 \right)
 dx_i dx_j,
 \end{equation}
-
+%
 or defining the \textit{strain tensor} \(e_{ij}\), we have
 %
 \begin{subequations}
@@ -43,7 +43,7 @@ e_{ij}
 \right).
 \end{equation}
 \end{subequations}
-
+%
 In this course we use only the linear terms and write
 %
 \begin{equation}\label{eqn:continuumElasticityReview:90}
@@ -55,7 +55,7 @@ e_{ij}
 \PD{x_j}{u_i}
 \right).
 \end{equation}
-
+%
 \FIXME{Unresolved: Relating displacement and position by strain
 
 In \citep{feynman1963flp:elasticMaterials} it is pointed out that this strain tensor simply relates the displacement vector coordinates \(u_i\) to the coordinates at the point at which it is measured
@@ -63,19 +63,19 @@ In \citep{feynman1963flp:elasticMaterials} it is pointed out that this strain te
 \begin{equation}\label{eqn:continuumElasticityReview:110}
 u_i = e_{ij} x_j.
 \end{equation}
-
+%
 When we get to fluid dynamics we perform a linear expansion of \(du_i\) and find something similar
 %
 \begin{equation}\label{eqn:continuumElasticityReview:530}
 dx_i' - dx_i = du_i = \PD{x_k}{u_i} dx_k = e_{ij} dx_k + \omega_{ij} dx_k
 \end{equation}
-
+%
 where
 %
 \begin{equation}\label{eqn:continuumElasticityReview:550}
 \omega_{ij} = \inv{2} \left( \PD{x_i}{u_j} +\PD{x_j}{u_i} \right).
 \end{equation}
-
+%
 Except for the antisymmetric term, note the structural similarity of \eqnref{eqn:continuumElasticityReview:110} and \eqnref{eqn:continuumElasticityReview:530}.  Why is it that we neglect the vorticity tensor in statics?
 %  If we are approximating the displacement, it appears to have a natural place in things, as we can see
 %
@@ -96,25 +96,25 @@ In a basis for which the strain tensor is diagonal, it was pointed out that we c
 \begin{equation}\label{eqn:continuumElasticityReview:130}
 (dx_k')^2 - (dx_k)^2 = 2 e_{kk} dx_k dx_k
 \end{equation}
-
+%
 from which we can rearrange, take roots, and apply a first order Taylor expansion to find (again no summation convention)
 %
 \begin{equation}\label{eqn:continuumElasticityReview:150}
 dx_k' \approx (1 + e_{kk}) dx_k.
 \end{equation}
-
+%
 An approximation of the displaced volume was then found in terms of the strain tensor trace (summation convention back again)
 %
 \begin{equation}\label{eqn:continuumElasticityReview:170}
 dV' \approx (1 + e_{kk}) dV,
 \end{equation}
-
+%
 allowing us to identify this trace as a relative difference in displaced volume
 %
 \begin{equation}\label{eqn:continuumElasticityReview:190}
 e_{kk} \approx \frac{dV' - dV}{dV}.
 \end{equation}
-
+%
 \subsection{Strain in cylindrical coordinates} \index{strain} \index{cylindrical coordinates}
 
 Useful in many practice problems are the cylindrical coordinate representation of the strain tensor
@@ -129,7 +129,7 @@ Useful in many practice problems are the cylindrical coordinate representation o
 2 e_{\phi z} &= \PD{z}{u_\phi} +\inv{r} \PD{\phi}{u_z}.
 \end{aligned}
 \end{equation}
-
+%
 This can be found in \citep{landau1960theory}.  It was not derived there or in class, but is not too hard, even using the second order methods we used for the Cartesian form of the tensor.
 
 An easier way to do this derivation (and understand what the coordinates represent) follows from the relation found in \S 6 of \citep{acheson1990elementary}
@@ -137,7 +137,7 @@ An easier way to do this derivation (and understand what the coordinates represe
 \begin{equation}\label{eqn:continuumElasticityReview:230}
 2 \Be_i e_{ij} n_j = 2 (\ncap \cdot \spacegrad) \Bu + \ncap \cross (\spacegrad \cross \Bu),
 \end{equation}
-
+%
 where \(\ncap\) is the normal to the surface at which we are measuring a force applied to the solid (our Cauchy tetrahedron).
 
 The cylindrical tensor coordinates of \eqnref{eqn:continuumElasticityReview:210} follow from
@@ -153,7 +153,7 @@ For a 2D strain tensor we found an interrelationship between the components of t
 \PDSq{x_1}{e_{22}}
 +\PDSq{x_2}{e_{11}},
 \end{equation}
-
+%
 and called this the compatibility condition.  It was claimed, but not demonstrated that this is what is required to ensure a deformation maintained a coherent solid geometry.
 
 I was not able to find any references to this compatibility condition in any of the texts I have, but found \citep{wiki:compatibilityMechanics}, \citep{wiki:infinitesimalStrainTheory}, and \citep{wiki:saintVenantCompat}.  It is not terribly surprising to see Christoffel symbol and differential forms references on those pages, since one can imagine that we would wish to look at the mappings of all the points in the object as it undergoes the transformation from the original to the deformed state.

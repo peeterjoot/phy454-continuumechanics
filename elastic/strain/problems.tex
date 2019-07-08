@@ -41,7 +41,7 @@ where
 \begin{equation}\label{eqn:strainProblems:550}
 \omega_{ij} = \inv{2} \left( \PD{x_i}{u_j} +\PD{x_j}{u_i} \right).
 \end{equation}
-
+%
 Except for the antisymmetric term, note the structural similarity of \eqnref{eqn:strainProblems:110} and \eqnref{eqn:strainProblems:530}.  Why is it that we neglect the vorticity tensor in statics?
 %  If we are approximating the displacement, it appears to have a natural place in things, as we can see
 %
@@ -153,7 +153,7 @@ e_{31}
 x_1
 \end{aligned}
 \end{equation}
-
+%
 In matrix form we have
 %
 \begin{equation}\label{eqn:continuumProblemSet1:250}
@@ -164,7 +164,7 @@ x_1 & 0 & x_3 \\
 x_1 & x_3 & -1 \\
 \end{bmatrix}
 \end{equation}
-
+%
 \makesubanswer{For the principle strains and axes}{problem:strain:ps1q2a2}
 
 At the point \((1, 2, 4)\) the strain tensor has the value
@@ -177,7 +177,7 @@ At the point \((1, 2, 4)\) the strain tensor has the value
 1 & 4 & -1
 \end{bmatrix}.
 \end{equation}
-
+%
 We wish to diagonalize this, solving the characteristic equation for the eigenvalues \(\lambda\)
 %
 \begin{equation}\label{eqn:problems:690}
@@ -210,13 +210,13 @@ We wish to diagonalize this, solving the characteristic equation for the eigenva
 +(4 + \lambda) \\
 \end{aligned}
 \end{equation}
-
+%
 We find the characteristic equation to be
 %
 \begin{equation}\label{eqn:continuumProblemSet1:290}
 0 = -\lambda^3 + 3 \lambda^2 + 22\lambda - 55.
 \end{equation}
-
+%
 This does not appear to lend itself easily to manual solution (there are no obvious roots to factor out).  As expected, since the matrix is symmetric, a plot \cref{fig:continuumL8:continuumProblemSet1Q2fig1} shows that all our roots are real.
 
 \imageFigure{../figures/phy454-continuumechanics/problemSet1Q2__Characteristic_equationFig1}{Q2.  Characteristic equation}{fig:continuumL8:continuumProblemSet1Q2fig1}{0.2}
@@ -226,7 +226,7 @@ Numerically, we determine these roots to be
 \begin{equation}\label{eqn:continuumProblemSet1:310}
 \{5.19684, -4.53206, 2.33522\}
 \end{equation}
-
+%
 with the corresponding basis (orthonormal eigenvectors), the principle axes are
 %
 \begin{equation}\label{eqn:continuumProblemSet1:330}
@@ -254,7 +254,7 @@ with the corresponding basis (orthonormal eigenvectors), the principle axes are
 \end{bmatrix}
 \right\}.
 \end{equation}
-
+%
 } % end answer
 
 \makeoproblem{Constitutive relation}{problem:fluids:midterm:1b}
@@ -269,13 +269,13 @@ The constitutive relation is the stress-strain relation, generally
 \begin{equation}\label{eqn:continuumMidTermReflection:150}
 \sigma_{ij} = c_{abij} e_{ab}
 \end{equation}
-
+%
 for isotropic solids we model this as
 %
 \begin{equation}\label{eqn:continuumMidTermReflection:170}
 \sigma_{ij} = \lambda e_{kk} \delta_{ij} + 2 \mu e_{ij}
 \end{equation}
-
+%
 and for Newtonian fluids
 %
 \begin{equation}\label{eqn:continuumMidTermReflection:190}

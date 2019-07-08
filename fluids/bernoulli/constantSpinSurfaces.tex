@@ -16,7 +16,7 @@ On their homework assignment, the student writes:
 \begin{equation}\label{eqn:constantSpinSurfaces:10}
 B = \frac{p}{\rho} + \inv{2}u^2 + g z
 \end{equation}
-
+%
 where \(B\) is a constant.  So the constant pressure surface at \(p = p_0\) is
 %
 \begin{equation}\label{eqn:constantSpinSurfaces:30}
@@ -41,14 +41,14 @@ Let us recall how we derived Bernoulli's theorem.  We started with Navier-Stokes
 \begin{equation}\label{eqn:constantSpinSurfaces:50}
 (\Bu \cdot \spacegrad ) \Bu = \spacegrad \inv{2} \Bu^2 + (\spacegrad \cross \Bu) \cross \Bu.
 \end{equation}
-
+%
 Navier-Stokes for a steady state incompressible flow, with external body force per unit volume \(\rho \Bg = -\rho \spacegrad \chi\) take the form
 %
 \begin{equation}\label{eqn:constantSpinSurfaces:70}
 \spacegrad \inv{2} \Bu^2 + (\spacegrad \cross \Bu) \cross \Bu
 = -\inv{\rho} \spacegrad p + \nu \spacegrad^2 \Bu - \spacegrad \chi.
 \end{equation}
-
+%
 For the non-viscous (``dry-water'') case where we take \(\mu = \nu \rho = 0\), and treat the density \(\rho\) as a constant we find
 %
 \begin{equation}\label{eqn:constantSpinSurfaces:90}
@@ -59,7 +59,7 @@ For the non-viscous (``dry-water'') case where we take \(\mu = \nu \rho = 0\), a
 \inv{2} \Bu^2 + \frac{p}{\rho} + \chi
 \right).
 \end{equation}
-
+%
 Observe that we only arrive at Bernoulli's theorem if the flow is also irrotational (as well as incompressible and non-viscous), as we require an irrotational flow where \(\spacegrad \cross \Bu = 0\) to claim that the gradient on the RHS is zero.
 %
 %The most general claim that we can make, even for irrotational flows is that we have
@@ -90,7 +90,7 @@ In this problem we do not have an irrotational flow, which can be demonstrated b
 2 \zcap \Omega
 \ne 0
 \end{dmath}
-
+%
 In fact we have
 %
 %
@@ -106,7 +106,7 @@ In fact we have
 =
 2 \Omega^2 (\xcap + \ycap)
 \end{dmath}
-
+%
 The closest we can get to Bernoulli's theorem for this problem is
 %
 \begin{equation}\label{eqn:constantSpinSurfaces:210}
@@ -117,7 +117,7 @@ The closest we can get to Bernoulli's theorem for this problem is
 \inv{2} \Bu^2 + \frac{p}{\rho} + g z
 \right).
 \end{equation}
-
+%
 We can say that the directional derivatives in directions perpendicular to \(\xcap + \ycap\) are zero, and that
 %
 %
@@ -132,7 +132,7 @@ We can say that the directional derivatives in directions perpendicular to \(\xc
 \inv{2} \Bu^2 + \frac{p}{\rho}
 \right)
 \end{dmath}
-
+%
 Perhaps those could be used to solve for the surface, but we no longer have something that is obviously integrable.
 
 Because \(\Bu \cdot (\Bu \cross (\spacegrad \cross \Bu)) = 0\), we can also say that
@@ -150,7 +150,7 @@ Because \(\Bu \cdot (\Bu \cross (\spacegrad \cross \Bu)) = 0\), we can also say 
 \inv{2} \Bu^2 + \frac{p}{\rho}
 \right).
 \end{dmath}
-
+%
 Perhaps this could also be used to find the surface?
 
 \paragraph{Streamline interpretation.}
@@ -164,13 +164,13 @@ x &= \rho \cos\theta \\
 y &= \rho \sin\theta
 \end{aligned}.
 \end{dmath}
-
+%
 The velocity field, plotted in \cref{fig:bucketStreamlines:bucketStreamlinesFig1}, is
 %
 \begin{dmath}\label{eqn:constantSpinSurfaces:252}
 \Bu = \Omega \rho \lr{ -\sin\theta, \cos\theta, 0}
 \end{dmath}
-
+%
 \imageFigure{../figures/phy454-continuumechanics/bucketStreamlinesFig1}{Streamlines for the rotating bucket system.}{fig:bucketStreamlines:bucketStreamlinesFig1}{0.3}
 
 Observe that the cross term \( \Bu \cross \lr{ \spacegrad \cross \Bu} \), are the normals to the streamlines.
@@ -183,7 +183,7 @@ Now we want to write down the steady state, incompressible, non-viscous Navier-S
 = \spacegrad \cdot \Bu
 = \partial_x (-\Omega y) + \partial_y(\Omega x).
 \end{dmath}
-
+%
 For the inertial term we have got
 %
 %
@@ -194,7 +194,7 @@ For the inertial term we have got
 =
 \Omega^2 (-x, -y, 0),
 \end{dmath}
-
+%
 Leaving us with
 %
 %
@@ -203,7 +203,7 @@ Leaving us with
 -\Omega^2 y = -\inv{\rho} \partial_y p
           0 = -\inv{\rho} \partial_z p - g
 \end{dmath}
-
+%
 Integrating these, we seek seek simultaneous solutions to
 %
 %
@@ -212,19 +212,19 @@ p = \inv{2} \rho \Omega^2 x^2 + f(y,z)
 p = \inv{2} \rho \Omega^2 y^2 + g(x,z)
 p = h(x, y) - \rho g z.
 \end{dmath}
-
+%
 It is clear that one solution would be
 %
 \begin{equation}\label{eqn:constantSpinSurfaces:350}
 p = p_0 + \inv{2} \rho \Omega^2 (x^2 + y^2) - \rho g z.
 \end{equation}
-
+%
 where \(p_0\) is some constant to be determined, dependent on where we set our origin.  Putting the origin of the coordinate system at the lowest point in the parabolic profile \((x, y, z) = (0, 0, 0)\), we have \(p(0, 0, 0) = p_0\), which fixes \(p_0\) as the atmospheric pressure.  If the radius of the bucket is \(R\), the max height \(h\) of the surface above that point is also found on this surface of constant pressure
 %
 \begin{equation}\label{eqn:constantSpinSurfaces:370}
 p_0 = p_0 + \inv{2} \rho \Omega^2 R^2 - \rho g h,
 \end{equation}
-
+%
 or
 %
 \begin{equation}\label{eqn:constantSpinSurfaces:390}

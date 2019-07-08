@@ -10,7 +10,7 @@ Those portions of the theory of elasticity that we did cover have the appearance
 \begin{equation}\label{eqn:continuumFluidsReview:830}
 d\Bx' = d\Bx + d\Bu \delta t.
 \end{equation}
-
+%
 We compute a first order Taylor expansion of this differential, defining a symmetric strain and antisymmetric vorticity tensor
 %
 \begin{subequations}
@@ -25,13 +25,13 @@ e_{ij} = \inv{2} \left(
 -\PD{x_i}{u_j} \right)
 \end{equation}
 \end{subequations}
-
+%
 Allowing us to write
 %
 \begin{equation}\label{eqn:continuumFluidsReview:890}
 dx_i' = dx_i + e_{ij} dx_j \delta t + \omega_{ij} dx_j \delta t.
 \end{equation}
-
+%
 We introduced vector and dual vector forms of the vorticity tensor with
 %
 \begin{subequations}
@@ -42,7 +42,7 @@ We introduced vector and dual vector forms of the vorticity tensor with
 \omega_{i j} = -\Omega_k \epsilon_{i j k},
 \end{equation}
 \end{subequations}
-
+%
 or
 %
 \begin{subequations}
@@ -53,13 +53,13 @@ or
 \BOmega = \inv{2} (\Bomega)_a \Be_a.
 \end{equation}
 \end{subequations}
-
+%
 We were then able to put our displacement differential into a partial vector form
 %
 \begin{equation}\label{eqn:continuumFluidsReview:950}
 d\Bx' = d\Bx + \left( \Be_i (e_{ij} \Be_j) \cdot d\Bx + \BOmega \cross d\Bx \right) \delta t.
 \end{equation}
-
+%
 \subsection{Relative change in volume}
 
 We are able to identity the divergence of the displacement as the relative change in volume per unit time in terms of the strain tensor trace (in the basis for which the strain is diagonal at a given point)
@@ -67,7 +67,7 @@ We are able to identity the divergence of the displacement as the relative chang
 \begin{equation}\label{eqn:continuumFluidsReview:1010}
 \frac{dV' - dV}{dV \delta t} = \spacegrad \cdot \Bu.
 \end{equation}
-
+%
 \subsection{Conservation of mass}
 
 Utilizing Green's theorem we argued that
@@ -75,14 +75,14 @@ Utilizing Green's theorem we argued that
 \begin{equation}\label{eqn:continuumFluidsReview:1030}
 \int \left( \PD{t}{\rho} + \spacegrad \cdot (\rho \Bu) \right) dV = 0.
 \end{equation}
-
+%
 We were able to relate this to rate of change of density, computing
 %
 \begin{equation}\label{eqn:continuumFluidsReview:1050}
 \frac{d\rho}{dt} = \PD{t}{\rho} + \Bu \cdot \spacegrad \rho =
 - \rho \spacegrad \cdot \Bu.
 \end{equation}
-
+%
 An important consequence of this is that for incompressible fluids (the only types of fluids considered in this course) the divergence of the displacement \(\spacegrad \cdot \Bu = 0\).
 
 \subsection{Constitutive relation}
@@ -92,7 +92,7 @@ We consider only Newtonian fluids, for which the stress is linearly related to t
 \begin{equation}\label{eqn:continuumFluidsReview:1070}
 \sigma_{ij} = - p \delta_{ij} + 2 \mu e_{ij}.
 \end{equation}
-
+%
 \subsection{Conservation of momentum (Navier-Stokes)}
 
 As in elasticity, our momentum conservation equation had the form
@@ -100,7 +100,7 @@ As in elasticity, our momentum conservation equation had the form
 \begin{equation}\label{eqn:continuumFluidsReview:1090}
 \rho \frac{du_i}{dt} = \PD{x_j}{\sigma_{ij}} + f_i,
 \end{equation}
-
+%
 where \(f_i\) are the components of the external (body) forces per unit volume acting on the fluid.
 
 \subsection{Observe the first order time derivative here}
@@ -115,7 +115,7 @@ Utilizing the constitutive relation and explicitly evaluating the stress tensor 
 = -\spacegrad p + \mu \spacegrad^2 \Bu
 + \mu \spacegrad (\spacegrad \cdot \Bu) + \rho \Bf.
 \end{equation}
-
+%
 Since we treat only incompressible fluids in this course we can decompose this into a pair of equations
 %
 \begin{subequations}
@@ -129,7 +129,7 @@ Since we treat only incompressible fluids in this course we can decompose this i
 \spacegrad \cdot \Bu = 0
 \end{equation}
 \end{subequations}
-
+%
 
 \subsection{No slip condition}
 
@@ -147,7 +147,7 @@ For fluids \(A\) and \(B\) separated at an interface with unit normal \(\ncap\) 
 \Bu_A \cdot \ncap = \Bu_B \cdot \ncap.
 \end{equation}
 \end{subequations}
-
+%
 For the problems we attempt, it will often be enough to consider only the tangential component of the velocity.
 
 \subsection{Traction vector matching at an interface} \index{traction vector}
@@ -157,7 +157,7 @@ As well as matching velocities, we have a force balance requirement at any inter
 \begin{equation}\label{eqn:continuumFluidsReview:1210}
 \Btau = \Be_i \sigma_{ij} n_j = \Bsigma \cdot \ncap
 \end{equation}
-
+%
 where \(\ncap = n_j \Be_i\) is the normal pointing from the interface into the fluid (so the traction vector represents the force of the interface on the fluid).  When that interface is another fluid, we are able to calculate the force of one fluid on the other.
 
 In addition the the constraints provided by the no-slip condition, we will often have to constrain our solutions according to the equality of the tangential components of the traction vector
@@ -166,14 +166,14 @@ In addition the the constraints provided by the no-slip condition, we will often
 \evalbar{\tau_i (\sigma_{ij} n_j)}{A} =
 \evalbar{\tau_i (\sigma_{ij} n_j)}{B},
 \end{equation}
-
+%
 We will sometimes also have to consider, especially when solving for the pressure, the force balance for the normal component of the traction vector at the interface too
 %
 \begin{equation}\label{eqn:continuumFluidsReview:1250}
 \evalbar{n_i (\sigma_{ij} n_j)}{A} =
 \evalbar{n_i (\sigma_{ij} n_j)}{B}.
 \end{equation}
-
+%
 As well as having a messy non-linear PDE to start with, our boundary value constraints can be very complicated, making the subject rich and tricky.
 
 \subsection{Flux}
@@ -183,4 +183,4 @@ A number of problems we did asked for the flux rate.  A slightly more sensible p
 \begin{equation}\label{eqn:continuumFluidsReview:1450}
 \int \frac{dm}{dt} = \rho \int \frac{dV}{dt} = \rho \int (\Bu \cdot \ncap) dA
 \end{equation}
-
+%

@@ -92,7 +92,7 @@ Our gradient is
 \frac{\thetacap}{r} \PD{\theta}{} +
 \zcap \PD{z}{},
 \end{equation}
-
+%
 For our Laplacian we find
 %
 \begin{equation}\label{eqn:flowInAPipeAndGravityDrivenFilmFlow:710}
@@ -118,13 +118,13 @@ For our Laplacian we find
 \partial_{rr} + \inv{r} \partial_r + \inv{r^2} \partial_{\theta\theta} + \partial_{zz},
 \end{aligned}
 \end{equation}
-
+%
 which we can write as
 %
 \begin{equation}\label{eqn:continuumL12:630}
 \spacegrad^2 = \inv{r} \PD{r}{} \left( r \PD{r}{} \right) + \inv{r^2} \PDSq{\theta}{} + \PDSq{z}{}.
 \end{equation}
-
+%
 Navier-Stokes takes the form
 
 \boxedEquation{eqn:classicalMechanicsPs2:650}{
@@ -166,7 +166,7 @@ It is pointed out in \citep{acheson1990elementary}, that our non-linear term \((
 \right)
 +\zcap \left((\Bu \cdot \spacegrad) u_z\right)
 \end{dmath}
-
+%
 For steady state and incompressible fluids in the absence of body forces we have
 %
 \begin{equation}\label{eqn:continuumL12:670}
@@ -179,7 +179,7 @@ p = \mu \left(
 \inv{r} \PD{r}{} \left( r \PD{r}{} \right) + \inv{r^2} \PDSq{\theta}{} + \PDSq{z}{} \right)
 \Bu,
 \end{equation}
-
+%
 or, in coordinates
 %
 \begin{equation}\label{eqn:continuumL12:690}
@@ -198,25 +198,25 @@ u_\theta \\
 u_z
 \end{aligned}
 \end{equation}
-
+%
 With an assumption that we have no radial or circulatory flows (\(u_r = u_\theta = 0\)), and with \(u_z = w\) assumed to only have a radial dependence, our velocity is
 %
 \begin{equation}\label{eqn:continuumL12:50}
 \Bu = \zcap w(r),
 \end{equation}
-
+%
 and an assumption of linear pressure dependence
 %
 \begin{equation}\label{eqn:continuumL12:60}
 \frac{dp}{dz} = -G,
 \end{equation}
-
+%
 then Navier-Stokes takes the final simple form
 %
 \begin{equation}\label{eqn:continuumL12:70}
 \inv{r} \frac{d}{dr} \left( r \frac{dw}{dr} \right) = - \frac{G}{\mu}.
 \end{equation}
-
+%
 Solving this we have
 %
 \begin{equation}\label{eqn:continuumL12:90}
@@ -226,7 +226,7 @@ r \frac{dw}{dr} = - \frac{G r^2}{2\mu} + A
 \begin{equation}\label{eqn:continuumL12:110}
 w = -\frac{G r^2}{4 \mu} + A \ln(r) + B
 \end{equation}
-
+%
 Requiring finite solutions for \(r = 0\) means that we must have \(A = 0\).  Also \(w(a) = 0\), we have \(B = G a^2/4 \mu\) so we must have
 %
 \begin{equation}\label{eqn:continuumL12:130}
@@ -245,7 +245,7 @@ Coordinates as in \cref{fig:continuumL12:continuumL12fig6}
 \begin{equation}\label{eqn:continuumL12:150}
 \Bu = \xcap u(y)
 \end{equation}
-
+%
 %\unnumberedSubsection{Boundary conditions}
 Our boundary conditions are
 
@@ -257,7 +257,7 @@ Our boundary conditions are
 \Btau \cdot (\Bsigma_l \cdot \ncap) = \Btau \cdot (\Bsigma_a \cdot \ncap),
 \end{equation}
 \end{enumerate}
-
+%
 We write
 %
 \begin{equation}\label{eqn:continuumL12:190}
@@ -276,7 +276,7 @@ We write
 \end{bmatrix}
 \end{aligned}
 \end{equation}
-
+%
 and seek simultaneous solutions to the pair of stress tensor equations
 %
 \begin{equation}\label{eqn:continuumL12:210}
@@ -293,7 +293,7 @@ and seek simultaneous solutions to the pair of stress tensor equations
 \right).
 \end{aligned}
 \end{equation}
-
+%
 In general this requires an iterated approach, solving for one with an initial approximation of the other, then switching and tuning the numerical method carefully for convergence.
 
 We expect that the flow of liquid will induce a flow of air at the interface, but may be able to make a one-sided approximation.  Let us see how far we get before we have to introduce any approximations and compute the traction vector for the liquid
@@ -319,7 +319,7 @@ We expect that the flow of liquid will induce a flow of air at the interface, bu
 \end{bmatrix}
 \end{aligned}
 \end{equation}
-
+%
 So
 %
 \begin{equation}\label{eqn:continuumL12:230}
@@ -336,39 +336,39 @@ So
 =
 \mu^l \PD{y}{u}
 \end{equation}
-
+%
 Our boundary value condition is therefore
 %
 \begin{equation}\label{eqn:continuumL12:250}
 \evalbar{\mu^l \PD{y}{u^l}}{y = h} =
 \evalbar{\mu^a \PD{y}{u^a}}{y = h}
 \end{equation}
-
+%
 When can we decouple this, treating only the liquid?  Observe that we have
 %
 \begin{equation}\label{eqn:continuumL12:270}
 \evalbar{\PD{y}{u^l}}{y = h} =
 \evalbar{\frac{\mu^a}{\mu^l} \PD{y}{u^a}}{y = h}
 \end{equation}
-
+%
 so if
 %
 \begin{equation}\label{eqn:continuumL12:290}
 \frac{\mu_a}{\mu_l} \ll 1
 \end{equation}
-
+%
 we can treat only the liquid portion of the problem, with a boundary value condition
 %
 \begin{equation}\label{eqn:continuumL12:310}
 \evalbar{\PD{y}{u^l}}{y = h} = 0.
 \end{equation}
-
+%
 Let us look at the component of the traction vector in the direction of the normal (liquid pressure acting on the air)
 %
 \begin{equation}\label{eqn:continuumL12:330}
 \ncap \cdot (\Bsigma^l \cdot \ncap) = \ncap \cdot (\Bsigma^a \cdot \ncap)
 \end{equation}
-
+%
 or
 %
 \begin{equation}\label{eqn:continuumL12:350}
@@ -382,7 +382,7 @@ or
 \end{bmatrix}
 = -\evalbar{p^l}{y = h} = -\evalbar{p^a}{y = h}
 \end{equation}
-
+%
 i.e. We have pressure matching at the interface.
 
 Our body force is
@@ -395,7 +395,7 @@ g \sin\alpha \\
 0
 \end{bmatrix}
 \end{equation}
-
+%
 %\unnumberedSubsection{Navier-stokes}
 Referring to the Navier-Stokes equation \eqnref{eqn:continuumL12:570}, we see that our only surviving parts are
 %
@@ -410,19 +410,19 @@ Referring to the Navier-Stokes equation \eqnref{eqn:continuumL12:570}, we see th
 0 = -\PD{z}{p}
 \end{equation}
 \end{subequations}
-
+%
 The last gives us \(p \ne p(z)\).  Integrating the second we have
 %
 \begin{equation}\label{eqn:continuumL12:410}
 p = \rho g y \cos\alpha + p_1
 \end{equation}
-
+%
 Since \(p = p_{\text{atm}}\) at \(y = h\), we have
 %
 \begin{equation}\label{eqn:continuumL12:430}
 p_{\text{atm}} = \rho g h \cos\alpha + p_1
 \end{equation}
-
+%
 Our first Navier-Stokes equation \eqnref{eqn:classicalMechanicsPs2:590a} becomes
 %
 \begin{equation}\label{eqn:continuumL12:450}
@@ -433,37 +433,37 @@ or
 \begin{equation}\label{eqn:continuumL12:470}
 \PDSq{y}{u} = -\frac{\rho g}{\mu} \sin\alpha
 \end{equation}
-
+%
 This we integrate twice
 %
 \begin{equation}\label{eqn:continuumL12:490}
 u = - \rho g \frac{\sin\alpha}{2 \mu} y^2 + A y + B
 \end{equation}
-
+%
 With
 %
 \begin{equation}\label{eqn:continuumL12:510a}
 u(0) = 0,
 \end{equation}
-
+%
 we see that \(B = 0\), and with
 %
 \begin{equation}\label{eqn:continuumL12:510b}
 \evalbar{\PD{y}{u}}{y = h} = 0,
 \end{equation}
-
+%
 we find that
 %
 \begin{equation}\label{eqn:continuumL12:510c}
 0 = - \rho g \frac{\sin\alpha}{\mu} h + A,
 \end{equation}
-
+%
 for
 %
 \begin{equation}\label{eqn:classicalMechanicsPs2:530}
 u = \rho g y \frac{\sin\alpha}{2 \mu} y \left( 2 h - y \right).
 \end{equation}
-
+%
 This velocity distribution is illustrated \cref{fig:continuumL12:continuumL12fig7}.
 
 \imageFigure{../figures/phy454-continuumechanics/lec12_Velocity_streamlines_for_flow_down_a_planeFig7}{Velocity streamlines for flow down a plane}{fig:continuumL12:continuumL12fig7}{0.2}

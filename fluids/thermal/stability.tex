@@ -34,13 +34,13 @@ Let us suppose that our displacement can be described in exponential form
 \begin{equation}\label{eqn:continuumL21:10}
 \delta x \sim e^{\sigma t}
 \end{equation}
-
+%
 where \(\sigma\) is the \textit{growth rate of perturbation}, and is in general a complex number of the form
 %
 \begin{equation}\label{eqn:continuumL21:30}
 \sigma = \sigma_{\text{R}} + i \sigma_{\text{I}}
 \end{equation}
-
+%
 \subsection{Case I.  Oscillatory unstability}
 
 A system of the form
@@ -51,7 +51,7 @@ A system of the form
 \sigma_{\text{I}} &> 0
 \end{aligned}
 \end{equation}
-
+%
 \textit{oscillatory unstable}.  An example of this is the undamped parabolic system illustrated above.
 
 \subsection{Case II.  Marginal unstability}
@@ -63,7 +63,7 @@ A system of the form
 &\sim e^{\sigma_{\text{R}} t} \left( \cos \sigma_{\text{I}} t + i \sin \sigma_{\text{I}} t \right)
 \end{aligned}
 \end{equation}
-
+%
 We will call systems of the form
 %
 \begin{equation}\label{eqn:stability:350}
@@ -72,7 +72,7 @@ We will call systems of the form
 \sigma_{\text{R}} &> 0
 \end{aligned}
 \end{equation}
-
+%
 \textit{marginally unstable}.  We can have unstable systems with \(\sigma_{\text{I}} \ne 0\) but still \(\sigma_{\text{R}} > 0\), but these are less common.
 
 \subsection{Case III.  Neutral stability}
@@ -83,7 +83,7 @@ We will call systems of the form
 \sigma_{\text{R}} &= \sigma_{\text{I}} = 0
 \end{aligned}
 \end{equation}
-
+%
 An example of this was the billiard table example where the ball moved to a new location on the table after being bumped slightly.
 
 \section{A mathematical description}
@@ -97,7 +97,7 @@ We start with Navier-Stokes as normal
 \begin{equation}\label{eqn:continuumL21:50}
 \rho \PD{t}{\Bu} + \rho (\Bu \cdot \spacegrad) \Bu = - \spacegrad p + \mu \spacegrad^2 \Bu - \rho \zcap g.
 \end{equation}
-
+%
 For steady state with \(\Bu = 0\) initially (our base state), we will call the following the equation of the base state
 
 \boxedEquation{eqn:continuumL21:70}{
@@ -113,7 +113,7 @@ p &= p_s + \delta p \\
 \rho &= \rho_s + \delta \rho
 \end{aligned}
 \end{equation}
-
+%
 After perturbation Navier-Stokes takes the form
 %
 %
@@ -121,55 +121,55 @@ After perturbation Navier-Stokes takes the form
 (\rho_s + \delta \rho )\PD{t}{(0 + \delta \Bu)} + (\rho_s + \delta \rho) ((0 + \delta \Bu) \cdot \spacegrad) (0 + \delta \Bu) =
 - \spacegrad (p_s + \delta p) + \mu \spacegrad^2 (0 + \delta \Bu) - (\rho_s + \delta \rho) \zcap g
 \end{dmath}
-
+%
 Retaining only terms that are of first order of smallness.
 %
 \begin{equation}\label{eqn:continuumL21:110}
 \rho_s \PD{t}{\delta \Bu} = - \spacegrad p_s - \spacegrad \delta p + \mu \spacegrad^2 \delta \Bu - \rho_s \zcap g - \delta \rho \zcap g
 \end{equation}
-
+%
 applying our equation of base state \eqnref{eqn:continuumL21:70}, we have
 %\spacegrad p_s = -\rho_s \zcap g
 \begin{equation}\label{eqn:continuumL21:110b}
 \rho_s \PD{t}{\delta \Bu} = \cancel{\rho_s \zcap g} - \spacegrad \delta p + \mu \spacegrad^2 \delta \Bu - \cancel{\rho_s \zcap g} - \delta \rho \zcap g,
 \end{equation}
-
+%
 or
 %
 \begin{equation}\label{eqn:continuumL21:110c}
 \rho_s \PD{t}{\delta \Bu} = - \spacegrad \delta p + \mu \spacegrad^2 \delta \Bu - \delta \rho \zcap g.
 \end{equation}
-
+%
 we can write
 %
 \begin{equation}\label{eqn:continuumL21:130}
 \left( \PD{t}{} - \nu \spacegrad^2 \right) \delta \Bu = -\inv{\rho_s} \spacegrad \delta p - \frac{\delta \rho}{\rho_s} \zcap g
 \end{equation}
-
+%
 Applying the divergence operation on both sides, and using \(\spacegrad \cdot \Bu = 0\) so that \(\spacegrad \cdot \delta \Bu = 0\) we have
 %
 \begin{equation}\label{eqn:continuumL21:150}
 \left( \PD{t}{} - \nu \spacegrad^2 \right) \cancel{\spacegrad \cdot \delta \Bu} = -\inv{\rho_s} \spacegrad^2 \delta p - (\zcap \cdot \spacegrad ) \frac{\delta \rho}{\rho_s} g,
 \end{equation}
-
+%
 or
 %
 \begin{equation}\label{eqn:continuumL21:170}
 \inv{\rho_s} \spacegrad^2 \delta p = - (\zcap \cdot \spacegrad ) \frac{\delta \rho}{\rho_s} g.
 \end{equation}
-
+%
 Assuming that \(\rho_s\) is constant (actually that is already been done above), we can cancel it, leaving
 %
 \begin{equation}\label{eqn:continuumL21:190}
 \spacegrad^2 \delta p = - (\zcap \cdot \spacegrad ) g \delta \rho = -g \PD{z}{} \delta \rho.
 \end{equation}
-
+%
 operating once more with \(\PDi{z}{}\) we have
 %
 \begin{equation}\label{eqn:continuumL21:210}
 \spacegrad^2 \PD{z}{\delta p} = -g \PDSq{z}{\delta \rho}.
 \end{equation}
-
+%
 Going back to \eqnref{eqn:continuumL21:130} and taking only the \(z\) component we have
 %
 \begin{equation}\label{eqn:continuumL21:230}
@@ -195,13 +195,13 @@ g \alpha \left(
 \delta T
 \end{aligned}
 \end{equation}
-
+%
 in the last step we use the following assumed relation for temperature
 %
 \begin{equation}\label{eqn:continuumL21:250}
 \delta \rho = - \rho_s \alpha \delta T.
 \end{equation}
-
+%
 Here \(\alpha\) is the coefficient of thermal expansion.  This is just a statement that expansion and temperature are related (as we heat something, it expands), with the ratio of the density change relative to the original being linearly related to the change in temperature.
 
 We have finally
@@ -215,7 +215,7 @@ g \alpha \left(
 \right)
 \delta T.
 \end{equation}
-
+%
 Solving this is the Rayleigh-Benard instability problem.
 
 While this is a fourth order differential equation, it is still the same sort of problem logically as we have been working on.  Our boundary value conditions at \(z = 0\) are
@@ -223,11 +223,11 @@ While this is a fourth order differential equation, it is still the same sort of
 \begin{equation}\label{eqn:continuumL21:430}
 u, v, w, \delta u, \delta v, \delta w = 0.
 \end{equation}
-
+%
 Also relevant will be a similar equation relating temperature and fluid flow rate
 %
 \begin{equation}\label{eqn:continuumL21:270}
 \left( \PD{t}{} - \kappa \spacegrad^2 \right) \delta T = \Delta T \frac{\delta w}{d},
 \end{equation}
-
+%
 which we will cover in the next (and final) lecture of the course.

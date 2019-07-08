@@ -18,7 +18,7 @@
 %\begin{equation}\label{eqn:continuumL11:30}
 %\spacegrad \cdot \Bu = 0
 %\end{equation}
-
+%
 We watched a video of the rocking tank as in \cref{fig:continuumL11:continuumL11fig1}.  The boundary condition that accounted for the matching of the die marker is that we have \textunderline{no slipping} at the interface.  Writing \(\taucap\) for the unit tangent to the interface then this condition at the interface is described mathematically by the conditions
 
 \imageFigure{../figures/phy454-continuumechanics/lec11_Rocking_tank_velocity_matchingFig1}{Rocking tank velocity matching}{fig:continuumL11:continuumL11fig1}{0.3}
@@ -29,7 +29,7 @@ We watched a video of the rocking tank as in \cref{fig:continuumL11:continuumL11
 \Bu_A \cdot \ncap &= \Bu_B \cdot \ncap.
 \end{aligned}
 \end{equation}
-
+%
 Referring to \cref{fig:continuumL11:continuumL11fig2} where the tangents and normals are depicted an example representation of the normal and tangent vectors for the fluids are
 
 \imageFigure{../figures/phy454-continuumechanics/lec11_Normals_and_tangents_at_interface_for_2D_systemFig2}{Normals and tangents at interface for 2D system}{fig:continuumL11:continuumL11fig2}{0.2}
@@ -48,26 +48,26 @@ Referring to \cref{fig:continuumL11:continuumL11fig2} where the tangents and nor
 \end{bmatrix}
 \end{aligned}
 \end{equation}
-
+%
 For the traction vector with components
 %
 \begin{equation}\label{eqn:continuumL11:110}
 T_i = \sigma_{ij} n_j,
 \end{equation}
-
+%
 we also have at the interface we must have matching of
 %
 \begin{equation}\label{eqn:continuumL11:130}
 \taucap \cdot \BT.
 \end{equation}
-
+%
 More explicitly, in coordinates this is
 %
 \begin{equation}\label{eqn:continuumL11:150}
 \evalbar{\tau_i (\sigma_{ij} n_j)}{A} =
 \evalbar{\tau_i (\sigma_{ij} n_j)}{B}
 \end{equation}
-
+%
 \makeexample
 {Steady incompressible flow}
 %{Steady incompressible rectilinear (unidirectional) flow}
@@ -186,13 +186,13 @@ u(0) &= 0 \\
 u(h) &= U.
 \end{aligned}
 \end{equation}
-
+%
 For such a flow \eqnref{eqn:continuumL11:330a} simplifies to
 %
 \begin{equation}\label{eqn:continuumL11:530}
 \frac{d^2 u}{dy^2} = 0
 \end{equation}
-
+%
 with solution
 %
 \begin{equation}\label{eqn:continuumL11:550}
@@ -208,19 +208,19 @@ u = \frac{U}{h} y + u(0) = \frac{U}{h} y.
 G &= - \frac{dp}{dx} \ne 0
 \end{aligned}
 \end{equation}
-
+%
 This time our simplified Navier-Stokes equation \eqnref{eqn:continuumL11:330a} is reduced to something slightly more complicated
 %
 \begin{equation}\label{eqn:continuumL11:590}
 \mu \frac{d^2 u}{dy^2} = -G,
 \end{equation}
-
+%
 with solution
 %
 \begin{equation}\label{eqn:continuumL11:610}
 u = -\frac{G}{2 \mu} y^2 + A y + B.
 \end{equation}
-
+%
 The boundary value conditions with the coordinate system in use illustrated in \cref{fig:continuumL11:continuumL11fig5} require the velocity to be zero at the interface (the pipe walls preventing flow in the interior of the pipe)
 
 \imageFigure{../figures/phy454-continuumechanics/lec11_1D_Channel_flow_coordinate_system_setupFig5}{1D Channel flow coordinate system setup}{fig:continuumL11:continuumL11fig5}{0.2}
@@ -229,7 +229,7 @@ The boundary value conditions with the coordinate system in use illustrated in \
 u(\pm h) =
 -\frac{G}{2 \mu} h^2 \pm A h + B = 0
 \end{equation}
-
+%
 One solution, immediately evident is,
 %
 \begin{equation}\label{eqn:continuumL11:650}
@@ -238,13 +238,13 @@ A &= 0 \\
 B &= \frac{G}{2 \mu} h^2,
 \end{aligned}
 \end{equation}
-
+%
 so our solution becomes
 %
 \begin{equation}\label{eqn:continuumL11:690}
 u = \frac{G}{2 \mu} \Bigl( h^2 - y^2 \Bigr),
 \end{equation}
-
+%
 a parabolic velocity flow.  This is illustrated graphically in \cref{fig:continuumL11:continuumL11fig6}.
 
 \imageFigure{../figures/phy454-continuumechanics/lec11_Parabolic_velocity_distributionFig6}{Parabolic velocity distribution}{fig:continuumL11:continuumL11fig6}{0.2}
@@ -254,13 +254,13 @@ It is clear that this is maximized by \(y = 0\), but we can also see this by com
 \begin{equation}\label{eqn:continuumL11:710}
 \frac{du}{dy} = \frac{G}{\mu} y = 0.
 \end{equation}
-
+%
 This maximum is
 %
 \begin{equation}\label{eqn:continuumL11:850}
 u_{\text{max}} = \frac{G}{2\mu} h^2
 \end{equation}
-
+%
 The flux, or flow rate is
 %
 \begin{equation}\label{eqn:unidirectionalSolutions:890}
@@ -272,7 +272,7 @@ Q
 \frac{2 G h^3}{3}
 \end{aligned}
 \end{equation}
-
+%
 Let us now compute the strain (\(e_{ij}\)) and the stress (\(\sigma_{ij} = -p \delta_{ij} + 2 \mu e_{ij}\))
 %
 \begin{equation}\label{eqn:continuumL11:730}
@@ -282,13 +282,13 @@ e_{11} &= \PD{x}{u} = 0 \\
 e_{22} &= \PD{y}{v} = 0
 \end{aligned}
 \end{equation}
-
+%
 stress
 %
 \begin{equation}\label{eqn:continuumL11:750}
 \sigma_{12} = 2 \mu e_{12} = -G y
 \end{equation}
-
+%
 This can be used to compute the forces on the inner surfaces of the tube.  As illustrated in \cref{fig:continuumL11:continuumL11fig7}, our normals at \(\pm h\) are \(\mp \ycap\) respectively.  The traction vector in the \(y\) direction is at \(y = h\) is
 
 \imageFigure{../figures/phy454-continuumechanics/lec11_Normals_in_1D_channel_flow_systemFig7}{Normals in 1D channel flow system}{fig:continuumL11:continuumL11fig7}{0.2}
@@ -296,24 +296,24 @@ This can be used to compute the forces on the inner surfaces of the tube.  As il
 \begin{equation}\label{eqn:continuumL11:770}
 \tau_i = \sigma_{i 2} \evalbar{n_2}{y = h} = G h,
 \end{equation}
-
+%
 so that
 %
 \begin{equation}\label{eqn:continuumL11:791}
 \Btau = \xcap G h
 \end{equation}
-
+%
 (here the \(x\) directionality comes from the \(i = 1\) index of the stress tensor).
 %
 \begin{equation}\label{eqn:continuumL11:790}
 F_{x_L} = \xcap \cdot \Btau = G h
 \end{equation}
-
+%
 The total force is then
 %
 \begin{equation}\label{eqn:continuumL11:810}
 \int_0^L F_x dx = + G h L
 \end{equation}
-
+%
 \FIXME{Ask in class.  This is the tangential force at the boundary of the wall.  What is it a force on?  If it is tangential, how can it act on the wall?  It could act on an impediment placed right up next to the wall, but if that is the case, why are we integrating from \(x = 0\) to \(x = L\)?}
 } % end example

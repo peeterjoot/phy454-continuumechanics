@@ -24,13 +24,13 @@ u \PD{x}{u} + v \PD{y}{u} = - \inv{\rho} \PD{x}{p} + \nu \PDSq{y}{u}
 \PD{y}{p} = 0
 \end{equation}
 \end{enumerate}
-
+%
 In the inviscid region \(p\) is a constant in \(y\)
 %
 \begin{equation}\label{eqn:continuumL19:70}
 \PD{y}{p} = 0
 \end{equation}
-
+%
 This will be approximately true in the boundary layer too as illustrated in \cref{fig:continuumL19:continuumL19Fig1}
 
 \imageFigure{../figures/phy454-continuumechanics/lec19_Illustrating_the_boundary_layer_thickness_and_associated_pressure_variationFig1}{Illustrating the boundary layer thickness and associated pressure variation}{fig:continuumL19:continuumL19Fig1}{0.3}
@@ -40,19 +40,19 @@ Starting with
 \begin{equation}\label{eqn:continuumL19:90}
 \PD{t}{\Bu} + (\Bu \cdot \spacegrad) \Bu = -\spacegrad \left( \frac{p}{\rho} + \chi \right) + \nu \spacegrad^2 \Bu,
 \end{equation}
-
+%
 we were able to show that inviscid irrotational incompressible flows are governed by Bernoulli's equation
 %
 \begin{equation}\label{eqn:continuumL19:110}
 \frac{p}{\rho} + \chi + \inv{2} \Bu^2 = \text{constant}
 \end{equation}
-
+%
 In the absence of body forces (or constant potentials), we have
 %
 \begin{equation}\label{eqn:continuumL19:130}
 -\PD{x}{}\frac{p}{\rho} = \PD{x}{} \left(\inv{2} \Bu^2 \right) \sim U \PD{x}{U}
 \end{equation}
-
+%
 so that our boundary layer equations are
 %
 \begin{subequations}
@@ -66,7 +66,7 @@ u \PD{x}{u} + v \PD{y}{u} = U \frac{dU}{dx} + \nu \PDSq{y}{u}
 \PD{x}{u} + \PD{y}{v} = 0
 \end{equation}
 \end{subequations}
-
+%
 With boundary conditions
 %
 \begin{equation}\label{eqn:continuumProblemSet2:210}
@@ -76,7 +76,7 @@ U(x, \infty) &= U(x) \\
 V(x, 0) &= 0
 \end{aligned}
 \end{equation}
-
+%
 %\unnumberedSubsection{Similarity transformation}
 
 Define a similarity variable \(\eta\)
@@ -84,31 +84,31 @@ Define a similarity variable \(\eta\)
 \begin{equation}\label{eqn:continuumL19:230}
 \eta \sim \frac{y}{\sqrt{\nu t}}
 \end{equation}
-
+%
 Suppose we want
 %
 \begin{equation}\label{eqn:continuumL19:250}
 \eta \sim f(y, x)
 \end{equation}
-
+%
 Since we have
 %
 \begin{equation}\label{eqn:continuumL19:270}
 x \sim U t,
 \end{equation}
-
+%
 or
 %
 \begin{equation}\label{eqn:continuumL19:290}
 t \sim \frac{x}{U}.
 \end{equation}
-
+%
 We can make the transformation
 %
 \begin{equation}\label{eqn:continuumL19:310}
 \eta = \frac{y}{\sqrt{2 \frac{\nu x}{U}}}
 \end{equation}
-
+%
 We can introduce stream functions
 %
 \begin{equation}\label{eqn:continuumProblemSet2:330}
@@ -117,7 +117,7 @@ u &= \PD{y}{\psi} \\
 v &= -\PD{x}{\psi}
 \end{aligned}
 \end{equation}
-
+%
 We can check that this satisfies the continuity equation since we have
 %
 \begin{equation}\label{eqn:boundaryLayersAndStreamFunctionsAndBlassius:1170}
@@ -129,13 +129,13 @@ We can check that this satisfies the continuity equation since we have
 &= 0
 \end{aligned}
 \end{equation}
-
+%
 Now introduce a similarity variable
 %
 \begin{equation}\label{eqn:continuumL19:350}
 f(\eta) = \frac{\psi}{\delta U_0} = \frac{\psi}{\sqrt{2 \nu x U_0}}
 \end{equation}
-
+%
 Note that we have also suddenly assumed that \(U = U_0\) (a constant, which will also kill the \(U'\) term in the N-S equation).  This is not really justified by anything we have done so far, but asking about this in class, it was stated that this is a restriction for this formulation of the Blasius problem.
 
 Also note that this last step requires:
@@ -143,13 +143,13 @@ Also note that this last step requires:
 \begin{equation}\label{eqn:continuumL19:730}
 \delta = \sqrt{ 2 \nu x/U_0 }.
 \end{equation}
-
+%
 This at least makes sense dimensionally since we have
 %
 \begin{equation}\label{eqn:continuumL19:731}
 [\sqrt{\nu x/U}] = \sqrt{ (L^2/T) (L) (T/L)} = L,
 \end{equation}
-
+%
 but where did this definition of \(\delta\) come from?
 
 In \citep{ wiki:BlasiusBoundary} it is mentioned that this is a result of the scaling argument.  We did have some scaling arguments that included \(\delta\) in the expressions from last lecture, one of which was \eqnref{eqn:continuumL19:130}
@@ -157,7 +157,7 @@ In \citep{ wiki:BlasiusBoundary} it is mentioned that this is a result of the sc
 \begin{equation}\label{eqn:continuumL19:750}
 \delta \sim \frac{v L}{U},
 \end{equation}
-
+%
 but that does not obviously give us \eqnref{eqn:continuumL19:730}?
 
 Ah.  We argued that
@@ -165,13 +165,13 @@ Ah.  We argued that
 \begin{equation}\label{eqn:continuumL19:1130}
 v \PD{y}{u} \sim \frac{U^2}{L}
 \end{equation}
-
+%
 and that the larger of the viscous terms was
 %
 \begin{equation}\label{eqn:continuumL19:1150}
 \nu \PDSq{y}{u} \sim \frac{\nu U}{\delta^2}.
 \end{equation}
-
+%
 If we require that these are the same order of magnitude, as argued in \S 8.3 of \citep{acheson1990elementary}, then we find \eqnref{eqn:continuumL19:750}.
 
 Regardless, given this change of variables, we can apparently compute
@@ -179,7 +179,7 @@ Regardless, given this change of variables, we can apparently compute
 \begin{equation}\label{eqn:continuumL19:370}
 f''' + f f'' = 0.
 \end{equation}
-
+%
 Our boundary conditions are
 %
 \begin{equation}\label{eqn:continuumL19:390}
@@ -188,7 +188,7 @@ f = f' = 0 & \quad \mbox{\(\eta = 0\)} \\
 f' = 1 & \quad \mbox{\(\eta = \infty\)} \\
 \end{array}
 \end{equation}
-
+%
 %\unnumberedSubsection{Deriving the equation of motion}
 
 Attempting to derive \eqnref{eqn:continuumL19:370} using the definitions above gets a bit messy.  It is messy enough that I mistakenly thought that we could not possible arrive at a differential equation that has a plain old (non-derivative) \(f\) in it as in \eqnref{eqn:continuumL19:370} above.  The algebra involved in taking the derivatives got the better of me.  This derivation is treated a different way in \citep{acheson1990elementary}.  For the purpose of completeness (and because that derivation also leaves out some details), lets do this from start to finish with all the gory details, but following the outline provided in the text.
@@ -198,37 +198,37 @@ Instead of pre-determining the form of the similarity variable exactly, we can s
 \begin{equation}\label{eqn:continuumL19:770}
 \eta = \frac{y}{g(x)}.
 \end{equation}
-
+%
 We still introduce stream our stream functions \eqnref{eqn:continuumProblemSet2:330}, but require that our horizontal velocity component is only a function of our similarity variable
 %
 \begin{equation}\label{eqn:continuumL19:790}
 u = U h(\eta),
 \end{equation}
-
+%
 where \(h(\eta)\) is to be determined, and is scaled by our characteristic velocity \(U\).  Observe that, as above, we are assuming that \(U(x) = U\), a constant (which also kills off the \(U U'\) term in the Navier-Stokes equation.)  Given this form of \(u\), we note that
 %
 \begin{equation}\label{eqn:continuumL19:810}
 u(\eta) = \PD{y}{\psi} = \PD{\eta}{\psi} \PD{y}{\eta} = \inv{g(x)} \PD{\eta}{\psi},
 \end{equation}
-
+%
 so that
 %
 \begin{equation}\label{eqn:continuumL19:830}
 \psi = U g(x) \int_0^\eta h(\eta') d\eta' + k(x).
 \end{equation}
-
+%
 It is argued in the text that we also want \(\psi\) to be a streamline, so that \(\psi(\eta = 0) = 0\) implying that \(k(x) = 0\).  I do not honestly follow the rational for that, but it is certainly convenient to set \(k(x) = 0\), so lets do so and see where things go.  With
 %
 \begin{equation}\label{eqn:continuumL19:850}
 f(\eta) = \int_0^\eta h(\eta') d\eta'.
 \end{equation}
-
+%
 Observe that \(f(0)\) is necessarily zero with this definition.  We can now write
 %
 \begin{equation}\label{eqn:continuumL19:870}
 \psi(\eta, x) = U g(x) f(\eta).
 \end{equation}
-
+%
 This is like what we had in class, with the exception that instead of a constant relating \(\psi\) and \(f(\eta)\) we also have a function of \(x\).  That is exactly what we need so that we can end up with both \(f\) and derivatives of \(f\) in our Navier-Stokes equation.
 
 Now let us do the mechanical bits, computing all the derivatives.  We can compute \(v\) to start with
@@ -245,7 +245,7 @@ v
 &= U g' \left( f' \eta - f \right)
 \end{aligned}
 \end{equation}
-
+%
 We had initially \(u = U h(\eta)\), but \(f'(\eta) = h(\eta)\), so we have now got both \(u\) and \(v\) specified in terms of \(f\) and \(g\) and their derivatives
 %
 \begin{equation}\label{eqn:continuumL19:890}
@@ -254,7 +254,7 @@ u &= U f' \\
 v &= U g' \left( f' \eta - f \right).
 \end{aligned}
 \end{equation}
-
+%
 We have got a bunch of the \(u\) derivatives that we have to compute
 %
 \begin{equation}\label{eqn:boundaryLayersAndStreamFunctionsAndBlassius:1210}
@@ -296,7 +296,7 @@ U \inv{g} f''' \PD{y}{\eta} \\
 U \inv{g^2} f'''.
 \end{aligned}
 \end{equation}
-
+%
 Our \(x\) component of Navier-Stokes now takes the form
 %
 \begin{equation}\label{eqn:boundaryLayersAndStreamFunctionsAndBlassius:1270}
@@ -332,13 +332,13 @@ f'''
 \right)
 \end{aligned}
 \end{equation}
-
+%
 or (assuming \(g \ne 0\))
 %
 \begin{equation}\label{eqn:continuumL19:910}
 f''' + \frac{U g g' }{\nu} f f'' = 0.
 \end{equation}
-
+%
 Now, it we wish \(U g g'/\nu = 1\) (to make this equation as easy to solve as possible), we can integrate to find the required form of \(g(x)\).  This gives
 %
 \begin{equation}\label{eqn:continuumL19:930}
@@ -349,7 +349,7 @@ It is argued that we expect
 \begin{equation}\label{eqn:continuumL19:950}
 \PD{y}{u} = U f'' \inv{g},
 \end{equation}
-
+%
 to become singular at \(x = 0\), so we should set \(C = 0\).  This leaves us with
 %
 \begin{subequations}
@@ -369,7 +369,7 @@ u = U f'
 v = (\eta f' - f) \frac{\nu}{g},
 \end{equation}
 \end{subequations}
-
+%
 and boundary value conditions
 %
 \begin{subequations}
@@ -383,7 +383,7 @@ f'(0) = 0
 f'(\infty) = 1.
 \end{equation}
 \end{subequations}
-
+%
 where \eqnref{eqn:continuumL19:1090} follows from \(u(0) = 0\) and \eqnref{eqn:continuumL19:1030}, and \eqnref{eqn:continuumL19:1110} follows from the fact that \(u\) tends to \(U\).
 
 %\unnumberedSubsection{Numeric solution}

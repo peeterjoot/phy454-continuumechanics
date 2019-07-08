@@ -9,25 +9,25 @@ We start with Navier-Stokes in vector form
 \begin{equation}\label{eqn:continuumL18:290}
 \PD{t}{\Bu} + (\Bu \cdot \spacegrad) \Bu = -\spacegrad \left( \frac{p}{\rho} \right) + \nu \spacegrad^2 \Bu + \Bg.
 \end{equation}
-
+%
 Writing the body force as a potential
 %
 \begin{equation}\label{eqn:continuumL18:310}
 \Bg = -\spacegrad \chi,
 \end{equation}
-
+%
 so that we have
 %
 \begin{equation}\label{eqn:continuumL18:330}
 \PD{t}{\Bu} + (\Bu \cdot \spacegrad) \Bu = -\spacegrad \left( \frac{p}{\rho} + \chi \right) + \nu \spacegrad^2 \Bu .
 \end{equation}
-
+%
 Using the vector identity
 %
 \begin{equation}\label{eqn:continuumL18:350}
 (\Bu \cdot \spacegrad) \Bu = \spacegrad \cross (\spacegrad \cross \Bu) + \spacegrad \left( \inv{2} \Bu^2 \right),
 \end{equation}
-
+%
 we can write
 %
 \begin{equation}\label{eqn:continuumL18:370}
@@ -35,13 +35,13 @@ we can write
 \spacegrad \cross (\spacegrad \cross \Bu) + \spacegrad \left( \inv{2} \Bu^2 \right)
 = -\spacegrad \left( \frac{p}{\rho} + \chi \right) + \nu \spacegrad^2 \Bu .
 \end{equation}
-
+%
 If we consider the non-viscous region of the flow (far from the boundary layer), we can kill the Laplacian term.  Again, considering only the steady state, and assuming that we have irrotational flow (\(\spacegrad \cross \Bu = 0\)) in the non-viscous region, we have
 %
 \begin{equation}\label{eqn:continuumL18:390}
 \spacegrad \left( \frac{p}{\rho} + \chi + \inv{2} \Bu^2 \right) = 0.
 \end{equation}
-
+%
 or
 
 \boxedEquation{eqn:continuumL18:410}{
@@ -60,7 +60,7 @@ argues that since the velocites are tangential to any streamline, and because \(
 \begin{equation}\label{eqn:continuumL18:391}
 \spacegrad \lr{ \frac{p}{\rho} + \chi + \inv{2} \Bu^2 },
 \end{equation}
-
+%
 From this \cref{eqn:continuumL18:410} is a statement that the quantity in the gradient operation is constant along any streamline, even for rotational flows.
 
 Observe that the general form of Bernoulli's theorem follows from the fact that
@@ -68,7 +68,7 @@ Observe that the general form of Bernoulli's theorem follows from the fact that
 \begin{equation}\label{eqn:continuumL18:391}
 \Bu \cdot \lr{ \Bu \cross \lr{ \spacegrad \cross \Bu } } = 0,
 \end{equation}
-
+%
 where the mathematical statement of the theorem is
 
 \boxedEquation{eqn:continuumL18:410}{

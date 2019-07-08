@@ -25,7 +25,7 @@ For pure liquid, say pure water at room temperature, one has the following estim
 \nu &\sim 10^{-2}
 \end{aligned}
 \end{equation}
-
+%
 For a \(d \sim 1 \text{cm}\) layer depth and a ten degree temperature drop convective velocities have been experimentally measured of about \(10^{-2}\).
 % \text{cm}/\text{s}
 With \(g \sim 10^{-3}\), calculate the values of \(U_1\), \(U_2\), \(U_3\), and \(U_4\).  Which ones of the characteristic velocities \((U_1\), \(U_2\), \(U_3, U_4)\) do you think are suitable for nondimensionalising the velocity in Navier-Stokes/Energy equation describing the water convection problem?
@@ -70,13 +70,13 @@ so that
 \begin{equation}\label{eqn:continuumProblemSet3:90}
 [U_2] = \frac{L^2}{T} \inv{L} = \frac{L}{T}.
 \end{equation}
-
+%
 \item For \(U_3\)
 %
 \begin{equation}\label{eqn:continuumProblemSet3:110}
 [U_3] = \sqrt{ \frac{L}{T^2} \inv{K} L K } = \frac{L}{T}
 \end{equation}
-
+%
 \item For \(U_4\)
 
 According to \citep{wolframThermalDiffusivity}, thermal diffusivity is defined by
@@ -84,20 +84,20 @@ According to \citep{wolframThermalDiffusivity}, thermal diffusivity is defined b
 \begin{equation}\label{eqn:continuumProblemSet3:130}
 \PD{t}{T} = \kappa \spacegrad^2 T
 \end{equation}
-
+%
 so that
 %
 \begin{equation}\label{eqn:continuumProblemSet3:150}
 [\kappa] = \inv{[t][\spacegrad^2]} = \frac{L^2}{T}
 \end{equation}
-
+%
 That gives us
 %
 \begin{equation}\label{eqn:continuumProblemSet3:170}
 [U_4] = \frac{L^2}{T} \inv{L} = \frac{L}{T}.
 \end{equation}
 \end{enumerate}
-
+%
 %We have verified that all of these have dimensions of velocity.
 
 \makesubanswer{Water convection}{problem:fluids:ps3:2}
@@ -111,7 +111,7 @@ U_3 &\sim \sqrt{ 10^{-3} 10^{-4} (1) 10^1 } = 10^{-3} \\
 U_4 &\sim 10^{-3}/1 = 10^{-3}
 \end{aligned}
 \end{equation}
-
+%
 Use of \(U_2 = \nu/d\) gives the closest match to the measured characteristic velocity of \(10^{-2}\).
 
 \makesubanswer{Mantle convection}{problem:fluids:ps3:3}
@@ -124,7 +124,7 @@ U_3 &\sim \sqrt{ 10^{-3} 10^{-5} 10^8 10^3 } \sim 10^1 \\
 U_4 &\sim \frac{10^{-2}}{10^8} = 10^{-10}
 \end{aligned}
 \end{equation}
-
+%
 Both \(U_1\) and \(U_4\) come close to the actual convective mantle velocity of \(10^{-8}\).  Use of \(U_1\) to nondimensionalise is probably best, since it has more degrees of freedom, and includes the gravity term that is probably important for such large masses.
 
 \FIXME{check against posted solutions}
@@ -136,7 +136,7 @@ Both \(U_1\) and \(U_4\) come close to the actual convective mantle velocity of 
 \begin{equation}\label{eqn:continuumProblemSet3:230}
 \rho \PD{t}{\Bu} + \rho (\Bu \cdot \spacegrad) \Bu = - \spacegrad p + \mu \spacegrad^2 \Bu + \rho g \zcap
 \end{equation}
-
+%
 where \(\zcap\) is the unit vector in the \(z\) direction.  You may scale:
 
 \begin{itemize}
@@ -154,7 +154,7 @@ Let us start by dividing by \(g \rho\), to make all terms (most obviously the \(
 \begin{equation}\label{eqn:continuumProblemSet3:250}
 \inv{g} \PD{t}{\Bu} + \inv{g} (\Bu \cdot \spacegrad) \Bu = - \inv{g \rho} \spacegrad p + \frac{\mu}{g \rho} \spacegrad^2 \Bu + \zcap.
 \end{equation}
-
+%
 Our suggested replacements are
 %
 \begin{equation}\label{eqn:continuumProblemSet3:270}
@@ -165,30 +165,30 @@ p &= \rho U^2 p' \\
 \spacegrad &= \inv{R} \spacegrad'.
 \end{aligned}
 \end{equation}
-
+%
 Plugging these in we have
 %
 \begin{equation}\label{eqn:continuumProblemSet3:290}
 \frac{U^2}{g R} \PD{t'}{\Bu'} + \frac{U^2}{g R} (\Bu' \cdot \spacegrad') \Bu' = - \frac{\cancel{\rho} U^2}{g \cancel{\rho} R} \spacegrad' p' + \frac{\mu U}{g \rho R^2} {\spacegrad'}^2 \Bu' + \zcap.
 \end{equation}
-
+%
 Making a \(\text{Fr} = gR/U\) replacement, using the Froude number, we have
 %
 \begin{equation}\label{eqn:continuumProblemSet3:310}
 \frac{U}{\text{Fr}} \PD{t'}{\Bu'} + \frac{U}{\text{Fr}} (\Bu' \cdot \spacegrad') \Bu' = - \frac{U}{\text{Fr}} \spacegrad' p' + \frac{\mu }{\text{Fr} \rho R} {\spacegrad'}^2 \Bu' + \zcap.
 \end{equation}
-
+%
 Scaling by \(\text{Fr}/U\) we tidy things up a bit, and also allow for insertion of the Reynold's number
 %
 \begin{equation}\label{eqn:continuumProblemSet3:330}
 \PD{t'}{\Bu'} + (\Bu' \cdot \spacegrad') \Bu' = - \spacegrad' p' + \frac{1}{\text{Re}} {\spacegrad'}^2 \Bu' + \frac{\text{Fr}}{U}\zcap.
 \end{equation}
-
+%
 Observe that the dimensions of Froude's number is that of velocity
 %
 \begin{equation}\label{eqn:continuumProblemSet3:350}
 [\text{Fr}] = [g] T = \frac{L}{T},
 \end{equation}
-
+%
 so that the end result is dimensionless as desired.  We also see that Froude's number, characterizes the significance of the body force for fluid flow at the characteristic velocity.  This is consistent with \citep{wiki:froudeNumber} where it was stated that the Froude number is used to determine the resistance of a partially submerged object moving through water, and permits the comparison of objects of different sizes (complete with pictures of canoes of various sizes that Froude built for such study).
 } % end answer

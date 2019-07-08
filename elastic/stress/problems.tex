@@ -152,13 +152,13 @@ e_{ij}
 \end{bmatrix}
  10^{-6}.
 \end{equation}
-
+%
 Note that this is dimensionless, unlike the stress.
 
 Associated Mathematica notebook for this problem (\nbref{continuumProblemSet1Q1.cdf})
 } % end answer
 
-\makeoproblem{Stress and strain, small displacement}{problem:continuumProblemSet1:q2b}
+\makeoproblem{Small stress and strain}{problem:continuumProblemSet1:q2b}
 {2012 ps1, p2 b}
 {
 For the problem \ref{problem:strain:ps1q2a}, is the body under compression or expansion?
@@ -181,13 +181,13 @@ p_i
 \delta_{ij}.
 \end{aligned}
 \end{equation}
-
+%
 We see that the stress tensor at this point is also necessarily diagonal if the strain is diagonal in that basis (with the implicit assumption here that we are talking about an isotropic material).  Noting that the Poisson ratio is bounded according to
 %
 \begin{equation}\label{eqn:continuumProblemSet1:350}
 -1 \le \nu \le \inv{2},
 \end{equation}
-
+%
 so if our trace is positive (as it is in this problem for all points \(x_2 > 1/2\)), then any positive principle strain value will result in a positive stress along that direction).  For example at the point \((1,2,4)\) of the previous part of this problem (for which \(x_2 > 1/2\)), we have
 %
 \begin{equation}\label{eqn:continuumProblemSet1:370}
@@ -203,13 +203,13 @@ so if our trace is positive (as it is in this problem for all points \(x_2 > 1/2
 + \frac{3 \nu}{1 - 2 \nu}
 \end{bmatrix}.
 \end{equation}
-
+%
 We see that at this point the \((1,1)\) and \((3,3)\) components of stress is positive (expansion in those directions) regardless of the material, and provided that
 %
 \begin{equation}\label{eqn:continuumProblemSet1:390}
 \frac{3 \nu}{1 - 2 \nu} > 4.53206
 \end{equation}
-
+%
 (i.e. \(\nu > 0.375664\)) the material is under expansion in all directions.  For \(\nu < 0.375664\) the material at that point is expanding in the \(\pcap_1\) and \(\pcap_3\) directions, but under compression in the \(\pcap_2\) directions.
 
 (save to disk and run with either Mathematica or the free Wolfram CDF player ( http://www.wolfram.com/cdf-player/  ) )
@@ -232,13 +232,13 @@ The stress tensor at a point has components given by
 2 & 1 & -1
 \end{bmatrix}.
 \end{equation}
-
+%
 Find the traction vector across an area normal to the unit vector
 %
 \begin{equation}\label{eqn:continuumProblemSet1:70}
 \ncap = ( \sqrt{2} \Be_1 - \Be_2 + \Be_3)/2
 \end{equation}
-
+%
 Can you construct a tangent vector \(\Btau\) on this plane by inspection?  What are the components of the force per unit area along the normal \(\ncap\) and tangent \(\Btau\) on that surface?  (hint: projection of the traction vector.)
 } % makeoproblem
 
@@ -248,13 +248,13 @@ The traction vector, the force per unit volume that holds a body in equilibrium,
 \begin{equation}\label{eqn:continuumProblemSet1:410}
 P_i = \sigma_{ik} n_k
 \end{equation}
-
+%
 where \(n_k\) was the coordinates of the normal to the surface with area \(df_k\).  In matrix form, this is just
 %
 \begin{equation}\label{eqn:continuumProblemSet1:430}
 \BP = \sigma \ncap,
 \end{equation}
-
+%
 so our traction vector for this stress tensor and surface normal is just
 %
 \begin{equation}\label{eqn:problems:650}
@@ -286,7 +286,7 @@ so our traction vector for this stress tensor and surface normal is just
 \end{bmatrix}
 \end{aligned}
 \end{equation}
-
+%
 We also want a vector in the plane, and can pick
 %
 \begin{equation}\label{eqn:continuumProblemSet1:450}
@@ -298,7 +298,7 @@ We also want a vector in the plane, and can pick
 1
 \end{bmatrix},
 \end{equation}
-
+%
 or
 %
 \begin{equation}\label{eqn:continuumProblemSet1:470}
@@ -309,7 +309,7 @@ or
 -\inv{2}
 \end{bmatrix},
 \end{equation}
-
+%
 It is clear that either of these is normal to \(\ncap\) (the first can also be computed by normalizing \(\ncap \cross \Be_1\), and the second with one round of Gram-Schmidt).  However, neither of these vectors in the plane are particularly interesting since they are completely arbitrary.  Let us instead compute the projection and rejection of the traction vector with respect to the normal.  We find for the projection
 %
 \begin{equation}\label{eqn:problems:670}
@@ -355,7 +355,7 @@ It is clear that either of these is normal to \(\ncap\) (the first can also be c
 \ncap
 \end{aligned}
 \end{equation}
-
+%
 Our rejection, the component of the traction vector in the plane, is
 %
 \begin{equation}\label{eqn:problems:690}
@@ -385,7 +385,7 @@ Our rejection, the component of the traction vector in the plane, is
 \end{bmatrix}
 \end{aligned}
 \end{equation}
-
+%
 This gives us a another vector perpendicular to the normal \(\ncap\)
 %
 \begin{equation}\label{eqn:continuumProblemSet1:490}
@@ -397,7 +397,7 @@ This gives us a another vector perpendicular to the normal \(\ncap\)
 -5
 \end{bmatrix}.
 \end{equation}
-
+%
 Wrapping up, we find the decomposition of the traction vector in the direction of the normal and its projection onto the plane to be
 %
 \begin{equation}\label{eqn:continuumProblemSet1:510}
@@ -407,7 +407,7 @@ Wrapping up, we find the decomposition of the traction vector in the direction o
 +
 \frac{3}{2} \taucap.
 \end{equation}
-
+%
 The components we can read off by inspection.
 
 Associated Mathematica notebook for this problem ({continuumProblemSet1Q3.cdf}).
@@ -426,7 +426,7 @@ y^2 & B \sin y & z \\
 C x & z & z^3
 \end{bmatrix}
 \end{equation}
-
+%
 Determine the constant \(A\), \(B\), and \(C\) if the body is in equilibrium.
 } % makeoproblem
 
@@ -450,7 +450,7 @@ In the absence of external forces our equilibrium condition was
 \begin{equation}\label{eqn:continuumProblemSet1:530}
 \partial_k \sigma_{ik} = 0.
 \end{equation}
-
+%
 In matrix form we wish to operate (to the left) with the gradient coordinate vector
 %
 \begin{equation}\label{eqn:problems:710}
@@ -491,7 +491,7 @@ B &= -\frac{1}{\cos y} \\
 C &= -3 z^2,
 \end{aligned}
 \end{equation}
-
+%
 provided \(y \ne 0\), and \(y \ne \pi/2 + n\pi\) for integer \(n\).  If equilibrium is to hold along the \(y = 0\) plane, then we must either also have \(A = 0\) or also impose the restriction \(x = m \pi\) (for integer \(m\)).
 
 } % end answer

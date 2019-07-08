@@ -18,7 +18,7 @@ In fluid dynamics we look at displacements with respect to time as illustrated i
 \begin{equation}\label{eqn:continuumL8:230}
 d\Bx' = d\Bx + d\Bu \delta t
 \end{equation}
-
+%
 In index notation
 %
 \begin{equation}\label{eqn:strainAndVorticity:490}
@@ -28,7 +28,7 @@ dx_i'
 &= dx_i + \PD{x_j}{u_i} dx_j \delta t
 \end{aligned}
 \end{equation}
-
+%
 We define the strain tensor, still symmetric, using only first order partials
 %
 \begin{equation}\label{eqn:continuumL8:250}
@@ -36,7 +36,7 @@ e_{ij} = \inv{2} \left(
 \PD{x_j}{u_i} +
 \PD{x_i}{u_j} \right).
 \end{equation}
-
+%
 We also define an antisymmetric vorticity tensor
 %
 \begin{equation}\label{eqn:continuumL8:270}
@@ -44,7 +44,7 @@ We also define an antisymmetric vorticity tensor
 \PD{x_j}{u_i}
 -\PD{x_i}{u_j} \right)
 \end{equation}
-
+%
 Effect of \(e_{ij}\) when diagonalized
 %
 \begin{equation}\label{eqn:continuumL8:290}
@@ -56,7 +56,7 @@ e_{11} & 0 & 0 \\
 0 & 0 & e_{33}
 \end{bmatrix}
 \end{equation}
-
+%
 so that in this frame of reference we have
 %
 \begin{equation}\label{eqn:continuumL8:310}
@@ -66,19 +66,19 @@ dx_2' &= ( 1 + e_{22} \delta t) dx_2 \\
 dx_3' &= ( 1 + e_{33} \delta t) dx_3
 \end{aligned}
 \end{equation}
-
+%
 Let us find the matrix form of the antisymmetric tensor.  We find
 %
 \begin{equation}\label{eqn:continuumL8:330}
 \omega_{11} = \omega_{22} = \omega_{33} = 0
 \end{equation}
-
+%
 Introducing a vorticity vector
 %
 \begin{equation}\label{eqn:continuumL8:350}
 \Bomega = \spacegrad \cross \Bu
 \end{equation}
-
+%
 we find
 %
 \begin{equation}\label{eqn:continuumL8:370}
@@ -88,13 +88,13 @@ we find
 \omega_{31} &= \inv{2}\left( \PD{x_1}{u_3} -\PD{x_3}{u_1} \right) = - \inv{2} (\spacegrad \cross \Bu)_2
 \end{aligned}
 \end{equation}
-
+%
 Writing
 %
 \begin{equation}\label{eqn:continuumL8:390}
 \Omega_i = \inv{2} \omega_i
 \end{equation}
-
+%
 we find the matrix form of this antisymmetric tensor
 %
 \begin{equation}\label{eqn:continuumL8:410}
@@ -115,13 +115,13 @@ dx_1'
 &= dx_1 + \left( \Omega_2 dx_3 - \Omega_3 dx_2 \right) \delta t
 \end{aligned}
 \end{equation}
-
+%
 Doing this for all components we find
 %
 \begin{equation}\label{eqn:continuumL8:430}
 d\Bx' = d\Bx + (\BOmega \cross d\Bx) \delta t.
 \end{equation}
-
+%
 The tensor \(\omega_{ij}\) implies rotation of a control volume with an angular velocity \(\BOmega = \Bomega/2\) (half the vorticity vector).
 
 In general we have
@@ -129,7 +129,7 @@ In general we have
 \begin{equation}\label{eqn:continuumL8:450}
 dx_i' = dx_i + e_{ij} dx_j \delta t + \omega_{ij} dx_j \delta t
 \end{equation}
-
+%
 \section{Comparing to elastostatics}
 
 %After this first fluid dynamics lecture I was left troubled.  We would just been barraged with a set of equations pulled out of a magic hat, with no notion of where they came from.
@@ -162,7 +162,7 @@ dx_j \delta t  \\
 x_i + e_{ij} dx_j \delta t + \omega_{ij} dx_j \delta t
 \end{aligned}
 \end{equation}
-
+%
 %Employing vector notation we can write our first order displacement as
 %
 %\begin{align*}

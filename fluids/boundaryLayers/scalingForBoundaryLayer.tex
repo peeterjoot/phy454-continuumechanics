@@ -29,7 +29,7 @@ where
 \begin{equation}\label{eqn:continuumL18:10}
 L \gg \delta.
 \end{equation}
-
+%
 As always, we start with the Navier-Stokes equation, restricting ourselves to the steady state \(\PDi{t}{\Bu} = 0\) case.  In coordinates, for incompressible flows, we have our usual \(x\) momentum, \(y\) momentum, and continuity equations
 %
 \begin{subequations}
@@ -50,7 +50,7 @@ u \PD{x}{v} + v \PD{y}{v} = - \inv{\rho} \PD{y}{p} + \nu \left(
 +\PD{y}{v} = 0
 \end{equation}
 \end{subequations}
-
+%
 Let us look at the scaling of these equations, starting with the continuity equation \eqnref{eqn:continuumL18:70}.  This is roughly
 %
 \begin{equation}\label{eqn:continuumL18:90}
@@ -59,7 +59,7 @@ Let us look at the scaling of these equations, starting with the continuity equa
 \PD{y}{v} &\sim \frac{v}{\delta}
 \end{aligned}
 \end{equation}
-
+%
 We require that these have to be of the same order of magnitude.
 
 \FIXME{Why?  This does not make sense to me since in horizontal flow we had \(v = 0\), and the two components of the divergence are obviously of different scales}
@@ -69,19 +69,19 @@ If these are of the same scale we have
 \begin{equation}\label{eqn:continuumL18:110}
 \frac{U}{L} \sim \frac{v}{\delta}
 \end{equation}
-
+%
 so that
 %
 \begin{equation}\label{eqn:continuumL18:130}
 v \sim \frac{U \delta}{L}
 \end{equation}
-
+%
 or
 %
 \begin{equation}\label{eqn:continuumL18:150}
 v \ll U
 \end{equation}
-
+%
 Looking at the viscous terms
 %
 \begin{equation}\label{eqn:continuumL18:170}
@@ -90,13 +90,13 @@ Looking at the viscous terms
 \nu \PDSq{y}{u} &\sim \frac{\nu U}{\delta^2}
 \end{aligned}
 \end{equation}
-
+%
 or
 %
 \begin{equation}\label{eqn:continuumL18:190}
 \nu \PDSq{y}{u} \gg \nu \PDSq{x}{u}
 \end{equation}
-
+%
 So we can neglect the \(x\) component of the Laplacian in our \(x\) momentum equation \eqnref{eqn:continuumL18:30}.
 
 How about the inertial terms
@@ -107,7 +107,7 @@ u \PD{x}{u} &\sim \frac{U^2}{L} \\
 v \PD{y}{u} &\sim \frac{\delta U}{L} \frac{U}{\delta} \sim \frac{U^2}{L}
 \end{aligned}
 \end{equation}
-
+%
 Since these are of the same order (in the boundary regions) we cannot neglect either.  We also cannot neglect the pressure gradient, since this is what induces the flow.
 
 For the \(y\) momentum equation we have
@@ -118,7 +118,7 @@ For the \(y\) momentum equation we have
 \nu \PDSq{y}{v} &\sim \nu \frac{\delta U}{L} \inv{\delta^2} \sim \nu \frac{U}{\delta L} \ll \frac{\nu U}{\delta^2}
 \end{aligned}
 \end{equation}
-
+%
 We can neglect all the Laplacian terms in the \(y\) momentum equation.
 
 \question
@@ -135,13 +135,13 @@ u \PD{x}{v} &\sim \frac{\delta U^2}{L^2} \\
 v \PD{y}{v} &\sim \frac{\delta U}{L} \frac{\delta U}{L} \inv{\delta} \sim \frac{\delta U^2}{L^2}
 \end{aligned}
 \end{equation}
-
+%
 Note that
 %
 \begin{equation}\label{eqn:continuumL18:270}
 \frac{\delta U^2}{L^2} = \frac{\delta}{L} \left( \frac{U^2}{L} \right) \ll \frac{U^2}{L}
 \end{equation}
-
+%
 We see that both of the \(y\) momentum inertial terms can be neglected in comparison to the \(x\) momentum equations.
 
 Putting all of this together, our equations of motion for the boundary flow are now reduced to
@@ -157,7 +157,7 @@ u \PD{x}{u} + v \PD{y}{u} = - \inv{\rho} \PD{x}{p} + \nu \PDSq{y}{u}
 \PD{x}{u} + \PD{y}{v} = 0
 \end{equation}
 \end{subequations}
-
+%
 Utilizing Bernoulli's theorem \eqnref{eqn:continuumL18:410}, we can deal with the pressure term, the magnitude of which is
 %
 \begin{equation}\label{eqn:scalingForBoundaryLayer:450}
@@ -168,7 +168,7 @@ Utilizing Bernoulli's theorem \eqnref{eqn:continuumL18:410}, we can deal with th
 &\sim U \frac{dU}{dx},
 \end{aligned}
 \end{equation}
-
+%
 and our equations of motion are finally reduced to
 %
 \begin{subequations}
@@ -182,7 +182,7 @@ u \PD{x}{u} + v \PD{y}{u} = U \frac{dU}{dx} + \nu \PDSq{y}{u}
 \PD{x}{u} + \PD{y}{v} = 0
 \end{equation}
 \end{subequations}
-
+%
 \FIXME{
 Relevant?
 
