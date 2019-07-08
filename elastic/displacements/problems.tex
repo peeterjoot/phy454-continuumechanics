@@ -2,7 +2,6 @@
 % Copyright © 2012 Peeter Joot.  All Rights Reserved.
 % Licenced as described in the file LICENSE under the root directory of this GIT repository.
 %
-
 %
 %
 \makeoproblem{\(\BP\)-waves, \(\BS\)-waves, Love-waves}{problem:elastic:displacements:midtermQ1a}
@@ -13,15 +12,12 @@ Show that in \(\BP\)-waves the divergence of the displacement vector represents 
 
 \makeanswer{problem:elastic:displacements:midtermQ1a}{
 The \(\BP\)-wave equation was a result of operating on the displacement equation with the divergence operator
-
 \begin{equation}\label{eqn:continuumMidTermReflection:10}
 \spacegrad \cdot \left(
 \rho \PDSq{t}{\Be} = (\lambda + \mu) \spacegrad (\spacegrad \cdot \Be) + \mu \spacegrad^2 \Be
 \right)
 \end{equation}
-
 we obtain
-
 \begin{equation}\label{eqn:continuumMidTermReflection:30}
 \PDSq{t}{} \left( \spacegrad \cdot \Be \right) = \frac{\lambda + 2 \mu}{\rho} \spacegrad^2 (\spacegrad \cdot \Be).
 \end{equation}
@@ -40,7 +36,6 @@ We have a wave equation where the ``waving'' quantity is \(\Theta = \spacegrad \
 \end{equation}
 
 Recall that, in a coordinate basis for which the strain \(e_{ij}\) is diagonal we have
-
 \begin{equation}\label{eqn:continuumMidTermReflection:50}
 \begin{aligned}
 dx' &= \sqrt{1 + 2 e_{11}} dx \\
@@ -50,13 +45,10 @@ dz' &= \sqrt{1 + 2 e_{33}} dz.
 \end{equation}
 
 Expanding in Taylor series to \(O(1)\) we have for \(i = 1, 2, 3\) (no sum)
-
 \begin{equation}\label{eqn:continuumMidTermReflection:70}
 dx_i' \approx (1 + e_{ii}) dx_i.
 \end{equation}
-
 so the displaced volume is
-
 \begin{equation}\label{eqn:problems:3250}
 \begin{aligned}
 dV' &=
@@ -75,33 +67,28 @@ dx_3
 \end{equation}
 
 Since
-
 \begin{equation}\label{eqn:continuumMidTermReflection:90}
 \begin{aligned}
 e_{11} &= \inv{2} \left( \PD{x}{e_1} +\PD{x}{e_1} \right) = \PD{x}{e_1} \\
 e_{22} &= \inv{2} \left( \PD{y}{e_2} +\PD{y}{e_2} \right) = \PD{y}{e_2} \\
-e_{33} &= \inv{2} \left( \PD{z}{e_3} +\PD{z}{e_3} \right) = \PD{z}{e_3}
+e_{33} &= \inv{2} \left( \PD{z}{e_3} +\PD{z}{e_3} \right) = \PD{z}{e_3}.
 \end{aligned}
 \end{equation}
 
 We have
-
 \begin{equation}\label{eqn:continuumMidTermReflection:110}
 dV' = (1 + \spacegrad \cdot \Be) dV,
 \end{equation}
-
 or
-
 \begin{equation}\label{eqn:continuumMidTermReflection:130}
-\frac{dV' - dV}{dV} = \spacegrad \cdot \Be
+\frac{dV' - dV}{dV} = \spacegrad \cdot \Be.
 \end{equation}
 
 The relative change in volume can therefore be expressed as the divergence of \(\Be\), the displacement vector, and it is this relative volume change that is ``waving'' in the \(\BP\)-wave equation as illustrated in the following \cref{fig:continuumMidtermReflection:continuumMidtermReflectionFig1} sample 1D compression wave
-
 \imageFigure{../figures/phy454-continuumechanics/midtermReflectionA_1D_compression_waveFig1}{A 1D compression wave}{fig:continuumMidtermReflection:continuumMidtermReflectionFig1}{0.2}
 } % end answer
 
-\makeoproblem{\(\BP\)-waves, \(\BS\)-waves. Longitudinal or transverse?}{problem:elastic:displacements:midtermQ1b}
+\makeoproblem{Character of \(\BP\)-waves and \(\BS\)-waves.}{problem:elastic:displacements:midtermQ1b}
 {2012 midterm, p1 b}
 {
 Between a \(\BP\)-wave and an \(\BS\)-wave which one is longitudinal and which one is transverse?
@@ -109,7 +96,6 @@ Between a \(\BP\)-wave and an \(\BS\)-wave which one is longitudinal and which o
 
 \makeanswer{problem:elastic:displacements:midtermQ1b}{
 \(\BP\)-waves are longitudinal.
-
 \(\BS\)-waves are transverse.
 } % end answer
 
@@ -187,12 +173,9 @@ We must then have
 
 \begin{dmath}\label{eqn:continuumFluidsReviewXX:3190}
 0 = A - C
-0 = -C + 5 B
+0 = -C + 5 B,
 \end{dmath}
-
-Or
-
-
+or
 \begin{dmath}\label{eqn:continuumFluidsReviewXX:3210}
 A = C
 B = \frac{C}{5}.

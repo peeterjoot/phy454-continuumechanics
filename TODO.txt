@@ -2,12 +2,14 @@
 - 
    - need commas and periods: sections, figures, chapters, problems, examples
 
-   - remove blank lines before and after equations.
+   - remove blank lines before and after equations, sections, problems, ...
 
    - figure size audit.
 
    - lots of fixmes and placeholders.
 
+   - equation number overlap audit.
+   
 - 
 
   Label `eqn:continuumL18:391' multiply defined

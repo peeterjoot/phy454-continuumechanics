@@ -254,21 +254,23 @@ Our separation of variables function now takes the form
 \end{equation}
 
 Writing
-
 \begin{equation}\label{eqn:continuumL22:570}
 D = \frac{\partial}{\partial z},
 \end{equation}
-
-our beastly equation to solve is then given by
-
+and \( \phi = i ( k_1 x + k_2 y) + \sigma t \), the beastly equation to solve is
 \begin{equation}\label{eqn:thermalStability:1130}
 \begin{aligned}
 0
 &=
 \left( \PD{t}{} - \spacegrad_t^2 - D^2 \right) \left( \text{P}_r \PD{t}{} - \spacegrad_t^2 -D^2 \right) \left( \spacegrad_t^2 -D^2 \right)
-\Theta(z) e^{ i ( k_1 x + k_2 y) + \sigma t} \\
+\Theta(z) 
+%e^{ i ( k_1 x + k_2 y) + \sigma t} 
+e^{ \phi }
+\\
 &\quad - \calR \spacegrad_t^2
-\Theta(z) e^{ i ( k_1 x + k_2 y) + \sigma t}
+\Theta(z) 
+%e^{ i ( k_1 x + k_2 y) + \sigma t}
+e^{ \phi }
 \\
 &=
 \Bigl( \left( \sigma + k^2 - D^2 \right) \left( \text{P}_r \sigma + k^2 - D^2 \right) \left( -k^2 -D^2 \right) + \calR k^2
@@ -277,52 +279,40 @@ our beastly equation to solve is then given by
 \end{equation}
 
 This is now an equation for only \(\Theta(z)\)
-
 \begin{equation}\label{eqn:continuumL22:870}
 0 = \Bigl( \left( \sigma + k^2 - D^2 \right) \left( \text{P}_r \sigma + k^2 - D^2 \right) \left( -k^2 -D^2 \right) + \calR k^2
 \Bigr) \Theta(z).
 \end{equation}
 
 Conceptually we have just a plain old LDE, and should we decide to expand this out we have something of the form
-
 \begin{equation}\label{eqn:continuumL22:890}
 0 = \Bigl( \alpha D^6 + \beta D^4 + \gamma D^2 + \zeta \Bigr) \Theta(z).
 \end{equation}
 
 Our standard toolbox method to solve this is to assume a solution \(\Theta(z) = e^{m z}\) and compute the characteristic equation.  We would have to solve
-
 \begin{equation}\label{eqn:continuumL22:910}
 0 = \alpha m^6 + \beta m^4 + \gamma m^2 + \zeta.
 \end{equation}
 
 Let us back up a bit instead.  Looking back to \eqnref{eqn:continuumL22:670}, it is clear that we will have the same separable form for our perturbed velocity since we have
-
 \begin{equation}\label{eqn:continuumL22:670b}
 \left( \text{P}_r \sigma + k^2 - D^2 \right) \Theta(z) e^{i (\Bk \cdot \Bx) } e^{\sigma t} = \delta w,
 \end{equation}
-
 where
-
 \begin{equation}\label{eqn:continuumL22:930}
 \Bk = (k_x, k_y, 0).
 \end{equation}
 
 Assuming a solution of the form
-
 \begin{equation}\label{eqn:continuumL22:950}
 \delta w = w(z) e^{ i ( k_1 x + k_2 y) + \sigma t},
 \end{equation}
-
 our velocity is then fully specified in terms of the temperature, since we have
-
 \begin{equation}\label{eqn:continuumL22:970}
 w(z) = \left( \text{P}_r \sigma + k^2 - D^2 \right) \Theta(z).
 \end{equation}
-
 \section{Back to our coupled equations}
-
 Having gleamed an idea what the form of our solutions is, we can simplify our original coupled system, writing
-
 \begin{subequations}
 \label{eqn:continuumL22:990a}
 \begin{equation}\label{eqn:continuumL22:990}
@@ -334,38 +324,31 @@ Having gleamed an idea what the form of our solutions is, we can simplify our or
 \end{subequations}
 
 Considering the boundary conditions, if the heating is even then at \(z = t = 0\) we can not have any variation with \(x\) and \(y\), so can only have \(\Theta(0) = 0\).  Thus at the boundary, from \eqnref{eqn:continuumL22:990}, we have
-
 \begin{equation}\label{eqn:continuumL22:1030}
 0 = \evalbar{(D^2 - k^2) ( \sigma - (D^2 - k^2) ) w(z)}{z = 0}.
 \end{equation}
 
 From the continuity equation \(\spacegrad \cdot \Bu = 0\), the text argues that we also have \(\PDi{z}{\delta w} = 0\) on the boundary, so that on that plane we also have
-
 \begin{equation}\label{eqn:continuumL22:1050}
 0 = \evalbar{w(z) = D w(z)}{z = 0}.
 \end{equation}
 
 Expanding out \eqnref{eqn:continuumL22:1030} then gives us
-
 \begin{equation}\label{eqn:continuumL22:1070}
-0 = \evalbar{(D^4 - D^2 ( 2 k^2 + \sigma ) + k^2(\sigma + k^2))w}{z = 0}.
+0 = \evalbar{(D^4 - D^2 ( 2 k^2 + \sigma ) + k^2(\sigma + k^2))w}{z = 0},
 \end{equation}
-
 or
 \begin{equation}\label{eqn:continuumL22:1070b}
 0 = \evalbar{(D^4 - D^2 ( 2 k^2 + \sigma ))w}{z = 0}.
 \end{equation}
 
 These boundary value constraints \eqnref{eqn:continuumL22:1050}, and \eqnref{eqn:continuumL22:1070b}, plus the coupled system equations \eqnref{eqn:continuumL22:990a} are the complete problem to solve.  To get a feel for the solution of this system, consider the system with the following simpler set of boundary value constraints
-
 \begin{equation}\label{eqn:continuumL22:590}
 \evalbar{w = D^2 w = D^4 w}{z = 0, 1} = 0,
 \end{equation}
-
 which in the text is described as the artificial problem of thermal instability for boundaries that are stress free.
 \FIXME{it is not clear to me what that means without some thought ... return to this}
 For such a system on the boundaries \(z = 0, 1\) (noting that we are still in dimensionless quantities), we have solutions
-
 \begin{equation}\label{eqn:continuumL22:470}
 \begin{aligned}
 w(z) &= A_n \sin\left( n \pi z \right) \\
@@ -374,36 +357,33 @@ w(z) &= A_n \sin\left( n \pi z \right) \\
 \end{equation}
 
 Note that we have
-
 \begin{equation}\label{eqn:continuumL22:1090}
 (D^2 - k^2)
-\sin\left( n \pi z \right).
+\sin\left( n \pi z \right)
  = \left( -\left( n \pi \right)^2 - k^2 \right)
 \sin\left( n \pi z \right).
 \end{equation}
-
 Inserting \eqnref{eqn:continuumL22:470} into our system \eqnref{eqn:continuumL22:990a}, we have
-
 \begin{equation}\label{eqn:continuumL22:1110}
 \begin{aligned}
+0 &=
 \left( -\left( n \pi \right)^2 - k^2 \right)
-\left( \sigma -
-\left( -\left( n \pi \right)^2 - k^2 \right)
+\left( 
+   \sigma - \left( -\left( n \pi \right)^2 - k^2 \right)
 \right) A_n
+\sin\left( n \pi z \right) \\
+&\quad + \calR k^2 B_n
 \sin\left( n \pi z \right)
-+ \calR k^2 B_n
-\sin\left( n \pi z \right)
-&= 0 \\
+\\
+0 &=
 \left( -\left( n \pi \right)^2 - k^2 - \text{P}_r \sigma \right) B_n
 \sin\left( n \pi z \right)
 + A_n
 \sin\left( n \pi z \right)
-&= 0
 \end{aligned}
 \end{equation}
 
 For any \(A_n\), \(B_n\), we must then have
-
 \begin{equation}\label{eqn:continuumL22:490}
 0 =
 \begin{vmatrix}
@@ -413,55 +393,38 @@ For any \(A_n\), \(B_n\), we must then have
 \end{equation}
 
 For \(\sigma = 0\), this gives us the critical value for the Rayleigh number
-
 \begin{equation}\label{eqn:continuumL22:510}
 \calR = \frac{(k^2 + n^2 \pi^2)^3}{k^2},
 \end{equation}
-
 the value that separates our stable and unstable solutions.  On the other hand for
 \begin{itemize}
 \item \(\Real(\sigma) > 0\) (\(\Delta T > \Delta T_e\)), we have an instable system.
 \item \(\Real(\sigma) < 0\) (\(\Delta T > \Delta T_e\)), we have a stable system.
 \end{itemize}
-
 This is illustrated in \cref{fig:continuumL22:continuumL22Fig2}.
-
 \imageFigure{../figures/phy454-continuumechanics/lec22_Critical_Rayleighs_numberFig2}{Critical Rayleigh's number}{fig:continuumL22:continuumL22Fig2}{0.3}
-
 The instability means that we will have instable flows as illustrated in \cref{fig:continuumL22:continuumL22Fig3}.
-
 \imageFigure{../figures/phy454-continuumechanics/lec22_Instability_due_to_heatingFig3}{Instability due to heating}{fig:continuumL22:continuumL22Fig3}{0.2}
-
 Solving for these critical points we find
-
 \begin{subequations}
 \begin{equation}\label{eqn:continuumL22:530}
 k_e^2 = \frac{\pi^2}{2}
 \end{equation}
 \begin{equation}\label{eqn:continuumL22:550}
-\calR_e = \frac{27 \pi^4}{4}
+\calR_e = \frac{27 \pi^4}{4}.
 \end{equation}
 \end{subequations}
-
 \section{Multimedia presentations}
 
 \begin{itemize}
 \item Kelvin-Helmholtz instability.
-
 Colored salt water underneath, with unsalted water on top.  Apparatus tilted causing flow of one over the other.  Instability of the interface.
 
 See \citep{wiki:KelvinHelmholtz} for a really cool animation of a simulation of this effect.  It ends up looking very fractal.  Also interesting is the picture of this observed for real in the atmosphere of Saturn.
-
 \item A simulated mushroom cloud occurring with one fluid seeping into another.  This looks it matches what we find under Rayleigh-Taylor instability in \citep{wiki:RayleighTaylor}.
-
 \item plume, motion up through a denser fluid.
-
 \item Plateau-Rayleigh instability.  Drop pinching off.  See instability in the fluid channel feeding the drop.  A crude illustration of this can be found in \cref{fig:continuumL22:continuumL22Fig4}.
-
 \imageFigure{../figures/phy454-continuumechanics/lec22_Crude_illustration_of_instability_leading_to_a_drop_pinching_offFig4}{Crude illustration of instability leading to a drop pinching off}{fig:continuumL22:continuumL22Fig4}{0.2}
-
 A better illustrations (and animations) can be found in \citep{wiki:PlateauRayleigh}.
-
 \item Jet of water injected into a rotating tub on a turntable.  Jet forms and surfaces.
-
 \end{itemize}
