@@ -14,7 +14,7 @@
       problems
       sections
 
-   - figure size audit.
+   - figure size audit: done up to pg 147
 
    - lots of fixmes and placeholders.
 
