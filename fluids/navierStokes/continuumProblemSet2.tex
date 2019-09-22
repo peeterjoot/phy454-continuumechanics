@@ -10,7 +10,7 @@
 {
 Imagine a steady rectilinear blood flow of the form \(\Bu = u(y) \ycap\) through a two dimensional artery.  It is driven by a constant pressure gradient \(G = -dp/dx\) maintained by an external `heart'.  The top and bottom walls of the artery are \(2h\) distance apart and the fluid satisfies no-slip boundary conditions at the walls.  Assuming that the fluid is Newtonian,
 
-
+%
 \makesubproblem{Show that the Navier-Stokes equation reduces to
 %
 \begin{equation}\label{eqn:continuumProblemSet2:20}
@@ -20,14 +20,14 @@ Imagine a steady rectilinear blood flow of the form \(\Bu = u(y) \ycap\) through
 where \(\mu\) is the viscosity of the blood.
 
 }{problem:fluids:bloodReduceNS}
-
+%
 \makesubproblem{Show that the velocity profile of the fluid inside the artery is a parabolic profile.}{problem:fluids:bloodVelocityProfile}
 \makesubproblem{What is the maximum speed of the fluid?  Draw the velocity profile to show where the maximum speed occurs inside the artery.}{problem:fluids:bloodMaxSpeed}
 \makesubproblem{If due to smoking etc., the viscosity of the blood gets doubled, then what should be the new pressure gradient to be maintained by the `heart' to keep the liquid flux through the artery at the same level as the non-smoking one?.}{problem:fluids:bloodViscositySmoking}
 } % makeoproblem
-
+%
 \makeanswer{problem:fluids:blood}{
-
+%
 \makesubanswer{Navier-Stokes.}{problem:fluids:bloodReduceNS}
 %\unnumberedSubsection{Navier-Stokes equation for the system}
 The Navier-Stokes equation, for an incompressible unidirectional fluid \(\Bu = (u, 0, 0)\), assuming that there is no \(z\) dependence, takes the form
@@ -74,7 +74,7 @@ Finally, since we have an assumption of no z-dependence (\(\PDi{z}{u} = 0\)) and
 \end{equation}
 %
 as desired.
-
+%
 \makesubanswer{Velocity profile.}{problem:fluids:bloodVelocityProfile}
 For the velocity profile, integrating \eqnref{eqn:continuumProblemSet2:140} twice, we have
 %
@@ -190,7 +190,7 @@ Consider steady simple shearing flow with no imposed pressure gradient \((G = 0)
 \end{equation}
 %
 The boundary conditions are no-slip at the lower plate \((y = -h)\) and at \(y = 0\).  The top plate is moving with a velocity \(-U\) at \(y = h\) and fluid is sticking to it.  using the continuity of tangential (shear) stress at the interface (\(y = 0\))
-
+%
 \makesubproblem{Derive the velocity profile of the two fluids.}{problem:fluids:simpleShearing1}
 \makesubproblem{Calculate the maximum speed.}{problem:fluids:simpleShearing2}
 \makesubproblem{Calculate the mean speed.}{problem:fluids:simpleShearing3}
@@ -198,9 +198,9 @@ The boundary conditions are no-slip at the lower plate \((y = -h)\) and at \(y =
 \makesubproblem{Calculate the tangential force (per unit width) \(F_x\) on the strip \(0 \le x \le L\) of the wall \(y = -h\).}{problem:fluids:simpleShearing5}
 \makesubproblem{Calculate the tangential force (per unit width) \(F_x^0\) on the strip \(0 \le x \le L\) at the interface \(y = 0\) by the top fluid on the lower fluid.}{problem:fluids:simpleShearing6}
 } % makeoproblem
-
+%
 \makeanswer{problem:fluids:simpleShearing}{
-
+%
 \makesubanswer{Velocity profiles.}{problem:fluids:simpleShearing1}
 Starting with the velocity profile derivation for the two fluids, we set up coordinates as in \cref{fig:continuumProblemSet2:continuumProblemSet2Fig2}.  Our steady flow for layers \(1\) and \(2\) has the form
 
@@ -367,7 +367,7 @@ This is plotted with \(h = U = 1\) in \cref{fig:continuumProblemSet2:continuumPr
 We are now ready to calculate the maximum speed.
 
 With \(u^{(1)}(-h) = 0\), and \(u^{(1)}\) linearly decreasing, then \(u^{(2)}\) linearly decreasing further from the value at \(y = 0\), it is clear that the maximum speed, no matter the viscosities of the fluids, is on the upper moving interface.  This maximum takes the value \(\Abs{u^{(2)}(h)} = U\).
-
+%
 \makesubanswer{Mean speed.}{problem:fluids:simpleShearing3}
 As linear functions the average speeds of the respective fluids fall on the midpoints \(y = \pm h/2\).  These are
 %
@@ -438,7 +438,7 @@ F = -\frac{U \mu^{(1)} \mu^{(2)} }{(\mu^{(1)} + \mu^{(2)})} \frac{L}{h}.
 \end{equation}
 %
 The negative value here makes sense since it is acting to push the fluid backwards in the direction of the upper wall motion.
-
+%
 \makesubanswer{Tangential force on upper wall.}{problem:fluids:simpleShearing6}
 We note that due to constant nature of the tangential component of the traction vector shown above, the force per unit width of the upper fluid acting on the lower fluid, is also given by \eqnref{eqn:continuumProblemSet2:740}.
 } % end answer
@@ -449,7 +449,7 @@ We note that due to constant nature of the tangential component of the traction 
 Add a constant pressure gradient \(G = -dp/dx\), applied between the boundaries \(y = \pm h\), to the problem above.
 Describe qualitatively what type of flow profile you would expect in the steady state.  Draw the velocity profiles for two cases (i) \(\mu^{(1)} > \mu^{(2)}\) (ii) \(\mu^{(1)} < \mu^{(2)}\).  Explain your result.
 } % makeoproblem
-
+%
 \makeanswer{problem:fluids:simpleShearingPressureGrad}{
 We showed earlier that the Navier-Stokes equations for this Q3 case, where \(G\) is non-zero were given by \eqnref{eqn:continuumProblemSet2:400}, which restated is
 \begin{equation}\label{eqn:continuumProblemSet2:400b}
