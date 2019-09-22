@@ -63,11 +63,11 @@ These do not look particularly easy to solve, and we have not even set up the bo
 \section{Boundary value constraints}
 
 One of out constraints is the no-slip condition for the velocity components at the base of the slope
-
+%
 \boxedEquation{eqn:inclinedFlowWithoutConstantHeightAssumption:80}{
 u(x, 0) = v(x, 0) = 0.
 }
-
+%
 We should also have a zero tangential component to the traction vector at the interface.  We need to consider some geometry, and refer to \cref{fig:inclinedFlowWithoutConstantHeightAssumption:inclinedFlowWithoutConstantHeightAssumptionFig3}
 %
 \pdfTexFigure{../figures/phy454-continuumechanics/inclinedFlowWithoutConstantHeightAssumptionFig3.pdf_tex}{Differential vector element.}{fig:inclinedFlowWithoutConstantHeightAssumption:inclinedFlowWithoutConstantHeightAssumptionFig3}{0.5}
@@ -197,7 +197,7 @@ e_{12} &=
 \end{equation}
 %
 So, a zero tangential traction vector component at the interface requires
-
+%
 \boxedEquation{eqn:inclinedFlowWithoutConstantHeightAssumption:220}{
 0 = h' \left( \evalbar{\left( \PD{y}{v} - \PD{x}{u} \right) +
 \inv{2} \left(
@@ -207,7 +207,7 @@ So, a zero tangential traction vector component at the interface requires
 }{y = h}\right)
 (1 - (h')^2 ).
 }
-
+%
 What is the normal component of the traction vector at the interface?  We can calculate
 %
 \begin{equation}\label{eqn:inclinedFlowWithoutConstantHeightAssumption:960}
@@ -273,7 +273,7 @@ In this more general case we have the same thing, but the non-pressure portions 
 \end{equation}
 %
 Again assuming no motion of the air, with air pressure \(p_A\), this is
-
+%
 \boxedEquation{eqn:inclinedFlowWithoutConstantHeightAssumption:280}{
 -p(x, h)
 +
@@ -291,7 +291,6 @@ Again assuming no motion of the air, with air pressure \(p_A\), this is
 }{y = h}
 = -p_A
 }
-
 Observe that for the horizontal flow problem, where \(h' = 0\) and \(v = 0\), this would have been nothing more than a requirement that \(p(h) = p_A\), but now that we introduce downwards motion and allow the height to vary, the pressure matching condition becomes a much more complex beastie.
 
 \section{Laplacian of Pressure and Vorticity}
@@ -450,7 +449,7 @@ So we have
 \end{equation}
 %
 We are working with the \(\spacegrad \cdot \Bu = 0\) incompressibility assumption so we kill off the last term.  Our velocity ends up introducing a non-homogeneous forcing term to the Laplacian pressure equation and we have got something trickier to solve
-
+%
 \boxedEquation{eqn:inclinedFlowWithoutConstantHeightAssumption:500}{
 \rho \sum_k (\partial_k u_k)^2
 +
@@ -458,7 +457,7 @@ We are working with the \(\spacegrad \cdot \Bu = 0\) incompressibility assumptio
 =
 -\spacegrad^2 p.
 }
-
+%
 Now let us see how our vorticity Laplacian needs to be modified.  Taking the curl of the impulsive term we have
 %
 \begin{equation}\label{eqn:inclinedFlowWithoutConstantHeightAssumption:1060}
@@ -507,11 +506,11 @@ Or, with
 \end{equation}
 %
 this is
-
+%
 \boxedEquation{eqn:inclinedFlowWithoutConstantHeightAssumption:580}{
 (\spacegrad u_m) \wedge (\partial_m \Bu) + (\Bu \cdot \spacegrad) \BOmega = \nu \spacegrad^2 \BOmega.
 }
-
+%
 It is this and \eqnref{eqn:inclinedFlowWithoutConstantHeightAssumption:500} that we really have to solve.  Before moving on, let us write out all the non-boundary condition equations in coordinate form for the 2D case that we are interested in here.  We have
 %
 \begin{subequations}

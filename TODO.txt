@@ -1,8 +1,18 @@
 
 - 
-   - need commas and periods: sections, figures, chapters, problems, examples
+   - need commas and periods:
+      sections
+      chapters
+      problems
+      examples
 
-   - remove blank lines before and after equations, sections, problems, ...
+   - remove blank lines before and after:
+      chapters
+      equations
+      examples
+      figures
+      problems
+      sections
 
    - figure size audit.
 
