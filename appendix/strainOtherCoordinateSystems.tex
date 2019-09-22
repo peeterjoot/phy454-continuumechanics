@@ -4,7 +4,7 @@
 %
 \label{chap:appendix:strainCoordinates}
 \section{Cylindrical coordinates} \index{cylindrical coordinates}
-
+%
 At the end of the section in the text, the formulas for the spherical and cylindrical versions (to first order) of the \textAndIndex{strain tensor} is given without derivation.  Let us do that derivation for the cylindrical case, which is simpler.  It appears that use of explicit vector notation is helpful here, so we write
 %
 \begin{equation}\label{eqn:continuumL2:370}
@@ -259,9 +259,9 @@ Note that in class we retained the second order terms.  That becomes a messier c
 \end{dmath}
 %
 As with the first order case, we can read off the tensor coordinates by inspection (once we factor out the various factors of \(2\) and \(r\)).  The next logical step would be to do the spherical tensor calculation.  That would likely be particularly messy if we attempted it in the brute force fashion.  Let us step back and look at the general case, before tackling there spherical polar form explicitly.
-
+%
 \section{For general coordinate representation}
-
+%
 Now let us dispense with the assumption that we have an orthonormal frame.  Given an arbitrary, not necessarily orthonormal, position dependent frame \(\{e_\mu\}\), and its reciprocal frame \(\{e^\mu\}\), as defined by
 %
 \begin{equation}\label{eqn:continuumL2:510}
@@ -611,9 +611,9 @@ e_\mu \cdot
 \end{dmath}
 %
 Here \(\alpha < \beta\) is used to denote summation over the pairs \(\alpha \ne \beta\) just once, not necessarily any numeric ordering.  For example with \(\alpha, \beta \in \{r, \phi, z\}\), this could be the set \(\{\alpha, \beta\} \in \{r \phi, \phi z, z r\}\).
-
+%
 \section{Cartesian tensor}
-
+%
 In the Cartesian case all the partials of the unit vectors are zero, and we also have no need of upper or lower indices.  We are left with just
 %
 \begin{equation}\label{eqn:continuumL2:630}
@@ -652,9 +652,9 @@ dx^j
 \end{equation}
 %
 This essentially recovers the result \eqnref{eqn:continuumL2:190} derived in class.
-
+%
 \section{Cylindrical tensor}
-
+%
 Now lets do the cylindrical tensor again, but this time without resorting Mathematica brute force.
 
 First we recall that all our basis vector derivatives are zero except for the \(\phi\) derivatives, and for those we have
@@ -1155,9 +1155,9 @@ To summarize we have, including both first and second order terms,
 \end{dmath}
 %
 Factors of \(r\) have been pulled out so that the portions remaining in the braces are exactly the cylindrical tensor elements as given in the text (except also with the second order terms here).  Observe that the pre-calculation of the general formula has allowed an on paper expansion of the cylindrical tensor without too much pain, and this time without requiring Mathematica.
-
+%
 \section{Spherical tensor}
-
+%
 To perform the derivation in spherical coordinates we have some setup to do first, since we need explicit representations of all three unit vectors.  The radial vector we can get easily by geometry and find the usual
 %
 \begin{equation}\label{eqn:continuumL2:810}
@@ -1264,7 +1264,7 @@ d{\Bl'}^2 - d\Bx^2
 \end{dmath}
 %
 \section{Spherical tensor.  Manual derivation}
-
+%
 Doing the calculation pretty much completely with Mathematica is rather unsatisfying.  To set up for it let us first compute the unit vectors from scratch.  I will use geometric algebra to do this calculation.  Consider \cref{fig:qmTwoExamReflection:continuumL2fig5}
 %
 \imageFigure{../figures/phy454-continuumechanics/lec2_Composite_rotations_for_spherical_polar_unit_vectorsFig5}{Composite rotations for spherical polar unit vectors.}{fig:qmTwoExamReflection:continuumL2fig5}{0.4}
