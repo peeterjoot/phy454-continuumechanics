@@ -33,7 +33,7 @@ Our steady state and incompressibility constraints break this into a few indepen
 \begin{aligned}
 \rho^{(i)} \PD{t}{\Bu^{(i)}} &= 0 \\
 \spacegrad \cdot \Bu^{(i)} &= 0 \\
-\rho^{(i)} (\Bu^{(i)} \cdot \spacegrad) \Bu^{(i)} &= - \spacegrad p^{(i)} + \mu^{(i)} \spacegrad^2 \Bu^{(i)} + \rho^{(i)} \Bg
+\rho^{(i)} (\Bu^{(i)} \cdot \spacegrad) \Bu^{(i)} &= - \spacegrad p^{(i)} + \mu^{(i)} \spacegrad^2 \Bu^{(i)} + \rho^{(i)} \Bg.
 \end{aligned}
 \end{equation}
 Let us require no components of the flows in the \(y\), or \(z\) directions initially.  As the equivalent of Newton's law for fluid flows, conservation of linear momentum requires that for our steady state problem we have \(u_y = u_z = 0\) for the flows in both fluid layers.
@@ -71,7 +71,7 @@ Dropping indices temporarily, for the normal to the surface \(\ncap = (n_1, n_2,
 &= \sigma_{1 k} \delta_{2 k} \\
 &= \sigma_{1 2} \\
 &= -p \cancel{\delta_{1 2}} + 2 \mu e^{1 2} \\
-&= \mu \left( \PD{y}{u_1} + \cancel{\PD{x}{u_2}} \right)
+&= \mu \left( \PD{y}{u_1} + \cancel{\PD{x}{u_2}} \right).
 \end{aligned}
 \end{equation}
 %
@@ -86,10 +86,10 @@ Our boundary value conditions, what we need in addition to the Navier-Stokes equ
 \begin{subequations}
 \label{eqn:twoLayerInclinedFlowDifferentDensities:70}
 \begin{equation}\label{eqn:twoLayerInclinedFlowDifferentDensities:175}
-u^{(i)} = u^{(j)}
+u^{(i)} = u^{(j)},
 \end{equation}
 \begin{equation}\label{eqn:twoLayerInclinedFlowDifferentDensities:195}
-p^{(i)} = p^{(j)}
+p^{(i)} = p^{(j)},
 \end{equation}
 \begin{equation}\label{eqn:twoLayerInclinedFlowDifferentDensities:215}
 \mu^{(i)} \PD{y}{u^{(i)}} = \mu^{(i)} \PD{y}{u^{(j)}}.
@@ -105,7 +105,7 @@ p^{(i)} = p^{(i)}(x, y).
 %
 Using this, we can integrate our y-coordinate Navier-Stokes equation \eqnref{eqn:twoLayerInclinedFlowDifferentDensities:150}, to find
 \begin{equation}\label{eqn:twoLayerInclinedFlowDifferentDensities:255}
-p^{(i)} = - \rho^{(i)} g y \cos\alpha + f^{(i)}(x)
+p^{(i)} = - \rho^{(i)} g y \cos\alpha + f^{(i)}(x).
 \end{equation}
 %
 At this point we can introduce the first boundary value constraint, that the pressures must match at the interfaces.  In particular, on the upper surface, where we have atmospheric pressure \(p_A\) our pressure is
@@ -157,12 +157,12 @@ g \cos\alpha
 + p_A
 &
 \quad \mbox{\(y < h_1\)} \\
-\rho^{(2)} g \cos\alpha (H - y) + p_A.
+\rho^{(2)} g \cos\alpha (H - y) + p_A
 &
 \quad \mbox{\(y \in [h_1, h_1 + h_2]\)} \\
 p_A
 &
-\quad \mbox{\(y > H\)}
+\quad \mbox{\(y > H\)}.
 \end{array}
 \right.
 }
@@ -180,7 +180,7 @@ While more general solutions can likely be found, we will limit ourselves to loo
 \begin{aligned}
 0 &= \mu^{(i)} (\partial_{xx} + \partial_{yy} + \partial_{zz}) u^{(i)} + \rho^{(i)} g \sin\alpha  \\
   &= \mu^{(i)} \partial_{yy} u^{(i)} + \rho^{(i)} g \sin\alpha \\
-  &= \mu^{(i)} \frac{d^2}{dy^2} u^{(i)} + \rho^{(i)} g \sin\alpha
+  &= \mu^{(i)} \frac{d^2}{dy^2} u^{(i)} + \rho^{(i)} g \sin\alpha.
 \end{aligned}
 \end{equation}
 %
@@ -202,7 +202,7 @@ The boundary conditions left to exploit are
 u^{(1)}(0) &= 0 \\
 u^{(1)}(h_1) &= u^{(2)}(h_1) \\
 \tau_x^{(1)}(h_1) &= \tau_x^{(2)}(h_1) \\
-\tau_x^{(2)}(H) &= 0,
+\tau_x^{(2)}(H) &= 0.
 \end{aligned}
 \end{equation}
 %
@@ -243,7 +243,7 @@ Matching both at the interface (\(y = h_1\)) gives us
 \begin{equation}\label{eqn:twoLayerInclinedFlowDifferentDensities:535}
 \begin{aligned}
 -\frac{\rho^{(1)} g \sin\alpha }{2 \mu^{(1)}} h_1^2 + A^{(1)} h_1 &= \frac{\rho^{(2)} g \sin\alpha }{2 \mu^{(2)}} h_1 \left( 2 h_2 + h_1 \right) + B^{(2)} \\
-- \rho^{(1)} g h_1 \sin\alpha + \mu^{(1)} A^{(1)} &= \rho^{(2)} g h_2 \sin\alpha
+- \rho^{(1)} g h_1 \sin\alpha + \mu^{(1)} A^{(1)} &= \rho^{(2)} g h_2 \sin\alpha.
 \end{aligned}
 \end{equation}
 %
@@ -253,7 +253,7 @@ We find
 A^{(1)} =
 \inv{ \mu^{(1)} }
 (\rho^{(1)} h_1 + \rho^{(2)} h_2 )
-g \sin\alpha
+g \sin\alpha.
 \end{equation}
 %
 Let us substitute this back for our first fluid velocity
@@ -272,7 +272,7 @@ g \sin\alpha \left(
 (\rho^{(1)} h_1 + \rho^{(2)} h_2 )
 \right) \\
 &=
-\frac{g y \sin\alpha}{2 \mu^{(1)}} \left( \rho^{(1) } (2 h_1 - y) +2 \rho^{(2)} h_2 \right) \\
+\frac{g y \sin\alpha}{2 \mu^{(1)}} \left( \rho^{(1) } (2 h_1 - y) +2 \rho^{(2)} h_2 \right).
 \end{aligned}
 \end{equation}
 %
@@ -295,7 +295,7 @@ B^{(2)}
 \left(
 \frac{\mu^{(2)}}{\mu^{(1)}} \left( \rho^{(1) } h_1 +2 \rho^{(2)} h_2 \right)
 - \rho^{(2)} \left( 2 h_2 + h_1 \right)
-\right) \\
+\right).
 \end{aligned}
 \end{equation}
 %
@@ -303,7 +303,7 @@ So, finally, we have for the velocities
 %
 \begin{subequations}
 \begin{equation}\label{eqn:twoLayerInclinedFlowDifferentDensities:575}
-u^{(1)}(y) = \frac{g y \sin\alpha}{2 \mu^{(1)}} \left( \rho^{(1) } (2 h_1 - y) +2 \rho^{(2)} h_2 \right)
+u^{(1)}(y) = \frac{g y \sin\alpha}{2 \mu^{(1)}} \left( \rho^{(1) } (2 h_1 - y) +2 \rho^{(2)} h_2 \right),
 \end{equation}
 \begin{equation}\label{eqn:twoLayerInclinedFlowDifferentDensities:575b}
 \begin{aligned}

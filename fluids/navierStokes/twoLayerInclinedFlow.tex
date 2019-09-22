@@ -24,7 +24,7 @@ We have to setup of the equations of motion for this system.  We will write \(H 
 %
 \begin{dmath}\label{eqn:twoLayerInclinedFlow:10}
 \rho \ddt{\Bu^{(i)}} = \rho \PD{t}{\Bu^{(i)}} + \rho (\Bu^{(i)} \cdot \spacegrad) \Bu^{(i)}
-= - \spacegrad p^{(i)} + \mu^{(i)} \spacegrad^2 \Bu^{(i)} + \mu^{(i)} \spacegrad (\spacegrad \cdot \Bu^{(i)}) + \rho \Bg
+= - \spacegrad p^{(i)} + \mu^{(i)} \spacegrad^2 \Bu^{(i)} + \mu^{(i)} \spacegrad (\spacegrad \cdot \Bu^{(i)}) + \rho \Bg.
 \end{dmath}
 %
 Our steady state and incompressibility constraints break this into a few independent equations
@@ -33,7 +33,7 @@ Our steady state and incompressibility constraints break this into a few indepen
 \begin{aligned}
 \rho \PD{t}{\Bu^{(i)}} &= 0 \\
 \spacegrad \cdot \Bu^{(i)} &= 0 \\
-\rho (\Bu^{(i)} \cdot \spacegrad) \Bu^{(i)} &= - \spacegrad p^{(i)} + \mu^{(i)} \spacegrad^2 \Bu^{(i)} + \rho \Bg
+\rho (\Bu^{(i)} \cdot \spacegrad) \Bu^{(i)} &= - \spacegrad p^{(i)} + \mu^{(i)} \spacegrad^2 \Bu^{(i)} + \rho \Bg.
 \end{aligned}
 \end{equation}
 %
@@ -76,7 +76,7 @@ Dropping indices temporarily, for the normal to the surface \(\ncap = (n_1, n_2,
 &= \sigma_{1 k} \delta_{2 k} \\
 &= \sigma_{1 2} \\
 &= -p \cancel{\delta_{1 2}} + 2 \mu e^{1 2} \\
-&= \mu \left( \PD{y}{u_1} + \cancel{\PD{x}{u_2}} \right)
+&= \mu \left( \PD{y}{u_1} + \cancel{\PD{x}{u_2}} \right).
 \end{aligned}
 \end{equation}
 %
@@ -93,10 +93,10 @@ Our boundary value conditions, what we need in addition to the Navier-Stokes equ
 \begin{subequations}
 \label{eqn:twoLayerInclinedFlow:70}
 \begin{equation}\label{eqn:twoLayerInclinedFlow:175}
-u^{(i)} = u^{(j)}
+u^{(i)} = u^{(j)},
 \end{equation}
 \begin{equation}\label{eqn:twoLayerInclinedFlow:195}
-p^{(i)} = p^{(j)}
+p^{(i)} = p^{(j)},
 \end{equation}
 \begin{equation}\label{eqn:twoLayerInclinedFlow:215}
 \mu^{(i)} \PD{y}{u^{(i)}} = \mu^{(i)} \PD{y}{u^{(j)}}.
@@ -115,7 +115,7 @@ p^{(i)} = p^{(i)}(x, y).
 Using this, we can integrate our y-coordinate Navier-Stokes equation \eqnref{eqn:twoLayerInclinedFlow:150}, to find
 %
 \begin{equation}\label{eqn:twoLayerInclinedFlow:255}
-p^{(i)} = - \rho g y \cos\alpha + f^{(i)}(x)
+p^{(i)} = - \rho g y \cos\alpha + f^{(i)}(x).
 \end{equation}
 %
 At this point we can introduce the first boundary value constraint, that the pressures must match at the interfaces.  In particular, on the upper surface, where we have atmospheric pressure \(p_A\) our pressure is
@@ -170,7 +170,7 @@ While more general solutions can likely be found, we will limit ourselves to loo
 \begin{aligned}
 0 &= \mu^{(i)} (\partial_{xx} + \partial_{yy} + \partial_{zz}) u^{(i)} + \rho g \sin\alpha  \\
   &= \mu^{(i)} \partial_{yy} u^{(i)} + \rho g \sin\alpha \\
-  &= \mu^{(i)} \frac{d^2}{dy^2} u^{(i)} + \rho g \sin\alpha
+  &= \mu^{(i)} \frac{d^2}{dy^2} u^{(i)} + \rho g \sin\alpha.
 \end{aligned}
 \end{equation}
 %
@@ -192,7 +192,7 @@ The boundary conditions left to exploit are
 u^{(1)}(0) &= 0 \\
 u^{(1)}(h_1) &= u^{(2)}(h_1) \\
 \tau_x^{(1)}(h_1) &= \tau_x^{(2)}(h_1) \\
-\tau_x^{(2)}(H) &= 0,
+\tau_x^{(2)}(H) &= 0.
 \end{aligned}
 \end{equation}
 %
@@ -233,7 +233,7 @@ Matching both at the interface (\(y = h_1\)) gives us
 \begin{equation}\label{eqn:twoLayerInclinedFlow:535}
 \begin{aligned}
 -\frac{\rho g \sin\alpha }{2 \mu^{(1)}} h_1^2 + A^{(1)} h_1 &= \frac{\rho g \sin\alpha }{2 \mu^{(2)}} h_1 \left( 2 h_2 + h_1 \right) + B^{(2)} \\
-- \rho g h_1 \sin\alpha + \mu^{(1)} A^{(1)} &= \rho g h_2 \sin\alpha
+- \rho g h_1 \sin\alpha + \mu^{(1)} A^{(1)} &= \rho g h_2 \sin\alpha.
 \end{aligned}
 \end{equation}
 %
@@ -263,7 +263,7 @@ h_1 - \frac{\rho g \sin\alpha }{2 \mu^{(2)}} h_1 \left( 2 h_2 + h_1 \right) \\
 \frac{\rho g h_1 \sin\alpha }{2} (2 h_2 + h_1) \left(
 \inv{ \mu^{(1)}}
 -\inv{ \mu^{(2)}}
-\right)
+\right).
 \end{aligned}
 \end{equation}
 %

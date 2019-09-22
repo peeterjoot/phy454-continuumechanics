@@ -8,7 +8,7 @@
 We characterized stability in terms of displacements writing
 %
 \begin{equation}\label{eqn:continuumFluidsReview:2770}
-\delta x = e^{(\sigma_R + i \sigma_I) t}
+\delta x = e^{(\sigma_R + i \sigma_I) t},
 \end{equation}
 %
 and defining
@@ -26,20 +26,20 @@ We considered the Rayleigh-Benard problem, looking at thermal effects in a cavit
 \begin{aligned}
 \Bu &= \Bu_{\text{base}} + \delta \Bu = 0 + \delta \Bu \\
 p &= p_s + \delta p \\
-\rho &= \rho_s + \delta \rho
+\rho &= \rho_s + \delta \rho,
 \end{aligned}
 \end{equation}
 %
 and introducing an equation for the base state
 %
 \begin{equation}\label{eqn:continuumFluidsReview:2790}
-\spacegrad p_s = -\rho_s \zcap g
+\spacegrad p_s = -\rho_s \zcap g,
 \end{equation}
 %
 we found
 %
 \begin{equation}\label{eqn:continuumFluidsReview:2810}
-\left( \PD{t}{} - \nu \spacegrad^2 \right) \delta \Bu = -\inv{\rho_s} \spacegrad \delta p - \frac{\delta \rho}{\rho_s} \zcap g
+\left( \PD{t}{} - \nu \spacegrad^2 \right) \delta \Bu = -\inv{\rho_s} \spacegrad \delta p - \frac{\delta \rho}{\rho_s} \zcap g.
 \end{equation}
 %
 Operating on this with \(\PDi{z}{} \spacegrad \cdot ()\) we find
@@ -51,7 +51,7 @@ Operating on this with \(\PDi{z}{} \spacegrad \cdot ()\) we find
 from which we apply back to \eqnref{eqn:continuumFluidsReview:2810} and take just the z component to find
 %
 \begin{equation}\label{eqn:continuumFluidsReview:2850}
-\left( \PD{t}{} - \nu \spacegrad^2 \right) \delta w = -\inv{\rho_s} \PD{z}{\delta p} - \frac{\delta \rho}{\rho_s} g
+\left( \PD{t}{} - \nu \spacegrad^2 \right) \delta w = -\inv{\rho_s} \PD{z}{\delta p} - \frac{\delta \rho}{\rho_s} g.
 \end{equation}
 %
 With an assumption that density change and temperature are linearly related
@@ -74,7 +74,7 @@ g \alpha \left(
 We also applied our perturbation to the energy balance equation
 %
 \begin{equation}\label{eqn:continuumFluidsReview:2910}
-\PD{t}{T} + (\Bu \cdot \spacegrad) T = \kappa \spacegrad^2 T
+\PD{t}{T} + (\Bu \cdot \spacegrad) T = \kappa \spacegrad^2 T.
 \end{equation}
 %
 We determined that the base state temperature obeyed
@@ -102,15 +102,15 @@ We used this to non-dimensionalize with
 x,y,z & \quad \mbox{with \(d\)} \\
 t & \quad \mbox{with \(d^2/\nu\)} \\
 \delta w & \quad \mbox{with \(\kappa/d\)} \\
-\delta T & \quad \mbox{with \(\Delta T\)}
+\delta T & \quad \mbox{with \(\Delta T\)},
 \end{array}
 \end{equation}
 %
-And found (primes dropped)
+and found (primes dropped)
 %
 \begin{subequations}
 \begin{equation}\label{eqn:continuumFluidsReview:3010}
-\spacegrad^2 \left( \PD{t}{} - \spacegrad^2 \right) \delta w = \calR \left( \PDSq{x}{} +\PDSq{y}{} \right) \delta T
+\spacegrad^2 \left( \PD{t}{} - \spacegrad^2 \right) \delta w = \calR \left( \PDSq{x}{} +\PDSq{y}{} \right) \delta T,
 \end{equation}
 \begin{equation}\label{eqn:continuumFluidsReview:3030}
 \left( \text{P}_r \PD{t}{} - \spacegrad^2 \right) \delta T = \delta w,
@@ -132,7 +132,7 @@ We were able to construct some approximate solutions for a problem similar to th
 \begin{equation}\label{eqn:continuumFluidsReview:3090}
 \begin{aligned}
 \delta w &= w(z) e^{ i ( k_1 x + k_2 y) + \sigma t} \\
-\delta T &= \Theta(z) e^{ i ( k_1 x + k_2 y) + \sigma t}
+\delta T &= \Theta(z) e^{ i ( k_1 x + k_2 y) + \sigma t}.
 \end{aligned}
 \end{equation}
 %
@@ -161,4 +161,3 @@ which for \(\sigma = 0\), this gives us the critical value for the Rayleigh numb
 which is the boundary for thermal stability or instability.
 
 The end result was a lot of manipulation for which we did not do any sort of applied problems.  It looks like a theory that requires a lot of study to do anything useful with, so my expectation is that it will not be covered in detail on the exam.  Having some problems to know why we spent two days on it in class would have been nice.
-

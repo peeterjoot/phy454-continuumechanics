@@ -86,12 +86,11 @@ A consequence is that \(\spacegrad \cdot \Bu = 0\) for an incompressible fluid. 
 \frac{dm}{dt}
 &= \int \frac{d\rho}{dt} dV \\
 &= -\int_{\partial V} \rho \Bu \cdot d\BA \\
-&= -\int_V \spacegrad \cdot (\rho \Bu) dV
+&= -\int_V \spacegrad \cdot (\rho \Bu) dV.
 \end{aligned}
 \end{equation}
 %
-(the minus sign here signifying that the mass is leaving the volume through the surface, and that we are using an outwards facing normal on the volume.)
-
+The minus sign here signifying that the mass is leaving the volume through the surface, and that we are using an outwards facing normal on the volume.
 If the surface bounding the volume does not change with time (ie. \(\PDi{t}{V} = 0\)) we can write
 %
 \begin{equation}\label{eqn:continuumMidTermReflection:230}
@@ -165,7 +164,7 @@ Here, we have used the steady state condition and are neglecting gravity, and ki
 0 &= \partial_x u \\
 u \cancel{\partial_x u} &= -\partial_x p + \mu \spacegrad^2 u \\
 0 &= -\partial_y p \\
-0 &= -\partial_z p
+0 &= -\partial_z p,
 \end{aligned}
 \end{equation}
 %
@@ -207,7 +206,7 @@ u = -\frac{G}{2 \mu} y^2 + \frac{A}{h} y + B'.
 Let us incorporate an additional constant into \(B'\)
 %
 \begin{equation}\label{eqn:continuumMidTermReflection:490}
-B' = \frac{G}{2 \mu} h^2 + B
+B' = \frac{G}{2 \mu} h^2 + B,
 \end{equation}
 %
 so that we have
@@ -219,7 +218,7 @@ u = \frac{G}{2 \mu} (h^2 - y^2) + \frac{A}{h} y + B.
 (I did not do use \(B'\) this way on the exam, nor did I include the factor of \(1/h\) in the first integration constant, but both of these should simplify the algebra since we will be evaluating the boundary value conditions at \(y = \pm h\).)
 %
 \begin{equation}\label{eqn:continuumMidTermReflection:530}
-u = \frac{G}{2 \mu} (h^2 - y^2) + \frac{A}{h} y + B
+u = \frac{G}{2 \mu} (h^2 - y^2) + \frac{A}{h} y + B.
 \end{equation}
 %
 Applying the velocity matching conditions we have for the lower and upper plates respectively
@@ -227,14 +226,14 @@ Applying the velocity matching conditions we have for the lower and upper plates
 \begin{equation}\label{eqn:continuumMidTermReflection:550}
 \begin{aligned}
 0 &= \frac{A}{h} (-h) + B \\
--U &= \frac{A}{h} (h) + B
+-U &= \frac{A}{h} (h) + B.
 \end{aligned}
 \end{equation}
 %
 Adding these we find
 %
 \begin{equation}\label{eqn:continuumMidTermReflection:570}
-B = -\frac{U}{2}
+B = -\frac{U}{2},
 \end{equation}
 %
 and subtracting find
@@ -246,13 +245,13 @@ A = -\frac{U}{2}.
 Our velocity is
 %
 \begin{equation}\label{eqn:continuumMidTermReflection:610}
-u = \frac{G}{2 \mu} (h^2 - y^2) - \frac{U}{2 h} y -\frac{U}{2}
+u = \frac{G}{2 \mu} (h^2 - y^2) - \frac{U}{2 h} y -\frac{U}{2},
 \end{equation}
 %
 or rearranged a bit
 %
 \boxedEquation{eqn:continuumMidTermReflection:630}{
-u(y) = \frac{G}{2 \mu} (h^2 - y^2) - \frac{U}{2} \left( 1 + \frac{y}{h} \right)
+u(y) = \frac{G}{2 \mu} (h^2 - y^2) - \frac{U}{2} \left( 1 + \frac{y}{h} \right).
 }
 %
 \makesubanswer{Zero shear.}{problem:fluids:midterm:p2b}
@@ -288,7 +287,7 @@ For high \(U\), we will let the shear flow dominate, and have plotted this in \c
 Since our acceleration is
 %
 \begin{equation}\label{eqn:continuumMidTermReflection:690}
-\frac{du}{dy} = -\frac{G}{\mu} y - \frac{U}{2 h}
+\frac{du}{dy} = -\frac{G}{\mu} y - \frac{U}{2 h},
 \end{equation}
 %
 our extreme values occur at
@@ -312,7 +311,7 @@ u(y_m)
 \frac{G h^2}{2 \mu} -\frac{U}{2}
 + \frac{U^2 \mu}{4 h^2 G} \left(
 1 -\inv{2}
-\right)
+\right),
 \end{aligned}
 \end{equation}
 %
@@ -326,7 +325,7 @@ u_{\text{max}} = \frac{G h^2}{2 \mu} -\frac{U}{2} + \frac{U^2 \mu}{8 h^2 G}.
 An element of our volume flux is
 %
 \begin{equation}\label{eqn:continuumMidTermReflection:750}
-\frac{dV}{dt} = dy dz \Bu \cdot \xcap
+\frac{dV}{dt} = dy dz \Bu \cdot \xcap.
 \end{equation}
 %
 Looking at the volume flux through the width \(\Delta z\) is then
@@ -342,7 +341,7 @@ Looking at the volume flux through the width \(\Delta z\) is then
 \int_{-h}^h dy
 \frac{G}{2 \mu} \left(h^2 y - \inv{3} y^3 \right) - \frac{U}{2} \left( y + \frac{y^2}{2 h} \right) \\
 &= \Delta z
-\left( \frac{2 G h^3}{3 \mu} - U h \right)
+\left( \frac{2 G h^3}{3 \mu} - U h \right).
 \end{aligned}
 \end{equation}
 %
@@ -367,7 +366,7 @@ T_1
 \PD{y}{u}
 +
 \cancel{\PD{x}{v}}
-\right)
+\right).
 \end{aligned}
 \end{equation}
 %
@@ -383,7 +382,7 @@ We have calculated that derivative above in \eqnref{eqn:continuumMidTermReflecti
 \begin{aligned}
 T_1
 &= \mu \left( -\frac{G}{\mu} y - \frac{U}{2 h} \right) \\
-&= - G y - \frac{U \mu}{2 h}
+&= - G y - \frac{U \mu}{2 h}.
 \end{aligned}
 \end{equation}
 %

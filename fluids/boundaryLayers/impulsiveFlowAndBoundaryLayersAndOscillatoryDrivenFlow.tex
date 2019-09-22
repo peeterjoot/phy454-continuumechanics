@@ -22,7 +22,7 @@ u(0, t) =
 \left\{
 \begin{array}{l l}
 0 & \quad \mbox{for \(t < 0\)} \\
-U(t) & \quad \mbox{for \(t \ge 0\)} \\
+U(t) & \quad \mbox{for \(t \ge 0\)},
 \end{array}
 \right.
 \end{equation}
@@ -50,13 +50,13 @@ u = U f(\eta),
 we found that we needed to solve
 %
 \begin{equation}\label{eqn:continuumL17:100}
-f'' + 2 \eta f' = 0
+f'' + 2 \eta f' = 0,
 \end{equation}
 %
 where
 %
 \begin{equation}\label{eqn:continuumL17:120}
-f' = \frac{df}{d\eta}
+f' = \frac{df}{d\eta},
 \end{equation}
 %
 with solution
@@ -89,14 +89,12 @@ so that the speed at \((y_1, t_1)\) equals the speed at \((y_2, t_2)\).  This is
 \section{Universal behavior.}
 %
 Looking at a plot with different viscosities for position vs time scaled as \(\sqrt{\nu t}\) as in \cref{fig:continuumL17:continuumL17Fig4} we see a sort of universal behavior
-
 %
 \pdfTexFigure{../figures/phy454-continuumechanics/continuumL17Fig4.pdf_tex}{Universal behavior.}{fig:continuumL17:continuumL17Fig4}{0.6}
 %
 Characterizing this we introduce the concept of boundary layer thickness
 %
 \makedefinition{Boundary layer thickness}{dfn:continuumL17:200}{The length scale over which \index{viscosity} is dominant.  This is the viscous length scale. \index{boundary layer}}
-
 This is similar to what we have in the heat equation
 %
 \begin{equation}\label{eqn:continuumL17:220}
@@ -127,7 +125,7 @@ U(t) = U_0 \cos \Omega t = \Real\left( U_0 e^{i \Omega t} \right).
 We write
 %
 \begin{equation}\label{eqn:continuumL17:280}
-u(y, t) = \Real\left( f(y) e^{i \Omega t} \right)
+u(y, t) = \Real\left( f(y) e^{i \Omega t} \right),
 \end{equation}
 %
 with substitution into
@@ -139,19 +137,19 @@ with substitution into
 we have
 %
 \begin{equation}\label{eqn:continuumL17:320}
-i \Omega f(y) e^{i \Omega t} = \nu f'' e^{i \Omega t}
+i \Omega f(y) e^{i \Omega t} = \nu f'' e^{i \Omega t},
 \end{equation}
 %
 or
 %
 \begin{equation}\label{eqn:continuumL17:340}
-i \Omega f(y) = \nu f''
+i \Omega f(y) = \nu f''.
 \end{equation}
 %
 This is an equation of the form
 %
 \begin{equation}\label{eqn:continuumL17:360}
-f'' = m^2 f
+f'' = m^2 f,
 \end{equation}
 %
 where
@@ -182,7 +180,7 @@ m^2
 &=
 \frac{\Omega}{2 \nu} (i^2 + 1 + 2 i) \\
 &=
-\frac{\Omega}{\nu} i
+\frac{\Omega}{\nu} i.
 \end{aligned}
 \end{equation}
 %
@@ -191,7 +189,7 @@ Considering the boundary value constraints we have
 \begin{equation}\label{eqn:continuumL17:440}
 f(y) =
 A e^{\lambda (1 + i) y}
-+ B e^{-\lambda (1 + i) y}
++ B e^{-\lambda (1 + i) y}.
 \end{equation}
 %
 Since \(u(\infty, t) \rightarrow 0\) we must have
@@ -203,25 +201,25 @@ f(\infty) = 0,
 so we must kill off the exponentially increasing (albeit also oscillating) term by setting \(A = 0\).  Also, since
 %
 \begin{equation}\label{eqn:continuumL17:480}
-u(0, t) = U(t)
+u(0, t) = U(t),
 \end{equation}
 %
 we must have
 %
 \begin{equation}\label{eqn:continuumL17:500}
-f(0) = U_0
+f(0) = U_0,
 \end{equation}
 %
 or
 %
 \begin{equation}\label{eqn:continuumL17:520}
-B = U_0
+B = U_0,
 \end{equation}
 %
 so
 %
 \begin{equation}\label{eqn:continuumL17:540}
-f(y) = U_0 e^{-\lambda (1 + i) y}
+f(y) = U_0 e^{-\lambda (1 + i) y},
 \end{equation}
 %
 and
@@ -230,7 +228,7 @@ and
 u(y, t) =
 \Real\left(
 U_0 e^{-\lambda y} e^{ -i (\lambda y - \Omega t) }
-\right)
+\right),
 \end{equation}
 %
 or

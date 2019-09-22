@@ -32,13 +32,13 @@ For the ball on the table, assuming some friction that stops the ball, fairly qu
 Let us suppose that our displacement can be described in exponential form
 %
 \begin{equation}\label{eqn:continuumL21:10}
-\delta x \sim e^{\sigma t}
+\delta x \sim e^{\sigma t},
 \end{equation}
 %
 where \(\sigma\) is the \textit{growth rate of perturbation}, and is in general a complex number of the form
 %
 \begin{equation}\label{eqn:continuumL21:30}
-\sigma = \sigma_{\text{R}} + i \sigma_{\text{I}}
+\sigma = \sigma_{\text{R}} + i \sigma_{\text{I}}.
 \end{equation}
 %
 \subsection{Case I.  Oscillatory unstability.}
@@ -48,7 +48,7 @@ A system of the form
 \begin{equation}\label{eqn:stability:310}
 \begin{aligned}
 \sigma_{\text{R}} &= 0 \\
-\sigma_{\text{I}} &> 0
+\sigma_{\text{I}} &> 0.
 \end{aligned}
 \end{equation}
 %
@@ -60,7 +60,7 @@ A system of the form
 \begin{aligned}
 \delta x
 &\sim e^{\sigma_{\text{R}} t} e^{i \sigma_{\text{I}} t} \\
-&\sim e^{\sigma_{\text{R}} t} \left( \cos \sigma_{\text{I}} t + i \sin \sigma_{\text{I}} t \right)
+&\sim e^{\sigma_{\text{R}} t} \left( \cos \sigma_{\text{I}} t + i \sin \sigma_{\text{I}} t \right).
 \end{aligned}
 \end{equation}
 %
@@ -69,7 +69,7 @@ We will call systems of the form
 \begin{equation}\label{eqn:stability:350}
 \begin{aligned}
 \sigma_{\text{I}} &= 0 \\
-\sigma_{\text{R}} &> 0
+\sigma_{\text{R}} &> 0,
 \end{aligned}
 \end{equation}
 %
@@ -80,7 +80,7 @@ We will call systems of the form
 \begin{equation}\label{eqn:stability:370}
 \begin{aligned}
 \sigma &= 0 \\
-\sigma_{\text{R}} &= \sigma_{\text{I}} = 0
+\sigma_{\text{R}} &= \sigma_{\text{I}} = 0.
 \end{aligned}
 \end{equation}
 %
@@ -99,7 +99,7 @@ We start with Navier-Stokes as normal
 For steady state with \(\Bu = 0\) initially (our base state), we will call the following the equation of the base state
 %
 \boxedEquation{eqn:continuumL21:70}{
-\spacegrad p_s = -\rho_s \zcap g
+\spacegrad p_s = -\rho_s \zcap g.
 }
 %
 We will allow perturbations of each of our variables
@@ -108,7 +108,7 @@ We will allow perturbations of each of our variables
 \begin{aligned}
 \Bu &= \Bu_{\text{base}} + \delta \Bu = 0 + \delta \Bu \\
 p &= p_s + \delta p \\
-\rho &= \rho_s + \delta \rho
+\rho &= \rho_s + \delta \rho.
 \end{aligned}
 \end{equation}
 %
@@ -117,13 +117,13 @@ After perturbation Navier-Stokes takes the form
 %
 \begin{dmath}\label{eqn:continuumL21:90}
 (\rho_s + \delta \rho )\PD{t}{(0 + \delta \Bu)} + (\rho_s + \delta \rho) ((0 + \delta \Bu) \cdot \spacegrad) (0 + \delta \Bu) =
-- \spacegrad (p_s + \delta p) + \mu \spacegrad^2 (0 + \delta \Bu) - (\rho_s + \delta \rho) \zcap g
+- \spacegrad (p_s + \delta p) + \mu \spacegrad^2 (0 + \delta \Bu) - (\rho_s + \delta \rho) \zcap g.
 \end{dmath}
 %
 Retaining only terms that are of first order of smallness.
 %
 \begin{equation}\label{eqn:continuumL21:110}
-\rho_s \PD{t}{\delta \Bu} = - \spacegrad p_s - \spacegrad \delta p + \mu \spacegrad^2 \delta \Bu - \rho_s \zcap g - \delta \rho \zcap g
+\rho_s \PD{t}{\delta \Bu} = - \spacegrad p_s - \spacegrad \delta p + \mu \spacegrad^2 \delta \Bu - \rho_s \zcap g - \delta \rho \zcap g,
 \end{equation}
 %
 applying our equation of base state \eqnref{eqn:continuumL21:70}, we have
@@ -138,10 +138,10 @@ or
 \rho_s \PD{t}{\delta \Bu} = - \spacegrad \delta p + \mu \spacegrad^2 \delta \Bu - \delta \rho \zcap g.
 \end{equation}
 %
-we can write
+We can write
 %
 \begin{equation}\label{eqn:continuumL21:130}
-\left( \PD{t}{} - \nu \spacegrad^2 \right) \delta \Bu = -\inv{\rho_s} \spacegrad \delta p - \frac{\delta \rho}{\rho_s} \zcap g
+\left( \PD{t}{} - \nu \spacegrad^2 \right) \delta \Bu = -\inv{\rho_s} \spacegrad \delta p - \frac{\delta \rho}{\rho_s} \zcap g.
 \end{equation}
 %
 Applying the divergence operation on both sides, and using \(\spacegrad \cdot \Bu = 0\) so that \(\spacegrad \cdot \delta \Bu = 0\) we have
@@ -162,7 +162,7 @@ Assuming that \(\rho_s\) is constant (actually that is already been done above),
 \spacegrad^2 \delta p = - (\zcap \cdot \spacegrad ) g \delta \rho = -g \PD{z}{} \delta \rho.
 \end{equation}
 %
-operating once more with \(\PDi{z}{}\) we have
+Operating once more with \(\PDi{z}{}\) we have
 %
 \begin{equation}\label{eqn:continuumL21:210}
 \spacegrad^2 \PD{z}{\delta p} = -g \PDSq{z}{\delta \rho}.
@@ -190,18 +190,17 @@ g \alpha \left(
 \PDSq{x}{}
 +\PDSq{y}{}
 \right)
-\delta T
+\delta T.
 \end{aligned}
 \end{equation}
 %
-in the last step we use the following assumed relation for temperature
+In the last step we use the following assumed relation for temperature
 %
 \begin{equation}\label{eqn:continuumL21:250}
 \delta \rho = - \rho_s \alpha \delta T.
 \end{equation}
 %
 Here \(\alpha\) is the coefficient of thermal expansion.  This is just a statement that expansion and temperature are related (as we heat something, it expands), with the ratio of the density change relative to the original being linearly related to the change in temperature.
-
 We have finally
 %
 \begin{equation}\label{eqn:continuumL21:290}
@@ -215,7 +214,6 @@ g \alpha \left(
 \end{equation}
 %
 Solving this is the Rayleigh-Benard instability problem.
-
 While this is a fourth order differential equation, it is still the same sort of problem logically as we have been working on.  Our boundary value conditions at \(z = 0\) are
 %
 \begin{equation}\label{eqn:continuumL21:430}

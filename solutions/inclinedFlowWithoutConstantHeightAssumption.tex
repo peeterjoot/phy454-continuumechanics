@@ -27,13 +27,13 @@ For viscous incompressible flow down the plane our equations of motion are
 \begin{subequations}
 \label{eqn:inclinedFlowWithoutConstantHeightAssumption:20}
 \begin{equation}\label{eqn:inclinedFlowWithoutConstantHeightAssumption:380}
-\rho \PD{t}{u} + \rho (u \partial_x + v \partial_y) u = -\partial_x p + \mu \left(\partial_{xx} + \partial_{yy}\right) u + \rho g \sin\alpha
+\rho \PD{t}{u} + \rho (u \partial_x + v \partial_y) u = -\partial_x p + \mu \left(\partial_{xx} + \partial_{yy}\right) u + \rho g \sin\alpha,
 \end{equation}
 \begin{equation}\label{eqn:inclinedFlowWithoutConstantHeightAssumption:400}
-\rho \PD{t}{v} + \rho (u \partial_x + v \partial_y) v = -\partial_y p + \mu \left(\partial_{xx} + \partial_{yy}\right) v - \rho g \cos\alpha
+\rho \PD{t}{v} + \rho (u \partial_x + v \partial_y) v = -\partial_y p + \mu \left(\partial_{xx} + \partial_{yy}\right) v - \rho g \cos\alpha,
 \end{equation}
 \begin{equation}\label{eqn:inclinedFlowWithoutConstantHeightAssumption:420}
-0 = -\partial_z p
+0 = -\partial_z p,
 \end{equation}
 \begin{equation}\label{eqn:inclinedFlowWithoutConstantHeightAssumption:440}
 0 = \partial_x u + \partial_y v.
@@ -45,13 +45,13 @@ Now, can we kill the time dependent term?  Even allowing for \(u\) to vary with 
 \begin{subequations}
 \label{eqn:inclinedFlowWithoutConstantHeightAssumption:40}
 \begin{equation}\label{eqn:inclinedFlowWithoutConstantHeightAssumption:300}
-\rho (u \partial_x + v \partial_y) u = -\partial_x p + \mu \left(\partial_{xx} + \partial_{yy}\right) u + \rho g \sin\alpha \\
+\rho (u \partial_x + v \partial_y) u = -\partial_x p + \mu \left(\partial_{xx} + \partial_{yy}\right) u + \rho g \sin\alpha,
 \end{equation}
 \begin{equation}\label{eqn:inclinedFlowWithoutConstantHeightAssumption:320}
-\rho (u \partial_x + v \partial_y) v = -\partial_y p + \mu \left(\partial_{xx} + \partial_{yy}\right) v - \rho g \cos\alpha \\
+\rho (u \partial_x + v \partial_y) v = -\partial_y p + \mu \left(\partial_{xx} + \partial_{yy}\right) v - \rho g \cos\alpha,
 \end{equation}
 \begin{equation}\label{eqn:inclinedFlowWithoutConstantHeightAssumption:340}
-0 = -\partial_z p \\
+0 = -\partial_z p,
 \end{equation}
 \begin{equation}\label{eqn:inclinedFlowWithoutConstantHeightAssumption:360}
 0 = \partial_x u + \partial_y v.
@@ -81,7 +81,7 @@ A position vector on the surface has the value
 so that a differential element on the surface, tangential to the surface is proportional to
 %
 \begin{equation}\label{eqn:inclinedFlowWithoutConstantHeightAssumption:120}
-d\Br = \left( \xcap + \ddx{h} \ycap \right) dx
+d\Br = \left( \xcap + \ddx{h} \ycap \right) dx,
 \end{equation}
 %
 so our unit tangent vector in the direction depicted in the figure is
@@ -135,7 +135,7 @@ Our traction vector relative to the normal \(\ncap\) is
 + \mu e_{ij}
 \right) n_j \\
 &=
--p \ncap + \mu \Be_i e_{ij} n_j
+-p \ncap + \mu \Be_i e_{ij} n_j.
 \end{aligned}
 \end{equation}
 %
@@ -178,7 +178,7 @@ e_{21} & e_{22}
 \left(
 h' (e_{22} - e_{11} )
 + e_{12} (1 - (h')^2 )
-\right)
+\right).
 \end{aligned}
 \end{equation}
 %
@@ -240,7 +240,7 @@ What is the normal component of the traction vector at the interface?  We can ca
 \left(
 -2 h' e_{12}
 + (h')^2 e_{11} + e_{22}
-\right)
+\right).
 \end{aligned}
 \end{equation}
 %
@@ -259,7 +259,7 @@ So this component of the traction vector is
 \right)
 + (h')^2 \PD{x}{u}
  + \PD{y}{v}
-\right)
+\right).
 \end{equation}
 %
 For the purely recilinear flow, with \(h' = 0\) and \(v = 0\), as a a consequence of Navier-Stokes and our assumptions, all but the pressure portion of this component of the traction vector was zero.  The force balance equation for the interface was therefore just a matching of the pressure with the external (ie: air) pressure.
@@ -289,7 +289,7 @@ Again assuming no motion of the air, with air pressure \(p_A\), this is
  + \PD{y}{v}
 \right)
 }{y = h}
-= -p_A
+= -p_A.
 }
 Observe that for the horizontal flow problem, where \(h' = 0\) and \(v = 0\), this would have been nothing more than a requirement that \(p(h) = p_A\), but now that we introduce downwards motion and allow the height to vary, the pressure matching condition becomes a much more complex beastie.
 %
@@ -336,7 +336,7 @@ we get
 \begin{aligned}
 0 &= -P' Q + \mu (X'' Y + X Y'') \\
 0 &= -P Q' + \mu (R'' S + R S'') \\
-0 &= X' Y + R S'
+0 &= X' Y + R S'.
 \end{aligned}
 \end{equation}
 %
@@ -355,7 +355,7 @@ The idea of substituting the zero divergence equation \(\spacegrad \cdot \Bu\) w
 &= -\spacegrad p + \mu \spacegrad ( \spacegrad \Bu ) \\
 &= -\spacegrad p + \mu \spacegrad ( \cancel{\spacegrad \cdot \Bu} + \spacegrad \wedge \Bu ) \\
 &= -\spacegrad p + \mu \spacegrad ( \spacegrad \wedge \Bu ) \\
-&= \spacegrad \left( -p + \mu \spacegrad \wedge \Bu \right)
+&= \spacegrad \left( -p + \mu \spacegrad \wedge \Bu \right).
 \end{aligned}
 \end{equation}
 %
@@ -366,7 +366,7 @@ Writing out the vorticity (bivector) in component form, and writing \(i = \Be_1 
 \spacegrad \wedge \Bu
 &= (\Be_1 \partial_x + \Be_2 \partial_y) \wedge (\Be_1 u + \Be_2 v) \\
 &= \Be_1 \Be_2 (\partial_x v - \partial_y u ) \\
-&= i (\partial_x v - \partial_y u )
+&= i (\partial_x v - \partial_y u ).
 \end{aligned}
 \end{equation}
 %
@@ -393,7 +393,7 @@ However, note that \(\spacegrad^2\) is a scalar operator, and this zero identity
 \begin{subequations}
 \label{eqn:inclinedFlowWithoutConstantHeightAssumption:150}
 \begin{equation}\label{eqn:inclinedFlowWithoutConstantHeightAssumption:170}
-0 = \spacegrad^2 p
+0 = \spacegrad^2 p,
 \end{equation}
 \begin{equation}\label{eqn:inclinedFlowWithoutConstantHeightAssumption:190}
 0 = \spacegrad^2 \Theta.
@@ -407,7 +407,7 @@ Note that we can obtain \eqnref{eqn:inclinedFlowWithoutConstantHeightAssumption:
 0
 &= -\spacegrad^2 p + \mu \spacegrad^3 \Bu \\
 &= -\spacegrad^2 p + \mu \spacegrad^2 (\spacegrad \Bu) \\
-&= -\spacegrad^2 p + \mu \spacegrad^2 (\spacegrad \wedge \Bu) \\
+&= -\spacegrad^2 p + \mu \spacegrad^2 (\spacegrad \wedge \Bu).
 \end{aligned}
 \end{equation}
 %
@@ -433,7 +433,7 @@ Starting with the divergence, with summation implied over repeated indices, we h
 \sum_k (\partial_k u_k)^2
 +
 \sum_{k \ne m} (\partial_k u_m) (\partial_m u_k )
-+ (\Bu \cdot \spacegrad) ( \spacegrad \cdot \Bu )
++ (\Bu \cdot \spacegrad) ( \spacegrad \cdot \Bu ).
 \end{aligned}
 \end{equation}
 %
@@ -445,7 +445,7 @@ So we have
 \sum_k (\partial_k u_k)^2
 +
 2 \sum_{k < m} (\partial_k u_m) (\partial_m u_k )
-+ (\Bu \cdot \spacegrad) ( \spacegrad \cdot \Bu )
++ (\Bu \cdot \spacegrad) ( \spacegrad \cdot \Bu ).
 \end{equation}
 %
 We are working with the \(\spacegrad \cdot \Bu = 0\) incompressibility assumption so we kill off the last term.  Our velocity ends up introducing a non-homogeneous forcing term to the Laplacian pressure equation and we have got something trickier to solve
@@ -478,7 +478,7 @@ Now let us see how our vorticity Laplacian needs to be modified.  Taking the cur
 \left(
 (\partial_k u_m) (\partial_m u_n )
 + (\Bu \cdot \spacegrad) \partial_k u_n
-\right)
+\right).
 \end{aligned}
 \end{equation}
 %
@@ -487,7 +487,7 @@ So we have
 \spacegrad \wedge ((\Bu \cdot \spacegrad) \Bu)
 =
 (\spacegrad u_m) \wedge (\partial_m \Bu)
-+ (\Bu \cdot \spacegrad) (\spacegrad \wedge \Bu)
++ (\Bu \cdot \spacegrad) (\spacegrad \wedge \Bu).
 \end{equation}
 %
 Putting things back together, our vorticity equation is
@@ -496,7 +496,7 @@ Putting things back together, our vorticity equation is
 \rho (\spacegrad u_m) \wedge (\partial_m \Bu)
 + \rho (\Bu \cdot \spacegrad) (\spacegrad \wedge \Bu)
 =
-\mu \spacegrad^2 (\spacegrad \wedge \Bu)
+\mu \spacegrad^2 (\spacegrad \wedge \Bu).
 \end{equation}
 %
 Or, with
@@ -525,7 +525,7 @@ It is this and \eqnref{eqn:inclinedFlowWithoutConstantHeightAssumption:500} that
 \right)
 + \left( u \PD{x}{} + v \PD{y}{} \right) \Theta
 =
-\nu \spacegrad^2 \Theta
+\nu \spacegrad^2 \Theta,
 \end{equation}
 \begin{equation}\label{eqn:inclinedFlowWithoutConstantHeightAssumption:640}
 \Theta = \PD{x}{v} - \PD{y}{u}.
@@ -558,7 +558,7 @@ I have expressed the curl as a wedge product, and not a cross product (either wo
 &=
 (\Bu \cdot \spacegrad) \Bu
 -
-\inv{2} \spacegrad (\Bu \cdot \Bu),
+\inv{2} \spacegrad (\Bu \cdot \Bu).
 \end{aligned}
 \end{equation}
 %
@@ -618,7 +618,7 @@ Expanding out that divergence we have
 \partial_k \left(
 u_r
 \left( \partial_r u_k - \partial_k u_r \right)
-\right)
+\right),
 % \\
 %&=
 %\partial_k \left(
@@ -675,7 +675,7 @@ u_a \Omega_{ab} \Be_b
 &=
 \spacegrad \wedge (
 u_a \Omega_{ab} \Be_b
-)
+).
 \end{aligned}
 \end{equation}
 %
@@ -698,13 +698,13 @@ The Navier-Stokes equations are now recast in terms of vorticity as
 %\Omega_{rk}
 \spacegrad \cdot (\Bu \wedge \BOmega)
 =
--\spacegrad^2 \left( \frac{p}{\rho} + \frac{1}{2} \Bu^2 + \phi \right)
+-\spacegrad^2 \left( \frac{p}{\rho} + \frac{1}{2} \Bu^2 + \phi \right),
 \end{equation}
 \begin{equation}\label{eqn:inclinedFlowWithoutConstantHeightAssumption:780}
-\PD{t}{\BOmega} + \spacegrad \wedge (\Bu \cdot \BOmega) = \nu \spacegrad^2 \BOmega
+\PD{t}{\BOmega} + \spacegrad \wedge (\Bu \cdot \BOmega) = \nu \spacegrad^2 \BOmega,
 \end{equation}
 \begin{equation}\label{eqn:inclinedFlowWithoutConstantHeightAssumption:800}
-\BOmega = \spacegrad \wedge \Bu
+\BOmega = \spacegrad \wedge \Bu,
 \end{equation}
 \begin{equation}\label{eqn:inclinedFlowWithoutConstantHeightAssumption:820}
 \spacegrad \cdot \Bu = 0,
@@ -741,7 +741,7 @@ For our problem where we have only \(u_1\) and \(u_2\) components, and any \(\pa
 &=
 -\Omega_{12}^2 + (u_1 \partial_2 - u_2 \partial_1 ) \Omega_{12} \\
 &=
--\Omega_{12}^2 - i \cdot (\Bu \wedge \spacegrad) \Omega_{12} \\
+-\Omega_{12}^2 - i \cdot (\Bu \wedge \spacegrad) \Omega_{12},
 \end{aligned}
 \end{equation}
 %
@@ -759,7 +759,7 @@ and
 +
 (u_1 \partial_1 + u_2 \partial_2) \Omega_{1 2} \\
 &=
-(\Bu \cdot \spacegrad) \Omega_{1 2}
+(\Bu \cdot \spacegrad) \Omega_{1 2}.
 \end{aligned}
 \end{equation}
 %
@@ -769,7 +769,7 @@ So we have
 \begin{equation}\label{eqn:inclinedFlowWithoutConstantHeightAssumption:840a}
 \Omega_{12}^2 + i \cdot (\Bu \wedge \spacegrad) \Omega_{12}
 =
-\spacegrad^2 \left( \frac{p}{\rho} + \frac{1}{2} \Bu^2 + \phi \right)
+\spacegrad^2 \left( \frac{p}{\rho} + \frac{1}{2} \Bu^2 + \phi \right),
 \end{equation}
 \begin{equation}\label{eqn:inclinedFlowWithoutConstantHeightAssumption:860b}
 \PD{t}{\Omega_{12}} +
@@ -793,12 +793,10 @@ Note that since \(\spacegrad^2 \phi\) could equal zero (as in our problem) we wi
 \section{Now what?}
 %
 The strategy that I had thought to attempt to tackle this problem, when I had left it like \eqnref{eqn:inclinedFlowWithoutConstantHeightAssumption:599} was something along the following lines
-
 \begin{itemize}
 \item First ignore the non-linear terms.  Find solutions for the homogeneous vorticity \index{vorticity} and pressure Laplacian equations that satisfy our boundary value conditions, and use that to find a first solution for \(h(x)\).
 \item Use this to solve for \(u\) and \(v\) from the vorticity.
 \end{itemize}
-
 However, after reworking it using the identity found in Feynman's dry water chapter, I think it is best not to try to solve it yet, and study some more first.  I have a feeling that there are likely more such techniques that have been developed that will be useful to know before I try to plow my way through things.
 
 Regardless, it is interesting to see just how tricky the equations of motion become when one does not make unrealistic assumptions.  I have a feeling that to actually attempt this specific problem, I may very well need a computer and numerical techniques.

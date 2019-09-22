@@ -11,7 +11,7 @@ At the end of the section in the text, the formulas for the spherical and cylind
 \begin{equation}\label{eqn:continuumL2:370}
 \begin{aligned}
 \Bx &= r \rcap + z \zcap \\
-\Bu & u_r \rcap + u_\phi \phicap + u_z \zcap
+\Bu & u_r \rcap + u_\phi \phicap + u_z \zcap,
 \end{aligned}
 \end{equation}
 %
@@ -21,7 +21,7 @@ where
 \begin{aligned}
 \rcap &= \Be_1 e^{i\phi} \\
 \phicap &= \Be_2 e^{i\phi} \\
-i &= \Be_1 \Be_2
+i &= \Be_1 \Be_2.
 \end{aligned}
 \end{equation}
 %
@@ -93,7 +93,7 @@ For the squared magnitude's difference from \(d\Bx^2\) we have
 + 2 dr ( du_r - u_\phi d\phi )
 + ( du_\phi + u_r d\phi )^2 \\
 &\qquad + 2 r d\phi ( du_\phi + u_r d\phi )
-+ du_z^2 + 2 du_z dz \\
++ du_z^2 + 2 du_z dz.
 \end{aligned}
 \end{equation}
 %
@@ -134,7 +134,7 @@ dz
 \PD{r}{u_z} dr
 +\PD{\phi}{u_z} d\phi
 +\PD{z}{u_z} dz
-\right) \\
+\right).
 \end{aligned}
 \end{equation}
 %
@@ -280,7 +280,6 @@ Our coordinate representation, with summation and dimensionality implied, is
 %
 Our differentials are
 %
-%
 \begin{dmath}\label{eqn:continuumL2:550}
 d\Bx
 = dx^\mu e_\mu + x^\mu d e_\mu
@@ -293,7 +292,6 @@ x^\mu
 \end{dmath}
 %
 and
-%
 %
 \begin{dmath}\label{eqn:continuumL2:570}
 d\Bu
@@ -375,7 +373,6 @@ e_\mu \cdot
 \end{equation}
 %
 and
-%
 %
 \begin{dmath*}
 (d\Bu + d\Bx)^2
@@ -461,7 +458,6 @@ d\beta
 \end{dmath*}
 %
 Taking the difference we find
-%
 %
 \begin{dmath}\label{eqn:continuumL2:610}
 (d\Bu + d\Bx)^2 - d\Bx^2
@@ -608,7 +604,7 @@ u_\nu
 \right)
 e_\mu \cdot
 \PD{\alpha}{e^\nu}
-\right)
+\right).
 \end{dmath}
 %
 Here \(\alpha < \beta\) is used to denote summation over the pairs \(\alpha \ne \beta\) just once, not necessarily any numeric ordering.  For example with \(\alpha, \beta \in \{r, \phi, z\}\), this could be the set \(\{\alpha, \beta\} \in \{r \phi, \phi z, z r\}\).
@@ -630,7 +626,7 @@ dx^j
 2
 \PD{x^i}{u^k}
 \PD{x^j}{x^k}
-\right)
+\right).
 \end{equation}
 %
 However, since we also have \(\PDi{x^j}{x^k} = \delta_{jk}\), this is
@@ -670,17 +666,17 @@ First we recall that all our basis vector derivatives are zero except for the \(
 If we write
 %
 \begin{equation}\label{eqn:continuumL2:690}
-\Bx = r \rcap + z \zcap = x_r \rcap + x_\phi \phicap + x_z \zcap
+\Bx = r \rcap + z \zcap = x_r \rcap + x_\phi \phicap + x_z \zcap,
 \end{equation}
 %
-We have for all the \(x^\mu\) partials
+we have for all the \(x^\mu\) partials
 %
 \begin{equation}\label{eqn:continuumL2:710}
 \PD{\alpha}{x^\mu} =
 \left\{
 \begin{array}{l l}
 1 & \quad \mbox{if \(\alpha = x^\mu = r\) or \(\alpha = x^\mu = z\)} \\
-0 & \quad \mbox{otherwise}
+0 & \quad \mbox{otherwise}.
 \end{array}
 \right.
 \end{equation}
@@ -722,7 +718,7 @@ u_n
 \right)
 e_m \cdot
 \PD{\alpha}{e_n}
-\right)
+\right).
 \end{dmath}
 %
 For both \(r\) and \(z\) all our unit vectors have zero derivatives so we are left respectively with
@@ -752,7 +748,6 @@ and
 \end{equation}
 %
 For the \(\alpha = \phi\) term we have
-%
 %
 \begin{dmath*}
 2 d\phi d\phi
@@ -800,7 +795,7 @@ r
 +
 u_r
 )
-\right)
+\right).
 \end{dmath*}
 %
 Now, on to the mixed terms.  The easiest is the \(dz dr\) term, for which all the unit vector derivatives are zero, and we are left with just
@@ -831,7 +826,6 @@ Now, on to the mixed terms.  The easiest is the \(dz dr\) term, for which all th
 \end{aligned}
 \end{equation}
 Now we have the two messy mixed terms.  For the \(r\), \(\phi\) term we get
-%
 %
 \begin{dmath*}
 2 dr
@@ -954,7 +948,7 @@ r
 +
 u_r
 )
-\right)
+\right).
 \end{dmath*}
 %
 Finally for the \(z\), \(\phi\) term we have
@@ -1059,11 +1053,10 @@ r
 +
 u_r
 )
-\right)
+\right).
 \end{dmath*}
 %
 To summarize we have, including both first and second order terms,
-%
 %
 \begin{dmath}\label{eqn:continuumL2:790}
 {d\Bl'}^2 - d\Bx^2
@@ -1152,7 +1145,7 @@ To summarize we have, including both first and second order terms,
 \PD{z}{u_r}
 +
 \PD{r}{u_z}
-\right)
+\right).
 \end{dmath}
 %
 Factors of \(r\) have been pulled out so that the portions remaining in the braces are exactly the cylindrical tensor elements as given in the text (except also with the second order terms here).  Observe that the pre-calculation of the general formula has allowed an on paper expansion of the cylindrical tensor without too much pain, and this time without requiring Mathematica.
@@ -1167,7 +1160,7 @@ To perform the derivation in spherical coordinates we have some setup to do firs
 \sin\theta \cos\phi \\
 \sin\theta \sin\phi \\
 \cos\theta
-\end{bmatrix}
+\end{bmatrix}.
 \end{equation}
 %
 We can get \(\phicap\) by geometrical intuition since it the plane unit vector at angle \(\phi\) rotated by \(\pi/2\).  That is
@@ -1178,13 +1171,13 @@ We can get \(\phicap\) by geometrical intuition since it the plane unit vector a
 -\sin\phi \\
 \cos\phi \\
 0
-\end{bmatrix}
+\end{bmatrix}.
 \end{equation}
 %
 We can get \(\thetacap\) by utilizing the right handedness of the coordinates since
 %
 \begin{equation}\label{eqn:continuumL2:850}
-\phicap \cross \rcap = \thetacap
+\phicap \cross \rcap = \thetacap,
 \end{equation}
 %
 and find
@@ -1195,7 +1188,7 @@ and find
 \cos\theta \cos\phi \\
 \cos\theta \sin\phi \\
 -\sin\theta
-\end{bmatrix}
+\end{bmatrix}.
 \end{equation}
 %
 Brute forcing the differential strain element calculation (\nbref{strainTensorSphericalColumnVectors.cdf}, we find
@@ -1261,7 +1254,7 @@ d{\Bl'}^2 - d\Bx^2
 - u_{\phi } \cot\theta \inv{r } \frac{\partial u_{\theta }}{\partial r}
 + \inv{r } \frac{\partial u_{\phi }}{\partial r} \left( u_{\theta } \cot\theta + r + u_r \right)
 + \inv{r \sin\theta} \frac{\partial u_m}{\partial \phi } \frac{\partial u_m}{\partial r}
-\right)
+\right).
 \end{dmath}
 %
 \section{Spherical tensor.  Manual derivation.}
@@ -1276,7 +1269,7 @@ We have two sets of rotations, the first is a rotation about the \(z\) axis by \
 \begin{aligned}
 \Be_1' &= \Be_1 e^{i\phi} = \Be_1 \cos\phi + \Be_2 \sin\phi \\
 \Be_2' &= \Be_2 e^{i\phi} = \Be_2 \cos\phi - \Be_1 \sin\phi \\
-\Be_3' &= \Be_3
+\Be_3' &= \Be_3.
 \end{aligned}
 \end{equation}
 %
@@ -1297,7 +1290,7 @@ Now we rotate in the plane spanned by \(\Be_3\) and \(\Be_1'\) by \(\theta\).  W
 &= \Be_1 e^{i\phi} e^{j\theta} \\
 &= \Be_1 e^{i\phi} (\cos\theta + \Be_3 \Be_1 e^{i\phi} \sin\theta) \\
 &= \Be_1 e^{i\phi} \cos\theta -\Be_3 \sin\theta \\
-&= (\Be_1 \cos\phi + \Be_2 \sin\phi) \cos\theta -\Be_3 \sin\theta \\
+&= (\Be_1 \cos\phi + \Be_2 \sin\phi) \cos\theta -\Be_3 \sin\theta,
 \end{aligned}
 \end{equation}
 %
@@ -1307,7 +1300,7 @@ Now we rotate in the plane spanned by \(\Be_3\) and \(\Be_1'\) by \(\theta\).  W
 &= \Be_3 e^{j\theta} \\
 &= \Be_3 (\cos\theta + \Be_3 \Be_1 e^{i\phi} \sin\theta) \\
 &= \Be_3 \cos\theta + \Be_1 e^{i\phi} \sin\theta \\
-&= \Be_3 \cos\theta + (\Be_1 \cos\phi + \Be_2 \sin\phi) \sin\theta \\
+&= \Be_3 \cos\theta + (\Be_1 \cos\phi + \Be_2 \sin\phi) \sin\theta.
 \end{aligned}
 \end{equation}
 %
@@ -1317,7 +1310,7 @@ Now, these are all the same relations that we could find with coordinate algebra
 \begin{aligned}
 \rcap &= \Be_1 \cos\phi \sin\theta +\Be_2 \sin\phi \sin\theta +\Be_3 \cos\theta  \\
 \thetacap &= \Be_1 \cos\phi \cos\theta +\Be_2 \sin\phi \cos\theta -\Be_3 \sin\theta  \\
-\phicap &= -\Be_1 \sin\phi + \Be_2 \cos\phi
+\phicap &= -\Be_1 \sin\phi + \Be_2 \cos\phi.
 \end{aligned}
 \end{equation}
 %
@@ -1331,7 +1324,7 @@ There is nothing special in this approach if that is as far as we go, but we can
 &= \Be_3 ( \cos\theta + \Be_3 \Be_1 e^{i\phi} \sin\theta ) \\
 &= \Be_3 ( \cos\theta + \Be_3 \Be_1 \Be_2 \Be_2 e^{i\phi} \sin\theta ) \\
 &= \Be_3 ( \cos\theta + I \phicap \sin\theta ) \\
-&= \Be_3 e^{ I \phicap \theta }
+&= \Be_3 e^{ I \phicap \theta },
 \end{aligned}
 \end{equation}
 %
@@ -1373,7 +1366,7 @@ Taking differentials we find first
 %
 \begin{equation}\label{eqn:strainOtherCoordinateSystems:1390}
 \begin{aligned}
-d\phicap = \Be_2 e^{i\phi} i d\phi = \phicap i d\phi
+d\phicap = \Be_2 e^{i\phi} i d\phi = \phicap i d\phi,
 \end{aligned}
 \end{equation}
 %
@@ -1394,7 +1387,7 @@ d\thetacap
 &= \phicap (\cos\theta + I \phicap \sin\theta) d\phi
 - I \sin\theta d\phi
 - \Be_3 e^{I\phicap \theta} d\theta \\
-&= \phicap \cos\theta d\phi - \rcap d\theta
+&= \phicap \cos\theta d\phi - \rcap d\theta,
 \end{aligned}
 \end{equation}
 %
@@ -1412,7 +1405,7 @@ d \rcap
 &=
 i \phicap i \sin\theta d\phi + i \phicap e^{I\phicap \theta} d\theta \\
 &=
-\phicap \sin\theta d\phi + \thetacap d\theta
+\phicap \sin\theta d\phi + \thetacap d\theta.
 \end{aligned}
 \end{equation}
 %
@@ -1421,7 +1414,7 @@ Summarizing these differentials we have
 \begin{aligned}
 d\rcap &= \phicap \sin\theta d\phi + \thetacap d\theta \\
 d\thetacap &= \phicap \cos\theta d\phi - \rcap d\theta \\
-d\phicap &= \phicap i d\phi
+d\phicap &= \phicap i d\phi.
 \end{aligned}
 \end{equation}
 %
@@ -1429,7 +1422,7 @@ A final cleanup is required.  While \(\phicap i\) is a vector and has a nicely c
 %
 \begin{equation}\label{eqn:strainOtherCoordinateSystems:1450}
 \begin{aligned}
-\phicap \cdot (\phicap i) = 0
+\phicap \cdot (\phicap i) = 0,
 \end{aligned}
 \end{equation}
 %
@@ -1445,7 +1438,7 @@ A final cleanup is required.  While \(\phicap i\) is a vector and has a nicely c
 &=
 \gpgradezero{ I (\cos\theta e^{-i\phi} + I \Be_2 \sin\theta) \Be_2 } \\
 &=
--\sin\theta
+-\sin\theta,
 \end{aligned}
 \end{equation}
 %
@@ -1471,7 +1464,7 @@ Summarizing once again, but this time in terms of \(\rcap\), \(\thetacap\) and \
 \begin{aligned}
 d\rcap &= \phicap \sin\theta d\phi + \thetacap d\theta \\
 d\thetacap &= \phicap \cos\theta d\phi - \rcap d\theta \\
-d\phicap &= -(\rcap \sin\theta + \thetacap \cos\theta) d\phi
+d\phicap &= -(\rcap \sin\theta + \thetacap \cos\theta) d\phi.
 \end{aligned}
 \end{equation}
 %
@@ -1526,13 +1519,12 @@ du_r \rcap + du_\theta \thetacap + du_\phi \phicap
 %
 We can add \(d\Bx\) to this and take differences
 %
-%
 \begin{dmath}\label{eqn:continuumL2:1110}
 (d\Bu + d\Bx)^2 - d\Bx^2
 =
 \left( du_r - u_\theta d\theta - u_\phi \sin\theta d\phi + dr \right)^2
 +\left( du_\theta + u_r d\theta - u_\phi \cos\theta d\phi + r d\theta \right)^2
-+\left( du_\phi + u_r \sin\theta d\phi + u_\theta \cos\theta d\phi + r \sin\theta d\phi \right)^2
++\left( du_\phi + u_r \sin\theta d\phi + u_\theta \cos\theta d\phi + r \sin\theta d\phi \right)^2.
 \end{dmath}
 %
 For each \(m = r,\theta,\phi\) we have
@@ -1574,12 +1566,11 @@ dr
 \left( \PD{r}{u_\phi} dr + \PD{\theta}{u_\phi} d\theta + \PD{\phi}{u_\phi} d\phi \right)
 r \sin\theta d\phi
 + r \sin^2\theta u_r d\phi^2 \\
-&+ r \sin\theta \cos\theta u_\theta d\phi^2
+&+ r \sin\theta \cos\theta u_\theta d\phi^2.
 \end{aligned}
 \end{equation}
 %
 Collecting terms we have the result of the text in the braces
-%
 %
 \begin{dmath}\label{eqn:continuumL2:1150}
 \left((d\Bu + d\Bx)^2 - d\Bx^2\right)
@@ -1608,7 +1599,7 @@ Collecting terms we have the result of the text in the braces
 %\right)
 +2 r \sin\theta d\phi dr \left(
 \inv{r \sin\theta} \PD{\phi}{u_r} - \inv{r} u_\phi + \PD{r}{u_\phi}
-\right)
+\right).
 \end{dmath}
 %
 It should be possible to do the calculation to second order too, but to include all the quadratic terms in \(u_m\) is again really messy.  Trying that with Mathematica (\nbref{strainTensorSpherical.cdf}) gives the same results as above using the strictly coordinate algebra approach.

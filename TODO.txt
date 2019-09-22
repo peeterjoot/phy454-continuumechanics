@@ -1,7 +1,5 @@
 
 - 
-   - equation punctuation done to pg 54.
-
    - lots of fixmes and placeholders.
 
    - equation number overlap audit.

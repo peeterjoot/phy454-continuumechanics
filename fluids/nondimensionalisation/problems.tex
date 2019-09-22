@@ -22,7 +22,7 @@ For pure liquid, say pure water at room temperature, one has the following estim
 \begin{aligned}
 \alpha &\sim 10^{-4} \\
 \kappa &\sim 10^{-3} \\
-\nu &\sim 10^{-2}
+\nu &\sim 10^{-2}.
 \end{aligned}
 \end{equation}
 %
@@ -71,24 +71,23 @@ so that
 [U_2] = \frac{L^2}{T} \inv{L} = \frac{L}{T}.
 \end{equation}
 %
-\item For \(U_3\)
+\item For \(U_3\):
 %
 \begin{equation}\label{eqn:continuumProblemSet3:110}
-[U_3] = \sqrt{ \frac{L}{T^2} \inv{K} L K } = \frac{L}{T}
+[U_3] = \sqrt{ \frac{L}{T^2} \inv{K} L K } = \frac{L}{T}.
 \end{equation}
 %
-\item For \(U_4\)
-
+\item For \(U_4\):
 According to \citep{wolframThermalDiffusivity}, thermal diffusivity is defined by
 %
 \begin{equation}\label{eqn:continuumProblemSet3:130}
-\PD{t}{T} = \kappa \spacegrad^2 T
+\PD{t}{T} = \kappa \spacegrad^2 T,
 \end{equation}
 %
 so that
 %
 \begin{equation}\label{eqn:continuumProblemSet3:150}
-[\kappa] = \inv{[t][\spacegrad^2]} = \frac{L^2}{T}
+[\kappa] = \inv{[t][\spacegrad^2]} = \frac{L^2}{T}.
 \end{equation}
 %
 That gives us
@@ -108,7 +107,7 @@ For water at room temperature, we have
 U_1 &\sim 10^{-3} 10^{-4} (1)^2 10^1 \inv{10^{-2}} = 10^{-4} \\
 U_2 &\sim 10^{-2}/1 = 10^{-2} \\
 U_3 &\sim \sqrt{ 10^{-3} 10^{-4} (1) 10^1 } = 10^{-3} \\
-U_4 &\sim 10^{-3}/1 = 10^{-3}
+U_4 &\sim 10^{-3}/1 = 10^{-3}.
 \end{aligned}
 \end{equation}
 %
@@ -121,12 +120,11 @@ For the mantle convection problem let us compute the characteristic velocities
 U_1 &\sim \frac{10^{-3} 10^{-5} 10^{16} 10^3 }{10^{21}} = 10^{-10} \\
 U_2 &\sim \frac{10^{21}}{10^8} = 10^{13} \\
 U_3 &\sim \sqrt{ 10^{-3} 10^{-5} 10^8 10^3 } \sim 10^1 \\
-U_4 &\sim \frac{10^{-2}}{10^8} = 10^{-10}
+U_4 &\sim \frac{10^{-2}}{10^8} = 10^{-10}.
 \end{aligned}
 \end{equation}
 %
 Both \(U_1\) and \(U_4\) come close to the actual convective mantle velocity of \(10^{-8}\).  Use of \(U_1\) to nondimensionalise is probably best, since it has more degrees of freedom, and includes the gravity term that is probably important for such large masses.
-
 \FIXME{check against posted solutions}
 } % end answer
 %
@@ -134,17 +132,15 @@ Both \(U_1\) and \(U_4\) come close to the actual convective mantle velocity of 
 {2012 ps3, p2}
 {
 \begin{equation}\label{eqn:continuumProblemSet3:230}
-\rho \PD{t}{\Bu} + \rho (\Bu \cdot \spacegrad) \Bu = - \spacegrad p + \mu \spacegrad^2 \Bu + \rho g \zcap
+\rho \PD{t}{\Bu} + \rho (\Bu \cdot \spacegrad) \Bu = - \spacegrad p + \mu \spacegrad^2 \Bu + \rho g \zcap,
 \end{equation}
 %
 where \(\zcap\) is the unit vector in the \(z\) direction.  You may scale:
-
 \begin{itemize}
 \item velocity with the characteristic velocity \(U\),
 \item time with \(R/U\), where \(R\) is the characteristic length scale,
-\item pressure with \(\rho U^2\),
+\item pressure with \(\rho U^2\).
 \end{itemize}
-
 Reynolds number \(\text{Re} = R U \rho/ \mu\) and Froude number \(\text{Fr} = g R/U\).
 } % makeoproblem
 %

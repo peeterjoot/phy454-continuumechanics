@@ -24,7 +24,7 @@ With only horizontal components to the flow, the Navier-Stokes equations for inc
 \PDSq{x}{}
 +\PDSq{y}{}
 \right)
-u
+u,
 \end{equation}
 \begin{equation}\label{eqn:channelFlowWithStepPressureGradient:50}
 \PD{x}{u} = 0.
@@ -117,7 +117,7 @@ and
 or
 \begin{subequations}
 \begin{equation}\label{eqn:channelFlowWithStepPressureGradient:290}
-u_H(\pm h, t) = 0
+u_H(\pm h, t) = 0,
 \end{equation}
 \begin{equation}\label{eqn:channelFlowWithStepPressureGradient:310}
 u_H(y, 0) = -\frac{P}{2 \rho \nu} \left( h^2 - y^2 \right).
@@ -148,7 +148,7 @@ u_H(y, t) = \sum_\alpha e^{-\alpha^2 \nu t} \left( A_\alpha \sin \alpha y + B_\a
 %
 We have constraints on \(\alpha\) due to our boundary value conditions.  For our sin terms to be solutions we require
 \begin{equation}\label{eqn:channelFlowWithStepPressureGradient:390}
-\sin (\alpha (\pm h)) = \sin n \pi
+\sin (\alpha (\pm h)) = \sin n \pi,
 \end{equation}
 and for our cosine terms to be solutions we require
 \begin{equation}\label{eqn:channelFlowWithStepPressureGradient:410}
@@ -169,7 +169,7 @@ C_0 + \sum_{m > 0} C_m e^{ -(m \pi/2h)^2 \nu t }
 \left\{
 \begin{array}{l l}
 \sin \left( \frac{ m \pi y }{2 h} \right) & \quad \mbox{\(m\) even} \\
-\cos \left( \frac{ m \pi y }{2 h} \right) & \quad \mbox{\(m\) odd} \\
+\cos \left( \frac{ m \pi y }{2 h} \right) & \quad \mbox{\(m\) odd.} \\
 \end{array}
 \right.
 \end{equation}
@@ -183,7 +183,7 @@ Our undetermined constants should be provided by the boundary value constraint a
 \left\{
 \begin{array}{l l}
 \sin \left( \frac{ m \pi y }{2 h} \right) & \quad \mbox{\(m\) even} \\
-\cos \left( \frac{ m \pi y }{2 h} \right) & \quad \mbox{\(m\) odd} \\
+\cos \left( \frac{ m \pi y }{2 h} \right) & \quad \mbox{\(m\) odd.} \\
 \end{array}
 \right.
 \end{equation}
@@ -234,7 +234,7 @@ Note that since \(m\) and \(n\) must be odd, \(m \pm n = 2 c\) for some integer 
 +\cos( m \pi )
 \right) dx \\
 &=
-h
+h.
 \end{aligned}
 \end{equation}
 %

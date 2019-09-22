@@ -10,7 +10,7 @@ This did not fit with much of the other lecture material.  Looking at the big pi
 }
 Consider a surface with some variation as in \cref{fig:continuumL13:continuumL13Fig13}
 %
-\imageFigure{../figures/phy454-continuumechanics/lec13_variable_surface_geometriesFig13}{Variable surface geometries.}{fig:continuumL13:continuumL13Fig13}{0.2}
+\imageFigure{../figures/phy454-continuumechanics/lec13_variable_surface_geometriesFig13}{Variable surface geometries.}{fig:continuumL13:continuumL13Fig13}{0.15}
 %
 We can construct an equation for the surface
 %
@@ -28,14 +28,14 @@ If \(d\) is the average height, with the \(\eta(x,t)\) the variation of the heig
 %
 \FIXME{had \(z = d + \eta(x, t)\) on board?}
 \begin{equation}\label{eqn:continuumL13:200}
-h = d + \eta(x, t)
+h = d + \eta(x, t),
 \end{equation}
 %
 and for the surface
 %
 \FIXME{had: \(z - \eta(x, t) = \text{constant}\) on the board?}
 \begin{equation}\label{eqn:continuumL13:220}
-\phi = d - \eta(x, t) = 0
+\phi = d - \eta(x, t) = 0.
 \end{equation}
 %
 We can generalize this and define a surface function as one that satisfies
@@ -51,7 +51,7 @@ Consider a small section of a 2D surface as in \cref{fig:continuumL13:continuumL
 With \(\phi = \text{constant}\) on the surface, we have for \(\phi = \phi(x, y, z)\)
 %
 \begin{equation}\label{eqn:continuumL13:240}
-d\phi = 0
+d\phi = 0,
 \end{equation}
 %
 or, in coordinates
@@ -62,7 +62,7 @@ d\phi &=
 \PD{x}{\phi} dx
 +\PD{y}{\phi} dy
 +\PD{z}{\phi} dz \\
-&= \spacegrad \phi \cdot d\Br
+&= \spacegrad \phi \cdot d\Br.
 \end{aligned}
 \end{equation}
 %
@@ -85,17 +85,16 @@ We can therefore construct the unit normal by scaling the gradient
 \end{equation}
 %
 since the direction of \(\ncap\) is \(\spacegrad \phi\).
-
 For example, in our case where \(\phi = y - h(x, t)\), we have
 %
 \begin{equation}\label{eqn:continuumL13:280}
-\spacegrad \phi = \xcap \left( -\PD{x}{h} \right) + \ycap
+\spacegrad \phi = \xcap \left( -\PD{x}{h} \right) + \ycap.
 \end{equation}
 %
 This has norm
 %
 \begin{equation}\label{eqn:continuumL13:300}
-\Abs{\spacegrad \phi} = \sqrt{ 1 + \left( \PD{x}{h} \right)^2 }
+\Abs{\spacegrad \phi} = \sqrt{ 1 + \left( \PD{x}{h} \right)^2 },
 \end{equation}
 %
 and our unit normal is
@@ -104,7 +103,7 @@ and our unit normal is
 \ncap =
 \frac{\xcap \left( -\PD{x}{h} \right) + \ycap}{
 \sqrt{ 1 + \left( \PD{x}{h} \right)^2 }
-}
+}.
 \end{equation}
 %
 By inspection we can also express the unit tangent, and we have for both
@@ -120,6 +119,6 @@ By inspection we can also express the unit tangent, and we have for both
 \inv{
 \sqrt{ 1 + \left( \PD{x}{h} \right)^2 }
 }
-\left( 1, \PD{x}{h} \right)
+\left( 1, \PD{x}{h} \right).
 \end{aligned}
 \end{equation}

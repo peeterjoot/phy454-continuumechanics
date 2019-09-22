@@ -13,7 +13,7 @@
 Consider incompressible viscous steady flow between two long cylinders of radii \(R_1\) and \(R_2\), \(R_1 > R_1\), rotating about their axes with angular velocities \(\Omega_1\), \(\Omega_2\).  Look for a solution of the form, where \(\phicap\) is a unit vector along the azimuthal direction:
 \begin{subequations}
 \begin{equation}\label{eqn:couetteFlow:10}
-\Bu = v(r) \phicap
+\Bu = v(r) \phicap,
 \end{equation}
 \begin{equation}\label{eqn:couetteFlow:30}
 p = p(r).
@@ -42,7 +42,7 @@ Navier-Stokes for steady state incompressible flow has the form
 %
 \begin{subequations}
 \begin{equation}\label{eqn:couetteFlow:70}
-(\Bu \cdot \spacegrad) \Bu = -\inv{\rho} \spacegrad p + \nu \spacegrad^2 \Bu
+(\Bu \cdot \spacegrad) \Bu = -\inv{\rho} \spacegrad p + \nu \spacegrad^2 \Bu,
 \end{equation}
 \begin{equation}\label{eqn:couetteFlow:90}
 \spacegrad \cdot \Bu = 0.
@@ -67,7 +67,7 @@ Let us first verify that the incompressible condition \eqnref{eqn:couetteFlow:90
 + \frac{v(r) \phicap}{r} \cdot \partial_\phi \phicap \\
 &=
  \frac{v(r) \phicap}{r} \cdot (-\rcap) \\
-&= 0
+&= 0.
 \end{aligned}
 \end{equation}
 %
@@ -131,7 +131,7 @@ and
 \left(
 \inv{r} (r v')' - \frac{v}{r^2}
 \right)
-\phicap
+\phicap.
 \end{aligned}
 \end{equation}
 %
@@ -152,7 +152,7 @@ Equating \(\rcap\) and \(\phicap\) components we have two equations to solve
 %
 \begin{subequations}
 \begin{equation}\label{eqn:couetteFlow:130}
-r (r v')' - v = 0
+r (r v')' - v = 0,
 \end{equation}
 \begin{equation}\label{eqn:couetteFlow:150}
 p' = \frac{\rho v^2}{r}.
@@ -187,14 +187,14 @@ Given the velocity, we can now determine the pressure up to a constant
 p'
 &= \frac{\rho}{r} \left( a r + \frac{b}{r} \right)^2 \\
 &= \frac{\rho}{r} \left( a^2 r^2 + \frac{b^2}{r^2} + 2 a b \right) \\
-&= \rho \left( a^2 r + \frac{b^2}{r^3} + 2 \frac{a b}{r} \right)
+&= \rho \left( a^2 r + \frac{b^2}{r^3} + 2 \frac{a b}{r} \right),
 \end{aligned}
 \end{equation}
 %
 so
 \begin{equation}\label{eqn:couetteFlow:190}
 p_r -p_0
-= \rho \left( \inv{2} a^2 r^2 - \frac{b^2}{2 r^2} + 2 a b \ln r \right)
+= \rho \left( \inv{2} a^2 r^2 - \frac{b^2}{2 r^2} + 2 a b \ln r \right).
 \end{equation}
 %
 \makesubanswer{Constants and the pressure.}{problem:fluids:couetteFlow:2}
@@ -276,7 +276,7 @@ v(r) =
 \left(
 \left( R_2^2 \Omega_2 - R_1^2 \Omega_1\right) r
 +\frac{R_1^2 R_2^2}{r} (\Omega_1 -\Omega_2)
-\right)
+\right),
 \end{equation}
 \begin{dmath}\label{eqn:couetteFlow:390}
 p(r) -p_0
@@ -311,7 +311,7 @@ in cylindrical coordinates and find
 =
 \sigma_{rr}
 =
--p + 2 \mu \cancel{\PD{r}{u_r}}
+-p + 2 \mu \cancel{\PD{r}{u_r}},
 \end{equation}
 \begin{equation}\label{eqn:couetteFlow:1010}
 \Bt_{\phicap} \cdot \phicap
@@ -322,7 +322,7 @@ in cylindrical coordinates and find
 \left(
 \inv{r}
 \cancel{\PD{\phi}{u_\phi}} + \cancel{\frac{u_r}{r}}
-\right)
+\right),
 \end{equation}
 \begin{equation}\label{eqn:couetteFlow:1030}
 \Bt_{z} \cdot \zcap
@@ -330,7 +330,7 @@ in cylindrical coordinates and find
 \sigma_{z z}
 =
 -p + 2 \mu
-\cancel{\PD{z}{u_z}}
+\cancel{\PD{z}{u_z}},
 \end{equation}
 \begin{equation}\label{eqn:couetteFlow:1050}
 \Bt_{\rcap} \cdot \phicap
@@ -341,7 +341,7 @@ in cylindrical coordinates and find
  \PD{r}{u_\phi}
 +\inv{r} \cancel{\PD{\phi}{u_r}}
 - \frac{u_\phi}{r}
-\right)
+\right),
 \end{equation}
 \begin{equation}\label{eqn:couetteFlow:1070}
 \Bt_{\phicap} \cdot \zcap
@@ -351,7 +351,7 @@ in cylindrical coordinates and find
 \mu \left(
 \frac{1}{r} \cancel{\PD{\phi}{u_z}}
     + \cancel{\PD{z}{u_\phi}}
-\right)
+\right),
 \end{equation}
 \begin{equation}\label{eqn:couetteFlow:950}
 \Bt_{\zcap} \cdot \rcap
@@ -441,7 +441,7 @@ For the complete torque on the fluid due to a strip of width \(\Delta z\) the ma
 \left(
 R_2^2 \Omega_2 - R_1^2 \Omega_1
 +\frac{R_1^2 R_2^2}{r^2} (\Omega_2 -\Omega_1)
-\right) \zcap.
+\right) \zcap,
 \end{equation}
 \begin{equation}\label{eqn:couetteFlow:1230}
 \Btau_2 =

@@ -26,7 +26,7 @@ In either case we have
 =
 \ncap \cross (\spacegrad \cross \Bu)
 =
-\spacegrad' (\ncap \cdot \Bu') - (\ncap \cdot \spacegrad) \Bu
+\spacegrad' (\ncap \cdot \Bu') - (\ncap \cdot \spacegrad) \Bu,
 \end{equation}
 %
 (where the primes indicate the scope of the gradient, showing here that we are operating only on \(\Bu\), and not \(\ncap\)).
@@ -172,7 +172,7 @@ Our curl is then
 (\partial_\phi \rcap) u_r
 +
 (\partial_\phi \phicap) u_\phi
-\right)
+\right).
 \end{aligned}
 \end{equation}
 %
@@ -307,7 +307,7 @@ we can now read off our components by taking dot products to yield
 \begin{equation}\label{eqn:stressTensorVectorForm:630}
 \sigma_{rr}
 =
--p + 2 \mu \PD{r}{u_r}
+-p + 2 \mu \PD{r}{u_r},
 \end{equation}
 \begin{equation}\label{eqn:stressTensorVectorForm:650}
 \sigma_{r \phi}
@@ -316,7 +316,7 @@ we can now read off our components by taking dot products to yield
  \PD{r}{u_\phi}
 +\inv{r} \PD{\phi}{u_r}
 - \frac{u_\phi}{r}
-\right)
+\right),
 \end{equation}
 \begin{equation}\label{eqn:stressTensorVectorForm:670}
 \sigma_{r z}
@@ -447,7 +447,7 @@ so we can now read off our components by taking dot products to yield
 \left(
 \inv{r}
 \PD{\phi}{u_\phi} + \frac{u_r}{r}
-\right)
+\right),
 \end{equation}
 \begin{equation}\label{eqn:stressTensorVectorForm:730}
 \sigma_{\phi z}
@@ -455,7 +455,7 @@ so we can now read off our components by taking dot products to yield
 \mu \left(
 \frac{1}{r} \PD{\phi}{u_z}
     + \PD{z}{u_\phi}
-\right)
+\right),
 \end{equation}
 \begin{equation}\label{eqn:stressTensorVectorForm:750}
 \sigma_{\phi r}
@@ -479,7 +479,7 @@ Like the \(\rcap\) normal direction, our directional derivative component for a 
 \rcap u_r + \phicap u_\phi + \zcap u_z
 \right) \\
 &=
-\rcap \partial_z u_r + \phicap \partial_z u_\phi + \zcap \partial_z u_z
+\rcap \partial_z u_r + \phicap \partial_z u_\phi + \zcap \partial_z u_z.
 \end{aligned}
 \end{equation}
 Projecting our curl bivector onto the \(\zcap\) direction we have
@@ -515,7 +515,7 @@ Projecting our curl bivector onto the \(\zcap\) direction we have
 \rcap
 \left(
 \partial_z u_r - \partial_r u_z
-\right)
+\right).
 \end{aligned}
 \end{equation}
 Putting things together we have
@@ -587,7 +587,7 @@ we can now read off our components by taking dot products to yield
 \sigma_{z z}
 =
 -p + 2 \mu
-\PD{z}{u_z}
+\PD{z}{u_z},
 \end{equation}
 \begin{equation}\label{eqn:stressTensorVectorForm:810}
 \sigma_{z r}
@@ -595,7 +595,7 @@ we can now read off our components by taking dot products to yield
 \mu \left(
 \PD{z}{u_r}
 + \PD{r}{u_z}
-\right)
+\right),
 \end{equation}
 \begin{equation}\label{eqn:stressTensorVectorForm:830}
 \sigma_{z \phi}
@@ -613,7 +613,7 @@ we can now read off our components by taking dot products to yield
 \begin{equation}\label{eqn:stressTensorVectorForm:850}
 \sigma_{rr}
 =
--p + 2 \mu \PD{r}{u_r}
+-p + 2 \mu \PD{r}{u_r},
 \end{equation}
 \begin{equation}\label{eqn:stressTensorVectorForm:870}
 \sigma_{\phi \phi}
@@ -622,13 +622,13 @@ we can now read off our components by taking dot products to yield
 \left(
 \inv{r}
 \PD{\phi}{u_\phi} + \frac{u_r}{r}
-\right)
+\right),
 \end{equation}
 \begin{equation}\label{eqn:stressTensorVectorForm:890}
 \sigma_{z z}
 =
 -p + 2 \mu
-\PD{z}{u_z}
+\PD{z}{u_z},
 \end{equation}
 \begin{equation}\label{eqn:stressTensorVectorForm:910}
 \sigma_{r \phi}
@@ -637,7 +637,7 @@ we can now read off our components by taking dot products to yield
  \PD{r}{u_\phi}
 +\inv{r} \PD{\phi}{u_r}
 - \frac{u_\phi}{r}
-\right)
+\right),
 \end{equation}
 \begin{equation}\label{eqn:stressTensorVectorForm:930}
 \sigma_{\phi z}
@@ -645,7 +645,7 @@ we can now read off our components by taking dot products to yield
 \mu \left(
 \frac{1}{r} \PD{\phi}{u_z}
     + \PD{z}{u_\phi}
-\right)
+\right),
 \end{equation}
 \begin{equation}\label{eqn:stressTensorVectorForm:950}
 \sigma_{z r}
@@ -673,10 +673,10 @@ Referring back to \eqnref{eqn:continuumL2:1010} where we noted that the unit vec
 %
 \begin{subequations}
 \begin{equation}\label{eqn:stressTensorVectorForm:130}
-d\rcap = \phicap \sin\theta d\phi + \thetacap d\theta
+d\rcap = \phicap \sin\theta d\phi + \thetacap d\theta,
 \end{equation}
 \begin{equation}\label{eqn:stressTensorVectorForm:150}
-d\thetacap = \phicap \cos\theta d\phi - \rcap d\theta
+d\thetacap = \phicap \cos\theta d\phi - \rcap d\theta,
 \end{equation}
 \begin{equation}\label{eqn:stressTensorVectorForm:170}
 d\phicap = -(\rcap \sin\theta + \thetacap \cos\theta) d\phi,
@@ -888,7 +888,7 @@ We can now read off our components by taking dot products
 \begin{equation}\label{eqn:stressTensorVectorForm:310}
 \sigma_{rr}
 =
--p + 2 \mu \PD{r}{u_r}
+-p + 2 \mu \PD{r}{u_r},
 \end{equation}
 \begin{equation}\label{eqn:stressTensorVectorForm:330}
 \sigma_{r \theta}
@@ -896,7 +896,7 @@ We can now read off our components by taking dot products
 \mu \left(
 \PD{r}{u_\theta}
 + \inv{r} \PD{\theta}{u_r} - \frac{u_\theta}{r}
-\right)
+\right),
 \end{equation}
 \begin{equation}\label{eqn:stressTensorVectorForm:350}
 \sigma_{r \phi}
@@ -1030,7 +1030,7 @@ so we can now read off our components by taking dot products
 \mu \left(
  \frac{2}{r} \PD{\theta}{u_\theta}
 + \frac{2}{r} u_r
-\right)
+\right),
 \end{equation}
 \begin{equation}\label{eqn:stressTensorVectorForm:450}
 \sigma_{\theta \phi}
@@ -1039,7 +1039,7 @@ so we can now read off our components by taking dot products
 \frac{1}{r} \PD{\theta}{u_\phi}
 + \inv{r \sin\theta} \PD{\phi}{u_\theta}
 - \frac{u_\phi \cot\theta}{r}
-\right)
+\right),
 \end{equation}
 \begin{equation}\label{eqn:stressTensorVectorForm:470}
 \sigma_{\theta r}
@@ -1273,7 +1273,7 @@ u_r
 + \frac{
 \cot\theta u_\theta
 }{r}
-\right)
+\right),
 \end{equation}
 \begin{equation}\label{eqn:stressTensorVectorForm:570}
 \sigma_{\phi r}
@@ -1282,7 +1282,7 @@ u_r
   \frac{1}{r \sin\theta} \PD{\phi}{u_r}
 - \frac{u_\phi}{r}
 + \PD{r}{u_\phi}
-\right)
+\right),
 \end{equation}
 \begin{equation}\label{eqn:stressTensorVectorForm:590}
 \sigma_{\phi \theta}
@@ -1300,7 +1300,7 @@ This again is consistent with (15.20) from \citep{landau1987course}.
 \begin{equation}\label{eqn:stressTensorVectorForm:310b}
 \sigma_{rr}
 =
--p + 2 \mu \PD{r}{u_r}
+-p + 2 \mu \PD{r}{u_r},
 \end{equation}
 \begin{equation}\label{eqn:stressTensorVectorForm:430b}
 \sigma_{\theta \theta}
@@ -1310,7 +1310,7 @@ This again is consistent with (15.20) from \citep{landau1987course}.
 2 \mu \left(
  \frac{1}{r} \PD{\theta}{u_\theta}
 + \frac{ u_r }{r}
-\right)
+\right),
 \end{equation}
 \begin{equation}\label{eqn:stressTensorVectorForm:550b}
 \sigma_{\phi \phi}
@@ -1325,7 +1325,7 @@ u_r
 + \frac{
 \cot\theta u_\theta
 }{r}
-\right)
+\right),
 \end{equation}
 \begin{equation}\label{eqn:stressTensorVectorForm:330b}
 \sigma_{r \theta}
@@ -1341,7 +1341,7 @@ u_r
 \frac{1}{r \sin\theta} \PD{\phi}{u_\theta}
 - \frac{u_\phi \cot\theta}{r}
 +\inv{r} \PD{\theta}{u_\phi}
-\right).
+\right),
 \end{equation}
 \begin{equation}\label{eqn:stressTensorVectorForm:570b}
 \sigma_{\phi r}

@@ -12,22 +12,22 @@ In the boundary layer we found
 \begin{enumerate}
 \item Continuity equation
 \begin{equation}\label{eqn:continuumL19:10}
-\PD{x}{u} + \PD{y}{v} = 0
+\PD{x}{u} + \PD{y}{v} = 0.
 \end{equation}
 \item \(x\) momentum equation
 \begin{equation}\label{eqn:continuumL19:30}
-u \PD{x}{u} + v \PD{y}{u} = - \inv{\rho} \PD{x}{p} + \nu \PDSq{y}{u}
+u \PD{x}{u} + v \PD{y}{u} = - \inv{\rho} \PD{x}{p} + \nu \PDSq{y}{u}.
 \end{equation}
 \item \(y\) momentum equation
 \begin{equation}\label{eqn:continuumL19:50}
-\PD{y}{p} = 0
+\PD{y}{p} = 0.
 \end{equation}
 \end{enumerate}
 %
 In the inviscid region \(p\) is a constant in \(y\)
 %
 \begin{equation}\label{eqn:continuumL19:70}
-\PD{y}{p} = 0
+\PD{y}{p} = 0.
 \end{equation}
 %
 This will be approximately true in the boundary layer too as illustrated in \cref{fig:continuumL19:continuumL19Fig1}
@@ -43,13 +43,13 @@ Starting with
 we were able to show that inviscid irrotational incompressible flows are governed by Bernoulli's equation
 %
 \begin{equation}\label{eqn:continuumL19:110}
-\frac{p}{\rho} + \chi + \inv{2} \Bu^2 = \text{constant}
+\frac{p}{\rho} + \chi + \inv{2} \Bu^2 = \text{constant}.
 \end{equation}
 %
 In the absence of body forces (or constant potentials), we have
 %
 \begin{equation}\label{eqn:continuumL19:130}
--\PD{x}{}\frac{p}{\rho} = \PD{x}{} \left(\inv{2} \Bu^2 \right) \sim U \PD{x}{U}
+-\PD{x}{}\frac{p}{\rho} = \PD{x}{} \left(\inv{2} \Bu^2 \right) \sim U \PD{x}{U},
 \end{equation}
 %
 so that our boundary layer equations are
@@ -72,22 +72,21 @@ With boundary conditions
 \begin{aligned}
 U(x, 0) &= 0 \\
 U(x, \infty) &= U(x) \\
-V(x, 0) &= 0
+V(x, 0) &= 0.
 \end{aligned}
 \end{equation}
 %
 %\unnumberedSubsection{Similarity transformation}
-
 Define a similarity variable \(\eta\)
 %
 \begin{equation}\label{eqn:continuumL19:230}
-\eta \sim \frac{y}{\sqrt{\nu t}}
+\eta \sim \frac{y}{\sqrt{\nu t}}.
 \end{equation}
 %
 Suppose we want
 %
 \begin{equation}\label{eqn:continuumL19:250}
-\eta \sim f(y, x)
+\eta \sim f(y, x).
 \end{equation}
 %
 Since we have
@@ -99,13 +98,13 @@ x \sim U t,
 or
 %
 \begin{equation}\label{eqn:continuumL19:290}
-t \sim \frac{x}{U}.
+t \sim \frac{x}{U},
 \end{equation}
 %
-We can make the transformation
+we can make the transformation
 %
 \begin{equation}\label{eqn:continuumL19:310}
-\eta = \frac{y}{\sqrt{2 \frac{\nu x}{U}}}
+\eta = \frac{y}{\sqrt{2 \frac{\nu x}{U}}}.
 \end{equation}
 %
 We can introduce stream functions
@@ -113,7 +112,7 @@ We can introduce stream functions
 \begin{equation}\label{eqn:continuumProblemSet2:330}
 \begin{aligned}
 u &= \PD{y}{\psi} \\
-v &= -\PD{x}{\psi}
+v &= -\PD{x}{\psi}.
 \end{aligned}
 \end{equation}
 %
@@ -125,14 +124,14 @@ We can check that this satisfies the continuity equation since we have
 &=
 \frac{\partial^2 \psi}{\partial x \partial y}
 -\frac{\partial^2 \psi}{\partial y \partial x} \\
-&= 0
+&= 0.
 \end{aligned}
 \end{equation}
 %
 Now introduce a similarity variable
 %
 \begin{equation}\label{eqn:continuumL19:350}
-f(\eta) = \frac{\psi}{\delta U_0} = \frac{\psi}{\sqrt{2 \nu x U_0}}
+f(\eta) = \frac{\psi}{\delta U_0} = \frac{\psi}{\sqrt{2 \nu x U_0}}.
 \end{equation}
 %
 Note that we have also suddenly assumed that \(U = U_0\) (a constant, which will also kill the \(U'\) term in the N-S equation).  This is not really justified by anything we have done so far, but asking about this in class, it was stated that this is a restriction for this formulation of the Blasius problem.
@@ -162,7 +161,7 @@ but that does not obviously give us \eqnref{eqn:continuumL19:730}?
 Ah.  We argued that
 %
 \begin{equation}\label{eqn:continuumL19:1130}
-v \PD{y}{u} \sim \frac{U^2}{L}
+v \PD{y}{u} \sim \frac{U^2}{L},
 \end{equation}
 %
 and that the larger of the viscous terms was
@@ -184,7 +183,7 @@ Our boundary conditions are
 \begin{equation}\label{eqn:continuumL19:390}
 \begin{array}{l l}
 f = f' = 0 & \quad \mbox{\(\eta = 0\)} \\
-f' = 1 & \quad \mbox{\(\eta = \infty\)} \\
+f' = 1 & \quad \mbox{\(\eta = \infty\)}.
 \end{array}
 \end{equation}
 %
@@ -241,7 +240,7 @@ v
 &= - U \left( g' f - g f' \frac{y g'}{g^2} \right) \\
 &= - U \left( g' f - f' \frac{y g'}{g} \right) \\
 &= - U \left( g' f - f' g' \eta \right) \\
-&= U g' \left( f' \eta - f \right)
+&= U g' \left( f' \eta - f \right).
 \end{aligned}
 \end{equation}
 %
@@ -328,7 +327,7 @@ U g g' f f''
 -
 \nu
 f'''
-\right)
+\right),
 \end{aligned}
 \end{equation}
 %
@@ -353,16 +352,16 @@ to become singular at \(x = 0\), so we should set \(C = 0\).  This leaves us wit
 %
 \begin{subequations}
 \begin{equation}\label{eqn:continuumL19:970}
-g(x) = \sqrt{\frac{2 x \nu}{U}}
+g(x) = \sqrt{\frac{2 x \nu}{U}},
 \end{equation}
 \begin{equation}\label{eqn:continuumL19:990}
-\eta = \frac{y}{\sqrt{\frac{2 x \nu}{U}}}
+\eta = \frac{y}{\sqrt{\frac{2 x \nu}{U}}},
 \end{equation}
 \begin{equation}\label{eqn:continuumL19:1010}
-f''' + f f'' = 0
+f''' + f f'' = 0,
 \end{equation}
 \begin{equation}\label{eqn:continuumL19:1030}
-u = U f'
+u = U f',
 \end{equation}
 \begin{equation}\label{eqn:continuumL19:1050}
 v = (\eta f' - f) \frac{\nu}{g},
@@ -373,10 +372,10 @@ and boundary value conditions
 %
 \begin{subequations}
 \begin{equation}\label{eqn:continuumL19:1070}
-f(0) = 0
+f(0) = 0,
 \end{equation}
 \begin{equation}\label{eqn:continuumL19:1090}
-f'(0) = 0
+f'(0) = 0,
 \end{equation}
 \begin{equation}\label{eqn:continuumL19:1110}
 f'(\infty) = 1.
@@ -384,7 +383,6 @@ f'(\infty) = 1.
 \end{subequations}
 %
 where \eqnref{eqn:continuumL19:1090} follows from \(u(0) = 0\) and \eqnref{eqn:continuumL19:1030}, and \eqnref{eqn:continuumL19:1110} follows from the fact that \(u\) tends to \(U\).
-
 %\unnumberedSubsection{Numeric solution}
 
 We can solve this numerically and find solutions that look like \cref{fig:continuumL19:continuumL19Fig2}

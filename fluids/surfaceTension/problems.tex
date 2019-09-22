@@ -103,8 +103,11 @@ Again for \(x = \infty\) we have \(z = 0\), \(z' = 0\), so \(A = 1\).  Rearrangi
 Integrating this with Mathematica I get
 %
 \begin{equation}\label{eqn:continuumFluidsReview:1810}
-x - x_0 =
-\sqrt{2 a^2-z^2} \sgn(a-z)+ \frac{a}{\sqrt{2}} \ln \left(\frac{a \left(2 a-\sqrt{4 a^2-2 z^2} \sgn(a-z)\right)}{z}\right).
+\begin{aligned}
+x - x_0 &=
+\sqrt{2 a^2-z^2} \sgn(a-z) \\
+&\quad+ \frac{a}{\sqrt{2}} \ln \left(\frac{a \left(2 a-\sqrt{4 a^2-2 z^2} \sgn(a-z)\right)}{z}\right).
+\end{aligned}
 \end{equation}
 %
 It looks like the constant would have to be fixed numerically.  We require at \(x = 0\)

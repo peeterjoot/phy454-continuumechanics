@@ -38,17 +38,17 @@ The only term that survives is the \(\partial_\phi \phicap = -\rcap\) but that i
 = -\inv{\rho}
 \left( \rcap \partial_r + \frac{\phicap}{r} \partial_\phi + \zcap \partial_z \right) p
 + \nu
-\left( \inv{r} \partial_r ( r \partial_r ) + \frac{1}{r^2} \partial_{\phi \phi} + \partial_{zz} \right) u \phicap + \Bg
+\left( \inv{r} \partial_r ( r \partial_r ) + \frac{1}{r^2} \partial_{\phi \phi} + \partial_{zz} \right) u \phicap + \Bg.
 \end{dmath}
 %
 Splitting into \(\phicap, \rcap, \zcap\) coordinates respectively we have
 %
 \begin{subequations}
 \begin{equation}\label{eqn:coffeeCupWithBottom:70}
-0 = -\inv{r \rho} \partial_\phi p + \nu \left( \inv{r} \partial_r ( r \partial_r u ) - \frac{u}{r^2} + \partial_{zz} u \right)
+0 = -\inv{r \rho} \partial_\phi p + \nu \left( \inv{r} \partial_r ( r \partial_r u ) - \frac{u}{r^2} + \partial_{zz} u \right),
 \end{equation}
 \begin{equation}\label{eqn:coffeeCupWithBottom:90}
-- \frac{u^2}{r} = -\inv{\rho} \partial_r p
+- \frac{u^2}{r} = -\inv{\rho} \partial_r p,
 \end{equation}
 \begin{equation}\label{eqn:coffeeCupWithBottom:110}
 0 = -\inv{\rho} \partial_z p - g.
@@ -58,14 +58,14 @@ Splitting into \(\phicap, \rcap, \zcap\) coordinates respectively we have
 Demanding a symmetrical solution kills off the pressure term in \eqnref{eqn:coffeeCupWithBottom:70}, and we can proceed with separation of variables to find the allowable solutions for the velocity before imposing our boundary value conditions.  With \(u = R(r) Z(z)\) we have
 %
 \begin{equation}\label{eqn:coffeeCupWithBottom:130}
-\inv{r R} ( R' + r R'' ) - \frac{1}{r^2} = -\frac{Z''}{Z} = -\inv{a^2} = \inv{b^2}
+\inv{r R} ( R' + r R'' ) - \frac{1}{r^2} = -\frac{Z''}{Z} = -\inv{a^2} = \inv{b^2}.
 \end{equation}
 %
 Should we pick a negative or a positive constant here (ie: trig or hyperbolic functions for \(Z\))?  Allowing for both temporarily, we find for \(R\)
 %
 \begin{subequations}
 \begin{equation}\label{eqn:coffeeCupWithBottom:150}
-0 = r R' + r^2 R'' + R \left( -1 + \frac{r^2}{a^2} \right)
+0 = r R' + r^2 R'' + R \left( -1 + \frac{r^2}{a^2} \right),
 \end{equation}
 \begin{equation}\label{eqn:coffeeCupWithBottom:170}
 0 = r R' + r^2 R'' + R \left( -1 - \frac{r^2}{b^2} \right).
@@ -76,7 +76,7 @@ Using Mathematica (\nbref{coffeeCupWithBottom.cdf}) to look up the solutions, we
 %
 \begin{subequations}
 \begin{equation}\label{eqn:coffeeCupWithBottom:190}
-R(r) \in \Span \{ J_1(r/a), Y_1(r/a) \}
+R(r) \in \Span \{ J_1(r/a), Y_1(r/a) \},
 \end{equation}
 \begin{equation}\label{eqn:coffeeCupWithBottom:210}
 R(r) \in \Span \{ J_1(i r/b), Y_1(i r/b) \}.
@@ -96,7 +96,7 @@ C_a J_1(r/a) \sinh(z/a)
 s \Omega
 \sum
 \left( D_a J_1(r/a) + E_a Y_1(r/a) \right) \sinh(z/a)
- & \quad \mbox{\(r \in [s, R]\)} \\
+ & \quad \mbox{\(r \in [s, R]\)}.
 \end{array}
 \right.
 \end{equation}
@@ -114,7 +114,7 @@ C_i J_1(\lambda_i r/R) \sinh(\lambda_i z/R)
 s \Omega
 \sum
 \left( D_i J_1(\lambda_i r/R) + E_i Y_1(\lambda_i r/R) \right) \sinh(\lambda_i z/R)
- & \quad \mbox{\(r \in [s, R]\)} \\
+ & \quad \mbox{\(r \in [s, R]\)}.
 \end{array}
 \right.
 \end{equation}
@@ -123,10 +123,10 @@ The boundary value constraints of \(u(r = s) = \Omega s\) and \(u(r = R) = 0\) r
 %
 \begin{subequations}
 \begin{equation}\label{eqn:coffeeCupWithBottom:310}
-1 = \sum C_i J_1(\lambda_i s/R) \sinh(\lambda_i z/R)
+1 = \sum C_i J_1(\lambda_i s/R) \sinh(\lambda_i z/R),
 \end{equation}
 \begin{equation}\label{eqn:coffeeCupWithBottom:330}
-1 = \sum \left( D_i J_1(\lambda_i s/R) + E_i Y_1(\lambda_i s/R) \right) \sinh(\lambda_i z/R)
+1 = \sum \left( D_i J_1(\lambda_i s/R) + E_i Y_1(\lambda_i s/R) \right) \sinh(\lambda_i z/R),
 \end{equation}
 \begin{equation}\label{eqn:coffeeCupWithBottom:350}
 0 = \sum E_i Y_1(\lambda_i) \sinh(\lambda_i z/R).
@@ -146,7 +146,7 @@ We have just found the functional form for an azimuthal flow that has \(z\)-axis
 Let us attempt to solve this new simpler boundary value problem.  We will position the mixing cylinder at a height \(d\) above the bottom of the cup, and set the radius of that inner cylinder to \(s\) as before, with the mixing occurring at an angular velocity of \(\Omega\).  We now want apply these boundary value constrains to the velocity function we have found for the steady state problem.  Provided \(z < d\), this will have the form
 %
 \begin{equation}\label{eqn:coffeeCupWithBottom:500}
-u(r, z, 0) = s \Omega \sum C_i J_1(\lambda_i r/R) \sinh(\lambda_i z/R)
+u(r, z, 0) = s \Omega \sum C_i J_1(\lambda_i r/R) \sinh(\lambda_i z/R),
 \end{equation}
 %
 where \(\lambda_i\) are the zeros of the order one Bessel function \(J_1\).  Observe that our boundary value conditions of \(u(R, z, 0) = 0\) and \(u(r, 0, 0) = 0\) are automatically satisfied.  Note that because of the \(u(R, z, 0) = 0\) equality here, this form of solution is no good if we are mixing at the edge of the cup, so we require \(s \ne R\).
@@ -154,7 +154,7 @@ where \(\lambda_i\) are the zeros of the order one Bessel function \(J_1\).  Obs
 Our remaining boundary value condition \(u(s, d, 0) = s \Omega\), means that we have to solve
 %
 \begin{equation}\label{eqn:coffeeCupWithBottom:520}
-1 = \sum C_i J_1(\lambda_i s/R) \sinh(\lambda_i d/R)
+1 = \sum C_i J_1(\lambda_i s/R) \sinh(\lambda_i d/R).
 \end{equation}
 %
 Having had the same sort of problem in our steady state bottomless coffee problem, we know how to solve this
@@ -177,7 +177,7 @@ So we find that below the point of stirring (\(z = d\)), our steady state soluti
 }{
 \int_0^1 w J_1^2 (\lambda_i w) dw
 }
-J_1(\lambda_i r/R) \frac{\sinh(\lambda_i z/R)}{\sinh(\lambda_i d/R) }
+J_1(\lambda_i r/R) \frac{\sinh(\lambda_i z/R)}{\sinh(\lambda_i d/R) }.
 \end{equation}
 %
 For a cup size of \(R = 5 \text{cm}\), stir radius of \(s = 3 \text{cm}\), stir depth \(d = 2 \text{cm}\), and angular velocity \(\Omega = 2 \pi \text{rad}/\text{s}\), we can compute (\nbref{coffeeCupWithBottom.cdf}) some terms of this series
@@ -206,7 +206,7 @@ Let us now consider the time evolution problem when we stop the stirring abruptl
 \begin{equation}\label{eqn:coffeeCupWithBottom:800}
 \PD{t}{u} =
 \nu
-\left( \inv{r} \partial_r ( r \partial_r u ) -\frac{u}{r^2} + \partial_{zz} u \right)
+\left( \inv{r} \partial_r ( r \partial_r u ) -\frac{u}{r^2} + \partial_{zz} u \right),
 \end{equation}
 %
 with \(u = R(r) Z(z) T(t)\) we find
@@ -240,7 +240,7 @@ Our time dependent solution below the point of stirring is therefore of the form
 u(r, z, t)
 =
 s \Omega \sum_{\lambda_i^2 > \alpha^2} c_{i \alpha} J_1(\lambda_i r/R) \sinh\left( \sqrt{\lambda_i^2 - \alpha^2} z/R \right) e^{-\alpha^2 \nu t/R^2}
-+s \Omega \sum_{\lambda_i^2 < \alpha^2} d_{i \alpha} J_1(\lambda_i r/R) \sin\left( \sqrt{\alpha^2 -\lambda_i^2} z/R \right) e^{-\alpha^2 \nu t/R^2}
++s \Omega \sum_{\lambda_i^2 < \alpha^2} d_{i \alpha} J_1(\lambda_i r/R) \sin\left( \sqrt{\alpha^2 -\lambda_i^2} z/R \right) e^{-\alpha^2 \nu t/R^2},
 \end{dmath}
 %
 with a boundary value condition
@@ -369,7 +369,7 @@ We have got the same Bessel integral on both sides leaving us with
 \begin{equation}\label{eqn:coffeeCupWithBottom:1000}
 d_k = 2 \int_0^1 \sin( 2 \pi k y ) \frac{\sinh(\lambda_k y d/R)}{\sinh(\lambda_k d/R) } dy
 =
-\frac{4 \pi k (-1)^{k+1} \sinh \left(\frac{d \lambda_k}{R}\right)}{\frac{d^2 \lambda_k^2}{R^2} + 4 k^2 \pi^2}
+\frac{4 \pi k (-1)^{k+1} \sinh \left(\frac{d \lambda_k}{R}\right)}{\frac{d^2 \lambda_k^2}{R^2} + 4 k^2 \pi^2}.
 \end{equation}
 %
 Putting all the pieces together we have for the spin down of the fluid below the stir height for \(t \ge 0\).
