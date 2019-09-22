@@ -1,18 +1,13 @@
 
 - 
    - need commas and periods:
-      sections
-      examples
+      equation
+      subequation
+      dmath
 
    - remove blank lines before and after:
-      equations
-      examples
-      figures
-      makeproblem
       subproblem
-      makeanswer
       subanswer
-      sections
 
    - lots of fixmes and placeholders.
 
