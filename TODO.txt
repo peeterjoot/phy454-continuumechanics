@@ -19,6 +19,10 @@
    - lots of fixmes and placeholders.
 
    - equation number overlap audit.
+
+   - increase the line thickness in the mathematica figures.
+
+   - mathimagefigure for mathematica figures.
    
 - 
 
