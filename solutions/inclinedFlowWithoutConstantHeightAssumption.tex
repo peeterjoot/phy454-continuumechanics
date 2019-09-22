@@ -307,9 +307,9 @@ Supposing that we are neglecting the non-linear term of the Navier-Stokes equati
 \end{subequations}
 %
 How do we actually solve this beastie?
-
+%
 \subsection{Separation of variables?}
-
+%
 Considering this in 2D, assuming no z-dependence, with \(\Bu = \Bu(x, y) = (u, v)\) we have
 %
 \begin{equation}\label{eqn:nsVorticity:30}
@@ -341,9 +341,9 @@ we get
 \end{equation}
 %
 I could not find a way to substitute any of these into the other that would allow me to separate them, but perhaps I was not clever enough.
-
+%
 \subsection{In terms of vorticity?}
-
+%
 The idea of substituting the zero divergence equation \(\spacegrad \cdot \Bu\) will clearly lead to something a bit simpler.  Treating the Laplacian as a geometric (Clifford) product of two gradients we have
 \index{wedge product}
 \index{geometric product}
@@ -412,9 +412,9 @@ Note that we can obtain \eqnref{eqn:inclinedFlowWithoutConstantHeightAssumption:
 \end{equation}
 %
 Again, we have a multivector equation scalar and bivector parts, that must separately equal zero.  With the magnitude of the vorticity \(\Theta\)  given by \eqnref{eqn:inclinedFlowWithoutConstantHeightAssumption:90}, we once again obtain \eqnref{eqn:inclinedFlowWithoutConstantHeightAssumption:150}.  This can be done in plain old vector algebra as well by operating on the left not by the gradient, but separately with a divergence and curl operator.
-
+%
 \subsection{Pressure and vorticity equations with the non-linear term retained}
-
+%
 If we add back in our body force, and assume that it is constant (i.e. gravity), then this this will get killed with the application of the gradient.  We will still end up with one Laplacian for pressure, and one for vorticity.  That is not the case for the inertial \((\Bu \cdot \spacegrad) \Bu\) term of Navier-Stokes.  Let us take the divergence and curl of this and see how we have to modify the Laplacian equations above.
 
 Starting with the divergence, with summation implied over repeated indices, we have
@@ -533,9 +533,9 @@ It is this and \eqnref{eqn:inclinedFlowWithoutConstantHeightAssumption:500} that
 \end{subequations}
 %
 Our solution has to satisfy these equations, as well as still satisfying the original Navier-Stokes system \eqnref{eqn:inclinedFlowWithoutConstantHeightAssumption:40} that includes our gravitational term, and also has to satisfy both of our boundary value constraints \eqnref{eqn:inclinedFlowWithoutConstantHeightAssumption:220}, \eqnref{eqn:inclinedFlowWithoutConstantHeightAssumption:280}, and have \(u(x, 0) = v(x, 0) = 0\).  Wow, what a mess!  And this is all just the steady state problem.  Imagine adding time into the mix too!
-
+%
 \subsection{Reworking slightly}
-
+%
 In \S 40-2 \citep{feynman1963flp:dryWater}, the identity
 %
 \begin{equation}\label{eqn:inclinedFlowWithoutConstantHeightAssumption:641}
