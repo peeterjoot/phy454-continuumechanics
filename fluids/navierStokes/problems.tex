@@ -2,11 +2,10 @@
 % Copyright © 2012 Peeter Joot.  All Rights Reserved.
 % Licenced as described in the file LICENSE under the root directory of this GIT repository.
 %
-\makeproblem{Rectilinear flow with shear and pressure gradients}{problem:fluids:review:q1}
+\makeproblem{Rectilinear flow with shear and pressure gradients.}{problem:fluids:review:q1}
 {
 Solve for the velocity and discuss.
 } % makeproblem
-
 \makeanswer{problem:fluids:review:q1}{
 Lets specify that we have fluid flowing between surfaces at \(z = \pm h\), the lower surface moving at velocity \(v\) and pressure gradient \(dp/dx = -G\) we find that Navier-Stokes for an assumed flow of \(\Bu = u(z) \xcap\) takes the form
 %
@@ -14,13 +13,12 @@ Lets specify that we have fluid flowing between surfaces at \(z = \pm h\), the l
 0 &= \partial_x u + \partial_y (0) + \partial_z (0) \\
 u \cancel{\partial_x u} &= - \partial_x p + \mu \partial_{zz} u \\
 0 &= -\partial_y p \\
-0 &= -\partial_z p
+0 &= -\partial_z p.
 \end{align}
-
 We find that this reduces to
 %
 \begin{equation}\label{eqn:continuumFluidsReview:1290}
-\frac{d^2 u}{dz^2} = -\frac{G}{\mu}
+\frac{d^2 u}{dz^2} = -\frac{G}{\mu},
 \end{equation}
 %
 with solution

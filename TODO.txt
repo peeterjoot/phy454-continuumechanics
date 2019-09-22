@@ -2,16 +2,16 @@
 - 
    - need commas and periods:
       sections
-      chapters
-      problems
       examples
 
    - remove blank lines before and after:
-      chapters
       equations
       examples
       figures
-      problems
+      makeproblem
+      subproblem
+      makeanswer
+      subanswer
       sections
 
    - lots of fixmes and placeholders.
