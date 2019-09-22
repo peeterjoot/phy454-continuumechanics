@@ -80,17 +80,16 @@ In classical mechanics we have
 our analogue here is found in terms of the stress tensor
 %
 \begin{equation}\label{eqn:continuumL10:150}
-\int_V F_i dV = \int_V \PD{x_j}{\sigma_{ij}} dV
+\int_V F_i dV = \int_V \PD{x_j}{\sigma_{ij}} dV.
 \end{equation}
 %
 Here \(F_i\) is the force per unit volume.  With body forces we have
 %
 \begin{equation}\label{eqn:continuumL10:170}
-F_i = \rho \frac{du_i}{dt} = \PD{x_j}{\sigma_{ij}} + \rho f_i
+F_i = \rho \frac{du_i}{dt} = \PD{x_j}{\sigma_{ij}} + \rho f_i,
 \end{equation}
 %
 where \(f_i\) is an external force per unit volume.  Observe that \(\sigma_{ij}\), through the constitutive relation, includes both contributions of linear displacement and the vorticity component.
-
 From the constitutive relation \eqnref{eqn:continuumL9:250}, we have
 %
 \begin{equation}\label{eqn:NavierStokes:350}
@@ -106,14 +105,14 @@ From the constitutive relation \eqnref{eqn:continuumL9:250}, we have
 &= - \PD{x_i}{p} + \mu \left(
 \frac{\partial^2 u_i}{\partial x_j \partial x_j}
 +\frac{\partial^2 u_j}{\partial x_i \partial x_j}
-\right)
+\right).
 \end{aligned}
 \end{equation}
 %
 Observe that the term
 %
 \begin{equation}\label{eqn:continuumL10:190}
-\frac{\partial^2 u_i}{\partial x_j \partial x_j}
+\frac{\partial^2 u_i}{\partial x_j \partial x_j},
 \end{equation}
 %
 is the \(i^{\text{th}}\) component of \(\spacegrad^2 \Bu\), whereas
@@ -122,13 +121,12 @@ is the \(i^{\text{th}}\) component of \(\spacegrad^2 \Bu\), whereas
 \begin{aligned}
 \frac{\partial^2 u_j}{\partial x_i \partial x_j}
 &= \PD{x_i}{} \left( \PD{x_j}{u_j} \right) \\
-&= \PD{x_i}{} (\spacegrad \cdot \Bu)
+&= \PD{x_i}{} (\spacegrad \cdot \Bu),
 \end{aligned}
 \end{equation}
 %
 is the \(i^{\text{th}}\) component of \(\spacegrad (\spacegrad \cdot \Bu)\).
-
-We have therefore that
+Therefore
 %
 \begin{equation}\label{eqn:continuumL10:210}
 \rho \frac{du_i}{dt} = \left( -\spacegrad p + \mu \spacegrad^2 \Bu

@@ -57,7 +57,7 @@ With
 we introduce the dual vector
 %
 \begin{equation}\label{eqn:continuumL9:90}
-\BOmega = \Omega_k \Be_k = \inv{2} \Bomega
+\BOmega = \Omega_k \Be_k = \inv{2} \Bomega,
 \end{equation}
 %
 defined according to
@@ -66,14 +66,14 @@ defined according to
 \begin{aligned}
 \Omega_1 &= \inv{2} \omega_{32} = \inv{2} \omega_1 \\
 \Omega_2 &= \inv{2} \omega_{13} = \inv{2} \omega_2 \\
-\Omega_3 &= \inv{2} \omega_{21} = \inv{2} \omega_3
+\Omega_3 &= \inv{2} \omega_{21} = \inv{2} \omega_3.
 \end{aligned}
 \end{equation}
 %
 With
 \begin{equation}\label{eqn:continuumL9:610}
 \omega_{k}
-= \epsilon_{ijk} \partial_i u_j
+= \epsilon_{ijk} \partial_i u_j,
 \end{equation}
 %
 we can write
@@ -164,7 +164,7 @@ dV'
 \left(
 1 + (\spacegrad \cdot \Bu)
 \delta t
-\right) dV \\
+\right) dV.
 \end{aligned}
 \end{equation}
 %
@@ -177,7 +177,7 @@ So much like we expressed the relative change of volume in solids, we now can ex
 or
 %
 \begin{equation}\label{eqn:continuumL9:210}
-\frac{\delta(dV)}{dV \delta t} = \spacegrad \cdot \Bu,
+\frac{\delta(dV)}{dV \delta t} = \spacegrad \cdot \Bu.
 \end{equation}
 %
 We identify the divergence of the displacement as the relative change in volume per unit time.
@@ -196,7 +196,7 @@ where \(p\) is called the isotropic pressure, and \(\mu\) is the viscosity of th
 For comparison, in solids we had
 %
 \begin{equation}\label{eqn:continuumL9:270}
-\sigma_{ij} = \lambda e_{kk} \delta_{ij} + 2 \mu e_{ij}
+\sigma_{ij} = \lambda e_{kk} \delta_{ij} + 2 \mu e_{ij}.
 \end{equation}
 %
 While we are allowing for rotation in the fluids (\(\omega_{ij}\)) that we did not consider for solids, we now impose a requirement that the strain tensor trace is not a function of the fluid displacements, with
@@ -216,7 +216,7 @@ Can we mathematically justify this explanation?  We see above that we have
 so we are in effect making the identification
 %
 \begin{equation}\label{eqn:continuumL9:670}
-\ln dV = -p t /\lambda + \ln dV_0
+\ln dV = -p t /\lambda + \ln dV_0,
 \end{equation}
 %
 or
@@ -234,11 +234,10 @@ The relative change in a differential volume element changes exponentially.
 \end{equation}
 %
 Some examples
-
 \begin{itemize}
-\item \(\mu_{\text{air}} = 1.8 \times 10^{-5} \frac{\text{kg}}{\text{m s}}\)
-\item \(\mu_{\text{water}} = 1.1 \times 10^{-3} \frac{\text{kg}}{\text{m s}}\)
-\item \(\mu_{\text{glycerin}} = 2.3 \frac{\text{kg}}{\text{m s}}\)
+\item \(\mu_{\text{air}} = 1.8 \times 10^{-5} \frac{\text{kg}}{\text{m s}}\),
+\item \(\mu_{\text{water}} = 1.1 \times 10^{-3} \frac{\text{kg}}{\text{m s}}\),
+\item \(\mu_{\text{glycerin}} = 2.3 \frac{\text{kg}}{\text{m s}}\).
 \end{itemize}
 %
 \section{Conservation of mass in fluid.}
@@ -248,11 +247,10 @@ Referring to \cref{fig:continuumL9:continuumL9fig2}
 \imageFigure{../figures/phy454-continuumechanics/lec9_Area_projections_for_mass_conservation_argumentFig2}{Area projections for mass conservation argument.}{fig:continuumL9:continuumL9fig2}{0.3}
 %
 \FIXME{What this figure illustrates was not clear to me in class}
-
 we have a flow rate
 %
 \begin{equation}\label{eqn:continuumL9:310}
-\rho \Bu \delta t ds
+\rho \Bu \delta t ds,
 \end{equation}
 %
 or
@@ -274,17 +272,20 @@ we must have
 -\oint \rho \Bu \cdot d\Bs.
 \end{equation}
 %
+With
 \begin{equation}\label{eqn:continuumL9:370}
-dm = \rho dV
+dm = \rho dV,
 \end{equation}
 %
+the mass flow rate is
 \begin{equation}\label{eqn:continuumL9:390}
-\frac{dm}{dt} = \frac{d}{dt} (\rho dV)
+\frac{dm}{dt} = \frac{d}{dt} (\rho dV),
+which is
 \end{equation}
 %
 \begin{itemize}
 \item
-positive if fluid is coming in.
+positive if fluid is coming in, and
 \item
 negative if fluid is going out.
 \end{itemize}
@@ -333,14 +334,14 @@ To make sense of this, observe that we have for \(f = f(x, y, z, t)\)
 +\PD{z}{f} \frac{\delta z}{\delta t}
 + \PD{t}{f} \\
 &=
-(\spacegrad f) \cdot \Bu + \PD{t}{f}
+(\spacegrad f) \cdot \Bu + \PD{t}{f},
 \end{aligned}
 \end{equation}
 %
 so we have
 %
 \begin{equation}\label{eqn:continuumL9:510}
-\PD{t}{\rho} + \Bu \cdot \spacegrad \rho = \frac{d\rho}{dt}
+\PD{t}{\rho} + \Bu \cdot \spacegrad \rho = \frac{d\rho}{dt},
 \end{equation}
 %
 or
@@ -353,7 +354,7 @@ or
 When the density does not change note that we have
 %
 \begin{equation}\label{eqn:continuumL9:550}
-\frac{d\rho}{dt} = 0
+\frac{d\rho}{dt} = 0,
 \end{equation}
 %
 which then implies

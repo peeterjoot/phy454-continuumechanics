@@ -37,7 +37,7 @@ We introduced vector and dual vector forms of the vorticity tensor with
 %
 \begin{subequations}
 \begin{equation}\label{eqn:continuumFluidsReview:970}
-\Omega_k = \inv{2} \partial_i u_j \epsilon_{i j k}
+\Omega_k = \inv{2} \partial_i u_j \epsilon_{i j k},
 \end{equation}
 \begin{equation}\label{eqn:continuumFluidsReview:990}
 \omega_{i j} = -\Omega_k \epsilon_{i j k},
@@ -48,7 +48,7 @@ or
 %
 \begin{subequations}
 \begin{equation}\label{eqn:continuumFluidsReview:910}
-\Bomega = \spacegrad \cross \Bu
+\Bomega = \spacegrad \cross \Bu,
 \end{equation}
 \begin{equation}\label{eqn:continuumFluidsReview:930}
 \BOmega = \inv{2} (\Bomega)_a \Be_a.
@@ -141,7 +141,7 @@ For fluids \(A\) and \(B\) separated at an interface with unit normal \(\ncap\) 
 %
 \begin{subequations}
 \begin{equation}\label{eqn:continuumFluidsReview:1170}
-\Bu_A \cdot \taucap = \Bu_B \cdot \taucap
+\Bu_A \cdot \taucap = \Bu_B \cdot \taucap,
 \end{equation}
 \begin{equation}\label{eqn:continuumFluidsReview:1190}
 \Bu_A \cdot \ncap = \Bu_B \cdot \ncap.
@@ -156,7 +156,7 @@ For the problems we attempt, it will often be enough to consider only the tangen
 As well as matching velocities, we have a force balance requirement at any interface.  This will be expressed in terms of the traction vector
 %
 \begin{equation}\label{eqn:continuumFluidsReview:1210}
-\Btau = \Be_i \sigma_{ij} n_j = \Bsigma \cdot \ncap
+\Btau = \Be_i \sigma_{ij} n_j = \Bsigma \cdot \ncap,
 \end{equation}
 %
 where \(\ncap = n_j \Be_i\) is the normal pointing from the interface into the fluid (so the traction vector represents the force of the interface on the fluid).  When that interface is another fluid, we are able to calculate the force of one fluid on the other.
@@ -182,6 +182,6 @@ As well as having a messy non-linear PDE to start with, our boundary value const
 A number of problems we did asked for the flux rate.  A slightly more sensible physical quantity is the mass flux, which adds the density into the mix
 %
 \begin{equation}\label{eqn:continuumFluidsReview:1450}
-\int \frac{dm}{dt} = \rho \int \frac{dV}{dt} = \rho \int (\Bu \cdot \ncap) dA
+\int \frac{dm}{dt} = \rho \int \frac{dV}{dt} = \rho \int (\Bu \cdot \ncap) dA.
 \end{equation}
 %

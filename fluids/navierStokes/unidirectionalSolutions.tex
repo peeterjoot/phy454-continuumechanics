@@ -38,18 +38,16 @@ Referring to \cref{fig:continuumL11:continuumL11fig2} where the tangents and nor
 \imageFigure{../figures/phy454-continuumechanics/lec11_Normals_and_tangents_at_interface_for_2D_systemFig2}{Normals and tangents at interface for 2D system.}{fig:continuumL11:continuumL11fig2}{0.15}
 %
 \begin{equation}\label{eqn:continuumL11:90}
-\begin{aligned}
-\taucap &=
+\taucap =
 \begin{bmatrix}
 1 \\
 0
-\end{bmatrix} \\
-\ncap &=
+\end{bmatrix}, \qquad
+\ncap =
 \begin{bmatrix}
 0 \\
 1
-\end{bmatrix}
-\end{aligned}
+\end{bmatrix}.
 \end{equation}
 %
 For the traction vector with components
@@ -142,7 +140,7 @@ Operating on the first with an x partial we find
 \end{equation}
 Since we have
 \begin{equation}\label{eqn:continuumL11:370}
-\PDSq{x}{p} = 0
+\PDSq{x}{p} = 0,
 \end{equation}
 we also have
 \begin{equation}\label{eqn:continuumL11:390}
@@ -191,7 +189,7 @@ u(h) &= U.
 For such a flow \eqnref{eqn:continuumL11:330a} simplifies to
 %
 \begin{equation}\label{eqn:continuumL11:530}
-\frac{d^2 u}{dy^2} = 0
+\frac{d^2 u}{dy^2} = 0,
 \end{equation}
 %
 with solution
@@ -205,7 +203,7 @@ u = \frac{U}{h} y + u(0) = \frac{U}{h} y.
 \begin{equation}\label{eqn:continuumL11:570}
 \begin{aligned}
 \Bu &= \xcap u(y) \\
-G &= - \frac{dp}{dx} \ne 0
+G &= - \frac{dp}{dx} \ne 0.
 \end{aligned}
 \end{equation}
 %
@@ -227,7 +225,7 @@ The boundary value conditions with the coordinate system in use illustrated in \
 %
 \begin{equation}\label{eqn:continuumL11:630}
 u(\pm h) =
--\frac{G}{2 \mu} h^2 \pm A h + B = 0
+-\frac{G}{2 \mu} h^2 \pm A h + B = 0.
 \end{equation}
 %
 One solution, immediately evident is,
@@ -258,7 +256,7 @@ It is clear that this is maximized by \(y = 0\), but we can also see this by com
 This maximum is
 %
 \begin{equation}\label{eqn:continuumL11:850}
-u_{\text{max}} = \frac{G}{2\mu} h^2
+u_{\text{max}} = \frac{G}{2\mu} h^2.
 \end{equation}
 %
 The flux, or flow rate is
@@ -269,7 +267,7 @@ Q
 &= \iint_S \Bu \cdot \xcap ds \\
 &= \int_0^1 dz \int_{-h}^h dy u(y) \\
 &=
-\frac{2 G h^3}{3}
+\frac{2 G h^3}{3}.
 \end{aligned}
 \end{equation}
 %
@@ -279,14 +277,14 @@ Let us now compute the strain (\(e_{ij}\)) and the stress (\(\sigma_{ij} = -p \d
 \begin{aligned}
 e_{12} &= e_{21} = \inv{2} \left( \PD{y}{u} \right) = - \frac{G y}{2 \mu} \\
 e_{11} &= \PD{x}{u} = 0 \\
-e_{22} &= \PD{y}{v} = 0
+e_{22} &= \PD{y}{v} = 0,
 \end{aligned}
 \end{equation}
 %
 stress
 %
 \begin{equation}\label{eqn:continuumL11:750}
-\sigma_{12} = 2 \mu e_{12} = -G y
+\sigma_{12} = 2 \mu e_{12} = -G y.
 \end{equation}
 %
 This can be used to compute the forces on the inner surfaces of the tube.  As illustrated in \cref{fig:continuumL11:continuumL11fig7}, our normals at \(\pm h\) are \(\mp \ycap\) respectively.  The traction vector in the \(y\) direction is at \(y = h\) is
@@ -300,19 +298,19 @@ This can be used to compute the forces on the inner surfaces of the tube.  As il
 so that
 %
 \begin{equation}\label{eqn:continuumL11:791}
-\Btau = \xcap G h
+\Btau = \xcap G h.
 \end{equation}
 %
-(here the \(x\) directionality comes from the \(i = 1\) index of the stress tensor).
+Here the \(x\) directionality comes from the \(i = 1\) index of the stress tensor, so the force per unit distance is
 %
 \begin{equation}\label{eqn:continuumL11:790}
-F_{x_L} = \xcap \cdot \Btau = G h
+F_{x_L} = \xcap \cdot \Btau = G h.
 \end{equation}
 %
 The total force is then
 %
 \begin{equation}\label{eqn:continuumL11:810}
-\int_0^L F_x dx = + G h L
+\int_0^L F_x dx = + G h L.
 \end{equation}
 %
 \FIXME{Ask in class.  This is the tangential force at the boundary of the wall.  What is it a force on?  If it is tangential, how can it act on the wall?  It could act on an impediment placed right up next to the wall, but if that is the case, why are we integrating from \(x = 0\) to \(x = L\)?}

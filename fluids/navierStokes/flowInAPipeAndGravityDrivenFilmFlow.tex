@@ -62,7 +62,7 @@ Two examples that we have solved analytically are illustrated in \cref{fig:conti
 %
 Sometimes we can utilize solutions already found to understand the behavior of more complex systems.  Combining the two we can look at flow over a plate as in \cref{fig:continuumL12:continuumL12fig3}
 %
-\imageFigure{../figures/phy454-continuumechanics/lec12_Flow_on_a_plateFig3}{Flow on a plate.}{fig:continuumL12:continuumL12fig3}{0.2}
+\imageFigure{../figures/phy454-continuumechanics/lec12_Flow_on_a_plateFig3}{Flow on a plate.}{fig:continuumL12:continuumL12fig3}{0.15}
 %
 Example 2.  Fluid in a container.  If the surface tension is altered on one side, we induce a flow on the surface, leading to a circulation flow.  This can be done for example, by introducing a heat source or addition of surfactant.
 
@@ -88,7 +88,7 @@ Our gradient is
 \spacegrad =
 \rcap \PD{r}{} +
 \frac{\thetacap}{r} \PD{\theta}{} +
-\zcap \PD{z}{},
+\zcap \PD{z}{}.
 \end{equation}
 %
 For our Laplacian we find
@@ -162,7 +162,7 @@ It is pointed out in \citep{acheson1990elementary}, that our non-linear term \((
 +\thetacap \left((\Bu \cdot \spacegrad) u_\theta
 + \frac{u_r u_\theta}{r}
 \right)
-+\zcap \left((\Bu \cdot \spacegrad) u_z\right)
++\zcap \left((\Bu \cdot \spacegrad) u_z\right).
 \end{dmath}
 %
 For steady state and incompressible fluids in the absence of body forces we have
@@ -193,7 +193,7 @@ u_\theta \\
 \PD{z}{p}
 &= \mu \left(
 \inv{r} \PD{r}{} \left( r \PD{r}{} \right) + \inv{r^2} \PDSq{\theta}{} + \PDSq{z}{} \right)
-u_z
+u_z.
 \end{aligned}
 \end{equation}
 %
@@ -218,33 +218,32 @@ then Navier-Stokes takes the final simple form
 Solving this we have
 %
 \begin{equation}\label{eqn:continuumL12:90}
-r \frac{dw}{dr} = - \frac{G r^2}{2\mu} + A
+r \frac{dw}{dr} = - \frac{G r^2}{2\mu} + A,
 \end{equation}
 %
 \begin{equation}\label{eqn:continuumL12:110}
-w = -\frac{G r^2}{4 \mu} + A \ln(r) + B
+w = -\frac{G r^2}{4 \mu} + A \ln(r) + B.
 \end{equation}
 %
 Requiring finite solutions for \(r = 0\) means that we must have \(A = 0\).  Also \(w(a) = 0\), we have \(B = G a^2/4 \mu\) so we must have
 %
 \begin{equation}\label{eqn:continuumL12:130}
-w(r) = \frac{G}{4 \mu}( a^2 - r^2 )
+w(r) = \frac{G}{4 \mu}( a^2 - r^2 ).
 \end{equation}
 } % end example
 \makeexample{Gravity driven flow of a liquid film.}{ex:fluids:inclinedgravityflow}{
 %(This is one of our Professor's favorite problems).
 Reading: \S 2.3 from \citep{acheson1990elementary}.
 
-Coordinates as in \cref{fig:continuumL12:continuumL12fig6}
+Coordinates as in \cref{fig:continuumL12:continuumL12fig6} are
 \imageFigure{../figures/phy454-continuumechanics/lec12_Gravity_driven_flow_down_an_inclined_planeFig6}{Gravity driven flow down an inclined plane.}{fig:continuumL12:continuumL12fig6}{0.2}
 %
 \begin{equation}\label{eqn:continuumL12:150}
-\Bu = \xcap u(y)
+\Bu = \xcap u(y).
 \end{equation}
 %
 %\unnumberedSubsection{Boundary conditions}
 Our boundary conditions are
-
 \begin{enumerate}
 \item \(u(y = 0) = 0\)
 \item Tangential stress at the air-liquid interface \(y = h\) is equal.
@@ -257,20 +256,18 @@ Our boundary conditions are
 We write
 %
 \begin{equation}\label{eqn:continuumL12:190}
-\begin{aligned}
-\Btau &=
+\Btau =
 \begin{bmatrix}
 1 \\
 0 \\
 0
-\end{bmatrix} \\
-\ncap &=
+\end{bmatrix},\qquad
+\ncap =
 \begin{bmatrix}
 0 \\
 1 \\
 0
-\end{bmatrix}
-\end{aligned}
+\end{bmatrix},
 \end{equation}
 %
 and seek simultaneous solutions to the pair of stress tensor equations
@@ -330,27 +327,27 @@ So
 0
 \end{bmatrix}
 =
-\mu^l \PD{y}{u}
+\mu^l \PD{y}{u}.
 \end{equation}
 %
 Our boundary value condition is therefore
 %
 \begin{equation}\label{eqn:continuumL12:250}
 \evalbar{\mu^l \PD{y}{u^l}}{y = h} =
-\evalbar{\mu^a \PD{y}{u^a}}{y = h}
+\evalbar{\mu^a \PD{y}{u^a}}{y = h}.
 \end{equation}
 %
 When can we decouple this, treating only the liquid?  Observe that we have
 %
 \begin{equation}\label{eqn:continuumL12:270}
 \evalbar{\PD{y}{u^l}}{y = h} =
-\evalbar{\frac{\mu^a}{\mu^l} \PD{y}{u^a}}{y = h}
+\evalbar{\frac{\mu^a}{\mu^l} \PD{y}{u^a}}{y = h},
 \end{equation}
 %
 so if
 %
 \begin{equation}\label{eqn:continuumL12:290}
-\frac{\mu_a}{\mu_l} \ll 1
+\frac{\mu_a}{\mu_l} \ll 1,
 \end{equation}
 %
 we can treat only the liquid portion of the problem, with a boundary value condition
@@ -362,7 +359,7 @@ we can treat only the liquid portion of the problem, with a boundary value condi
 Let us look at the component of the traction vector in the direction of the normal (liquid pressure acting on the air)
 %
 \begin{equation}\label{eqn:continuumL12:330}
-\ncap \cdot (\Bsigma^l \cdot \ncap) = \ncap \cdot (\Bsigma^a \cdot \ncap)
+\ncap \cdot (\Bsigma^l \cdot \ncap) = \ncap \cdot (\Bsigma^a \cdot \ncap),
 \end{equation}
 %
 or
@@ -376,11 +373,10 @@ or
 -p^l \\
 0
 \end{bmatrix}
-= -\evalbar{p^l}{y = h} = -\evalbar{p^a}{y = h}
+= -\evalbar{p^l}{y = h} = -\evalbar{p^a}{y = h}.
 \end{equation}
 %
 i.e. We have pressure matching at the interface.
-
 Our body force is
 %
 \begin{equation}\label{eqn:continuumL12:370}
@@ -389,7 +385,7 @@ Our body force is
 g \sin\alpha \\
 -g \cos\alpha \\
 0
-\end{bmatrix}
+\end{bmatrix}.
 \end{equation}
 %
 %\unnumberedSubsection{Navier-stokes}
@@ -410,13 +406,13 @@ Referring to the Navier-Stokes equation \eqnref{eqn:continuumL12:570}, we see th
 The last gives us \(p \ne p(z)\).  Integrating the second we have
 %
 \begin{equation}\label{eqn:continuumL12:410}
-p = \rho g y \cos\alpha + p_1
+p = \rho g y \cos\alpha + p_1.
 \end{equation}
 %
 Since \(p = p_{\text{atm}}\) at \(y = h\), we have
 %
 \begin{equation}\label{eqn:continuumL12:430}
-p_{\text{atm}} = \rho g h \cos\alpha + p_1
+p_{\text{atm}} = \rho g h \cos\alpha + p_1.
 \end{equation}
 %
 Our first Navier-Stokes equation \eqnref{eqn:classicalMechanicsPs2:590a} becomes
@@ -427,13 +423,13 @@ Our first Navier-Stokes equation \eqnref{eqn:classicalMechanicsPs2:590a} becomes
 %
 or
 \begin{equation}\label{eqn:continuumL12:470}
-\PDSq{y}{u} = -\frac{\rho g}{\mu} \sin\alpha
+\PDSq{y}{u} = -\frac{\rho g}{\mu} \sin\alpha.
 \end{equation}
 %
 This we integrate twice
 %
 \begin{equation}\label{eqn:continuumL12:490}
-u = - \rho g \frac{\sin\alpha}{2 \mu} y^2 + A y + B
+u = - \rho g \frac{\sin\alpha}{2 \mu} y^2 + A y + B.
 \end{equation}
 %
 With

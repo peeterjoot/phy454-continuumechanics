@@ -9,16 +9,14 @@
 {2012 ps2}
 {
 Imagine a steady rectilinear blood flow of the form \(\Bu = u(y) \ycap\) through a two dimensional artery.  It is driven by a constant pressure gradient \(G = -dp/dx\) maintained by an external `heart'.  The top and bottom walls of the artery are \(2h\) distance apart and the fluid satisfies no-slip boundary conditions at the walls.  Assuming that the fluid is Newtonian,
-
 %
 \makesubproblem{Show that the Navier-Stokes equation reduces to
 %
 \begin{equation}\label{eqn:continuumProblemSet2:20}
-\frac{d^2 u}{dy^2} = -\frac{G}{\mu}
+\frac{d^2 u}{dy^2} = -\frac{G}{\mu},
 \end{equation}
 %
 where \(\mu\) is the viscosity of the blood.
-
 }{problem:fluids:bloodReduceNS}
 %
 \makesubproblem{Show that the velocity profile of the fluid inside the artery is a parabolic profile.}{problem:fluids:bloodVelocityProfile}
@@ -34,13 +32,13 @@ The Navier-Stokes equation, for an incompressible unidirectional fluid \(\Bu = (
 %
 \begin{subequations}
 \begin{equation}\label{eqn:continuumProblemSet2:40}
-\rho \PD{t}{u} + u \PD{x}{u} = - \PD{x}{p} + \mu \left( \PDSq{x}{} + \PDSq{y}{} \right) u
+\rho \PD{t}{u} + u \PD{x}{u} = - \PD{x}{p} + \mu \left( \PDSq{x}{} + \PDSq{y}{} \right) u,
 \end{equation}
 \begin{equation}\label{eqn:continuumProblemSet2:60}
-0 = - \PD{y}{p}
+0 = - \PD{y}{p},
 \end{equation}
 \begin{equation}\label{eqn:continuumProblemSet2:80}
-0 = - \PD{z}{p}
+0 = - \PD{z}{p},
 \end{equation}
 \begin{equation}\label{eqn:continuumProblemSet2:100}
 0 = \PD{x}{u}.
@@ -51,10 +49,10 @@ With a steady state assumption we kill the \(\PDi{t}{u}\) term, and \eqnref{eqn:
 %
 \begin{subequations}
 \begin{equation}\label{eqn:continuumProblemSet2:40a}
-0 = - \PD{x}{p} + \mu \PDSq{y}{u}
+0 = - \PD{x}{p} + \mu \PDSq{y}{u},
 \end{equation}
 \begin{equation}\label{eqn:continuumProblemSet2:60b}
-0 = - \PD{y}{p}
+0 = - \PD{y}{p},
 \end{equation}
 \begin{equation}\label{eqn:continuumProblemSet2:80c}
 0 = - \PD{z}{p}.
@@ -86,8 +84,8 @@ Application of the no-slip boundary value condition \(u(\pm h) = 0\), we have
 %
 \begin{equation}\label{eqn:continuumProblemSet2:180}
 \begin{aligned}
-0 &= -\frac{G}{2 \mu} h^2 + A h + B \\
-0 &= -\frac{G}{2 \mu} h^2 - A h + B
+0 &= -\frac{G}{2 \mu} h^2 + A h + B, \\
+0 &= -\frac{G}{2 \mu} h^2 - A h + B.
 \end{aligned}
 \end{equation}
 %
@@ -95,7 +93,7 @@ Adding and subtracting these, we find
 %
 \begin{subequations}
 \begin{equation}\label{eqn:continuumProblemSet2:280}
-A = 0
+A = 0,
 \end{equation}
 \begin{equation}\label{eqn:continuumProblemSet2:300}
 B = \frac{G}{2 \mu} h^2,
@@ -112,7 +110,7 @@ u(y) = \frac{G}{2 \mu} \left( h^2 - y^2 \right).
 It is clear that the maximum speed of the fluid is found at \(y = 0\)
 %
 \begin{equation}\label{eqn:continuumProblemSet2:240}
-u(0) = \frac{G h^2}{2 \mu}
+u(0) = \frac{G h^2}{2 \mu}.
 \end{equation}
 %
 The velocity profile for this flow is drawn in \cref{fig:continuumProblemSet2:continuumProblemSet2Fig1}.
@@ -173,7 +171,7 @@ G_{\text{smoker}} = 2 G.
 %
 where \(G\) is the magnitude of the pressure gradient before the bad habits kicked in.  The smoker's poor little heart (soon to be a big overworked and weak heart) has to generate pressure gradients that are twice as big to get the same quantity of blood distributed through the body.
 } % end answer
-
+%
 \makeoproblem{Simple shearing flow.}{problem:fluids:simpleShearing}
 {2012 ps2}
 {
