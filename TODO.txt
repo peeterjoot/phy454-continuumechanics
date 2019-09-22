@@ -1,11 +1,6 @@
 
 - 
-   - need commas and periods:
-      equation
-      subequation
-      dmath
-
-   - equation punctuation done to pg 42.
+   - equation punctuation done to pg 54.
 
    - lots of fixmes and placeholders.
 
@@ -87,5 +82,5 @@ For grep output from that indexTags file, I pruned out references to:
 
       (phy485 looks better in this respect)
 
-      - Make \FIXME conditional on classicthesis drafting variable.
-         (or switch to \fixme package as done in phy485 notes).
+   - Make \FIXME conditional on classicthesis drafting variable.
+     (or switch to \fixme package as done in phy485 notes).
