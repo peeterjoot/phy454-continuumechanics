@@ -6,7 +6,7 @@
 %
 %
 \label{chap:inclinedFlowWithoutConstantHeightAssumption}
-\section{Motivation}
+\section{Motivation.}
 %
 In an informal discussion after class, it was claimed that the steady state flow down a plane would have constant height, unless you bring surface tension effects into the mix.  Part of that statement just does not make sense to me.  Consider the forces acting on the fluid in the \cref{fig:inclinedFlowWithoutConstantHeightAssumption:inclinedFlowWithoutConstantHeightAssumptionFig1}
 %
@@ -16,7 +16,7 @@ In the inclined reference frame we have a component of the force acting downward
 
 While we are just about to start covered surface tension, perhaps this is just allowing the surface to vary, and then solving the Navier-Stokes equations that result.  Let us try setting up the Navier-Stokes equation for steady state viscous flow down a plane without any assumption that the height is constant and see how far we can get.
 %
-\section{Equations of motion}
+\section{Equations of motion.}
 %
 We will use the same coordinates as before, with the directions given as in \cref{fig:inclinedFlowWithoutConstantHeightAssumption:inclinedFlowWithoutConstantHeightAssumptionFig2}.  However, this time, we let the height \(h(x)\) of the fluid at any distance \(x\) down the plane from the initial point vary.
 %
@@ -60,7 +60,7 @@ Now, can we kill the time dependent term?  Even allowing for \(u\) to vary with 
 %
 These do not look particularly easy to solve, and we have not even set up the boundary value constraints yet.  Let us do that next.
 %
-\section{Boundary value constraints}
+\section{Boundary value constraints.}
 %
 One of out constraints is the no-slip condition for the velocity components at the base of the slope
 %
@@ -293,7 +293,7 @@ Again assuming no motion of the air, with air pressure \(p_A\), this is
 }
 Observe that for the horizontal flow problem, where \(h' = 0\) and \(v = 0\), this would have been nothing more than a requirement that \(p(h) = p_A\), but now that we introduce downwards motion and allow the height to vary, the pressure matching condition becomes a much more complex beastie.
 %
-\section{Laplacian of Pressure and Vorticity}
+\section{Laplacian of Pressure and Vorticity.}
 %
 Supposing that we are neglecting the non-linear term of the Navier-Stokes equation.  For incompressible steady state flow, without any external forces, we would then have
 %
@@ -413,7 +413,7 @@ Note that we can obtain \eqnref{eqn:inclinedFlowWithoutConstantHeightAssumption:
 %
 Again, we have a multivector equation scalar and bivector parts, that must separately equal zero.  With the magnitude of the vorticity \(\Theta\)  given by \eqnref{eqn:inclinedFlowWithoutConstantHeightAssumption:90}, we once again obtain \eqnref{eqn:inclinedFlowWithoutConstantHeightAssumption:150}.  This can be done in plain old vector algebra as well by operating on the left not by the gradient, but separately with a divergence and curl operator.
 %
-\subsection{Pressure and vorticity equations with the non-linear term retained}
+\subsection{Pressure and vorticity equations with the non-linear term retained.}
 %
 If we add back in our body force, and assume that it is constant (i.e. gravity), then this this will get killed with the application of the gradient.  We will still end up with one Laplacian for pressure, and one for vorticity.  That is not the case for the inertial \((\Bu \cdot \spacegrad) \Bu\) term of Navier-Stokes.  Let us take the divergence and curl of this and see how we have to modify the Laplacian equations above.
 
@@ -534,7 +534,7 @@ It is this and \eqnref{eqn:inclinedFlowWithoutConstantHeightAssumption:500} that
 %
 Our solution has to satisfy these equations, as well as still satisfying the original Navier-Stokes system \eqnref{eqn:inclinedFlowWithoutConstantHeightAssumption:40} that includes our gravitational term, and also has to satisfy both of our boundary value constraints \eqnref{eqn:inclinedFlowWithoutConstantHeightAssumption:220}, \eqnref{eqn:inclinedFlowWithoutConstantHeightAssumption:280}, and have \(u(x, 0) = v(x, 0) = 0\).  Wow, what a mess!  And this is all just the steady state problem.  Imagine adding time into the mix too!
 %
-\subsection{Reworking slightly}
+\subsection{Reworking slightly.}
 %
 In \S 40-2 \citep{feynman1963flp:dryWater}, the identity
 %

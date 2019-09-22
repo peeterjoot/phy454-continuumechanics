@@ -3,13 +3,13 @@
 % Licenced as described in the file LICENSE under the root directory of this GIT repository.
 %
 \label{chap:coffeeCupWithBottom}
-\section{Motivation}
+\section{Motivation.}
 %
 Having tackled the problem of the spin down of a bottomless cup of coffee, lets try setting up the harder problem with a non-infinite cup.  It turns out that this is a lot harder.  Even the steady state solution requires a superposition of Bessel functions (whereas we only had that in the bottomless problem when we tried to find the time evolution after ceasing the stirring).
 
 I can find the form of the solution, but do not know how to actually apply the boundary value constraints.  I also find the no-slip constraints themselves become problematic, because they lead to an inconsistency at the point of contact of a moving and a static interface.  Before continuing, I need to find out how to deal with that inconsistency.
 %
-\section{Navier-Stokes for the problem}
+\section{Navier-Stokes for the problem.}
 %
 Working in cylindrical coordinates is the only sensible option.  Let us look first at the steady state problem, with the cup being stirred at at constant rate with the unrealistic rotating cylinder  stir stick used previously.  We will assume an azimuthal velocity profile
 %
@@ -138,7 +138,7 @@ We have other troubles too.  We can not simultaneously satisfy the boundary valu
 
 We have to somehow modify the no-slip condition so that when we have a moving interface in contact with a static interface we somehow deal with the fact that the no-slip constraints cannot simultaneously require the velocity to match both the moving and static interfaces at that point of contact.
 %
-\section{Base of cup no-slip troubles}
+\section{Base of cup no-slip troubles.}
 \index{no slip}
 %
 We have just found the functional form for an azimuthal flow that has \(z\)-axis dependence.  Attempting to apply the no-slip boundary value condition for our mixing device got us into trouble, since this simultaneously require zero and non-zero velocity at the point of contact of the mixing interface and the bottom of the vessel (i.e. where the stir stick contacts the bottom of the cup).  We can avoid this issue by constraining the mixing to only occur above the bottom of the cup, and then look at the flow that this induces below the mixing point.
@@ -199,7 +199,7 @@ The radial dependence of the magnitude of the velocity can be seen in \cref{fig:
 %
 It is not clear to me how to compute the velocity profile above the point of lowest stir depth.  Let us ignore that for now, and think a bit about the spin down problem.
 %
-\section{Spin down below the stir point}
+\section{Spin down below the stir point.}
 %
 Let us now consider the time evolution problem when we stop the stirring abruptly at \(t = 0\).  The \(\phicap\) component of Navier-Stokes becomes
 %
