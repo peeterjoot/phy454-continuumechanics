@@ -14,8 +14,6 @@
       problems
       sections
 
-   - figure size audit: done up to pg 147
-
    - lots of fixmes and placeholders.
 
    - equation number overlap audit.
