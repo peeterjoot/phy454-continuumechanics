@@ -207,18 +207,15 @@ so if our trace is positive (as it is in this problem for all points \(x_2 > 1/2
 We see that at this point the \((1,1)\) and \((3,3)\) components of stress is positive (expansion in those directions) regardless of the material, and provided that
 %
 \begin{equation}\label{eqn:continuumProblemSet1:390}
-\frac{3 \nu}{1 - 2 \nu} > 4.53206
+\frac{3 \nu}{1 - 2 \nu} > 4.53206,
 \end{equation}
 %
 (i.e. \(\nu > 0.375664\)) the material is under expansion in all directions.  For \(\nu < 0.375664\) the material at that point is expanding in the \(\pcap_1\) and \(\pcap_3\) directions, but under compression in the \(\pcap_2\) directions.
-
-(save to disk and run with either Mathematica or the free Wolfram CDF player ( http://www.wolfram.com/cdf-player/  ) )
-
+%(save to disk and run with either Mathematica or the free Wolfram CDF player ( http://www.wolfram.com/cdf-player/  ) )
 For a visualization of this part of this problem see (\nbref{continuumProblemSet1Q2animated.cdf}).  This animates the stress tensor associated with the problem, for different points \((x,y,z)\) and values of Poisson's ratio \(\nu\), with Mathematica manipulate sliders available to alter these (as well as a zoom control to scale the graphic, keeping the orientation and scale fixed with any variation of the other parameters).  This generalizes the solution of the problem (assuming I got it right for the specific \((1,2,4)\) point of the problem).  The vectors are the orthonormal eigenvectors of the tensor, scaled by the magnitude of the eigenvectors of the stress tensor (also diagonal in the basis of the diagonalized strain tensor at the point in question).  For those directions that are under expansive stress, I have colored the vectors blue, and for compressive directions, I have colored the vectors red.
 
 A confirmation of the characteristic equation calculated manually is also available (\nbref{continuumProblemSet1Q2.cdf}).
 } % end answer
-
 \makeoproblem{Traction vector.}{problem:continuumProblemSet1:q3}
 {2012 ps1, p3}
 {
@@ -236,7 +233,7 @@ The stress tensor at a point has components given by
 Find the traction vector across an area normal to the unit vector
 %
 \begin{equation}\label{eqn:continuumProblemSet1:70}
-\ncap = ( \sqrt{2} \Be_1 - \Be_2 + \Be_3)/2
+\ncap = ( \sqrt{2} \Be_1 - \Be_2 + \Be_3)/2.
 \end{equation}
 %
 Can you construct a tangent vector \(\Btau\) on this plane by inspection?  What are the components of the force per unit area along the normal \(\ncap\) and tangent \(\Btau\) on that surface?  (hint: projection of the traction vector.)
@@ -246,7 +243,7 @@ Can you construct a tangent vector \(\Btau\) on this plane by inspection?  What 
 The traction vector, the force per unit volume that holds a body in equilibrium, in coordinate form was
 %
 \begin{equation}\label{eqn:continuumProblemSet1:410}
-P_i = \sigma_{ik} n_k
+P_i = \sigma_{ik} n_k,
 \end{equation}
 %
 where \(n_k\) was the coordinates of the normal to the surface with area \(df_k\).  In matrix form, this is just

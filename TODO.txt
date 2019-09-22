@@ -5,6 +5,8 @@
       subequation
       dmath
 
+   - equation punctuation done to pg 42.
+
    - lots of fixmes and placeholders.
 
    - equation number overlap audit.

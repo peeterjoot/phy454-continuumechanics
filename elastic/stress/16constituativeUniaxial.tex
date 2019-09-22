@@ -18,15 +18,16 @@ Referring to \cref{fig:continuumL3:continuumL3fig4} and expanding out \eqnref{eq
 \sigma_{11} & 0 & 0\\
 0 & 0 & 0 \\
 0 & 0 & 0
-\end{bmatrix}
+\end{bmatrix},
 \end{equation}
 %
+and
 \begin{equation}\label{eqn:16constituativeUniaxial:490}
 \begin{aligned}
 2 \mu e_{11}
 &= \sigma_{11} - \frac{\lambda ( \sigma_{11} + \cancel{\sigma_{22}} ) }{3 \lambda + 2 \mu} \\
 &= \sigma_{11} \frac{3 \lambda + 2 \mu - \lambda }{3 \lambda + 2 \mu} \\
-&= 2 \sigma_{11} \frac{\lambda + \mu }{3 \lambda + 2 \mu}
+&= 2 \sigma_{11} \frac{\lambda + \mu }{3 \lambda + 2 \mu},
 \end{aligned}
 \end{equation}
 %
@@ -34,7 +35,7 @@ or
 %
 \begin{equation}\label{eqn:continuumL5:310}
 %\frac{e_{11}}{\sigma_{11}} = \frac{\lambda + \mu }{\mu(3 \lambda + 2 \mu)}
-\frac{\sigma_{11}}{e_{11}} = \frac{\mu(3 \lambda + 2 \mu)}{\lambda + \mu } = E
+\frac{\sigma_{11}}{e_{11}} = \frac{\mu(3 \lambda + 2 \mu)}{\lambda + \mu } = E,
 \end{equation}
 %
 where \(E\) is Young's modulus.  Young's modulus in the text (5.3) is given in terms of the bulk modulus \(K\).  Using \(\lambda = K - 2\mu/3\) we find
@@ -47,14 +48,15 @@ E
 &=
 \frac{\mu(3 (K - 2\mu/3)+ 2 \mu)}{K - 2\mu/3 + \mu } \\
 &=
-\frac{3 K \mu}{ K + \mu/3 }
+\frac{3 K \mu}{ K + \mu/3 }.
 \end{aligned}
 \end{equation}
+That is
 %
 \boxedEquation{eqn:continuumL5:330}{
 E =
 \frac{\mu(3 \lambda + 2 \mu)}{\lambda + \mu } =
-\frac{9 K \mu}{ 3 K + \mu }
+\frac{9 K \mu}{ 3 K + \mu }.
 }
 %
 \FIXME{random: there is no \cref{fig:continuumL5:continuumL5fig3} reference that I can find?
@@ -75,7 +77,7 @@ Note that we are still talking about uniaxial stress here.  Referring back to \e
 2 \mu e_{2 2}
 &= \sigma_{2 2} - \lambda \frac{\sigma_{k k}}{3 \lambda + 2 \mu} \delta_{2 2} \\
 &= \sigma_{2 2} - \lambda \frac{\sigma_{k k}}{3 \lambda + 2 \mu} \\
-&= - \frac{\lambda \sigma_{11}}{3 \lambda + 2 \mu}
+&= - \frac{\lambda \sigma_{11}}{3 \lambda + 2 \mu}.
 \end{aligned}
 \end{equation}
 %
@@ -90,7 +92,7 @@ Inserting this gives us
 \begin{aligned}
 2 \mu e_{22}
 %&= - \frac{\lambda}{3 \lambda + 2 \mu} \frac{ \sigma_{11}}{e_{11}} e_{11} \\
-= - \frac{\lambda}{\cancel{3 \lambda + 2 \mu}} \frac{ \mu (\cancel{3 \lambda + 2\mu})}{\lambda + \mu} e_{11}
+= - \frac{\lambda}{\cancel{3 \lambda + 2 \mu}} \frac{ \mu (\cancel{3 \lambda + 2\mu})}{\lambda + \mu} e_{11},
 \end{aligned}
 \end{equation}
 %
@@ -108,20 +110,20 @@ We can also relate the Poisson's ratio \(\nu\) to the shear modulus \(\mu\) (see
 \begin{equation}\label{eqn:continuumL5:430}
 % prof had:
 %\mu = \frac{E}{1 + 4 \nu}
-\mu = \frac{E}{2(1 + \nu)}
+\mu = \frac{E}{2(1 + \nu)},
 \end{equation}
 %
 \begin{equation}\label{eqn:continuumL5:450}
 % prof had:
 %\lambda = \frac{2 E \nu}{(1 - 2 \nu)(1 + 4 \mu)}
-\lambda = \frac{E \nu}{(1 - 2 \nu)(1 + \nu)}
+\lambda = \frac{E \nu}{(1 - 2 \nu)(1 + \nu)},
 \end{equation}
 %
 \begin{equation}\label{eqn:continuumL5:470}
 \begin{aligned}
-e_{11} &= \inv{E}\left( \sigma_{11} - \nu(\sigma_{22} + \sigma_{33}) \right) \\
-e_{22} &= \inv{E}\left( \sigma_{22} - \nu(\sigma_{11} + \sigma_{33}) \right) \\
-e_{33} &= \inv{E}\left( \sigma_{33} - \nu(\sigma_{11} + \sigma_{22}) \right)
+e_{11} &= \inv{E}\left( \sigma_{11} - \nu(\sigma_{22} + \sigma_{33}) \right),\\
+e_{22} &= \inv{E}\left( \sigma_{22} - \nu(\sigma_{11} + \sigma_{33}) \right),\\
+e_{33} &= \inv{E}\left( \sigma_{33} - \nu(\sigma_{11} + \sigma_{22}) \right).
 \end{aligned}
 \end{equation}
 %
