@@ -18,16 +18,16 @@ We compute a first order Taylor expansion of this differential, defining a symme
 \begin{equation}\label{eqn:continuumFluidsReview:850}
 e_{ij} = \inv{2} \left(
 \PD{x_j}{u_i} +
-\PD{x_i}{u_j} \right).
+\PD{x_i}{u_j} \right),
 \end{equation}
 \begin{equation}\label{eqn:continuumFluidsReview:870}
 \omega_{ij} = \inv{2} \left(
 \PD{x_j}{u_i}
--\PD{x_i}{u_j} \right)
+-\PD{x_i}{u_j} \right),
 \end{equation}
 \end{subequations}
 %
-Allowing us to write
+allowing us to write
 %
 \begin{equation}\label{eqn:continuumFluidsReview:890}
 dx_i' = dx_i + e_{ij} dx_j \delta t + \omega_{ij} dx_j \delta t.
@@ -124,13 +124,12 @@ Since we treat only incompressible fluids in this course we can decompose this i
 \rho \PD{t}{\Bu} + \rho (\Bu \cdot \spacegrad) \Bu
 = -\spacegrad p
 + \mu \spacegrad^2 \Bu
-+ \rho \Bf.
++ \rho \Bf,
 \end{equation}
 \begin{equation}\label{eqn:continuumFluidsReview:1150}
-\spacegrad \cdot \Bu = 0
+\spacegrad \cdot \Bu = 0.
 \end{equation}
 \end{subequations}
-%
 %
 \subsection{No slip condition.}
 %

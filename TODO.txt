@@ -5,10 +5,6 @@
       subequation
       dmath
 
-   - remove blank lines before and after:
-      subproblem
-      subanswer
-
    - lots of fixmes and placeholders.
 
    - equation number overlap audit.
