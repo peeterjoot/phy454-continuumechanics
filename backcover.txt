@@ -11,4 +11,3 @@ What you will find in this book:
 - My lecture notes.
 - Problem sets and midterm solutions. These have been incorporated into the lecture material as chapter end problems with solutions.
 - Some worked problems attempted for fun or for exam preparation.
-- Links to Mathematica workbooks associated with course content.
