@@ -45,7 +45,10 @@ The Navier-Stokes equation, for an incompressible unidirectional fluid \(\Bu = (
 \end{equation}
 \end{subequations}
 %
-With a steady state assumption we kill the \(\PDi{t}{u}\) term, and \eqnref{eqn:continuumProblemSet2:100} kills of the x-component of the Laplacian and our non-linear inertial term on the LHS, leaving just
+With a steady state assumption we kill the \(\PDi{t}{u}\) term.
+The x-component of the Laplacian and our non-linear inertial term on the LHS
+is killed off with the help of \cref{eqn:continuumProblemSet2:100},
+leaving just
 %
 \begin{subequations}
 \begin{equation}\label{eqn:continuumProblemSet2:40a}
@@ -59,13 +62,13 @@ With a steady state assumption we kill the \(\PDi{t}{u}\) term, and \eqnref{eqn:
 \end{equation}
 \end{subequations}
 %
-With \(\PD{z}{p} = \PD{y}{p} = 0\), we have \(\PD{x}{p} = dp/dx = -G\), so \eqnref{eqn:continuumProblemSet2:40a} is reduced to
+With \(\PD{z}{p} = \PD{y}{p} = 0\), we have \(\PD{x}{p} = dp/dx = -G\), so \cref{eqn:continuumProblemSet2:40a} is reduced to
 %
 \begin{equation}\label{eqn:continuumProblemSet2:40b}
 0 = G + \mu \PDSq{y}{u}.
 \end{equation}
 %
-Finally, since we have an assumption of no z-dependence (\(\PDi{z}{u} = 0\)) and from the incompressibility assumption \eqnref{eqn:continuumProblemSet2:100} (\(\PDi{x}{u} = 0\)), we have
+Finally, since we have an assumption of no z-dependence (\(\PDi{z}{u} = 0\)) and from the incompressibility assumption \cref{eqn:continuumProblemSet2:100} (\(\PDi{x}{u} = 0\)), we have
 %
 \begin{equation}\label{eqn:continuumProblemSet2:140}
 \PDSq{y}{u} = \frac{d^2 u}{dy^2} = -\frac{G}{\mu},
@@ -74,7 +77,7 @@ Finally, since we have an assumption of no z-dependence (\(\PDi{z}{u} = 0\)) and
 as desired.
 %
 \makesubanswer{Velocity profile.}{problem:fluids:bloodVelocityProfile}
-For the velocity profile, integrating \eqnref{eqn:continuumProblemSet2:140} twice, we have
+For the velocity profile, integrating \cref{eqn:continuumProblemSet2:140} twice, we have
 %
 \begin{equation}\label{eqn:continuumProblemSet2:160}
 u = -\frac{G}{2 \mu} y^2 + A y + B.
@@ -318,7 +321,7 @@ B^{(1)} = B^{(2)} &= -\frac{U \mu^{(2)}}{\mu^{(1)} + \mu^{(2)}},
 \end{aligned}
 \end{equation}
 %
-Referring back to \eqnref{eqn:continuumProblemSet2:500} our velocities are
+Referring back to \cref{eqn:continuumProblemSet2:500} our velocities are
 \boxedEquation{eqn:continuumProblemSet2:600}{
 \begin{aligned}
 %u^{(1)} &=
@@ -407,7 +410,7 @@ So our volume flux through a width \(\Delta z\) is
 \end{equation}
 %
 \makesubanswer{Tangential force on lower wall.}{problem:fluids:simpleShearing5}
-We see from \eqnref{eqn:continuumProblemSet2:600} the tangential components of our traction vectors are
+We see from \cref{eqn:continuumProblemSet2:600} the tangential components of our traction vectors are
 %
 \begin{equation}\label{eqn:continuumProblemSet2:1080}
 \begin{aligned}
@@ -436,7 +439,7 @@ F = -\frac{U \mu^{(1)} \mu^{(2)} }{(\mu^{(1)} + \mu^{(2)})} \frac{L}{h}.
 The negative value here makes sense since it is acting to push the fluid backwards in the direction of the upper wall motion.
 %
 \makesubanswer{Tangential force on upper wall.}{problem:fluids:simpleShearing6}
-We note that due to constant nature of the tangential component of the traction vector shown above, the force per unit width of the upper fluid acting on the lower fluid, is also given by \eqnref{eqn:continuumProblemSet2:740}.
+We note that due to constant nature of the tangential component of the traction vector shown above, the force per unit width of the upper fluid acting on the lower fluid, is also given by \cref{eqn:continuumProblemSet2:740}.
 } % end answer
 %
 \makeoproblem{Shearing flow, w/ pressure gradient.}{problem:fluids:simpleShearingPressureGrad}
@@ -447,7 +450,7 @@ Describe qualitatively what type of flow profile you would expect in the steady 
 } % makeoproblem
 %
 \makeanswer{problem:fluids:simpleShearingPressureGrad}{
-We showed earlier that the Navier-Stokes equations for this Q3 case, where \(G\) is non-zero were given by \eqnref{eqn:continuumProblemSet2:400}, which restated is
+We showed earlier that the Navier-Stokes equations for this Q3 case, where \(G\) is non-zero were given by \cref{eqn:continuumProblemSet2:400}, which restated is
 \begin{equation}\label{eqn:continuumProblemSet2:400b}
 0 = G + \mu^{(i)} \frac{d^2 u^{(i)}(y)}{dy^2}.
 \end{equation}

@@ -400,7 +400,7 @@ However, note that \(\spacegrad^2\) is a scalar operator, and this zero identity
 \end{equation}
 \end{subequations}
 %
-Note that we can obtain \eqnref{eqn:inclinedFlowWithoutConstantHeightAssumption:150} much more directly, if we know that is what we want to do.  Just operate on \eqnref{eqn:inclinedFlowWithoutConstantHeightAssumption:5} with the gradient from the left right off the bat.  We find
+Note that we can obtain \cref{eqn:inclinedFlowWithoutConstantHeightAssumption:150} much more directly, if we know that is what we want to do.  Just operate on \cref{eqn:inclinedFlowWithoutConstantHeightAssumption:5} with the gradient from the left right off the bat.  We find
 %
 \begin{equation}\label{eqn:inclinedFlowWithoutConstantHeightAssumption:1020}
 \begin{aligned}
@@ -411,7 +411,7 @@ Note that we can obtain \eqnref{eqn:inclinedFlowWithoutConstantHeightAssumption:
 \end{aligned}
 \end{equation}
 %
-Again, we have a multivector equation scalar and bivector parts, that must separately equal zero.  With the magnitude of the vorticity \(\Theta\)  given by \eqnref{eqn:inclinedFlowWithoutConstantHeightAssumption:90}, we once again obtain \eqnref{eqn:inclinedFlowWithoutConstantHeightAssumption:150}.  This can be done in plain old vector algebra as well by operating on the left not by the gradient, but separately with a divergence and curl operator.
+Again, we have a multivector equation scalar and bivector parts, that must separately equal zero.  With the magnitude of the vorticity \(\Theta\)  given by \cref{eqn:inclinedFlowWithoutConstantHeightAssumption:90}, we once again obtain \cref{eqn:inclinedFlowWithoutConstantHeightAssumption:150}.  This can be done in plain old vector algebra as well by operating on the left not by the gradient, but separately with a divergence and curl operator.
 %
 \subsection{Pressure and vorticity equations with the non-linear term retained.}
 %
@@ -511,7 +511,7 @@ this is
 (\spacegrad u_m) \wedge (\partial_m \Bu) + (\Bu \cdot \spacegrad) \BOmega = \nu \spacegrad^2 \BOmega.
 }
 %
-It is this and \eqnref{eqn:inclinedFlowWithoutConstantHeightAssumption:500} that we really have to solve.  Before moving on, let us write out all the non-boundary condition equations in coordinate form for the 2D case that we are interested in here.  We have
+It is this and \cref{eqn:inclinedFlowWithoutConstantHeightAssumption:500} that we really have to solve.  Before moving on, let us write out all the non-boundary condition equations in coordinate form for the 2D case that we are interested in here.  We have
 %
 \begin{subequations}
 \label{eqn:inclinedFlowWithoutConstantHeightAssumption:599}
@@ -532,7 +532,7 @@ It is this and \eqnref{eqn:inclinedFlowWithoutConstantHeightAssumption:500} that
 \end{equation}
 \end{subequations}
 %
-Our solution has to satisfy these equations, as well as still satisfying the original Navier-Stokes system \eqnref{eqn:inclinedFlowWithoutConstantHeightAssumption:40} that includes our gravitational term, and also has to satisfy both of our boundary value constraints \eqnref{eqn:inclinedFlowWithoutConstantHeightAssumption:220}, \eqnref{eqn:inclinedFlowWithoutConstantHeightAssumption:280}, and have \(u(x, 0) = v(x, 0) = 0\).  Wow, what a mess!  And this is all just the steady state problem.  Imagine adding time into the mix too!
+Our solution has to satisfy these equations, as well as still satisfying the original Navier-Stokes system \cref{eqn:inclinedFlowWithoutConstantHeightAssumption:40} that includes our gravitational term, and also has to satisfy both of our boundary value constraints \cref{eqn:inclinedFlowWithoutConstantHeightAssumption:220}, \cref{eqn:inclinedFlowWithoutConstantHeightAssumption:280}, and have \(u(x, 0) = v(x, 0) = 0\).  Wow, what a mess!  And this is all just the steady state problem.  Imagine adding time into the mix too!
 %
 \subsection{Reworking slightly.}
 %
@@ -546,7 +546,7 @@ In \S 40-2 \citep{feynman1963flp:dryWater}, the identity
 %
 is used to put the vorticity equation into a form with one additional portion expressed as a gradient.  This is a superior way to handle the inertial term because the curl of that gradient is then killed off.
 
-I have expressed the curl as a wedge product, and not a cross product (either works since they related by a constant duality transformation).  With the wedge product the identity \eqnref{eqn:inclinedFlowWithoutConstantHeightAssumption:641} has different signs.  That is
+I have expressed the curl as a wedge product, and not a cross product (either works since they related by a constant duality transformation).  With the wedge product the identity \cref{eqn:inclinedFlowWithoutConstantHeightAssumption:641} has different signs.  That is
 %
 \begin{equation}\label{eqn:inclinedFlowWithoutConstantHeightAssumption:1080}
 \begin{aligned}
@@ -711,7 +711,7 @@ The Navier-Stokes equations are now recast in terms of vorticity as
 \end{equation}
 \end{subequations}
 %
-Having restated things with the \(\spacegrad \Bu^2\) term moved to the RHS, let us also now write out \eqnref{eqn:inclinedFlowWithoutConstantHeightAssumption:760} and \eqnref{eqn:inclinedFlowWithoutConstantHeightAssumption:780} in coordinate form (we want this for the 2D case).  This is
+Having restated things with the \(\spacegrad \Bu^2\) term moved to the RHS, let us also now write out \cref{eqn:inclinedFlowWithoutConstantHeightAssumption:760} and \cref{eqn:inclinedFlowWithoutConstantHeightAssumption:780} in coordinate form (we want this for the 2D case).  This is
 %
 \begin{subequations}
 \begin{equation}\label{eqn:inclinedFlowWithoutConstantHeightAssumption:840}
@@ -792,7 +792,7 @@ Note that since \(\spacegrad^2 \phi\) could equal zero (as in our problem) we wi
 %
 \section{Now what?}
 %
-The strategy that I had thought to attempt to tackle this problem, when I had left it like \eqnref{eqn:inclinedFlowWithoutConstantHeightAssumption:599} was something along the following lines
+The strategy that I had thought to attempt to tackle this problem, when I had left it like \cref{eqn:inclinedFlowWithoutConstantHeightAssumption:599} was something along the following lines
 \begin{itemize}
 \item First ignore the non-linear terms.  Find solutions for the homogeneous vorticity \index{vorticity} and pressure Laplacian equations that satisfy our boundary value conditions, and use that to find a first solution for \(h(x)\).
 \item Use this to solve for \(u\) and \(v\) from the vorticity.

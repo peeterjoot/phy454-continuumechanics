@@ -12,14 +12,16 @@
 %
 Useful in many practice problems are the cylindrical coordinate representation of the strain tensor
 %
-\begin{align}\label{eqn:3cylindrical:210}
+\begin{equation}\label{eqn:3cylindrical:210}
+\begin{aligned}
 2 e_{rr} &= \PD{r}{u_r}  \\
 2 e_{\phi\phi} &= \inv{r} \PD{\phi}{u_\phi} +\inv{r} u_r  \\
 2 e_{zz} &= \PD{z}{u_z}  \\
 2 e_{zr} &= \PD{z}{u_r} + \PD{r}{u_z} \\
 2 e_{r\phi} &= \PD{r}{u_\phi} - \inv{r} u_\phi + \inv{r} \PD{\phi}{u_r} \\
 2 e_{\phi z} &= \PD{z}{u_\phi} +\inv{r} \PD{\phi}{u_z}.
-\end{align}
+\end{aligned}
+\end{equation}
 This result can be found in \citep{landau1960theory}, and is derived in appendix \ref{chap:appendix:strainCoordinates} using the second order methods found above for the Cartesian tensor.
 
 An easier way to do this derivation (and understand what the coordinates represent) follows from the relation found in \S 6 of \citep{acheson1990elementary}
@@ -28,7 +30,87 @@ An easier way to do this derivation (and understand what the coordinates represe
 2 \Be_i e_{ij} \Be_j \cdot \ncap = 2 (\ncap \cdot \spacegrad) \Bu + \ncap \cross (\spacegrad \cross \Bu),
 \end{equation}
 %
-where \(\ncap\) is the normal to the surface at which we are measuring a force applied to the solid (our Cauchy tetrahedron).
+where \(\ncap\) is the normal to the surface at which we are measuring a force applied to the solid (our Cauchy tetrahedron).  We may simply
+substitute \(\ncap = \rcap, \phicap, \zcap\) into \cref{eqn:3cylindrical:230}, to obtain
+\cref{eqn:3cylindrical:210}.
+See \cref{chap:continuumstressTensorVectorForm} for such a derivation.
 
-The cylindrical tensor coordinates of \eqnref{eqn:3cylindrical:210} follow from
-\eqnref{eqn:3cylindrical:230} nicely taking \(\ncap = \rcap, \phicap, \zcap\) in turn.  This derivation can be found in appendix \ref{chap:continuumstressTensorVectorForm}.
+Incidentally, \cref{eqn:3cylindrical:230} may be derived easily
+\begin{equation}\label{eqn:3cylindrical:250}
+\begin{aligned}
+2 \Be_i e_{ij} n_j
+&=
+\Be_i 
+\lr{
+   \partial_i u_j + \partial_j u_i
+}
+n_j \\
+&=
+\spacegrad \lr{ \Bu \cdot \ncap } 
++
+\lr{ \ncap \cdot \spacegrad } \Bu \\
+&=
+2 \lr{ \ncap \cdot \spacegrad } \Bu
++
+\lr{
+   \spacegrad \lr{ \Bu \cdot \ncap } 
+- \lr{ \ncap \cdot \spacegrad } \Bu
+} \\
+&=
+2 \lr{ \ncap \cdot \spacegrad } \Bu
+- \ncap \cdot \lr{ \spacegrad \wedge \Bu }.
+\end{aligned}
+\end{equation}
+
+We can make a pair of duality transformations to convert wedges into cross products.
+\begin{equation}\label{eqn:3cylindrical:270}
+\begin{aligned}
+- \ncap \cdot \lr{ \spacegrad \wedge \Bu }
+&=
+\gpgradeone{
+- \ncap \lr{ \spacegrad \wedge \Bu }
+} \\
+&=
+\gpgradeone{
+- \ncap I \lr{ \spacegrad \cross \Bu }
+} \\
+&=
+-I^2 \ncap \cross \lr{ \spacegrad \cross \Bu } \\
+&=
+\ncap \cross \lr{ \spacegrad \cross \Bu }.
+\end{aligned}
+\end{equation}
+
+We may also pull out a divergence term from \cref{eqn:3cylindrical:230} using the intermediate result from
+\cref{eqn:3cylindrical:250} as a starting point.
+
+\begin{equation}\label{eqn:3cylindrical:290}
+\begin{aligned}
+2 \lr{ \ncap \cdot \spacegrad } \Bu
+- \ncap \cdot \lr{ \spacegrad \wedge \Bu }
+&=
+\gpgradeone{
+   \lr{ \ncap \spacegrad + \spacegrad \ncap } \Bu - \frac{\ncap }{2}\lr{
+      \spacegrad \Bu - \Bu \spacegrad
+   }
+} \\
+&=
+\gpgradeone{
+   \inv{2} \ncap \spacegrad \Bu + \spacegrad \ncap \Bu + \inv{2} \ncap \Bu \spacegrad
+} \\
+&=
+\ncap \lr{ \spacegrad \cdot \Bu } + \gpgradeone{ \spacegrad \ncap \Bu }.
+\end{aligned}
+\end{equation}
+
+This gives us a few different representations for \cref{eqn:3cylindrical:230} that we are free to play with
+
+\begin{equation}\label{eqn:3cylindrical:310}
+\begin{aligned}
+2 \Be_i e_{ij} n_j
+&= \spacegrad \lr{ \ncap \cdot \Bu } + \lr{ \ncap \cdot \spacegrad } \Bu          \\
+&= 2 (\ncap \cdot \spacegrad) \Bu + \ncap \cross (\spacegrad \cross \Bu)          \\
+&= 2 \lr{ \ncap \cdot \spacegrad } \Bu - \ncap \cdot \lr{ \spacegrad \wedge \Bu } \\
+&= \ncap \lr{ \spacegrad \cdot \Bu } + \gpgradeone{ \spacegrad \ncap \Bu }.
+\end{aligned}
+\end{equation}
