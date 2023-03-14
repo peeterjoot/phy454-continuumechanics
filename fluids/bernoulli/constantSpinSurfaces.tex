@@ -77,35 +77,36 @@ Observe that we only arrive at Bernoulli's theorem if the flow is also irrotatio
 In this problem we do not have an irrotational flow, which can be demonstrated by direct calculation.  We have
 %
 %
-\begin{dmath}\label{eqn:constantSpinSurfaces:130}
+\begin{equation}\label{eqn:constantSpinSurfaces:130}
+\begin{aligned}
 \spacegrad \cross \Bu
-=
+&=
 \Omega
 \begin{vmatrix}
 \xcap  & \ycap & \zcap \\
 \partial_x  &\partial_y  & 0 \\
 -y  & x & 0
-\end{vmatrix}
-=
-2 \zcap \Omega
-\ne 0.
-\end{dmath}
+\end{vmatrix} \\
+&= 2 \zcap \Omega \\
+&\ne 0.
+\end{aligned}
+\end{equation}
 %
 In fact we have
 %
 %
-\begin{dmath}\label{eqn:constantSpinSurfaces:150}
+\begin{equation}\label{eqn:constantSpinSurfaces:150}
+\begin{aligned}
 \Bu \cross (\spacegrad \cross \Bu)
-=
-2 \Omega^2
+&= 2 \Omega^2
 \begin{vmatrix}
 \xcap  & \ycap  & \zcap \\
 -y  & x  & 0  \\
 0  & 0  & 1
-\end{vmatrix}
-=
-2 \Omega^2 (\xcap + \ycap).
-\end{dmath}
+\end{vmatrix} \\
+&= 2 \Omega^2 (\xcap + \ycap).
+\end{aligned}
+\end{equation}
 %
 The closest we can get to Bernoulli's theorem for this problem is
 %
@@ -120,35 +121,26 @@ The closest we can get to Bernoulli's theorem for this problem is
 %
 We can say that the directional derivatives in directions perpendicular to \(\xcap + \ycap\) are zero, and that
 %
-\begin{dmath}\label{eqn:constantSpinSurfaces:230}
+\begin{equation}\label{eqn:constantSpinSurfaces:230}
+\begin{aligned}
 2 \Omega^2
-= (\partial_x + \partial_y)
-\left(
-\inv{2} \Bu^2 + \frac{p}{\rho} + g z
-\right)
-= (\partial_x + \partial_y)
-\left(
-\inv{2} \Bu^2 + \frac{p}{\rho}
-\right).
-\end{dmath}
+&= (\partial_x + \partial_y) \lr{ \inv{2} \Bu^2 + \frac{p}{\rho} + g z } \\
+&= (\partial_x + \partial_y) \lr{ \inv{2} \Bu^2 + \frac{p}{\rho} }.
+\end{aligned}
+\end{equation}
 %
 Perhaps those could be used to solve for the surface, but we no longer have something that is obviously integrable.
 
 Because \(\Bu \cdot (\Bu \cross (\spacegrad \cross \Bu)) = 0\), we can also say that
 %
 %
-\begin{dmath}\label{eqn:constantSpinSurfaces:250}
+\begin{equation}\label{eqn:constantSpinSurfaces:250}
+\begin{aligned}
 0
-= \Bu \cdot \spacegrad
-\left(
-\inv{2} \Bu^2 + \frac{p}{\rho} + g z
-\right)
-=
-\Omega ( y \partial_x - x \partial_y )
-\left(
-\inv{2} \Bu^2 + \frac{p}{\rho}
-\right).
-\end{dmath}
+&= \Bu \cdot \spacegrad \lr{ \inv{2} \Bu^2 + \frac{p}{\rho} + g z } \\
+&= \Omega ( y \partial_x - x \partial_y ) \lr{ \inv{2} \Bu^2 + \frac{p}{\rho} }.
+\end{aligned}
+\end{equation}
 %
 Perhaps this could also be used to find the surface?
 
@@ -166,9 +158,9 @@ y &= \rho \sin\theta.
 %
 The velocity field, plotted in \cref{fig:bucketStreamlines:bucketStreamlinesFig1}, is
 %
-\begin{dmath}\label{eqn:constantSpinSurfaces:252}
+\begin{equation}\label{eqn:constantSpinSurfaces:252}
 \Bu = \Omega \rho \lr{ -\sin\theta, \cos\theta, 0}.
-\end{dmath}
+\end{equation}
 %
 \imageFigure{../figures/phy454-continuumechanics/bucketStreamlinesFig1}{Streamlines for the rotating bucket system.}{fig:bucketStreamlines:bucketStreamlinesFig1}{0.3}
 %
@@ -177,38 +169,44 @@ Observe that the cross term \( \Bu \cross \lr{ \spacegrad \cross \Bu} \), are th
 \makesubanswer{Solving Navier-Stokes.}{problem:fluids:constantSpinSurfaces:2}
 Now we want to write down the steady state, incompressible, non-viscous Navier-Stokes equations.  The first of these is trivially satisfied by our assumed solution
 %
-\begin{dmath}\label{eqn:constantSpinSurfaces:270}
+\begin{equation}\label{eqn:constantSpinSurfaces:270}
+\begin{aligned}
 0
-= \spacegrad \cdot \Bu
-= \partial_x (-\Omega y) + \partial_y(\Omega x).
-\end{dmath}
+&= \spacegrad \cdot \Bu \\
+&= \partial_x (-\Omega y) + \partial_y(\Omega x).
+\end{aligned}
+\end{equation}
 %
 For the inertial term we have got
 %
 %
-\begin{dmath}\label{eqn:constantSpinSurfaces:290}
+\begin{equation}\label{eqn:constantSpinSurfaces:290}
+\begin{aligned}
 \Bu \cdot \spacegrad \Bu
-=
-\Omega^2 (-y \partial_x + x \partial_y (-y, x, 0)
-=
-\Omega^2 (-x, -y, 0),
-\end{dmath}
+&= \Omega^2 (-y \partial_x + x \partial_y (-y, x, 0) \\
+&= \Omega^2 (-x, -y, 0),
+\end{aligned}
+\end{equation}
 %
 leaving us with
 %
-\begin{dmath}\label{eqn:constantSpinSurfaces:310}
--\Omega^2 x = -\inv{\rho} \partial_x p
--\Omega^2 y = -\inv{\rho} \partial_y p
-          0 = -\inv{\rho} \partial_z p - g.
-\end{dmath}
+\begin{equation}\label{eqn:constantSpinSurfaces:310}
+\begin{aligned}
+   -\Omega^2 x &= -\inv{\rho} \partial_x p \\
+   -\Omega^2 y &= -\inv{\rho} \partial_y p \\
+             0 &= -\inv{\rho} \partial_z p - g.
+\end{aligned}
+\end{equation}
 %
 Integrating these, we seek simultaneous solutions to
 %
-\begin{dmath}\label{eqn:constantSpinSurfaces:330}
-p = \inv{2} \rho \Omega^2 x^2 + f(y,z)
-p = \inv{2} \rho \Omega^2 y^2 + g(x,z)
-p = h(x, y) - \rho g z.
-\end{dmath}
+\begin{equation}\label{eqn:constantSpinSurfaces:330}
+\begin{aligned}
+   p &= \inv{2} \rho \Omega^2 x^2 + f(y,z) \\
+   p &= \inv{2} \rho \Omega^2 y^2 + g(x,z) \\
+   p &= h(x, y) - \rho g z.
+\end{aligned}
+\end{equation}
 %
 It is clear that one solution would be
 %

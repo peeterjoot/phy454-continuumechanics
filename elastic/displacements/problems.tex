@@ -134,42 +134,48 @@ Reviewing for the final I see that I had answered this wrong, and have corrected
 \makeproblem{Equilibrium.}{problem:elastic:displacements:exampractiseEquilibrium}{
 Suppose that the state of a body is given by
 %
-\begin{dmath}\label{eqn:continuumFluidsReviewXX:3130}
-\sigma_{11} = A x^4 y^3
-\sigma_{22} = 3 B x^2 y^5
-\sigma_{12} = -C x^3 y^4.
-\end{dmath}
+\begin{equation}\label{eqn:continuumFluidsReviewXX:3130}
+\begin{aligned}
+   \sigma_{11} &= A x^4 y^3 \\
+   \sigma_{22} &= 3 B x^2 y^5 \\
+   \sigma_{12} &= -C x^3 y^4.
+\end{aligned}
+\end{equation}
 %
 Determine the constants \(A\), \(B\) and \(C\) so that the body is in equilibrium (2011 Final Exam question II).
 } % makeproblem
 \makeanswer{problem:elastic:displacements:exampractiseEquilibrium}{
 We have
 %
-\begin{dmath}\label{eqn:continuumFluidsReviewXX:3150}
+\begin{equation}\label{eqn:continuumFluidsReviewXX:3150}
+\begin{aligned}
 0
-= \PD{x_j}{\sigma_{1j}}
-=
-\PD{x}{\sigma_{11}} + \PD{y}{\sigma_{12}}
-= 4 A x^3 y^3 - 4 C x^3 y^3,
-\end{dmath}
+&= \PD{x_j}{\sigma_{1j}} \\
+&= \PD{x}{\sigma_{11}} + \PD{y}{\sigma_{12}} \\
+&= 4 A x^3 y^3 - 4 C x^3 y^3,
+\end{aligned}
+\end{equation}
 %
 and
 %
 %
-\begin{dmath}\label{eqn:continuumFluidsReviewXX:3170}
+\begin{equation}\label{eqn:continuumFluidsReviewXX:3170}
+\begin{aligned}
 0
-= \PD{x_j}{\sigma_{2j}}
-=
-\PD{x}{\sigma_{21}} + \PD{y}{\sigma_{22}}
-= -3 C x^2 y^4 + 15 B x^2 y^4.
-\end{dmath}
+&= \PD{x_j}{\sigma_{2j}} \\
+&= \PD{x}{\sigma_{21}} + \PD{y}{\sigma_{22}} \\
+&= -3 C x^2 y^4 + 15 B x^2 y^4.
+\end{aligned}
+\end{equation}
 %
 We must then have
 %
-\begin{dmath}\label{eqn:continuumFluidsReviewXX:3190}
-0 = A - C
-0 = -C + 5 B,
-\end{dmath}
+\begin{equation}\label{eqn:continuumFluidsReviewXX:3190}
+\begin{aligned}
+   0 &= A - C \\
+   0 &= -C + 5 B,
+\end{aligned}
+\end{equation}
 or
 \begin{equation}\label{eqn:continuumFluidsReviewXX:3210}
 A = C

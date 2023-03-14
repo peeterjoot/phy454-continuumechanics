@@ -141,7 +141,7 @@ dz
 Grouping all terms, with all the second order terms neglected, we have
 %
 %
-\begin{dmath}\label{eqn:continuumL2:450}
+\begin{equation}\label{eqn:continuumL2:450}
 (d\Bl')^2 - d\Bx^2
 =
 2 dr dr \PD{r}{u_r}
@@ -150,7 +150,7 @@ Grouping all terms, with all the second order terms neglected, we have
 + 2 dz dr \left( \PD{z}{u_r} + \PD{r}{u_z} \right)
 + 2 dr r d\phi \left( \PD{r}{u_\phi} - \inv{r} u_\phi + \inv{r} \PD{\phi}{u_r} \right)
 + 2 dz r d\phi \left( \PD{z}{u_\phi} +\inv{r} \PD{\phi}{u_z} \right).
-\end{dmath}
+\end{equation}
 %
 From this we can read off the result quoted in the text
 %
@@ -169,7 +169,7 @@ Observe that we have to introduce factors of \(r\) along with all the \(d\phi\)'
 
 Note that in class we retained the second order terms.  That becomes a messier calculation (see \nbref{strainTensorCylindrical.cdf})
 %
-\begin{dmath}\label{eqn:continuumL2:490}
+\begin{equation}\label{eqn:continuumL2:490}
 (d\Bl')^2 - d\Bx^2
 =
 %2 dr^2 \left(
@@ -257,7 +257,7 @@ Note that in class we retained the second order terms.  That becomes a messier c
 +dr d\phi  \left(-2 u_{\phi }-2 u_{\phi } \frac{\partial u_r}{\partial r}+2 \frac{\partial u_r}{\partial \phi }+2 \frac{\partial u_r}{\partial r} \frac{\partial u_r}{\partial \phi }+2 \frac{\partial u_z}{\partial r} \frac{\partial u_z}{\partial \phi }+2 r \frac{\partial u_{\phi }}{\partial r}+2 u_r \frac{\partial u_{\phi }}{\partial r}+2 \frac{\partial u_{\phi }}{\partial r} \frac{\partial u_{\phi }}{\partial \phi }\right)
 +dz d\phi  \left(-2 u_{\phi } \frac{\partial u_r}{\partial z}+2 \frac{\partial u_r}{\partial z} \frac{\partial u_r}{\partial \phi }+2 \frac{\partial u_z}{\partial \phi }+2 \frac{\partial u_z}{\partial z} \frac{\partial u_z}{\partial \phi }+2 r \frac{\partial u_{\phi }}{\partial z}+2 u_r \frac{\partial u_{\phi }}{\partial z}+2 \frac{\partial u_{\phi }}{\partial z} \frac{\partial u_{\phi }}{\partial \phi }\right)
 +dr dz \left(2 \frac{\partial u_r}{\partial z}+2 \frac{\partial u_r}{\partial r} \frac{\partial u_r}{\partial z}+2 \frac{\partial u_z}{\partial r}+2 \frac{\partial u_z}{\partial r} \frac{\partial u_z}{\partial z}+2 \frac{\partial u_{\phi }}{\partial r} \frac{\partial u_{\phi }}{\partial z}\right).
-\end{dmath}
+\end{equation}
 %
 As with the first order case, we can read off the tensor coordinates by inspection (once we factor out the various factors of \(2\) and \(r\)).  The next logical step would be to do the spherical tensor calculation.  That would likely be particularly messy if we attempted it in the brute force fashion.  Let us step back and look at the general case, before tackling there spherical polar form explicitly.
 %
@@ -280,23 +280,26 @@ Our coordinate representation, with summation and dimensionality implied, is
 %
 Our differentials are
 %
-\begin{dmath}\label{eqn:continuumL2:550}
+\begin{equation}\label{eqn:continuumL2:550}
+\begin{aligned}
 d\Bx
-= dx^\mu e_\mu + x^\mu d e_\mu
-= \sum_\alpha d\alpha \left(
+&= dx^\mu e_\mu + x^\mu d e_\mu \\
+&= \sum_\alpha d\alpha \left(
 \PD{\alpha}{x^\mu} e_\mu
 +
 x^\mu
 \PD{\alpha}{e_\mu}
 \right),
-\end{dmath}
+\end{aligned}
+\end{equation}
 %
 and
 %
-\begin{dmath}\label{eqn:continuumL2:570}
+\begin{equation}\label{eqn:continuumL2:570}
+\begin{aligned}
 d\Bu
-= du^\mu e_\mu + u^\mu d e_\mu
-=
+&= du^\mu e_\mu + u^\mu d e_\mu \\
+&=
 \sum_\alpha
 d\alpha \left(
 \PD{\alpha}{u^\mu} e_\mu
@@ -304,7 +307,8 @@ d\alpha \left(
 u^\mu
 \PD{\alpha}{e_\mu}
 \right).
-\end{dmath}
+\end{aligned}
+\end{equation}
 %
 Summing these we have
 %
@@ -374,9 +378,10 @@ e_\mu \cdot
 %
 and
 %
-\begin{dmath*}
+\begin{equation*}
+\begin{aligned}
 (d\Bu + d\Bx)^2
-=
+&=
 \sum_{\alpha, \beta}
 d\alpha
 d\beta
@@ -410,8 +415,8 @@ d\beta
       u_\nu
    \right)
    \PD{\beta}{e^\nu}
-\right)
-=
+\right) \\
+&=
 \sum_{\alpha, \beta}
 d\alpha
 d\beta
@@ -455,11 +460,12 @@ d\beta
          \PD{\beta}{u_\nu}
       \right)
    \right).
-\end{dmath*}
+\end{aligned}
+\end{equation*}
 %
 Taking the difference we find
 %
-\begin{dmath}\label{eqn:continuumL2:610}
+\begin{equation}\label{eqn:continuumL2:610}
 (d\Bu + d\Bx)^2 - d\Bx^2
 =
 \sum_{\alpha, \beta}
@@ -498,12 +504,12 @@ u_\nu
 e_\mu \cdot
 \PD{\beta}{e^\nu}
 \right).
-\end{dmath}
+\end{equation}
 %
 To evaluate this, it is useful, albeit messier, to group terms a bit
 %
 %
-\begin{dmath}\label{eqn:continuumL2:610b}
+\begin{equation}\label{eqn:continuumL2:610b}
 (d\Bu + d\Bx)^2 - d\Bx^2
 =
 \sum_{\alpha}
@@ -605,7 +611,7 @@ u_\nu
 e_\mu \cdot
 \PD{\alpha}{e^\nu}
 \right).
-\end{dmath}
+\end{equation}
 %
 Here \(\alpha < \beta\) is used to denote summation over the pairs \(\alpha \ne \beta\) just once, not necessarily any numeric ordering.  For example with \(\alpha, \beta \in \{r, \phi, z\}\), this could be the set \(\{\alpha, \beta\} \in \{r \phi, \phi z, z r\}\).
 %
@@ -684,7 +690,7 @@ we have for all the \(x^\mu\) partials
 We are now set to evaluate the terms in the sum of \cref{eqn:continuumL2:610b} for the cylindrical coordinate system and should not need Mathematica to do it.  Let us do this one at a time, starting with all the squared differential pairs.  Those are, for \(\alpha \in \{r, \phi, z\}\) the value of
 %
 %
-\begin{dmath}\label{eqn:continuumL2:730}
+\begin{equation}\label{eqn:continuumL2:730}
 2 d\alpha d\alpha
 \left(
 \inv{2}
@@ -719,7 +725,7 @@ u_n
 e_m \cdot
 \PD{\alpha}{e_n}
 \right).
-\end{dmath}
+\end{equation}
 %
 For both \(r\) and \(z\) all our unit vectors have zero derivatives so we are left respectively with
 %
@@ -749,7 +755,7 @@ and
 %
 For the \(\alpha = \phi\) term we have
 %
-\begin{dmath*}
+\begin{equation*}
 2 d\phi d\phi
 \left(
 \inv{2}
@@ -796,7 +802,7 @@ r
 u_r
 )
 \right).
-\end{dmath*}
+\end{equation*}
 %
 Now, on to the mixed terms.  The easiest is the \(dz dr\) term, for which all the unit vector derivatives are zero, and we are left with just
 %
@@ -827,7 +833,7 @@ Now, on to the mixed terms.  The easiest is the \(dz dr\) term, for which all th
 \end{equation}
 Now we have the two messy mixed terms.  For the \(r\), \(\phi\) term we get
 %
-\begin{dmath*}
+\begin{equation*}
 2 dr
 d\phi
 \left(
@@ -949,12 +955,12 @@ r
 u_r
 )
 \right).
-\end{dmath*}
+\end{equation*}
 %
 Finally for the \(z\), \(\phi\) term we have
 %
 %
-\begin{dmath*}
+\begin{equation*}
 2 dz
 d\phi
 \left(
@@ -1054,42 +1060,26 @@ r
 u_r
 )
 \right).
-\end{dmath*}
+\end{equation*}
 %
 To summarize we have, including both first and second order terms,
 %
-\begin{dmath}\label{eqn:continuumL2:790}
+\begin{equation}\label{eqn:continuumL2:790}
 {d\Bl'}^2 - d\Bx^2
 =
 2 dr dr
-\left(
-\inv{2}
-\PD{r}{u_m}
-\PD{r}{u_m}
-+
-\PD{r}{u_r}
-\right)
+\lr{
+\inv{2} \PD{r}{u_m} \PD{r}{u_m} + \PD{r}{u_r}
+}
 +
 2 r^2 d\phi d\phi
-\left(
-\inv{2 r^2}
-\PD{\phi}{u_m}
-\PD{\phi}{u_m}
-+
-\inv{2 r^2} \left( u_r^2 + u_\phi^2 \right)
-+ \frac{u_r}{r}
--
-\inv{r}
-\PD{\phi}{u_r}
-\frac{u_\phi}{r}
-+
-\inv{r}
-\PD{\phi}{u_\phi}\left(
-1
-+
-\frac{u_r}{r}
-\right)
-\right)
+\lr{
+   \inv{2 r^2} \PD{\phi}{u_m} \PD{\phi}{u_m}
+   + \inv{2 r^2} \lr{ u_r^2 + u_\phi^2 }
+   + \frac{u_r}{r}
+   - \inv{r} \PD{\phi}{u_r} \frac{u_\phi}{r}
+   + \inv{r} \PD{\phi}{u_\phi}\lr{ 1 + \frac{u_r}{r} }
+}
 +
 2 dz dz
 \left(
@@ -1146,7 +1136,7 @@ To summarize we have, including both first and second order terms,
 +
 \PD{r}{u_z}
 \right).
-\end{dmath}
+\end{equation}
 %
 Factors of \(r\) have been pulled out so that the portions remaining in the braces are exactly the cylindrical tensor elements as given in the text (except also with the second order terms here).  Observe that the pre-calculation of the general formula has allowed an on paper expansion of the cylindrical tensor without too much pain, and this time without requiring Mathematica.
 %
@@ -1193,7 +1183,7 @@ and find
 %
 Brute forcing the differential strain element calculation (\nbref{strainTensorSphericalColumnVectors.cdf}, we find
 %
-\begin{dmath}\label{eqn:continuumL2:890}
+\begin{equation}\label{eqn:continuumL2:890}
 d{\Bl'}^2 - d\Bx^2
 =
 %(dr)^2 \left(
@@ -1255,7 +1245,7 @@ d{\Bl'}^2 - d\Bx^2
 + \inv{r } \frac{\partial u_{\phi }}{\partial r} \left( u_{\theta } \cot\theta + r + u_r \right)
 + \inv{r \sin\theta} \frac{\partial u_m}{\partial \phi } \frac{\partial u_m}{\partial r}
 \right).
-\end{dmath}
+\end{equation}
 %
 \section{Spherical tensor.  Manual derivation.}
 %
@@ -1519,13 +1509,13 @@ du_r \rcap + du_\theta \thetacap + du_\phi \phicap
 %
 We can add \(d\Bx\) to this and take differences
 %
-\begin{dmath}\label{eqn:continuumL2:1110}
+\begin{equation}\label{eqn:continuumL2:1110}
 (d\Bu + d\Bx)^2 - d\Bx^2
 =
 \left( du_r - u_\theta d\theta - u_\phi \sin\theta d\phi + dr \right)^2
 +\left( du_\theta + u_r d\theta - u_\phi \cos\theta d\phi + r d\theta \right)^2
 +\left( du_\phi + u_r \sin\theta d\phi + u_\theta \cos\theta d\phi + r \sin\theta d\phi \right)^2.
-\end{dmath}
+\end{equation}
 %
 For each \(m = r,\theta,\phi\) we have
 %
@@ -1572,7 +1562,7 @@ r \sin\theta d\phi
 %
 Collecting terms we have the result of the text in the braces
 %
-\begin{dmath}\label{eqn:continuumL2:1150}
+\begin{equation}\label{eqn:continuumL2:1150}
 \left((d\Bu + d\Bx)^2 - d\Bx^2\right)
 =
 2 dr^2 \left(
@@ -1600,6 +1590,6 @@ Collecting terms we have the result of the text in the braces
 +2 r \sin\theta d\phi dr \left(
 \inv{r \sin\theta} \PD{\phi}{u_r} - \inv{r} u_\phi + \PD{r}{u_\phi}
 \right).
-\end{dmath}
+\end{equation}
 %
 It should be possible to do the calculation to second order too, but to include all the quadratic terms in \(u_m\) is again really messy.  Trying that with Mathematica (\nbref{strainTensorSpherical.cdf}) gives the same results as above using the strictly coordinate algebra approach.

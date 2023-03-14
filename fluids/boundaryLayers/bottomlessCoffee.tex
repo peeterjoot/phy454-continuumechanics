@@ -57,13 +57,13 @@ Good.  Now let us express each of the terms of Navier-Stokes in cylindrical form
 Our inertial term is
 %
 %
-\begin{dmath}\label{eqn:bottomlessCoffee:70}
+\begin{equation}\label{eqn:bottomlessCoffee:70}
+\begin{aligned}
 \rho (\Bu \cdot \spacegrad) \Bu
-=
-\frac{\rho u}{r} \partial_\phi (u \phicap)
-=
-\frac{\rho u^2}{r} (-\rcap).
-\end{dmath}
+&= \frac{\rho u}{r} \partial_\phi (u \phicap) \\
+&= \frac{\rho u^2}{r} (-\rcap).
+\end{aligned}
+\end{equation}
 %
 Our pressure term is
 %
@@ -76,18 +76,13 @@ Our pressure term is
 and our Laplacian term is
 %
 %
-\begin{dmath}\label{eqn:bottomlessCoffee:110}
+\begin{equation}\label{eqn:bottomlessCoffee:110}
+\begin{aligned}
 \mu \spacegrad^2 \Bu
-=
-\mu \left(
-\inv{r} \partial_r ( r \partial_r) + \inv{r^2} \partial_{\phi\phi} + \partial_{z z}
-\right)
-u(r) \phicap
-=
-\mu \left(
-\frac{\phicap}{r} \partial_r ( r \partial_r u) + \frac{-\rcap u}{r^2}
-\right).
-\end{dmath}
+&= \mu \lr{ \inv{r} \partial_r ( r \partial_r) + \inv{r^2} \partial_{\phi\phi} + \partial_{z z} } u(r) \phicap \\
+&= \mu \lr{ \frac{\phicap}{r} \partial_r ( r \partial_r u) + \frac{-\rcap u}{r^2} }.
+\end{aligned}
+\end{equation}
 %
 Putting things together, we find that Navier-Stokes takes the form
 %
