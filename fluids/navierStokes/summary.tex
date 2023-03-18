@@ -110,11 +110,13 @@ Note that unlike our momentum conservation equation in elasticity \cref{eqn:cont
 Utilizing the constitutive relation and explicitly evaluating the stress tensor divergence \(\PDi{x_j}{\sigma_{ij}}\) we find
 %
 \begin{equation}\label{eqn:continuumFluidsReview:1110}
+\begin{aligned}
 \rho \frac{d\Bu}{dt}
-=
-\rho \PD{t}{\Bu} + \rho (\Bu \cdot \spacegrad) \Bu
-= -\spacegrad p + \mu \spacegrad^2 \Bu
+&=
+\rho \PD{t}{\Bu} + \rho (\Bu \cdot \spacegrad) \Bu \\
+&= -\spacegrad p + \mu \spacegrad^2 \Bu
 + \mu \spacegrad (\spacegrad \cdot \Bu) + \rho \Bf.
+\end{aligned}
 \end{equation}
 %
 Since we treat only incompressible fluids in this course we can decompose this into a pair of equations
