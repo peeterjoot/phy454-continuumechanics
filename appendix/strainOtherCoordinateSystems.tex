@@ -142,14 +142,16 @@ Grouping all terms, with all the second order terms neglected, we have
 %
 %
 \begin{equation}\label{eqn:continuumL2:450}
+\begin{aligned}
 (d\Bl')^2 - d\Bx^2
-=
+&=
 2 dr dr \PD{r}{u_r}
-+ 2 r^2 d\phi d\phi \left( \inv{r} \PD{\phi}{u_\phi} +\inv{r} u_r \right)
-+ 2 dz dz \PD{z}{u_z}
-+ 2 dz dr \left( \PD{z}{u_r} + \PD{r}{u_z} \right)
-+ 2 dr r d\phi \left( \PD{r}{u_\phi} - \inv{r} u_\phi + \inv{r} \PD{\phi}{u_r} \right)
-+ 2 dz r d\phi \left( \PD{z}{u_\phi} +\inv{r} \PD{\phi}{u_z} \right).
++ 2 r^2 d\phi d\phi \lr{ \inv{r} \PD{\phi}{u_\phi} +\inv{r} u_r }
++ 2 dz dz \PD{z}{u_z} \\
+&\quad + 2 dz dr \lr{ \PD{z}{u_r} + \PD{r}{u_z} }
++ 2 dr r d\phi \lr{ \PD{r}{u_\phi} - \inv{r} u_\phi + \inv{r} \PD{\phi}{u_r} } \\
+&\quad + 2 dz r d\phi \lr{ \PD{z}{u_\phi} +\inv{r} \PD{\phi}{u_z} }.
+\end{aligned}
 \end{equation}
 %
 From this we can read off the result quoted in the text
@@ -170,8 +172,9 @@ Observe that we have to introduce factors of \(r\) along with all the \(d\phi\)'
 Note that in class we retained the second order terms.  That becomes a messier calculation (see \nbref{strainTensorCylindrical.cdf})
 %
 \begin{equation}\label{eqn:continuumL2:490}
-(d\Bl')^2 - d\Bx^2
-=
+\begin{aligned}
+&(d\Bl')^2 - d\Bx^2 \\
+&=
 %2 dr^2 \left(
 %\PD{r}{u_r}
 %+ \inv{2} \left(
@@ -251,12 +254,35 @@ Note that in class we retained the second order terms.  That becomes a messier c
 %- \inv{r} \PD{z}{u_r} u_\phi
 %+ \inv{r} \PD{z}{u_\phi} u_r
 %\right)
-(dr)^2 \left(2 \frac{\partial u_r}{\partial r}+\left(\frac{\partial u_r}{\partial r}\right)^2+\left(\frac{\partial u_z}{\partial r}\right)^2+\left(\frac{\partial u_{\phi }}{\partial r}\right)^2\right)
-+(d\phi )^2 \left(2 r u_r+u_r^2+u_{\phi }^2-2 u_{\phi } \frac{\partial u_r}{\partial \phi }+\left(\frac{\partial u_r}{\partial \phi }\right)^2+\left(\frac{\partial u_z}{\partial \phi }\right)^2+2 r \frac{\partial u_{\phi }}{\partial \phi }+2 u_r \frac{\partial u_{\phi }}{\partial \phi }+\left(\frac{\partial u_{\phi }}{\partial \phi }\right)^2\right)
-+(dz)^2 \left(\left(\frac{\partial u_r}{\partial z}\right)^2+2 \frac{\partial u_z}{\partial z}+\left(\frac{\partial u_z}{\partial z}\right)^2+\left(\frac{\partial u_{\phi }}{\partial z}\right)^2\right)
-+dr d\phi  \left(-2 u_{\phi }-2 u_{\phi } \frac{\partial u_r}{\partial r}+2 \frac{\partial u_r}{\partial \phi }+2 \frac{\partial u_r}{\partial r} \frac{\partial u_r}{\partial \phi }+2 \frac{\partial u_z}{\partial r} \frac{\partial u_z}{\partial \phi }+2 r \frac{\partial u_{\phi }}{\partial r}+2 u_r \frac{\partial u_{\phi }}{\partial r}+2 \frac{\partial u_{\phi }}{\partial r} \frac{\partial u_{\phi }}{\partial \phi }\right)
-+dz d\phi  \left(-2 u_{\phi } \frac{\partial u_r}{\partial z}+2 \frac{\partial u_r}{\partial z} \frac{\partial u_r}{\partial \phi }+2 \frac{\partial u_z}{\partial \phi }+2 \frac{\partial u_z}{\partial z} \frac{\partial u_z}{\partial \phi }+2 r \frac{\partial u_{\phi }}{\partial z}+2 u_r \frac{\partial u_{\phi }}{\partial z}+2 \frac{\partial u_{\phi }}{\partial z} \frac{\partial u_{\phi }}{\partial \phi }\right)
-+dr dz \left(2 \frac{\partial u_r}{\partial z}+2 \frac{\partial u_r}{\partial r} \frac{\partial u_r}{\partial z}+2 \frac{\partial u_z}{\partial r}+2 \frac{\partial u_z}{\partial r} \frac{\partial u_z}{\partial z}+2 \frac{\partial u_{\phi }}{\partial r} \frac{\partial u_{\phi }}{\partial z}\right).
+(dr)^2 
+\lr{
+2 \frac{\partial u_r}{\partial r}+\left(\frac{\partial u_r}{\partial r}\right)^2+\left(\frac{\partial u_z}{\partial r}\right)^2+\left(\frac{\partial u_{\phi }}{\partial r}\right)^2
+} \\
+&\quad+(d\phi )^2 
+\Biglr{
+2 r u_r+u_r^2+u_{\phi }^2-2 u_{\phi } \frac{\partial u_r}{\partial \phi } \\
+&\qquad+\left(\frac{\partial u_r}{\partial \phi }\right)^2+\left(\frac{\partial u_z}{\partial \phi }\right)^2+2 r \frac{\partial u_{\phi }}{\partial \phi }+2 u_r \frac{\partial u_{\phi }}{\partial \phi }+\left(\frac{\partial u_{\phi }}{\partial \phi }\right)^2
+} \\
+&\quad+(dz)^2 
+\lr{
+\left(\frac{\partial u_r}{\partial z}\right)^2+2 \frac{\partial u_z}{\partial z}+\left(\frac{\partial u_z}{\partial z}\right)^2+\left(\frac{\partial u_{\phi }}{\partial z}\right)^2
+} \\
+&\quad+dr d\phi  
+\Biglr{
+-2 u_{\phi }-2 u_{\phi } \frac{\partial u_r}{\partial r}+2 \frac{\partial u_r}{\partial \phi }+2 \frac{\partial u_r}{\partial r} \frac{\partial u_r}{\partial \phi }+2 \frac{\partial u_z}{\partial r} \frac{\partial u_z}{\partial \phi } \\
+&\qquad +2 r \frac{\partial u_{\phi }}{\partial r}+2 u_r \frac{\partial u_{\phi }}{\partial r}+2 \frac{\partial u_{\phi }}{\partial r} \frac{\partial u_{\phi }}{\partial \phi }
+} \\
+&\quad+dz d\phi  
+\Biglr{
+-2 u_{\phi } \frac{\partial u_r}{\partial z}+2 \frac{\partial u_r}{\partial z} \frac{\partial u_r}{\partial \phi }+2 \frac{\partial u_z}{\partial \phi }+2 \frac{\partial u_z}{\partial z} \frac{\partial u_z}{\partial \phi } +2 r \frac{\partial u_{\phi }}{\partial z} \\
+&\qquad +2 u_r \frac{\partial u_{\phi }}{\partial z}+2 \frac{\partial u_{\phi }}{\partial z} \frac{\partial u_{\phi }}{\partial \phi }
+} \\
+&\quad+dr dz 
+\lr{
+2 \frac{\partial u_r}{\partial z}+2 \frac{\partial u_r}{\partial r} \frac{\partial u_r}{\partial z}+2 \frac{\partial u_z}{\partial r}+2 \frac{\partial u_z}{\partial r} \frac{\partial u_z}{\partial z}+2 \frac{\partial u_{\phi }}{\partial r} \frac{\partial u_{\phi }}{\partial z}
+}
+.
+\end{aligned}
 \end{equation}
 %
 As with the first order case, we can read off the tensor coordinates by inspection (once we factor out the various factors of \(2\) and \(r\)).  The next logical step would be to do the spherical tensor calculation.  That would likely be particularly messy if we attempted it in the brute force fashion.  Let us step back and look at the general case, before tackling there spherical polar form explicitly.
@@ -380,237 +406,123 @@ and
 %
 \begin{equation*}
 \begin{aligned}
-(d\Bu + d\Bx)^2
+&(d\Bu + d\Bx)^2 \\
 &=
 \sum_{\alpha, \beta}
 d\alpha
 d\beta
-\left(
-   \left(
-      \PD{\alpha}{x^\mu}
-      +
-      \PD{\alpha}{u^\mu}
-   \right)
-   e_\mu
+\lr{
+   \lr{ \PD{\alpha}{x^\mu} + \PD{\alpha}{u^\mu} } e_\mu
    +
-   \left(
-      x^\mu
-      +
-      u^\mu
-   \right)
-   \PD{\alpha}{e_\mu}
-\right)
-\cdot
-\left(
-   \left(
-      \PD{\beta}{x_\nu}
-      +
-      \PD{\beta}{u_\nu}
-   \right)
-   e^\nu
+   \lr{ x^\mu + u^\mu } \PD{\alpha}{e_\mu}
+} \cdot \\
+&\qquad 
+\lr{
+   \lr{ \PD{\beta}{x_\nu} + \PD{\beta}{u_\nu} } e^\nu
    +
-   \left(
-      x_\nu
-      +
-      u_\nu
-   \right)
-   \PD{\beta}{e^\nu}
-\right) \\
+   \lr{ x_\nu + u_\nu } \PD{\beta}{e^\nu}
+} \\
 &=
 \sum_{\alpha, \beta}
 d\alpha
 d\beta
-\left(
-   \left(
-      \PD{\alpha}{x^\mu}
-      +
-      \PD{\alpha}{u^\mu}
-   \right)
-   \left(
-      \PD{\beta}{x_\mu}
-      +
-      \PD{\beta}{u_\mu}
-   \right)
+\Biglr{
+   \lr{ \PD{\alpha}{x^\mu} + \PD{\alpha}{u^\mu} } \lr{ \PD{\beta}{x_\mu} + \PD{\beta}{u_\mu} }
    +
-   \left(
-      x^\mu
-      +
-      u^\mu
-   \right)
-   \left(
-      x_\nu
-      +
-      u_\nu
-   \right)
-   \PD{\alpha}{e_\mu}
+   \lr{ x^\mu + u^\mu } \lr{ x_\nu + u_\nu } \PD{\alpha}{e_\mu}
    \cdot
-   \PD{\beta}{e^\nu}
-   +
-   2 \left(
-         x^\mu
-         +
-         u^\mu
-     \right)
-   e^\nu
+   \PD{\beta}{e^\nu} \\
+   &\quad+
+   2 \lr{ x^\mu + u^\mu } e^\nu
    \cdot
    \PD{\alpha}{e_\mu}
-      \left(
-         \PD{\beta}{x_\nu}
-         +
-         \PD{\beta}{u_\nu}
-      \right)
-   \right).
+      \lr{ \PD{\beta}{x_\nu} + \PD{\beta}{u_\nu} }
+}.
 \end{aligned}
 \end{equation*}
 %
 Taking the difference we find
 %
 \begin{equation}\label{eqn:continuumL2:610}
-(d\Bu + d\Bx)^2 - d\Bx^2
-=
+\begin{aligned}
+&(d\Bu + d\Bx)^2 - d\Bx^2 \\
+&=
 \sum_{\alpha, \beta}
 d\alpha
 d\beta
-\left(
-\PD{\alpha}{u^\mu}
-\PD{\beta}{u_\mu}
-+
-2
-\PD{\alpha}{u^\mu}
-\PD{\beta}{x_\mu}
-+
-\left(
-u^\mu u_\nu
-+
-x^\mu u_\nu
-+
-u^\mu x_\nu
-\right)
-\PD{\alpha}{e_\mu}
-\cdot
-\PD{\beta}{e^\nu}
-+
-2
-\left(
-\PD{\alpha}{x^\mu}
-u_\nu
-+
-\PD{\alpha}{u^\mu}(
-x_\nu
-+
-u_\nu
-)
-\right)
-e_\mu \cdot
-\PD{\beta}{e^\nu}
-\right).
+\Biglr{
+  \PD{\alpha}{u^\mu} \PD{\beta}{u_\mu}
+  +
+  2 \PD{\alpha}{u^\mu} \PD{\beta}{x_\mu}
+  +
+  \lr{ u^\mu u_\nu + x^\mu u_\nu + u^\mu x_\nu } \PD{\alpha}{e_\mu}
+  \cdot
+  \PD{\beta}{e^\nu} \\
+  &\quad+
+  2
+  \lr{ \PD{\alpha}{x^\mu} u_\nu + \PD{\alpha}{u^\mu}( x_\nu + u_\nu) }
+  e_\mu \cdot
+  \PD{\beta}{e^\nu}
+}
+.
+\end{aligned}
 \end{equation}
 %
 To evaluate this, it is useful, albeit messier, to group terms a bit
 %
 %
 \begin{equation}\label{eqn:continuumL2:610b}
-(d\Bu + d\Bx)^2 - d\Bx^2
-=
+\begin{aligned}
+&(d\Bu + d\Bx)^2 - d\Bx^2 \\
+&=
 \sum_{\alpha}
 2 d\alpha
 d\alpha
-\left(
-\inv{2}
-\PD{\alpha}{u^\mu}
-\PD{\alpha}{u_\mu}
-+
-\PD{\alpha}{u^\mu}
-\PD{\alpha}{x_\mu}
-+
-\inv{2}
-\left(
-u^\mu u_\nu
-+
-x^\mu u_\nu
-+
-u^\mu x_\nu
-\right)
-\PD{\alpha}{e_\mu}
-\cdot
-\PD{\alpha}{e^\nu}
-+
-\left(
-\PD{\alpha}{x^\mu}
-u_\nu
-+
-\PD{\alpha}{u^\mu}(
-x_\nu
-+
-u_\nu
-)
-\right)
-e_\mu \cdot
-\PD{\alpha}{e^\nu}
-\right)
-+
+\Biglr{
+  \inv{2} \PD{\alpha}{u^\mu} \PD{\alpha}{u_\mu}
+  +
+  \PD{\alpha}{u^\mu} \PD{\alpha}{x_\mu}
+  +
+  \inv{2} \lr{ u^\mu u_\nu + x^\mu u_\nu + u^\mu x_\nu } \PD{\alpha}{e_\mu}
+  \cdot
+  \PD{\alpha}{e^\nu} \\
+  &\qquad+
+  \lr{ \PD{\alpha}{x^\mu} u_\nu + \PD{\alpha}{u^\mu}( x_\nu + u_\nu) } e_\mu \cdot \PD{\alpha}{e^\nu}
+} \\
+&\quad+
 \sum_{\alpha < \beta}
 2 d\alpha
 d\beta
-\left(
-\PD{\alpha}{u^\mu}
-\PD{\beta}{u_\mu}
-+
-\PD{\alpha}{u^\mu}
-\PD{\beta}{x_\mu}
-+
-\PD{\beta}{u^\mu}
-\PD{\alpha}{x_\mu}
-+
-\inv{2}
-\left(
-u^\mu u_\nu
-+
-x^\mu u_\nu
-+
-u^\mu x_\nu
-\right)
-\left(
-\PD{\alpha}{e_\mu}
-\cdot
-\PD{\beta}{e^\nu}
-+
-\PD{\beta}{e_\mu}
-\cdot
-\PD{\alpha}{e^\nu}
-\right)
-\right)
-+
+\Biglr{
+  \PD{\alpha}{u^\mu} \PD{\beta}{u_\mu}
+  +
+  \PD{\alpha}{u^\mu} \PD{\beta}{x_\mu}
+  +
+  \PD{\beta}{u^\mu} \PD{\alpha}{x_\mu} \\
+  &\quad+
+  \inv{2}
+  \lr{ u^\mu u_\nu + x^\mu u_\nu + u^\mu x_\nu }
+  \lr{
+  \PD{\alpha}{e_\mu} \cdot \PD{\beta}{e^\nu} + \PD{\beta}{e_\mu} \cdot \PD{\alpha}{e^\nu}
+  }
+} \\
+&\quad+
 \sum_{\alpha < \beta}
 2 d\alpha
 d\beta
-\left(
-\left(
-\PD{\alpha}{x^\mu}
-u_\nu
-+
-\PD{\alpha}{u^\mu}(
-x_\nu
-+
-u_\nu
-)
-\right)
-e_\mu \cdot
-\PD{\beta}{e^\nu}
-+
-\left(
-\PD{\beta}{x^\mu}
-u_\nu
-+
-\PD{\beta}{u^\mu}(
-x_\nu
-+
-u_\nu
-)
-\right)
-e_\mu \cdot
-\PD{\alpha}{e^\nu}
-\right).
+\Biglr{
+  \lr{
+  \PD{\alpha}{x^\mu} u_\nu + \PD{\alpha}{u^\mu}( x_\nu + u_\nu)
+  }
+  e_\mu \cdot
+  \PD{\beta}{e^\nu} \\
+  &\quad+
+  \lr{ \PD{\beta}{x^\mu} u_\nu + \PD{\beta}{u^\mu}( x_\nu + u_\nu) }
+  e_\mu \cdot
+  \PD{\alpha}{e^\nu}
+}
+.
+\end{aligned}
 \end{equation}
 %
 Here \(\alpha < \beta\) is used to denote summation over the pairs \(\alpha \ne \beta\) just once, not necessarily any numeric ordering.  For example with \(\alpha, \beta \in \{r, \phi, z\}\), this could be the set \(\{\alpha, \beta\} \in \{r \phi, \phi z, z r\}\).
@@ -691,40 +603,24 @@ We are now set to evaluate the terms in the sum of \cref{eqn:continuumL2:610b} f
 %
 %
 \begin{equation}\label{eqn:continuumL2:730}
+\begin{aligned}
 2 d\alpha d\alpha
-\left(
-\inv{2}
-\PD{\alpha}{u_m}
-\PD{\alpha}{u_m}
-+
-\PD{\alpha}{u_m}
-\PD{\alpha}{x_m}
-+
-\inv{2}
-\left(
-u_m u_n
-+
-x_m u_n
-+
-u_m x_n
-\right)
-\PD{\alpha}{e_m}
-\cdot
-\PD{\alpha}{e_n}
-+
-\left(
-\PD{\alpha}{x_m}
-u_n
-+
-\PD{\alpha}{u_m}(
-x_n
-+
-u_n
-)
-\right)
-e_m \cdot
-\PD{\alpha}{e_n}
-\right).
+\Biglr{
+  &\inv{2} \PD{\alpha}{u_m} \PD{\alpha}{u_m}
+  +
+  \PD{\alpha}{u_m} \PD{\alpha}{x_m} \\
+  &\quad+
+  \inv{2} \lr{ u_m u_n + x_m u_n + u_m x_n }
+  \PD{\alpha}{e_m}
+  \cdot
+  \PD{\alpha}{e_n} \\
+  &\quad+
+  \lr{ \PD{\alpha}{x_m} u_n + \PD{\alpha}{u_m}( x_n + u_n) }
+  e_m \cdot
+  \PD{\alpha}{e_n}
+}
+.
+\end{aligned}
 \end{equation}
 %
 For both \(r\) and \(z\) all our unit vectors have zero derivatives so we are left respectively with
@@ -756,52 +652,31 @@ and
 For the \(\alpha = \phi\) term we have
 %
 \begin{equation*}
+\begin{aligned}
+&2 d\phi d\phi
+\Biglr{
+  \inv{2} \PD{\phi}{u_m} \PD{\phi}{u_m}
+  +
+  \inv{2}
+  \sum_{m = r, \phi}
+  \lr{ u_m u_m + 2 x_m u_m } \\
+  &\quad+
+  \sum_{m n \in \{r \phi, \phi r\}}
+  \lr{ \PD{\phi}{x_m} u_n + \PD{\phi}{u_m}( x_n + u_n) }
+  e_m \cdot
+  \PD{\phi}{e_n}
+} \\
+&=
 2 d\phi d\phi
-\left(
-\inv{2}
-\PD{\phi}{u_m}
-\PD{\phi}{u_m}
-+
-\inv{2}
-\sum_{m = r, \phi}
-\left(
-u_m u_m
-+
-2 x_m u_m
-\right)
-+
-\sum_{m n \in \{r \phi, \phi r\}}
-\left(
-\PD{\phi}{x_m}
-u_n
-+
-\PD{\phi}{u_m}(
-x_n
-+
-u_n
-)
-\right)
-e_m \cdot
-\PD{\phi}{e_n}
-\right)
-=
-2 d\phi d\phi
-\left(
-\inv{2}
-\PD{\phi}{u_m}
-\PD{\phi}{u_m}
-+
-\inv{2} \left( u_r^2 + u_\phi^2 \right) + r u_r
--
-\PD{\phi}{u_r}
-u_\phi
-+
-\PD{\phi}{u_\phi}(
-r
-+
-u_r
-)
-\right).
+\Biglr{
+  \inv{2} \PD{\phi}{u_m} \PD{\phi}{u_m}
+  + \inv{2} \lr{ u_r^2 + u_\phi^2 }
+  + r u_r \\
+  &\quad- \PD{\phi}{u_r} u_\phi
+  + \PD{\phi}{u_\phi}( r + u_r)
+}
+.
+\end{aligned}
 \end{equation*}
 %
 Now, on to the mixed terms.  The easiest is the \(dz dr\) term, for which all the unit vector derivatives are zero, and we are left with just
@@ -834,308 +709,205 @@ Now, on to the mixed terms.  The easiest is the \(dz dr\) term, for which all th
 Now we have the two messy mixed terms.  For the \(r\), \(\phi\) term we get
 %
 \begin{equation*}
-2 dr
+\begin{aligned}
+&2 dr
 d\phi
-\left(
-\PD{r}{u_m}
-\PD{\phi}{u_m}
-+
-\PD{r}{u_m}
-\cancel{\PD{\phi}{x_m}}
-+
-\PD{\phi}{u_m}
-\PD{r}{x_m}
-+
-\inv{2}
-\left(
-u_m u_n
-+
-x_m u_n
-+
-u_m x_n
-\right)
-\left(
-\cancel{\PD{r}{e_m}}
-\cdot
-\PD{\phi}{e_n}
-+
-\PD{\phi}{e_m}
-\cdot
-\cancel{\PD{r}{e_n} }
-\right)
-\right)
-+
+\Biglr{
+  \PD{r}{u_m}
+  \PD{\phi}{u_m}
+  +
+  \PD{r}{u_m}
+  \cancel{\PD{\phi}{x_m}}
+  +
+  \PD{\phi}{u_m}
+  \PD{r}{x_m} \\
+  &\quad+
+  \inv{2}
+  \lr{ u_m u_n + x_m u_n + u_m x_n }
+    \lr{
+    \cancel{\PD{r}{e_m}}
+    \cdot
+    \PD{\phi}{e_n}
+    +
+    \PD{\phi}{e_m}
+    \cdot
+    \cancel{\PD{r}{e_n} }
+  }
+} \\
+&+
 2 dr d\phi
-\left(
-\left(
-\PD{r}{x_m}
-u_n
-+
-\PD{r}{u_m}(
-x_n
-+
-u_n
-)
-\right)
-e_m \cdot
-\PD{\phi}{e_n}
-+
-\left(
-\PD{\phi}{x_m}
-u_n
-+
-\PD{\phi}{u_m}(
-x_n
-+
-u_n
-)
-\right)
-e_m \cdot
-\cancel{\PD{r}{e_n}}
-\right)
-=2 dr d\phi
-\left(
-\PD{r}{u_m}
-\PD{\phi}{u_m}
-+
-\PD{\phi}{u_r}
-+
-u_n
-\rcap \cdot
-\PD{\phi}{e_n}
-+
-\PD{r}{u_m}(
-x_n
-+
-u_n
-)
-e_m \cdot
-\PD{\phi}{e_n}
-\right)
-=2 dr d\phi
-\left(
-\PD{r}{u_m}
-\PD{\phi}{u_m}
-+
-\PD{\phi}{u_r}
--
-u_\phi
-+
-\PD{r}{u_r}(
-x_n
-+
-u_n
-)
-\rcap \cdot
-\PD{\phi}{e_n}
-+
-\PD{r}{u_\phi}(
-x_n
-+
-u_n
-)
-\phicap \cdot
-\PD{\phi}{e_n}
-\right)
-=2 dr d\phi
-\left(
-\PD{r}{u_m}
-\PD{\phi}{u_m}
-+
-\PD{\phi}{u_r}
--
-u_\phi
--
-\PD{r}{u_r}
-u_\phi
-+
-\PD{r}{u_\phi}(
-r
-+
-u_r
-)
-\right).
+\Biglr{
+  \lr{ \PD{r}{x_m} u_n + \PD{r}{u_m}( x_n + u_n) }
+  e_m \cdot
+  \PD{\phi}{e_n} \\
+  &\quad+
+  \lr{ \PD{\phi}{x_m} u_n + \PD{\phi}{u_m}( x_n + u_n) }
+  e_m \cdot
+  \cancel{\PD{r}{e_n}}
+} \\
+&=2 dr d\phi
+\lr{
+  \PD{r}{u_m}
+  \PD{\phi}{u_m}
+  +
+  \PD{\phi}{u_r}
+  +
+  u_n \rcap \cdot \PD{\phi}{e_n}
+  +
+  \PD{r}{u_m}( x_n + u_n )
+  e_m \cdot
+  \PD{\phi}{e_n}
+} \\
+&=2 dr d\phi
+\lr{
+  \PD{r}{u_m}
+  \PD{\phi}{u_m}
+  +
+  \PD{\phi}{u_r}
+  -
+  u_\phi
+  +
+  \PD{r}{u_r}(
+  x_n
+  +
+  u_n
+  )
+  \rcap \cdot
+  \PD{\phi}{e_n}
+  +
+  \PD{r}{u_\phi}(
+  x_n
+  +
+  u_n
+  )
+  \phicap \cdot
+  \PD{\phi}{e_n}
+} \\
+&=2 dr d\phi
+\lr{
+  \PD{r}{u_m} \PD{\phi}{u_m}
+  +
+  \PD{\phi}{u_r}
+  -
+  u_\phi
+  -
+  \PD{r}{u_r} u_\phi
+  +
+  \PD{r}{u_\phi}( r + u_r )
+}.
+\end{aligned}
 \end{equation*}
 %
 Finally for the \(z\), \(\phi\) term we have
 %
 %
 \begin{equation*}
-2 dz
+\begin{aligned}
+&2 dz
 d\phi
-\left(
-\PD{z}{u_m}
-\PD{\phi}{u_m}
-+
-\PD{z}{u_m}
-\cancel{\PD{\phi}{x_m} }
-+
-\PD{\phi}{u_m}
-\PD{z}{x_m}
-+
-\inv{2}
-\left(
-u_m u_n
-+
-x_m u_n
-+
-u_m x_n
-\right)
-\left(
-\cancel{\PD{z}{e_m}}
-\cdot
-\PD{\phi}{e_n}
-+
-\PD{\phi}{e_m}
-\cdot
-\cancel{\PD{z}{e_n} }
-\right)
-\right)
-+
+\Biglr{
+  \PD{z}{u_m} \PD{\phi}{u_m}
+  +
+  \PD{z}{u_m}
+  \cancel{\PD{\phi}{x_m} }
+  +
+  \PD{\phi}{u_m} \PD{z}{x_m} \\
+  &\quad+
+  \inv{2} \lr{ u_m u_n + x_m u_n + u_m x_n }
+  \lr{
+    \cancel{\PD{z}{e_m}} \cdot \PD{\phi}{e_n}
+    +
+    \PD{\phi}{e_m} \cdot \cancel{\PD{z}{e_n} }
+  }
+} \\
+&+
 2 d\phi dz
-\left(
-\left(
-\PD{z}{x_m}
-u_n
-+
-\PD{z}{u_m}(
-x_n
-+
-u_n
-)
-\right)
-e_m \cdot
-\PD{\phi}{e_n}
-+
-\left(
-\PD{\phi}{x_m}
-u_n
-+
-\PD{\phi}{u_m}(
-x_n
-+
-u_n
-)
-\right)
-e_m \cdot
-\cancel{\PD{z}{e_n}}
-\right)
-=2 dz
+\Biglr{
+  \lr{ \PD{z}{x_m} u_n + \PD{z}{u_m}( x_n + u_n) } e_m \cdot \PD{\phi}{e_n} \\
+  &\quad+
+  \lr{ \PD{\phi}{x_m} u_n + \PD{\phi}{u_m}( x_n + u_n) } e_m \cdot \cancel{\PD{z}{e_n}}
+} \\
+&=2 dz
 d\phi
-\left(
-\PD{z}{u_m}
-\PD{\phi}{u_m}
-+
-\PD{\phi}{u_m}
-\PD{z}{x_m}
-+
-\cancel{
-u_n
-\zcap \cdot
-\PD{\phi}{e_n}
-}
-+
-\PD{z}{u_m}(
-x_n
-+
-u_n
-)
-e_m \cdot
-\PD{\phi}{e_n}
-\right)
-=2 dz
+\lr{
+  \PD{z}{u_m}
+  \PD{\phi}{u_m}
+  +
+  \PD{\phi}{u_m}
+  \PD{z}{x_m}
+  +
+  \cancel{
+  u_n
+  \zcap \cdot
+  \PD{\phi}{e_n}
+  }
+  +
+  \PD{z}{u_m}(
+  x_n
+  +
+  u_n
+  )
+  e_m \cdot
+  \PD{\phi}{e_n}
+} \\
+&=2 dz
 d\phi
-\left(
-\PD{z}{u_m}
-\PD{\phi}{u_m}
-+
-\PD{\phi}{u_z}
--
-\PD{z}{u_r}
-u_\phi
-+
-\PD{z}{u_\phi}(
-r
-+
-u_r
-)
-\right).
+\lr{
+  \PD{z}{u_m} \PD{\phi}{u_m}
+  +
+  \PD{\phi}{u_z}
+  -
+  \PD{z}{u_r} u_\phi
+  +
+  \PD{z}{u_\phi}( r + u_r )
+}.
+\end{aligned}
 \end{equation*}
 %
 To summarize we have, including both first and second order terms,
 %
 \begin{equation}\label{eqn:continuumL2:790}
-{d\Bl'}^2 - d\Bx^2
-=
+\begin{aligned}
+&{d\Bl'}^2 - d\Bx^2 \\
+&=
 2 dr dr
 \lr{
-\inv{2} \PD{r}{u_m} \PD{r}{u_m} + \PD{r}{u_r}
-}
-+
+  \inv{2} \PD{r}{u_m} \PD{r}{u_m} + \PD{r}{u_r}
+} \\
+&\quad+
 2 r^2 d\phi d\phi
-\lr{
+\Biglr{
    \inv{2 r^2} \PD{\phi}{u_m} \PD{\phi}{u_m}
-   + \inv{2 r^2} \lr{ u_r^2 + u_\phi^2 }
-   + \frac{u_r}{r}
+   + \inv{2 r^2} \lr{ u_r^2 + u_\phi^2 } \\
+   &\qquad+ \frac{u_r}{r}
    - \inv{r} \PD{\phi}{u_r} \frac{u_\phi}{r}
    + \inv{r} \PD{\phi}{u_\phi}\lr{ 1 + \frac{u_r}{r} }
-}
-+
-2 dz dz
-\left(
-\inv{2}
-\PD{z}{u_m}
-\PD{z}{u_m}
-+
-\PD{z}{u_z}
-\right)
-+2 dr r d\phi
-\left(
-\PD{r}{u_m}
-\inv{r}
-\PD{\phi}{u_m}
-+
-\inv{r}
-\PD{\phi}{u_r}
--
-\frac{u_\phi}{r}
--
-\PD{r}{u_r}
-\frac{u_\phi}{r}
-+
-\PD{r}{u_\phi}\left(
-1
-+
-\frac{u_r}{r}
-\right)
-\right)
-+2 r d\phi dz
-\left(
-\PD{z}{u_m}
-\inv{r}
-\PD{\phi}{u_m}
-+
-\inv{r}
-\PD{\phi}{u_z}
--
-\PD{z}{u_r}
-\frac{u_\phi}{r}
-+
-\PD{z}{u_\phi}\left(
-1
-+
-\frac{u_r}{r}
-\right)
-\right)
-+2 dz dr
-\left(
-\PD{z}{u_m}
-\PD{r}{u_m}
-+
-\PD{z}{u_r}
-+
-\PD{r}{u_z}
-\right).
+} \\
+&\quad+ 2 dz dz \lr{ \inv{2} \PD{z}{u_m} \PD{z}{u_m} + \PD{z}{u_z} } \\
+&\quad +2 dr r d\phi
+\lr{
+  \PD{r}{u_m} \inv{r} \PD{\phi}{u_m}
+  +
+  \inv{r} \PD{\phi}{u_r}
+  -
+  \frac{u_\phi}{r}
+  -
+  \PD{r}{u_r} \frac{u_\phi}{r}
+  +
+  \PD{r}{u_\phi} \lr{ 1 + \frac{u_r}{r} }
+} \\
+&\quad+2 r d\phi dz
+\lr{
+  \PD{z}{u_m} \inv{r} \PD{\phi}{u_m}
+  +
+  \inv{r} \PD{\phi}{u_z}
+  -
+  \PD{z}{u_r} \frac{u_\phi}{r}
+  +
+  \PD{z}{u_\phi} \lr{ 1 + \frac{u_r}{r} }
+} \\
+&\quad+2 dz dr \lr{ \PD{z}{u_m} \PD{r}{u_m} + \PD{z}{u_r} + \PD{r}{u_z} }.
+\end{aligned}
 \end{equation}
 %
 Factors of \(r\) have been pulled out so that the portions remaining in the braces are exactly the cylindrical tensor elements as given in the text (except also with the second order terms here).  Observe that the pre-calculation of the general formula has allowed an on paper expansion of the cylindrical tensor without too much pain, and this time without requiring Mathematica.
@@ -1184,67 +956,63 @@ and find
 Brute forcing the differential strain element calculation (\nbref{strainTensorSphericalColumnVectors.cdf}, we find
 %
 \begin{equation}\label{eqn:continuumL2:890}
-d{\Bl'}^2 - d\Bx^2
-=
-%(dr)^2 \left(
-%2 \frac{\partial u_r}{\partial r}
-%+ \frac{\partial u_r}{\partial r} \frac{\partial u_r}{\partial r}
-%+ \left(\frac{\partial u_{\theta }}{\partial r}\right)^2 + \left(\frac{\partial u_{\phi }}{\partial r}\right)^2\right)
-2 (dr)^2 \left(
-\frac{\partial u_r}{\partial r}
-+ \inv{2}
-\frac{\partial u_m}{\partial r} \frac{\partial u_m}{\partial r}
-\right)
-% + (d\theta )^2 \left(2 r u_r + u_r^2 + u_{\theta }^2 - 2 u_{\theta } \frac{\partial u_r}{\partial \theta } + \left(\frac{\partial u_r}{\partial \theta }\right)^2 + 2 \left(r + u_r\right) \frac{\partial u_{\theta }}{\partial \theta } + \left(\frac{\partial u_{\theta }}{\partial \theta }\right)^2 + \left(\frac{\partial u_{\phi }}{\partial \theta }\right)^2\right)
- + 2 r^2 (d\theta )^2 \left(
-\inv{r} u_r + \inv{2r^2}(u_r^2 + u_{\theta }^2) - \inv{r^2} u_{\theta } \frac{\partial u_r}{\partial \theta }
-+ \left(\inv{r} + \inv{r^2}u_r\right) \frac{\partial u_{\theta }}{\partial \theta }
-+ \inv{2 r^2} \frac{\partial u_m}{\partial \theta } \frac{\partial u_m}{\partial \theta }
-\right)
-%
-%+ (d\phi )^2 \left( u_\phi^2 + \left(u_{\theta }^2 \right) \cos^2\theta + \left(2 r u_r + u_r^2 \right) \sin^2\theta + \left(r + u_r\right) u_{\theta } \sin (2 \theta ) - 2 u_{\phi } \sin\theta \frac{\partial u_r}{\partial \phi } + \left(\frac{\partial u_r}{\partial \phi }\right)^2 \right)
-%\quad+ (d\phi )^2 \left(
-%- 2 u_{\phi } \cos\theta \frac{\partial u_{\theta }}{\partial \phi } + \left(\frac{\partial u_{\theta }}{\partial \phi }\right)^2 + \frac{\partial u_{\phi }}{\partial \phi } \left(2 u_{\theta } \cos\theta + 2 \left(r + u_r\right) \sin\theta + \frac{\partial u_{\phi }}{\partial \phi }\right)\right)
-+ 2 r^2 \sin^2\theta (d\phi )^2 \left(
-  \inv{2 r^2 \sin^2\theta} u_\phi^2
-+ \inv{2 r^2 } u_{\theta }^2 \cot^2\theta
-+ \inv{r} u_r
-+ \inv{2 r^2} u_r^2
-+ \left(\inv{r} + \inv{r^2}u_r\right) u_{\theta } \cot\theta
-\qquad
-- \inv{r^2 \sin\theta} u_{\phi } \frac{\partial u_r}{\partial \phi }
-- \inv{r^2 } u_{\phi } \frac{\cos\theta}{\sin^2\theta} \frac{\partial u_{\theta }}{\partial \phi }
-+ \inv{r^2 } \frac{\partial u_{\phi }}{\partial \phi } \left(u_{\theta } \frac{\cos\theta}{\sin^2\theta} + \left(r + u_r\right) \inv{\sin\theta} \right)
-+ \inv{2 r^2 \sin^2\theta} \frac{\partial u_m}{\partial \phi } \frac{\partial u_m}{\partial \phi }
-\right)
-% + 2 dr d\theta \left( - u_{\theta } + \frac{\partial u_r}{\partial \theta } + \frac{\partial u_r}{\partial r} \left( - u_{\theta } + \frac{\partial u_r}{\partial \theta }\right) + \frac{\partial u_{\theta }}{\partial r} \left(r + u_r + \frac{\partial u_{\theta }}{\partial \theta }\right) + \frac{\partial u_{\phi }}{\partial r} \frac{\partial u_{\phi }}{\partial \theta }\right)
- + 2 dr r d\theta \left(
+\begin{aligned}
+&d{\Bl'}^2 - d\Bx^2 \\
+&=
+2 (dr)^2 
+\lr{
+  \frac{\partial u_r}{\partial r}
+  + \inv{2}
+  \frac{\partial u_m}{\partial r} \frac{\partial u_m}{\partial r}
+} \\
+&\quad+ 2 r^2 (d\theta )^2 
+\Biglr{
+  \inv{r} u_r + \inv{2r^2}(u_r^2 + u_{\theta }^2) - \inv{r^2} u_{\theta } \frac{\partial u_r}{\partial \theta } \\
+  &\qquad+ \left(\inv{r} + \inv{r^2}u_r\right) \frac{\partial u_{\theta }}{\partial \theta }
+  + \inv{2 r^2} \frac{\partial u_m}{\partial \theta } \frac{\partial u_m}{\partial \theta }
+} \\
+&\quad+ 2 r^2 \sin^2\theta (d\phi )^2 
+\Biglr{
+    \inv{2 r^2 \sin^2\theta} u_\phi^2
+  + \inv{2 r^2 } u_{\theta }^2 \cot^2\theta
+  + \inv{r} u_r
+  + \inv{2 r^2} u_r^2 \\
+  &\qquad + \left(\inv{r} + \inv{r^2}u_r\right) u_{\theta } \cot\theta 
+  - \inv{r^2 \sin\theta} u_{\phi } \frac{\partial u_r}{\partial \phi }
+  - \inv{r^2 } u_{\phi } \frac{\cos\theta}{\sin^2\theta} \frac{\partial u_{\theta }}{\partial \phi } \\
+  &\qquad
+  + \inv{r^2 } \frac{\partial u_{\phi }}{\partial \phi } \left(u_{\theta } \frac{\cos\theta}{\sin^2\theta} + \left(r + u_r\right) \inv{\sin\theta} \right)
+  + \inv{2 r^2 \sin^2\theta} \frac{\partial u_m}{\partial \phi } \frac{\partial u_m}{\partial \phi }
+} \\
+&+ 2 dr r d\theta 
+\lr{
 - \inv{r} u_{\theta }
 + \inv{r} \frac{\partial u_r}{\partial \theta }
 - \inv{r} u_{\theta } \frac{\partial u_r}{\partial r}
 + \frac{\partial u_{\theta }}{\partial r} \left(1 + \frac{u_r}{r} \right)
 + \inv{r} \frac{\partial u_m}{\partial r} \frac{\partial u_m}{\partial \theta }
-\right)
-% + 2 d\theta  d\phi  \left(u_{\theta } u_{\phi } \sin\theta - u_{\theta } \frac{\partial u_r}{\partial \phi } + \frac{\partial u_r}{\partial \theta } \left( - u_{\phi } \sin\theta + \frac{\partial u_r}{\partial \phi }\right) - u_{\phi } \cos\theta \left(r + u_r + \frac{\partial u_{\theta }}{\partial \theta }\right) + \left(r + u_r + \frac{\partial u_{\theta }}{\partial \theta }\right) \frac{\partial u_{\theta }}{\partial \phi } + \frac{\partial u_{\phi }}{\partial \theta } \left(u_{\theta } \cos\theta + \left(r + u_r\right) \sin\theta + \frac{\partial u_{\phi }}{\partial \phi }\right)\right)
- + 2 r^2 \sin\theta d\theta  d\phi  \left(
-\inv{r^2 } u_{\theta } u_{\phi }
-- \inv{r^2 \sin\theta} u_{\theta } \frac{\partial u_r}{\partial \phi }
-- \inv{r^2 } u_{\phi } \frac{\partial u_r}{\partial \theta }
-- \inv{r^2 } u_{\phi } \cot\theta \left(r + u_r + \frac{\partial u_{\theta }}{\partial \theta }\right)
-\qquad
-+ \inv{r^2 \sin\theta} \left(r + u_r \right) \frac{\partial u_{\theta }}{\partial \phi }
-+ \frac{\partial u_{\phi }}{\partial \theta } \left(\frac{u_{\theta }}{r^2} \cot\theta + \inv{r} + \frac{u_r}{r^2} \right)
-+ \inv{r^2 \sin\theta} \frac{\partial u_m}{\partial \theta } \frac{\partial u_m}{\partial \phi }
-\right)
-% + 2 d\phi dr \left( - u_{\phi } \sin\theta + \frac{\partial u_r}{\partial \phi } + \frac{\partial u_r}{\partial r} \left( - u_{\phi } \sin\theta + \frac{\partial u_r}{\partial \phi }\right) + \frac{\partial u_{\theta }}{\partial r} \left( - u_{\phi } \cos\theta + \frac{\partial u_{\theta }}{\partial \phi }\right) + \frac{\partial u_{\phi }}{\partial r} \left(u_{\theta } \cos\theta + \left(r + u_r\right) \sin\theta + \frac{\partial u_{\phi }}{\partial \phi }\right)\right)
- + 2 r \sin\theta d\phi dr \left(
-- \inv{r } u_{\phi }
-+ \inv{r \sin\theta} \frac{\partial u_r}{\partial \phi }
-- u_{\phi } \inv{r } \frac{\partial u_r}{\partial r}
-- u_{\phi } \cot\theta \inv{r } \frac{\partial u_{\theta }}{\partial r}
-+ \inv{r } \frac{\partial u_{\phi }}{\partial r} \left( u_{\theta } \cot\theta + r + u_r \right)
-+ \inv{r \sin\theta} \frac{\partial u_m}{\partial \phi } \frac{\partial u_m}{\partial r}
-\right).
+} \\
+&+ 2 r^2 \sin\theta d\theta  d\phi  
+\Biglr{
+  \inv{r^2 } u_{\theta } u_{\phi }
+  - \inv{r^2 \sin\theta} u_{\theta } \frac{\partial u_r}{\partial \phi }
+  - \inv{r^2 } u_{\phi } \frac{\partial u_r}{\partial \theta } \\
+  &\qquad - \inv{r^2 } u_{\phi } \cot\theta \left(r + u_r + \frac{\partial u_{\theta }}{\partial \theta }\right) 
+  + \inv{r^2 \sin\theta} \left(r + u_r \right) \frac{\partial u_{\theta }}{\partial \phi } \\
+  &\qquad + \frac{\partial u_{\phi }}{\partial \theta } \left(\frac{u_{\theta }}{r^2} \cot\theta + \inv{r} + \frac{u_r}{r^2} \right)
+  + \inv{r^2 \sin\theta} \frac{\partial u_m}{\partial \theta } \frac{\partial u_m}{\partial \phi }
+} \\
+&+ 2 r \sin\theta d\phi dr 
+\Biglr{
+  - \inv{r } u_{\phi }
+  + \inv{r \sin\theta} \frac{\partial u_r}{\partial \phi }
+  - u_{\phi } \inv{r } \frac{\partial u_r}{\partial r} \\
+  &\qquad - u_{\phi } \cot\theta \inv{r } \frac{\partial u_{\theta }}{\partial r}
+  + \inv{r } \frac{\partial u_{\phi }}{\partial r} \left( u_{\theta } \cot\theta + r + u_r \right)
+  + \inv{r \sin\theta} \frac{\partial u_m}{\partial \phi } \frac{\partial u_m}{\partial r}
+}
+.
+\end{aligned}
 \end{equation}
 %
 \section{Spherical tensor.  Manual derivation.}
@@ -1510,11 +1278,13 @@ du_r \rcap + du_\theta \thetacap + du_\phi \phicap
 We can add \(d\Bx\) to this and take differences
 %
 \begin{equation}\label{eqn:continuumL2:1110}
+\begin{aligned}
 (d\Bu + d\Bx)^2 - d\Bx^2
-=
-\left( du_r - u_\theta d\theta - u_\phi \sin\theta d\phi + dr \right)^2
-+\left( du_\theta + u_r d\theta - u_\phi \cos\theta d\phi + r d\theta \right)^2
-+\left( du_\phi + u_r \sin\theta d\phi + u_\theta \cos\theta d\phi + r \sin\theta d\phi \right)^2.
+&=
+\lr{ du_r - u_\theta d\theta - u_\phi \sin\theta d\phi + dr }^2 \\
+&\quad +\lr{ du_\theta + u_r d\theta - u_\phi \cos\theta d\phi + r d\theta }^2 \\
+&\quad +\lr{ du_\phi + u_r \sin\theta d\phi + u_\theta \cos\theta d\phi + r \sin\theta d\phi }^2.
+\end{aligned}
 \end{equation}
 %
 For each \(m = r,\theta,\phi\) we have
@@ -1563,33 +1333,19 @@ r \sin\theta d\phi
 Collecting terms we have the result of the text in the braces
 %
 \begin{equation}\label{eqn:continuumL2:1150}
+\begin{aligned}
 \left((d\Bu + d\Bx)^2 - d\Bx^2\right)
-=
-2 dr^2 \left(
-\PD{r}{u_r}
-\right)
-+
-2 r^2 d\theta^2 \left(
-\inv{r} \PD{\theta}{u_\theta} + u_r \inv{r}
-\right)
-+2 r^2 \sin^2\theta d\phi^2 \left(
-\PD{\phi}{u_\phi} \inv{r \sin\theta} + \inv{r} u_r + \inv{r} \cot\theta u_\theta
-\right)
-+2 dr r d\theta \left(
-\inv{r} \PD{\theta}{u_r} - \inv{r} u_\theta +\PD{r}{u_\theta}
-\right)
-%+2 d\theta d\phi \left(
-%\PD{\phi}{u_\theta} r - u_\phi r \cos\theta +\PD{\theta}{u_\phi} r \sin\theta
-%\right)
-+2 r^2 \sin\theta d\theta d\phi \left(
-\PD{\phi}{u_\theta} \inv{r \sin\theta} - \inv{r} u_\phi \cot\theta +\inv{r} \PD{\theta}{u_\phi}
-\right)
-%+2 d\phi dr \left(
-%\PD{\phi}{u_r} - u_\phi \sin\theta + \PD{r}{u_\phi} r \sin\theta
-%\right)
-+2 r \sin\theta d\phi dr \left(
-\inv{r \sin\theta} \PD{\phi}{u_r} - \inv{r} u_\phi + \PD{r}{u_\phi}
-\right).
+&=
+2 dr^2 
+\lr{ \PD{r}{u_r} } \\
+&\quad+
+2 r^2 d\theta^2 \lr{ \inv{r} \PD{\theta}{u_\theta} + u_r \inv{r} }
+&\quad+ 2 r^2 \sin^2\theta d\phi^2 \lr{ \PD{\phi}{u_\phi} \inv{r \sin\theta} + \inv{r} u_r + \inv{r} \cot\theta u_\theta } \\
+&\quad+2 dr r d\theta \lr{ \inv{r} \PD{\theta}{u_r} - \inv{r} u_\theta +\PD{r}{u_\theta} } \\
+&\quad+2 r^2 \sin\theta d\theta d\phi \lr{ \PD{\phi}{u_\theta} \inv{r \sin\theta} - \inv{r} u_\phi \cot\theta +\inv{r} \PD{\theta}{u_\phi} } \\
+&\quad+2 r \sin\theta d\phi dr \lr{ \inv{r \sin\theta} \PD{\phi}{u_r} - \inv{r} u_\phi + \PD{r}{u_\phi} }
+.
+\end{aligned}
 \end{equation}
 %
 It should be possible to do the calculation to second order too, but to include all the quadratic terms in \(u_m\) is again really messy.  Trying that with Mathematica (\nbref{strainTensorSpherical.cdf}) gives the same results as above using the strictly coordinate algebra approach.

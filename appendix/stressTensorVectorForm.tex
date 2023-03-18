@@ -744,23 +744,25 @@ u_\phi
 so we have
 %
 \begin{equation}\label{eqn:stressTensorVectorForm:230}
+\begin{aligned}
 \spacegrad \wedge \Bu
-=
+&=
 \rcap \wedge \thetacap
-\left( \partial_r u_\theta - \inv{r} \partial_\theta u_r + \frac{u_\theta}{r}
-\right)
- +
+\lr{ \partial_r u_\theta - \inv{r} \partial_\theta u_r + \frac{u_\theta}{r} } \\
+&\quad +
 \thetacap \wedge \phicap
-\left(
+\lr{
 \inv{r} \partial_\theta u_\phi - \inv{r \sin\theta} \partial_\phi u_\theta
 + \frac{u_\phi \cot\theta}{r}
-\right)
- +
+} \\
+&\quad +
 \phicap \wedge \rcap
-\left(
+\lr{
 \inv{r \sin\theta} \partial_\phi u_r - \partial_r u_\phi
 - \frac{u_\phi}{r}
-\right).
+}
+.
+\end{aligned}
 \end{equation}
 \subsection{Outwards radial normal \texorpdfstring{\(\ncap = \rcap\)}{ncap equals rcap}.}
 The directional derivative portion of our strain is
@@ -995,24 +997,27 @@ Putting these together we find
 \end{equation}
 Which gives
 \begin{equation}\label{eqn:stressTensorVectorForm:390}
+\begin{aligned}
 2 {\Be}_{\thetacap}
-=
-\rcap \left(
+&=
+\rcap \lr{
   \frac{1}{r} \partial_\theta u_r
  + \partial_r u_\theta
 - \frac{u_\theta}{r}
-\right)
-+
-\thetacap \left(
+} \\
+&\quad +
+\thetacap \lr{
  \frac{2}{r} \partial_\theta u_\theta
 + \frac{2}{r} u_r
-\right)
-+
-\phicap \left(
+} \\
+&\quad +
+\phicap \lr{
 \frac{1}{r} \partial_\theta u_\phi
 + \inv{r \sin\theta} \partial_\phi u_\theta
 - \frac{u_\phi \cot\theta}{r}
-\right).
+}
+.
+\end{aligned}
 \end{equation}
 For our stress tensor
 %
@@ -1119,26 +1124,29 @@ u_\phi
 \end{equation}
 so we have
 \begin{equation}\label{eqn:stressTensorVectorForm:490}
+\begin{aligned}
 2 (\phicap \cdot \spacegrad) \Bu
-=
+&=
 2 \rcap
-\left(
+\lr{
    \inv{r \sin\theta} \partial_\phi u_r - \frac{u_\phi}{r}
-\right)
-+
+} \\
+&\quad+
 2 \thetacap
-\left(
+\lr{
    \inv{r \sin\theta} \partial_\phi u_\theta
    -
    \inv{r} \cot\theta u_\phi
-\right)
-+
+} \\
+&\quad +
 2 \phicap
-\left(
+\lr{
    \inv{r \sin\theta} \partial_\phi u_\phi
    + \inv{r} u_r
    + \inv{r} \cot\theta u_\theta
-\right),
+}
+,
+\end{aligned}
 \end{equation}
 and can move on to projecting our curl bivector onto the \(\phicap\) direction.  That portion of our strain tensor is
 \begin{equation}\label{eqn:stressTensorVectorForm:1390}

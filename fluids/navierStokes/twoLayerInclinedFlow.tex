@@ -23,8 +23,11 @@ Our problem is illustrated in \cref{fig:twoLayerInclinedFlow:twoLayerInclinedFlo
 We have to setup of the equations of motion for this system.  We will write \(H = h^{(1)} + h^{(2)}\).  We have a pair of Navier-Stokes equations to solve
 %
 \begin{equation}\label{eqn:twoLayerInclinedFlow:10}
-\rho \ddt{\Bu^{(i)}} = \rho \PD{t}{\Bu^{(i)}} + \rho (\Bu^{(i)} \cdot \spacegrad) \Bu^{(i)}
-= - \spacegrad p^{(i)} + \mu^{(i)} \spacegrad^2 \Bu^{(i)} + \mu^{(i)} \spacegrad (\spacegrad \cdot \Bu^{(i)}) + \rho \Bg.
+\begin{aligned}
+\rho \ddt{\Bu^{(i)}} 
+&= \rho \PD{t}{\Bu^{(i)}} + \rho (\Bu^{(i)} \cdot \spacegrad) \Bu^{(i)} \\
+&= - \spacegrad p^{(i)} + \mu^{(i)} \spacegrad^2 \Bu^{(i)} + \mu^{(i)} \spacegrad (\spacegrad \cdot \Bu^{(i)}) + \rho \Bg.
+\end{aligned}
 \end{equation}
 %
 Our steady state and incompressibility constraints break this into a few independent equations
