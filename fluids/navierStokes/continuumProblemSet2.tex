@@ -124,7 +124,8 @@ The velocity profile for this flow is drawn in \cref{fig:continuumProblemSet2:co
 %   \caption{Velocity profile for 1D constant pressure gradient steady state flow}\label{fig:continuumProblemSet2:continuumProblemSet2Fig1}
 %\end{figure}
 %
-\pdfTexFigure{../figures/phy454-continuumechanics/continuumProblemSet2Fig1r2.pdf_tex}{Velocity profile for 1D constant pressure gradient steady state flow.}{fig:continuumProblemSet2:continuumProblemSet2Fig1}{0.2}
+% continuumProblemSet2Fig1r2.cdf 
+\imageFigure{../figures/phy454-continuumechanics/continuumProblemSet2Fig1r2}{Velocity profile for 1D constant pressure gradient steady state flow.}{fig:continuumProblemSet2:continuumProblemSet2Fig1}{0.2}
 %
 \makesubanswer{Effects of viscosity doubling.}{problem:fluids:bloodViscositySmoking}
 With our velocity being dependent on the \(G/\mu\) ratio, it is clear that to consider the effects of viscosity doubling, even without calculating the flux, that we will need  twice the pressure gradient if the viscosity is doubled to maintain the same flux through the artery and veins.  To demonstrate this more thoroughly we can calculate this mass flux.  For an element of mass leaving a portion of the conduit, bounded by the plane normal to \(\xcap\) we have
@@ -475,9 +476,8 @@ A^{(1)} \mu^{(1)} &= A^{(2)} \mu^{(2)}.
 \end{equation}
 %
 Without actually solving this system we should expect that our solution will have the form of our pure shear flow, with parabolas superimposed on these linear flows.  For a higher viscosity bottom layer \(\mu^{(1)} > \mu^{(2)}\), this should look something like \cref{fig:continuumProblemSet2:continuumProblemSet2Fig4} whereas for the higher viscosity on the top, these would be roughly flipped as in \cref{fig:continuumProblemSet2:continuumProblemSet2Fig5}.
-%
+% 
 \imageFigure{../figures/phy454-continuumechanics/continuumProblemSet2Fig4}{Superposition of constant pressure gradient and shear flow solutions (\(\mu^{(1)} > \mu^{(2)}\)).}{fig:continuumProblemSet2:continuumProblemSet2Fig4}{0.3}
-%
 \imageFigure{../figures/phy454-continuumechanics/continuumProblemSet2Fig5}{Superposition of constant pressure gradient and shear flow solutions (\(\mu^{(1)} < \mu^{(2)}\)).}{fig:continuumProblemSet2:continuumProblemSet2Fig5}{0.3}
 %
 This superposition can be justified since we have no \((\Bu \cdot \spacegrad)\Bu\) term in the Navier-Stokes equations for these systems.
@@ -558,6 +558,7 @@ I lost a couple of marks on this assignment, all on the hand plotting.  The rema
 \item \(G\) is constant across the fluid.
 \end{enumerate}
 I am assuming that the comment about \(G\) being constant across the fluid means that the two humped velocity distribution I drew is not realistic.  Here is two actual plots using the above calculations.
+% problemSetIIQ3PlotWithManipulate.cdf
 %\cref{fig:continuumProblemSet2:continuumProblemSet2Fig6mu1Gtmu2}
 \imageFigure{../figures/phy454-continuumechanics/continuumProblemSet2Fig6mu1Gtmu2}{\(\mu^{(1)} > \mu^{(2)}\).}{fig:continuumProblemSet2:continuumProblemSet2Fig6mu1Gtmu2}{0.3}
 %
