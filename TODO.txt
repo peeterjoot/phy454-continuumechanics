@@ -1,10 +1,22 @@
 
+- matlab/phy454/bernoulli/bucketStreamlines.m
+
+figures/phy454-continuumechanics/bucketStreamlinesFig1
+
+regenerate as black and white.
+
+- increase the line thickness in the mathematica figures.
+
+ done up to page 235
+
+- figure 7.2: tap flow measurement. -- may be what is causing the kdp processing error.
+
+==================================================
 - 
    - lots of fixmes and placeholders.
 
    - equation number overlap audit.
 
-   - increase the line thickness in the mathematica figures.
 
    - mathimagefigure for mathematica figures.
    
