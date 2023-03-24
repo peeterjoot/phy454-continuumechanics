@@ -1,6 +1,6 @@
 THISDIR := phy454-continuumechanics
 THISBOOK := phy454
- 
+
 BIBLIOGRAPHY_PATH := classicthesis_mine
 HAVE_OWN_CONTENTS := 1
 #HAVE_OWN_TITLEPAGE := 1
@@ -43,7 +43,7 @@ SOURCE_DIRS += fluids/thermal
 SOURCE_DIRS += intro
 SOURCE_DIRS += solutions
 
-GENERATED_SOURCES += mathematica.tex 
+GENERATED_SOURCES += mathematica.tex
 GENERATED_SOURCES += backmatter.tex
 
 DO_SPELL_CHECK := $(shell cat spellcheckem.txt)
@@ -57,8 +57,12 @@ spellcheck: $(patsubst %.tex,%.sp,$(filter-out $(DONT_SPELL_CHECK),$(DO_SPELL_CH
 	spellcheck $^
 	touch $@
 
-parameters.sty : ../latex/bin/mkparams
-	../latex/bin/mkparams $(PARAMS) > $@
+distx:
+ifdef DISTEXTRA
+	cp $(THISBOOK).pdf ~/tmp/$(THISBOOK).$(DISTEXTRA).$(VER).pdf
+else
+	cp $(THISBOOK).pdf ~/tmp/$(THISBOOK).$(VER).pdf
+endif
 
 backmatter.tex: ../latex/classicthesis_mine/backmatter2.tex
 	rm -f $@

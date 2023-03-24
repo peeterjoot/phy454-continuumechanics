@@ -1,7 +1,3 @@
-%
-% Copyright © 2012 Peeter Joot.  All Rights Reserved.
-% Licenced as described in the file LICENSE under the root directory of this GIT repository.
-%
 % ****************************************************************************************************
 % classicthesis-config.tex
 % formerly known as loadpackages.sty, classicthesis-ldpkg.sty, and classicthesis-preamble.sty
@@ -43,21 +39,9 @@
 \newcommand{\hmmax}{0}
 
 % ********************************************************************
-
-%\AtBeginDocument{%
-%\let\latextableofcontents\tableofcontents
-%
-%\renewcommand{\tableofcontents}{%
-%  \addtocontents{toc}{\protect\setcounter{tocdepth}{-2}}
-%  \latextableofcontents%
-%  \addtocontents{toc}{\protect\setcounter{tocdepth}{3}}
-%}
-%}
-
 % https://tex.stackexchange.com/a/348976/15
 \BeforeTOCHead[toc]{\cleardoublepage\pdfbookmark{\contentsname}{toc}}
 \BeforeTOCHead[lof]{\cleardoublepage\pdfbookmark{\listfigurename}{lof}}
-%\BeforeTOCHead[lot]{\cleardoublepage\pdfbookmark{\listtablename}{lot}}
 
 % ********************************************************************
 % Triggers for this config
@@ -67,61 +51,57 @@
 \newboolean{enable-backrefs} % enable backrefs in the bibliography
 \setboolean{enable-backrefs}{true} % true false
 
-\newboolean{redacted}
-%\setboolean{redacted}{true}
-\setboolean{redacted}{false} % uncensored version.
+%% \newboolean{redacted}
+%% \usepackage{redacted}
+%%
+%% \newcommand{\withproblemsets}[1]{%
+%% \ifthenelse{\boolean{redacted}}%
+%% {%
+%% \textcolor{Maroon}{%
+%% PROBLEM SET RELATED MATERIAL REDACTED IN THIS DOCUMENT.%
+%% %
+%% PLEASE FEEL FREE TO EMAIL ME FOR THE FULL VERSION IF YOU AREN'T TAKING THE COURSE.%
+%% }%
+%% %
+%% \input{censor1pg.tex}%
+%% %
+%% \textcolor{Maroon}{%
+%% END-REDACTION%
+%% }%
+%% }%
+%% {#1}%
+%% }
+%%
+%% \newcommand{\withproblemsetsParagraph}[1]{%
+%% \ifthenelse{\boolean{redacted}}%
+%% {%
+%% \textcolor{Maroon}{%
+%% PROBLEM SET RELATED MATERIAL REDACTED IN THIS DOCUMENT.%
+%% %
+%% PLEASE FEEL FREE TO EMAIL ME FOR THE FULL VERSION IF YOU AREN'T TAKING THE COURSE.%
+%% }%
+%% %
+%% \input{censor1p.tex}%
+%% %\input{censor1p.tex}%
+%% %\input{censor1p.tex}%
+%% %
+%% \textcolor{Maroon}{%
+%% END-REDACTION%
+%% }%
+%% }%
+%% {#1}%
+%% }
+%%
+%% \newcommand{\withproblemsetsMessage}[1]{%
+%% \ifthenelse{\boolean{redacted}}%
+%% {%
+%% #1%
+%% }%
+%% {\relax}%
+%% }
 
-\newcommand{\withproblemsets}[1]{%
-\ifthenelse{\boolean{redacted}}%
-{%
-\textcolor{Maroon}{%
-PROBLEM SET RELATED MATERIAL REDACTED IN THIS DOCUMENT.%
-%
-PLEASE FEEL FREE TO EMAIL ME FOR THE FULL VERSION IF YOU AREN'T TAKING PHY1520.%
-}%
-%
-\input{censor1pg.tex}%
-%
-\textcolor{Maroon}{%
-END-REDACTION%
-}%
-}%
-{%
-#1%
-}%
-}
+% ****************************************************************************************************
 
-\newcommand{\withproblemsetsParagraph}[1]{%
-\ifthenelse{\boolean{redacted}}%
-{%
-\textcolor{Maroon}{%
-PROBLEM SET RELATED MATERIAL REDACTED IN THIS DOCUMENT.%
-%
-PLEASE FEEL FREE TO EMAIL ME FOR THE FULL VERSION IF YOU AREN'T TAKING PHY1520.%
-}%
-%
-\input{censor1p.tex}%
-%\input{censor1p.tex}%
-%\input{censor1p.tex}%
-%
-\textcolor{Maroon}{%
-END-REDACTION%
-}%
-}%
-{%
-#1%
-}%
-}
-
-\newcommand{\withproblemsetsMessage}[1]{%
-\ifthenelse{\boolean{redacted}}%
-{%
-#1%
-}%
-{%
-\relax%
-}%
-}
 
 % ****************************************************************************************************
 
