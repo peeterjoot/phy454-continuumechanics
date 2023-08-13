@@ -1,0 +1,14 @@
+V0.1.12-8
+- bib url updates (https://peeterjoot.com)
+- Some gutter fixes.
+- Regenerate various figures (switch to black and white, thick lines, MaTex markup, ...)
+- update figures for 3d flow between pipes to black and white (hatch shading.)
+- dmath purge.
+
+V???-??
+- Too big figure.
+- Remove dmath+aligned.
+- Dup sequential word fixes.
+- Add spell check rules and do it.
+- URL fixes.
+
