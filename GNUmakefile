@@ -56,16 +56,6 @@ spellcheck: $(patsubst %.tex,%.sp,$(filter-out $(DONT_SPELL_CHECK),$(DO_SPELL_CH
 	spellcheck $^
 	touch $@
 
-distx:
-ifdef DISTEXTRA
-	cp $(THISBOOK).pdf ~/tmp/$(THISBOOK).$(DISTEXTRA).$(VER).pdf
-else
-	cp $(THISBOOK).pdf ~/tmp/$(THISBOOK).$(VER).pdf
-endif
-
-scrpage2.sty : ../latex/scrpage2.sty
-	cp $^ $@
-
 backmatter.tex: ../latex/classicthesis_mine/backmatter2.tex
 	rm -f $@
 	ln -s ../latex/classicthesis_mine/backmatter2.tex backmatter.tex
